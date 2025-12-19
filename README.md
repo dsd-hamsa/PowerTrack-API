@@ -64,3 +64,7 @@ Unique Normalized Endpoints: 56
 54. [/api/view/sitelinks/{site_id}](documentation/view_sitelinks_site_id.md)
 55. [/api/view/sitesharelocations/{site_id}](documentation/view_sitesharelocations_site_id.md)
 56. [/api/view/siteshares/{site_id}](documentation/view_siteshares_site_id.md)
+
+---
+
+*Full documentation also available in [powertrack_api_docs_enhanced.md](powertrack_api_docs_enhanced.md) but it is very large*
