@@ -1,9 +1,8 @@
-# Endpoint 1
+# `/api/alerttrigger/{hardware_id}`
 
 [← Back to Index](../README.md)
 
 
-### `/api/alerttrigger/{hardware_id}`
 
 **Methods:** GET  
 **Status Codes:** 200  
@@ -55,6 +54,7 @@
 ```http
 GET /api/alerttrigger/H70617?lastChanged=2025-12-12T17:53:01Z
 Accept: application/json
+Referer: https://www.alsoenergy.com
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 ```

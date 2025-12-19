@@ -1,9 +1,8 @@
-# Endpoint 9
+# `/api/edit/hardware/{hardware_id}`
 
 [← Back to Index](../README.md)
 
 
-### `/api/edit/hardware/{hardware_id}`
 
 **Methods:** GET  
 **Status Codes:** 200  
@@ -387,6 +386,7 @@
 ```http
 GET /api/edit/hardware/H70611
 Accept: application/json
+Referer: https://www.alsoenergy.com
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 ```

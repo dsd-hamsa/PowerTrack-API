@@ -1,9 +1,8 @@
-# Endpoint 10
+# `/api/edit/modeling/{site_id}`
 
 [← Back to Index](../README.md)
 
 
-### `/api/edit/modeling/{site_id}`
 
 **Methods:** GET  
 **Status Codes:** 200  
@@ -190,6 +189,7 @@
 ```http
 GET /api/edit/modeling/S68624
 Accept: application/json
+Referer: https://www.alsoenergy.com
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 ```

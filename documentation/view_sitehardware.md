@@ -1,9 +1,8 @@
-# Endpoint 52
+# `/api/view/sitehardware`
 
 [← Back to Index](../README.md)
 
 
-### `/api/view/sitehardware`
 
 **Methods:** POST  
 **Status Codes:** 200  
@@ -24,6 +23,7 @@
 ```http
 POST /api/view/sitehardware?lastChanged=1900-01-01T00:00:00.000Z
 Accept: application/json
+Referer: https://www.alsoenergy.com
 Content-Type: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711

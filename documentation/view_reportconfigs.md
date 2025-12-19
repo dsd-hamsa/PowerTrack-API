@@ -1,9 +1,8 @@
-# Endpoint 50
+# `/api/view/reportconfigs`
 
 [← Back to Index](../README.md)
 
 
-### `/api/view/reportconfigs`
 
 **Methods:** POST  
 **Status Codes:** 200  
@@ -41,6 +40,7 @@
 ```http
 POST /api/view/reportconfigs?lastChanged=1900-01-01T00:00:00.000Z
 Accept: application/json
+Referer: https://www.alsoenergy.com
 Content-Type: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711

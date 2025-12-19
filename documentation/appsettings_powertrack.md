@@ -1,9 +1,8 @@
-# Endpoint 4
+# `/api/appsettings/powertrack`
 
 [← Back to Index](../README.md)
 
 
-### `/api/appsettings/powertrack`
 
 **Methods:** GET  
 **Status Codes:** 200  
@@ -71,6 +70,7 @@
 ```http
 GET /api/appsettings/powertrack
 Accept: application/json
+Referer: https://www.alsoenergy.com
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 ```

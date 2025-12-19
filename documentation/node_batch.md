@@ -1,9 +1,8 @@
-# Endpoint 16
+# `/api/node/batch`
 
 [← Back to Index](../README.md)
 
 
-### `/api/node/batch`
 
 **Methods:** POST  
 **Status Codes:** 200  
@@ -28,6 +27,7 @@
 ```http
 POST /api/node/batch
 Accept: application/json
+Referer: https://www.alsoenergy.com
 Content-Type: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711

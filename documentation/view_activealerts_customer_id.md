@@ -1,9 +1,8 @@
-# Endpoint 30
+# `/api/view/activealerts/{customer_id}`
 
 [← Back to Index](../README.md)
 
 
-### `/api/view/activealerts/{customer_id}`
 
 **Methods:** GET  
 **Status Codes:** 200  
@@ -48,6 +47,7 @@
 ```http
 GET /api/view/activealerts/C8458?lastChanged=1900-01-01T00:00:00.000Z
 Accept: application/json
+Referer: https://www.alsoenergy.com
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 ```

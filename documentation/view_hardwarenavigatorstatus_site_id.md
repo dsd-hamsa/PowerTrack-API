@@ -1,9 +1,8 @@
-# Endpoint 41
+# `/api/view/hardwarenavigatorstatus/{site_id}`
 
 [← Back to Index](../README.md)
 
 
-### `/api/view/hardwarenavigatorstatus/{site_id}`
 
 **Methods:** GET  
 **Status Codes:** 200  
@@ -28,6 +27,7 @@
 ```http
 GET /api/view/hardwarenavigatorstatus/S68624?lastChanged=1900-01-01T00:00:00.000Z
 Accept: application/json
+Referer: https://www.alsoenergy.com
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 ```

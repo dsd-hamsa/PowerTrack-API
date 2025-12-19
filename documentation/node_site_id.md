@@ -1,9 +1,8 @@
-# Endpoint 19
+# `/api/node/{site_id}`
 
 [← Back to Index](../README.md)
 
 
-### `/api/node/{site_id}`
 
 **Methods:** GET  
 **Status Codes:** 200  
@@ -68,6 +67,7 @@
 ```http
 GET /api/node/S38292?lastChanged=2025-12-16T16:52:13Z
 Accept: application/json
+Referer: https://www.alsoenergy.com
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 ```

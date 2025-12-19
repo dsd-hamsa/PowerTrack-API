@@ -1,9 +1,8 @@
-# Endpoint 8
+# `/api/edit/hardware/gateway/defaultparams/{id}`
 
 [← Back to Index](../README.md)
 
 
-### `/api/edit/hardware/gateway/defaultparams/{id}E855C584`
 
 **Methods:** POST  
 **Status Codes:** 200  
@@ -60,6 +59,7 @@
 ```http
 POST /api/edit/hardware/gateway/defaultparams/0090E855C584
 Accept: application/json
+Referer: https://www.alsoenergy.com
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 ```

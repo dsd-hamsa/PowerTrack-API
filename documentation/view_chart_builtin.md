@@ -1,9 +1,8 @@
-# Endpoint 35
+# `/api/view/chart/builtin`
 
 [← Back to Index](../README.md)
 
 
-### `/api/view/chart/builtin`
 
 **Methods:** POST  
 **Status Codes:** 200  
@@ -48,6 +47,7 @@
 ```http
 POST /api/view/chart/builtin
 Accept: application/json
+Referer: https://www.alsoenergy.com
 Content-Type: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711

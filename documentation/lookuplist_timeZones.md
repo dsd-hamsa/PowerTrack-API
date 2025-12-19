@@ -1,9 +1,8 @@
-# Endpoint 14
+# `/api/lookuplist/timeZones`
 
 [← Back to Index](../README.md)
 
 
-### `/api/lookuplist/timeZones`
 
 **Methods:** GET  
 **Status Codes:** 200  
@@ -28,6 +27,7 @@
 ```http
 GET /api/lookuplist/timeZones
 Accept: application/json
+Referer: https://www.alsoenergy.com
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 ```

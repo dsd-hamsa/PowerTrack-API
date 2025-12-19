@@ -1,9 +1,8 @@
-# Endpoint 44
+# `/api/view/portfolio/{customer_id}`
 
 [← Back to Index](../README.md)
 
 
-### `/api/view/portfolio/{customer_id}`
 
 **Methods:** GET  
 **Status Codes:** 200  
@@ -51,6 +50,7 @@
 ```http
 GET /api/view/portfolio/C8458?lastChanged=2025-07-29T02:37:29Z&mergeHash=
 Accept: application/json
+Referer: https://www.alsoenergy.com
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 ```

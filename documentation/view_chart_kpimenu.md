@@ -1,9 +1,8 @@
-# Endpoint 36
+# `/api/view/chart/kpimenu`
 
 [← Back to Index](../README.md)
 
 
-### `/api/view/chart/kpimenu`
 
 **Methods:** POST  
 **Status Codes:** 200  
@@ -118,6 +117,7 @@
 ```http
 POST /api/view/chart/kpimenu
 Accept: application/json
+Referer: https://www.alsoenergy.com
 Content-Type: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711

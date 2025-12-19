@@ -1,9 +1,8 @@
-# Endpoint 43
+# `/api/view/hardwarestatus/{hardware_id}`
 
 [← Back to Index](../README.md)
 
 
-### `/api/view/hardwarestatus/{hardware_id}`
 
 **Methods:** GET  
 **Status Codes:** 200  
@@ -126,6 +125,7 @@
 ```http
 GET /api/view/hardwarestatus/H70617?lastChanged=1900-01-01T00:00:00.000Z
 Accept: application/json
+Referer: https://www.alsoenergy.com
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 ```

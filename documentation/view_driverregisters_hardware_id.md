@@ -1,9 +1,8 @@
-# Endpoint 38
+# `/api/view/driverregisters/{hardware_id}`
 
 [← Back to Index](../README.md)
 
 
-### `/api/view/driverregisters/{hardware_id}`
 
 **Methods:** GET  
 **Status Codes:** 200  
@@ -39,6 +38,7 @@
 ```http
 GET /api/view/driverregisters/H504061?lastChanged=1900-01-01T00:00:00.000Z
 Accept: application/json
+Referer: https://www.alsoenergy.com
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 ```

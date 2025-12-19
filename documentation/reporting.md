@@ -1,9 +1,8 @@
-# Endpoint 23
+# `/api/reporting`
 
 [← Back to Index](../README.md)
 
 
-### `/api/reporting`
 
 **Methods:** GET  
 **Status Codes:** 200  
@@ -47,6 +46,7 @@
 ```http
 GET /api/reporting
 Accept: application/json
+Referer: https://www.alsoenergy.com
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 ```

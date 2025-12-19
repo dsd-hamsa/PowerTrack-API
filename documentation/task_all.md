@@ -1,9 +1,8 @@
-# Endpoint 25
+# `/api/task/all`
 
 [← Back to Index](../README.md)
 
 
-### `/api/task/all`
 
 **Methods:** GET  
 **Status Codes:** 200  
@@ -40,6 +39,7 @@ GET /api/task/all?lastChanged=2025-12-19T20:22:13Z
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 Accept: application/json
+Referer: https://www.alsoenergy.com
 ```
 
 **Response:**

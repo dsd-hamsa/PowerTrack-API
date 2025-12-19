@@ -1,9 +1,8 @@
-# Endpoint 47
+# `/api/view/pvsystmodules/{hardware_id}`
 
 [← Back to Index](../README.md)
 
 
-### `/api/view/pvsystmodules/{hardware_id}`
 
 **Methods:** GET  
 **Status Codes:** 200  
@@ -28,6 +27,7 @@
 ```http
 GET /api/view/pvsystmodules/H504061?lastChanged=1900-01-01T00:00:00.000Z
 Accept: application/json
+Referer: https://www.alsoenergy.com
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 ```

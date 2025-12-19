@@ -1,9 +1,8 @@
-# Endpoint 26
+# `/api/userpreferences`
 
 [← Back to Index](../README.md)
 
 
-### `/api/userpreferences`
 
 **Methods:** GET  
 **Status Codes:** 200  
@@ -32,6 +31,7 @@
 ```http
 GET /api/userpreferences?lastChanged=1900-01-01T00:00:00.000Z
 Accept: application/json
+Referer: https://www.alsoenergy.com
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 ```

@@ -1,9 +1,8 @@
-# Endpoint 15
+# `/api/node`
 
 [← Back to Index](../README.md)
 
 
-### `/api/node`
 
 **Methods:** POST  
 **Status Codes:** 200  
@@ -24,6 +23,7 @@
 ```http
 POST /api/node?lastChanged=2025-12-19T16:14:28Z
 Accept: application/json
+Referer: https://www.alsoenergy.com
 Content-Type: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711

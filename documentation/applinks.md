@@ -1,9 +1,8 @@
-# Endpoint 3
+# `/api/applinks`
 
 [← Back to Index](../README.md)
 
 
-### `/api/applinks`
 
 **Methods:** GET  
 **Status Codes:** 200  
@@ -36,6 +35,7 @@
 ```http
 GET /api/applinks
 Accept: application/json
+Referer: https://www.alsoenergy.com
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 ```

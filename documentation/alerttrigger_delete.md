@@ -1,18 +1,19 @@
-# `/api/view/hardwarestatus/status/{hardware_id}`
+# `/api/alerttrigger/{parentKey}/{key}`
 
 [← Back to Index](../README.md)
 
 
+### `/api/alerttrigger/{parentKey}/{key}`
 
-**Methods:** GET  
+**Methods:** DELETE  
 **Status Codes:** 200  
-**Call Count:** 5  
+**Call Count:** 1  
 
 #### Response Structure
 
 ```json
 {
-  "type": "integer"
+  "type": "null"
 }
 ```
 
@@ -21,8 +22,8 @@
 **Request:**
 
 ```http
-GET /api/view/hardwarestatus/status/H70619
-Accept: application/json
+DELETE /api/alerttrigger/H347559/x2d135413
+Accept: */*
 Referer: https://www.alsoenergy.com
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
@@ -31,6 +32,5 @@ ae_v: c75711
 **Response:**
 
 ```json
-1
+null
 ```
-
