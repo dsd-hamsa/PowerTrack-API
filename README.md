@@ -1,2 +1,66 @@
-# PowerTrack-API
-Documentation of the PowerTrack API
+# PowerTrack API Documentation
+
+Generated: 2025-12-19T13:04:12.405900
+Total API Calls Logged: 219
+Unique Normalized Endpoints: 56
+
+---
+
+## Table of Contents
+
+1. [/api/alerttrigger/{hardware_id}](documentation/alerttrigger_hardware_id.md)
+2. [/api/alerttrigger/{site_id}](documentation/alerttrigger_site_id.md)
+3. [/api/applinks](documentation/applinks.md)
+4. [/api/appsettings/powertrack](documentation/appsettings_powertrack.md)
+5. [/api/auditlog](documentation/auditlog.md)
+6. [/api/binding/batch](documentation/binding_batch.md)
+7. [/api/edit/customer/{customer_id}](documentation/edit_customer_customer_id.md)
+8. [/api/edit/hardware/gateway/defaultparams/{id}E855C584](documentation/edit_hardware_gateway_defaultparams_idE855C584.md)
+9. [/api/edit/hardware/{hardware_id}](documentation/edit_hardware_hardware_id.md)
+10. [/api/edit/modeling/{site_id}](documentation/edit_modeling_site_id.md)
+11. [/api/edit/site/{site_id}](documentation/edit_site_site_id.md)
+12. [/api/edit/sitehardware/{site_id}](documentation/edit_sitehardware_site_id.md)
+13. [/api/grafana/config](documentation/grafana_config.md)
+14. [/api/lookuplist/timeZones](documentation/lookuplist_timeZones.md)
+15. [/api/node](documentation/node.md)
+16. [/api/node/batch](documentation/node_batch.md)
+17. [/api/node/favorites](documentation/node_favorites.md)
+18. [/api/node/{customer_id}](documentation/node_customer_id.md)
+19. [/api/node/{site_id}](documentation/node_site_id.md)
+20. [/api/node/{user_id}](documentation/node_user_id.md)
+21. [/api/notifications/session](documentation/notifications_session.md)
+22. [/api/projectmanagement/{site_id}](documentation/projectmanagement_site_id.md)
+23. [/api/reporting](documentation/reporting.md)
+24. [/api/tag](documentation/tag.md)
+25. [/api/task/all](documentation/task_all.md)
+26. [/api/userpreferences](documentation/userpreferences.md)
+27. [/api/view/activealerts/activesummary/{customer_id}](documentation/view_activealerts_activesummary_customer_id.md)
+28. [/api/view/activealerts/activesummary/{hardware_id}](documentation/view_activealerts_activesummary_hardware_id.md)
+29. [/api/view/activealerts/activesummary/{site_id}](documentation/view_activealerts_activesummary_site_id.md)
+30. [/api/view/activealerts/{customer_id}](documentation/view_activealerts_customer_id.md)
+31. [/api/view/activealerts/{hardware_id}](documentation/view_activealerts_hardware_id.md)
+32. [/api/view/activealerts/{site_id}](documentation/view_activealerts_site_id.md)
+33. [/api/view/alerthistory](documentation/view_alerthistory.md)
+34. [/api/view/chart](documentation/view_chart.md)
+35. [/api/view/chart/builtin](documentation/view_chart_builtin.md)
+36. [/api/view/chart/kpimenu](documentation/view_chart_kpimenu.md)
+37. [/api/view/chart/kpioptions/{site_id}](documentation/view_chart_kpioptions_site_id.md)
+38. [/api/view/driverregisters/{hardware_id}](documentation/view_driverregisters_hardware_id.md)
+39. [/api/view/driversettings/list/{id}](documentation/view_driversettings_list_id.md)
+40. [/api/view/driversettings/{hardware_id}](documentation/view_driversettings_hardware_id.md)
+41. [/api/view/hardwarenavigatorstatus/{site_id}](documentation/view_hardwarenavigatorstatus_site_id.md)
+42. [/api/view/hardwarestatus/status/{hardware_id}](documentation/view_hardwarestatus_status_hardware_id.md)
+43. [/api/view/hardwarestatus/{hardware_id}](documentation/view_hardwarestatus_hardware_id.md)
+44. [/api/view/portfolio/{customer_id}](documentation/view_portfolio_customer_id.md)
+45. [/api/view/pvcurvemodels/efficiencycurvemodels](documentation/view_pvcurvemodels_efficiencycurvemodels.md)
+46. [/api/view/pvcurvemodels/incidenceanglemodels](documentation/view_pvcurvemodels_incidenceanglemodels.md)
+47. [/api/view/pvsystmodules/{hardware_id}](documentation/view_pvsystmodules_hardware_id.md)
+48. [/api/view/pvsystmodules/{site_id}](documentation/view_pvsystmodules_site_id.md)
+49. [/api/view/registeroffsets/{hardware_id}](documentation/view_registeroffsets_hardware_id.md)
+50. [/api/view/reportconfigs](documentation/view_reportconfigs.md)
+51. [/api/view/site/{site_id}](documentation/view_site_site_id.md)
+52. [/api/view/sitehardware](documentation/view_sitehardware.md)
+53. [/api/view/sitehardwareproduction/{site_id}](documentation/view_sitehardwareproduction_site_id.md)
+54. [/api/view/sitelinks/{site_id}](documentation/view_sitelinks_site_id.md)
+55. [/api/view/sitesharelocations/{site_id}](documentation/view_sitesharelocations_site_id.md)
+56. [/api/view/siteshares/{site_id}](documentation/view_siteshares_site_id.md)
