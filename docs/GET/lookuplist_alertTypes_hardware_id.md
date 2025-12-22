@@ -7,10 +7,10 @@
 
 ## Table of Contents
 
-- [Response Structure](#response-structure)
+- [Alert Type: General](#alert-type-general)
 - [Example](#example)
 
-## Response Structure
+## Alert Type: General
 
 ```json
 {
