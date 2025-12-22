@@ -1,0 +1,59 @@
+# /api/view/activealerts/activesummary/{site_id}
+
+[← Back to Index](../logs.md)
+
+**Methods:** GET  
+**Status Codes:** 200  
+
+## Table of Contents
+
+- [General](#general)
+- [Example](#example)
+
+## General
+
+```json
+{
+  "type": "object",
+  "properties": {
+    "hardwareSummary": {
+      "type": "object",
+      "properties": {}
+    },
+    "siteSummary": {
+      "type": "object",
+      "properties": {}
+    },
+    "total": {
+      "type": "number"
+    }
+  }
+}
+```
+
+[Return to top](#apiviewactivealertsactivesummary{site_id})
+
+## Example
+
+**Request:**
+
+```http
+GET /api/view/activealerts/activesummary/S67109?lastChanged=1900-01-01T00:00:00.000Z
+Accept: application/json
+ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
+ae_v: c75711
+referer: https://apps.alsoenergy.com/powertrack/S67109/overview/sites
+```
+
+**Response:**
+
+```json
+{
+  "hardwareSummary": {},
+  "siteSummary": {},
+  "total": 0
+}
+```
+
+[Return to top](#apiviewactivealertsactivesummary{site_id})
+
