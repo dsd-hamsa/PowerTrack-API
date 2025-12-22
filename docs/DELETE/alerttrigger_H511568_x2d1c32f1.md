@@ -1,0 +1,25 @@
+# /api/alerttrigger/H511568/x2d1c32f1
+
+[← Back to Index](../README.md)
+
+**Methods:** DELETE
+**Status Codes:** 200
+**Call Count:** 1
+
+## Table of Contents
+
+- [Example](#example)
+
+## Example
+
+**Request:**
+
+```http
+DELETE /api/alerttrigger/H511568/x2d1c32f1
+ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
+ae_v: c75711
+referer: https://apps.alsoenergy.com/powertrack/H511568/administration/alertsettings
+```
+
+[Return to top](#apialerttriggerh511568x2d1c32f1)
+
