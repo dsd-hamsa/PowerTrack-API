@@ -7,10 +7,10 @@
 
 ## Table of Contents
 
-- [Response Structure](#response-structure)
+- [Alert Type: AI250](#alert-type-ai250)
 - [Example](#example)
 
-## Response Structure
+## Alert Type: AI250
 
 ```json
 {
@@ -122,7 +122,7 @@
 **Request:**
 
 ```http
-GET /api/alerttrigger/x2d18e7f5?lastChanged=1900-01-01T00:00:00.000Z
+GET /api/alerttrigger/x2d1c32f1?lastChanged=1900-01-01T00:00:00.000Z
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
@@ -134,19 +134,19 @@ referer: https://apps.alsoenergy.com/powertrack/H511568/administration/alertsett
 ```json
 {
   "alertTypeKey": "AI250",
-  "checkNoSnow": true,
-  "checkSun": true,
+  "checkNoSnow": false,
+  "checkSun": false,
   "checkTime": false,
-  "delayHoursResolve": 0.5,
-  "delayHoursTrigger": 1,
+  "delayHoursResolve": 0,
+  "delayHoursTrigger": 0,
   "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
   "endTime": 0,
   "hasImpact": false,
-  "id": 1632245,
+  "id": 1848049,
   "impact": 0,
-  "isActive": true,
-  "key": "x2d18e7f5",
-  "lastChanged": "2025-12-22T22:05:23Z",
+  "isActive": false,
+  "key": "x2d1c32f1",
+  "lastChanged": "2025-12-22T22:05:47Z",
   "name": "Device communication",
   "ownerKey": "",
   "parameters": [
@@ -161,12 +161,12 @@ referer: https://apps.alsoenergy.com/powertrack/H511568/administration/alertsett
     }
   ],
   "parentKey": "H511568",
-  "priorityLevel": -1,
+  "priorityLevel": 0,
   "sharing": 0,
   "startTime": 0,
   "sunMaxAzimuth": 0,
   "sunMinAzimuth": 0,
-  "sunMinElevation": 15
+  "sunMinElevation": 0
 }
 ```
 
