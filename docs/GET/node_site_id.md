@@ -66,7 +66,7 @@
 **Request:**
 
 ```http
-GET /api/node/S68143?lastChanged=2025-12-22T21:57:18Z
+GET /api/node/S68143?lastChanged=2025-12-22T22:01:11Z
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
@@ -82,7 +82,7 @@ referer: https://apps.alsoenergy.com/powertrack/S68143/administration/config
   "isHidden": false,
   "key": "S68143",
   "kind": "site",
-  "lastChanged": "2025-12-22T21:58:47Z",
+  "lastChanged": "2025-12-22T22:02:50Z",
   "name": "*** LOST?* THD CA - 2304 Monterey Park",
   "parentKey": "C25228",
   "path": [
