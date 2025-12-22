@@ -8,7 +8,7 @@
 ## Table of Contents
 
 - [Payload Structure](#payload-structure)
-- [Response Structure](#response-structure)
+- [Alert Type: General](#alert-type-general)
 - [Example](#example)
 
 ## Payload Structure
@@ -118,7 +118,7 @@
 
 [Return to top](#apialerttriggers)
 
-## Response Structure
+## Alert Type: General
 
 ```json
 {
