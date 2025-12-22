@@ -3,12 +3,12 @@
 [← Back to Index](../logs.md)
 
 **Methods:** POST  
-**Status Codes:** 200  
+**Status Codes:** 200, 200  
 
 ## Table of Contents
 
 - [Payload Structure](#payload-structure)
-- [Response Structure](#response-structure)
+- [Alert Type: General](#alert-type-general)
 - [Example](#example)
 
 ## Payload Structure
@@ -118,7 +118,7 @@
 
 [Return to top](#apialerttriggertest)
 
-## Response Structure
+## Alert Type: General
 
 ```json
 {
