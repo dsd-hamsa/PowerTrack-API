@@ -3,14 +3,14 @@
 [← Back to Index](../logs.md)
 
 **Methods:** GET  
-**Status Codes:** 200  
+**Status Codes:** 200, 200  
 
 ## Table of Contents
 
-- [Response Structure](#response-structure)
+- [General](#general)
 - [Example](#example)
 
-## Response Structure
+## General
 
 ```json
 {
