@@ -3,14 +3,14 @@
 [← Back to Index](../logs.md)
 
 **Methods:** GET  
-**Status Codes:** 200  
+**Status Codes:** 200, 200  
 
 ## Table of Contents
 
-- [Response Structure](#response-structure)
+- [Inverter (functionCode: 1)](#inverter-functioncode-1)
 - [Example](#example)
 
-## Response Structure
+## Inverter (functionCode: 1)
 
 ```json
 {
@@ -32,7 +32,8 @@
       "type": "number"
     },
     "array": {
-      "type": "object"
+      "type": "object",
+      "properties": {}
     },
     "assetId": {
       "type": "string"
@@ -62,7 +63,8 @@
       "type": "string"
     },
     "conflictNames": {
-      "type": "object"
+      "type": "object",
+      "properties": {}
     },
     "dashboardKey": {
       "type": "string"
@@ -89,7 +91,8 @@
           "type": "string"
         },
         "dataNameDetail": {
-          "type": "object"
+          "type": "object",
+          "properties": {}
         },
         "index": {
           "type": "number"
@@ -139,7 +142,8 @@
       }
     },
     "eGauge": {
-      "type": "object"
+      "type": "object",
+      "properties": {}
     },
     "fixedEnergyOffset": {
       "type": "number"
@@ -151,7 +155,8 @@
       "type": "string"
     },
     "gateway": {
-      "type": "object"
+      "type": "object",
+      "properties": {}
     },
     "gatewayFwVersion": {
       "type": "string"
@@ -214,7 +219,8 @@
       "type": "string"
     },
     "kiosk": {
-      "type": "object"
+      "type": "object",
+      "properties": {}
     },
     "latitude": {
       "type": "number"
@@ -229,7 +235,8 @@
       "type": "number"
     },
     "meter": {
-      "type": "object"
+      "type": "object",
+      "properties": {}
     },
     "modelNum": {
       "type": "string"
@@ -766,7 +773,8 @@
           }
         },
         "lastChanged": {
-          "type": "object"
+          "type": "object",
+          "properties": {}
         },
         "notes": {
           "type": "array",
@@ -786,7 +794,8 @@
       "type": "string"
     },
     "thermal": {
-      "type": "object"
+      "type": "object",
+      "properties": {}
     },
     "thread": {
       "type": "number"
@@ -795,7 +804,8 @@
       "type": "string"
     },
     "turbine": {
-      "type": "object"
+      "type": "object",
+      "properties": {}
     },
     "unitId": {
       "type": "number"
@@ -816,10 +826,12 @@
       }
     },
     "virtualWeather": {
-      "type": "object"
+      "type": "object",
+      "properties": {}
     },
     "weather": {
-      "type": "object"
+      "type": "object",
+      "properties": {}
     },
     "weatherStationKey1": {
       "type": "string"
@@ -828,7 +840,8 @@
       "type": "string"
     },
     "zone": {
-      "type": "object"
+      "type": "object",
+      "properties": {}
     }
   }
 }
