@@ -8,7 +8,7 @@
 ## Table of Contents
 
 - [Payload Structure](#payload-structure)
-- [Response Structure](#response-structure)
+- [Alert Type: AI250](#alert-type-ai250)
 - [Example](#example)
 
 ## Payload Structure
@@ -118,7 +118,7 @@
 
 [Return to top](#apialerttrigger)
 
-## Response Structure
+## Alert Type: AI250
 
 ```json
 {
