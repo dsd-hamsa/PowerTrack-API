@@ -7,6 +7,7 @@
 
 ## Table of Contents
 
+- [General](#general)
 - [Example](#example)
 
 ## Example
