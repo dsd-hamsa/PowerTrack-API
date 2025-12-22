@@ -222,7 +222,7 @@
 **Request:**
 
 ```http
-GET /api/alerttrigger/H511568?lastChanged=2025-12-22T22:05:23Z
+GET /api/alerttrigger/H511568?lastChanged=2025-12-22T22:05:47Z
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
@@ -251,7 +251,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511568/administration/alertsett
       "impact": 0,
       "isActive": false,
       "key": "",
-      "lastChanged": "2025-12-22T22:05:32Z",
+      "lastChanged": "2025-12-22T22:06:05Z",
       "name": "Device communication",
       "ownerKey": "",
       "parameters": [
@@ -287,7 +287,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511568/administration/alertsett
       "impact": 0,
       "isActive": false,
       "key": "",
-      "lastChanged": "2025-12-22T22:05:32Z",
+      "lastChanged": "2025-12-22T22:06:05Z",
       "name": "SMA STP/TriPower Fault Alert",
       "ownerKey": "",
       "parameters": [],
@@ -301,7 +301,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511568/administration/alertsett
     }
   ],
   "key": "H511568",
-  "lastChanged": "2025-12-22T22:05:32Z",
+  "lastChanged": "2025-12-22T22:06:05Z",
   "triggers": [
     {
       "alertTypeKey": "AI862",
@@ -317,7 +317,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511568/administration/alertsett
       "impact": 0,
       "isActive": true,
       "key": "x2d18e7f6",
-      "lastChanged": "2025-12-22T22:05:32Z",
+      "lastChanged": "2025-12-22T22:06:05Z",
       "name": "SMA STP/TriPower Fault Alert",
       "ownerKey": "",
       "parameters": [],
