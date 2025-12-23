@@ -4,7 +4,7 @@
 [← Back to Index](../logs.md)
 
 **Methods:** GET  
-**Status Codes:** 200  
+**Status Codes:** 200, 200  
 
 ## Table of Contents
 
@@ -244,7 +244,7 @@
 **Request:**
 
 ```http
-GET /api/alerttrigger/H504132?lastChanged=2025-12-23T01:13:04Z
+GET /api/alerttrigger/H504132?lastChanged=1900-01-01T00:00:00.000Z
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
