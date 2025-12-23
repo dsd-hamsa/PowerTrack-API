@@ -1,5 +1,5 @@
 <a id="top"></a>
-# /api/alerttrigger/new/{hardware_id}/AI250
+# /api/alerttrigger/{alert_id}
 
 [← Back to Index](../logs.md)
 
@@ -123,7 +123,7 @@
 **Request:**
 
 ```http
-GET /api/alerttrigger/new/H511568/AI250
+GET /api/alerttrigger/x2d1c32f1?lastChanged=1900-01-01T00:00:00.000Z
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
@@ -139,15 +139,15 @@ referer: https://apps.alsoenergy.com/powertrack/H511568/administration/alertsett
   "checkSun": false,
   "checkTime": false,
   "delayHoursResolve": 0,
-  "delayHoursTrigger": 0.25,
+  "delayHoursTrigger": 0,
   "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
   "endTime": 0,
   "hasImpact": false,
-  "id": 0,
+  "id": 1848049,
   "impact": 0,
-  "isActive": true,
-  "key": "",
-  "lastChanged": "2025-12-22T22:06:05Z",
+  "isActive": false,
+  "key": "x2d1c32f1",
+  "lastChanged": "2025-12-22T22:05:47Z",
   "name": "Device communication",
   "ownerKey": "",
   "parameters": [
