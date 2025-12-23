@@ -81,19 +81,19 @@
 **Request:**
 
 ```http
-POST /api/node?lastChanged=2025-12-23T00:09:09Z
+POST /api/node?lastChanged=2025-12-22T22:02:50Z
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 Content-Type: application/json
 Accept: application/json
-referer: https://apps.alsoenergy.com/powertrack/H511563/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
 ```
 
 **Payload:**
 
 ```json
 {
-  "key": "H511563",
+  "key": "H494021",
   "context": "path",
   "kinds": [
     "customer",
@@ -115,8 +115,8 @@ referer: https://apps.alsoenergy.com/powertrack/H511563/administration/config
 
 ```json
 {
-  "key": "{\"key\":\"H511563\",\"context\":\"path\",\"kinds\":[\"customer\",\"hardware\",\"site\",\"user\",\"file\",\"folder\",\"report\"],\"subKinds\":[],\"nodes\":[],\"filter\":\"\",\"filterBy\":\"\"}",
-  "lastChanged": "2025-12-23T00:09:52Z",
+  "key": "{\"key\":\"H494021\",\"context\":\"path\",\"kinds\":[\"customer\",\"hardware\",\"site\",\"user\",\"file\",\"folder\",\"report\"],\"subKinds\":[],\"nodes\":[],\"filter\":\"\",\"filterBy\":\"\"}",
+  "lastChanged": "2025-12-23T00:09:09Z",
   "node": null,
   "nodes": [
     {
@@ -170,15 +170,15 @@ referer: https://apps.alsoenergy.com/powertrack/H511563/administration/config
       "permissions": 27
     },
     {
-      "key": "H511563",
-      "lastChanged": "2025-12-23T00:09:52Z",
-      "name": "Cell Modem (Pepwave)",
-      "sort": 1,
-      "icon": "https://www.alsoenergy.com/pub/Images/Device/19759.png",
+      "key": "H494021",
+      "lastChanged": "2025-12-23T00:09:09Z",
+      "name": "Solcast Virtual Weather Station",
+      "sort": 0,
+      "icon": "https://www.alsoenergy.com/pub/Images/weather.png",
       "flags": 0,
       "parentKey": "S68143",
       "kind": "hardware",
-      "subKind": 31,
+      "subKind": 5,
       "path": [
         "C8458",
         "C25228",
