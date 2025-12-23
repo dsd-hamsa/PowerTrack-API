@@ -67,26 +67,26 @@
 **Request:**
 
 ```http
-GET /api/node/H511564?lastChanged=2025-12-23T00:10:00Z
+GET /api/node/H511563?lastChanged=2025-12-23T00:09:52Z
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 Accept: application/json
-referer: https://apps.alsoenergy.com/powertrack/H511564/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H511563/administration/config
 ```
 
 **Response:**
 
 ```json
 {
-  "key": "H511564",
-  "lastChanged": "2025-12-23T00:10:27Z",
-  "name": "PowerLogger 1000",
-  "sort": 2,
-  "icon": "https://www.alsoenergy.com/pub/Images/Device/325.png",
+  "key": "H511563",
+  "lastChanged": "2025-12-23T00:10:00Z",
+  "name": "Cell Modem (Pepwave)",
+  "sort": 1,
+  "icon": "https://www.alsoenergy.com/pub/Images/Device/19759.png",
   "flags": 0,
   "parentKey": "S68143",
   "kind": "hardware",
-  "subKind": 10,
+  "subKind": 31,
   "path": [
     "C8458",
     "C25228",
