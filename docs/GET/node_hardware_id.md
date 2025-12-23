@@ -17,19 +17,7 @@
 {
   "type": "object",
   "properties": {
-    "flags": {
-      "type": "number"
-    },
-    "icon": {
-      "type": "string"
-    },
-    "isHidden": {
-      "type": "boolean"
-    },
     "key": {
-      "type": "string"
-    },
-    "kind": {
       "type": "string"
     },
     "lastChanged": {
@@ -38,22 +26,34 @@
     "name": {
       "type": "string"
     },
+    "sort": {
+      "type": "number"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "flags": {
+      "type": "number"
+    },
     "parentKey": {
       "type": "string"
     },
-    "path": {
+    "kind": {
       "type": "string"
-    },
-    "permissions": {
-      "type": "number"
-    },
-    "sort": {
-      "type": "number"
     },
     "subKind": {
       "type": "number"
     },
+    "path": {
+      "type": "string"
+    },
+    "isHidden": {
+      "type": "boolean"
+    },
     "validationStatus": {
+      "type": "number"
+    },
+    "permissions": {
       "type": "number"
     }
   }
@@ -67,34 +67,34 @@
 **Request:**
 
 ```http
-GET /api/node/H511568?lastChanged=2025-12-22T19:21:26Z
-Accept: application/json
+GET /api/node/H511576?lastChanged=2025-12-23T00:11:41Z
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/H511568/administration/config
+Accept: application/json
+referer: https://apps.alsoenergy.com/powertrack/H511576/administration/config
 ```
 
 **Response:**
 
 ```json
 {
+  "key": "H511576",
+  "lastChanged": "2025-12-23T00:11:51Z",
+  "name": "WEATHER STATION",
+  "sort": 42,
+  "icon": "https://www.alsoenergy.com/pub/Images/Device/8164.png",
   "flags": 0,
-  "icon": "https://www.alsoenergy.com/pub/Images/Device/19880.png",
-  "isHidden": false,
-  "key": "H511568",
-  "kind": "hardware",
-  "lastChanged": "2025-12-22T19:21:53Z",
-  "name": "INVERTER 1",
   "parentKey": "S68143",
+  "kind": "hardware",
+  "subKind": 5,
   "path": [
     "C8458",
     "C25228",
     "S68143"
   ],
-  "permissions": 27,
-  "sort": 11,
-  "subKind": 1,
-  "validationStatus": 0
+  "isHidden": false,
+  "validationStatus": 0,
+  "permissions": 27
 }
 ```
 
