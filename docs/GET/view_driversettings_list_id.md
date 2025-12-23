@@ -4,7 +4,7 @@
 [← Back to Index](../logs.md)
 
 **Methods:** GET  
-**Status Codes:** 200, 200  
+**Status Codes:** 200, 200, 200  
 
 ## Table of Contents
 
@@ -37,11 +37,11 @@
 **Request:**
 
 ```http
-GET /api/view/driversettings/list/3588
+GET /api/view/driversettings/list/19880
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 Accept: application/json
-referer: https://apps.alsoenergy.com/powertrack/H511575/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H511568/administration/config
 ```
 
 **Response:**
@@ -49,38 +49,68 @@ referer: https://apps.alsoenergy.com/powertrack/H511575/administration/config
 ```json
 [
   {
-    "name": "dev:ScalePOA",
-    "value": "0.1",
-    "type": 0
-  },
-  {
-    "name": "dev:POAOffset",
-    "value": "0",
-    "type": 0
-  },
-  {
-    "name": "dev:ScaleT",
-    "value": "0.1",
-    "type": 0
-  },
-  {
-    "name": "dev:ScaleWindSP",
-    "value": "0.1",
-    "type": 0
-  },
-  {
     "name": "dev:RegOffset",
     "value": "0",
     "type": 0
   },
   {
-    "name": "dev:ScaleGHI",
+    "name": "dev:UnitID",
+    "value": "3",
+    "type": 1
+  },
+  {
+    "name": "dev:tcpretry",
+    "value": "3",
+    "type": 0
+  },
+  {
+    "name": "dev:KWHoffset",
+    "value": "0",
+    "type": 0
+  },
+  {
+    "name": "dev:ScaleKWH",
+    "value": "1",
+    "type": 0
+  },
+  {
+    "name": "dev:ScaleKW",
+    "value": "0.001",
+    "type": 0
+  },
+  {
+    "name": "dev:ScaleV",
+    "value": "0.01",
+    "type": 0
+  },
+  {
+    "name": "dev:ScaleI",
+    "value": "0.001",
+    "type": 0
+  },
+  {
+    "name": "dev:ScaleFrequency",
+    "value": "0.01",
+    "type": 0
+  },
+  {
+    "name": "dev:ScaleKVAR",
+    "value": "0.001",
+    "type": 0
+  },
+  {
+    "name": "dev:ScalePF",
+    "value": "0.001",
+    "type": 0
+  },
+  {
+    "name": "dev:ScaleTemp",
     "value": "0.1",
     "type": 0
   },
   {
-    "name": "dev:GHIOffset",
-    "value": "0",
+    "name": "dev:ScaleKVA",
+    "value": "0.001",
     "type": 0
   }
 ]
