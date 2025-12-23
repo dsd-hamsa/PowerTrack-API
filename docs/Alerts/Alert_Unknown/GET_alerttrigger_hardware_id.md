@@ -243,18 +243,18 @@
 **Request:**
 
 ```http
-GET /api/alerttrigger/H462027?lastChanged=2025-12-22T18:51:15Z
+GET /api/alerttrigger/H299859?lastChanged=2025-12-22T18:51:15Z
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: e4dcd1
-referer: https://apps.alsoenergy.com/powertrack/H462027/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H299859/administration/config
 ```
 
 **Response:**
 
 ```json
 {
-  "assetCode": 24,
+  "assetCode": 21,
   "calculatedCapacity": 0,
   "capacity": 0,
   "defaultTriggers": [
@@ -272,7 +272,7 @@ referer: https://apps.alsoenergy.com/powertrack/H462027/administration/config
       "impact": 0,
       "isActive": false,
       "key": "",
-      "lastChanged": "2024-09-27T11:55:09Z",
+      "lastChanged": "2024-10-29T02:10:34Z",
       "name": "Device communication",
       "ownerKey": "",
       "parameters": [
@@ -286,33 +286,7 @@ referer: https://apps.alsoenergy.com/powertrack/H462027/administration/config
           "value": 0
         }
       ],
-      "parentKey": "H462027",
-      "priorityLevel": 0,
-      "sharing": 0,
-      "startTime": 0,
-      "sunMaxAzimuth": 0,
-      "sunMinAzimuth": 0,
-      "sunMinElevation": 0
-    },
-    {
-      "alertTypeKey": "AI3635",
-      "checkNoSnow": false,
-      "checkSun": false,
-      "checkTime": false,
-      "delayHoursResolve": 0,
-      "delayHoursTrigger": 0,
-      "description": "Detects alert conditions for Solar FlexRack and OMCO trackers.",
-      "endTime": 0,
-      "hasImpact": false,
-      "id": 0,
-      "impact": 0,
-      "isActive": false,
-      "key": "",
-      "lastChanged": "2024-09-27T11:55:09Z",
-      "name": "Solar FlexRack/OMCO Tracker Alert (revM)",
-      "ownerKey": "",
-      "parameters": [],
-      "parentKey": "H462027",
+      "parentKey": "H299859",
       "priorityLevel": 0,
       "sharing": 0,
       "startTime": 0,
@@ -321,8 +295,8 @@ referer: https://apps.alsoenergy.com/powertrack/H462027/administration/config
       "sunMinElevation": 0
     }
   ],
-  "key": "H462027",
-  "lastChanged": "2024-09-27T11:55:09Z",
+  "key": "H299859",
+  "lastChanged": "2024-10-29T02:10:34Z",
   "triggers": [
     {
       "alertTypeKey": "AI250",
@@ -334,11 +308,11 @@ referer: https://apps.alsoenergy.com/powertrack/H462027/administration/config
       "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
       "endTime": 0,
       "hasImpact": false,
-      "id": 1515018,
+      "id": 1117329,
       "impact": 0,
       "isActive": true,
-      "key": "x2d171e0a",
-      "lastChanged": "2024-09-27T11:55:09Z",
+      "key": "x2d110c91",
+      "lastChanged": "2024-10-29T02:10:34Z",
       "name": "Device communication",
       "ownerKey": "",
       "parameters": [
@@ -352,59 +326,7 @@ referer: https://apps.alsoenergy.com/powertrack/H462027/administration/config
           "value": 0
         }
       ],
-      "parentKey": "H462027",
-      "priorityLevel": 0,
-      "sharing": 0,
-      "startTime": 0,
-      "sunMaxAzimuth": 0,
-      "sunMinAzimuth": 0,
-      "sunMinElevation": 10
-    },
-    {
-      "alertTypeKey": "AI974",
-      "checkNoSnow": true,
-      "checkSun": true,
-      "checkTime": false,
-      "delayHoursResolve": 0.5,
-      "delayHoursTrigger": 0.5,
-      "description": "Detects alert conditions for 3 and 4 motor Solar FlexRack Trackers. Case 109694- revG Bit 0x80 was swapped in new revision with Bit 0x8000",
-      "endTime": 0,
-      "hasImpact": false,
-      "id": 1560765,
-      "impact": 0,
-      "isActive": false,
-      "key": "x2d17d0bd",
-      "lastChanged": "2024-09-27T11:55:09Z",
-      "name": "Solar FlexRack Tracker Alert (revG)",
-      "ownerKey": "",
-      "parameters": [],
-      "parentKey": "H462027",
-      "priorityLevel": 0,
-      "sharing": 0,
-      "startTime": 0,
-      "sunMaxAzimuth": 0,
-      "sunMinAzimuth": 0,
-      "sunMinElevation": 10
-    },
-    {
-      "alertTypeKey": "AI3635",
-      "checkNoSnow": true,
-      "checkSun": true,
-      "checkTime": false,
-      "delayHoursResolve": 0.5,
-      "delayHoursTrigger": 0.5,
-      "description": "Detects alert conditions for Solar FlexRack and OMCO trackers.",
-      "endTime": 0,
-      "hasImpact": false,
-      "id": 1578742,
-      "impact": 0,
-      "isActive": true,
-      "key": "x2d1816f6",
-      "lastChanged": "2024-09-27T11:55:09Z",
-      "name": "Solar FlexRack/OMCO Tracker Alert (revM)",
-      "ownerKey": "",
-      "parameters": [],
-      "parentKey": "H462027",
+      "parentKey": "H299859",
       "priorityLevel": 0,
       "sharing": 0,
       "startTime": 0,
