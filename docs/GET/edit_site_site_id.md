@@ -4,7 +4,7 @@
 [← Back to Index](../logs.md)
 
 **Methods:** GET  
-**Status Codes:** 200, 200  
+**Status Codes:** 200  
 
 ## Table of Contents
 
@@ -453,44 +453,7 @@
     },
     "monthlyOutput": {
       "type": "object",
-      "properties": {
-        "apr": {
-          "type": "number"
-        },
-        "aug": {
-          "type": "number"
-        },
-        "dec": {
-          "type": "number"
-        },
-        "feb": {
-          "type": "number"
-        },
-        "jan": {
-          "type": "number"
-        },
-        "jul": {
-          "type": "number"
-        },
-        "jun": {
-          "type": "number"
-        },
-        "mar": {
-          "type": "number"
-        },
-        "may": {
-          "type": "number"
-        },
-        "nov": {
-          "type": "number"
-        },
-        "oct": {
-          "type": "number"
-        },
-        "sep": {
-          "type": "number"
-        }
-      }
+      "properties": {}
     },
     "name": {
       "type": "string"
@@ -668,9 +631,107 @@
           }
         },
         "powerDisplays": {
-          "type": "array",
-          "items": {
-            "type": "unknown"
+          "type": "object",
+          "properties": {
+            "chart": {
+              "type": "string"
+            },
+            "customUrls": {
+              "type": "object",
+              "properties": {
+                "purl": {
+                  "type": "string"
+                },
+                "purlRoot": {
+                  "type": "string"
+                }
+              }
+            },
+            "displayInSiteOverview": {
+              "type": "boolean"
+            },
+            "environmentalComparisons": {
+              "type": "object",
+              "properties": {
+                "carbon": {
+                  "type": "boolean"
+                },
+                "cars": {
+                  "type": "boolean"
+                },
+                "gas": {
+                  "type": "boolean"
+                },
+                "homes": {
+                  "type": "boolean"
+                },
+                "methane": {
+                  "type": "boolean"
+                },
+                "oil": {
+                  "type": "boolean"
+                },
+                "televisions": {
+                  "type": "boolean"
+                },
+                "trees": {
+                  "type": "boolean"
+                },
+                "water": {
+                  "type": "boolean"
+                }
+              }
+            },
+            "isPublic": {
+              "type": "boolean"
+            },
+            "key": {
+              "type": "string"
+            },
+            "mainLogo": {
+              "type": "object",
+              "properties": {
+                "contentType": {
+                  "type": "string"
+                },
+                "key": {
+                  "type": "string"
+                },
+                "lastChanged": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "name": {
+                  "type": "string"
+                },
+                "uri": {
+                  "type": "string"
+                }
+              }
+            },
+            "name": {
+              "type": "string"
+            },
+            "nonStandardEnvironmentalComparisons": {
+              "type": "object",
+              "properties": {}
+            },
+            "overviewChart": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "titleIsSiteName": {
+              "type": "boolean"
+            },
+            "ts": {
+              "type": "object",
+              "properties": {}
+            },
+            "url": {
+              "type": "string"
+            }
           }
         }
       }
@@ -789,11 +850,11 @@
 **Request:**
 
 ```http
-GET /api/edit/site/S68143
+GET /api/edit/site/S67109
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/S68143/administration/config
+referer: https://apps.alsoenergy.com/powertrack/S67109/administration/config
 ```
 
 **Response:**
@@ -813,137 +874,15 @@ referer: https://apps.alsoenergy.com/powertrack/S68143/administration/config
     1,
     76,
     88,
-    263,
-    202,
-    77,
-    53,
-    51,
-    24,
-    204,
-    201,
-    199,
-    5,
-    176,
-    248,
-    61,
-    249,
-    171,
-    8,
-    259,
-    7,
-    246,
-    252,
-    73,
-    84,
-    198,
-    196,
-    167,
-    226,
-    203,
-    120,
-    122,
-    121,
-    22,
-    185,
-    233,
-    100,
-    3,
-    30,
-    57,
-    23,
-    200,
-    2,
-    6,
-    80,
-    81,
-    68,
-    72,
-    82,
-    58,
-    69,
-    241,
-    244,
-    242,
-    243,
-    78,
-    271,
-    228,
-    28,
-    4,
-    255,
-    24,
-    234,
-    101,
-    176,
-    249,
-    259,
-    167,
-    207,
-    11,
-    185,
-    233,
-    57,
-    23,
-    200,
-    64,
-    15,
-    38,
-    79,
-    123,
-    250,
-    241,
-    244,
-    242,
-    243,
-    156,
-    219,
-    220,
-    218,
-    217,
-    229,
-    59,
-    78,
-    227,
-    228,
-    28,
-    4,
     257,
-    187,
     21,
-    186,
     245,
     258,
-    240,
     19,
     20,
-    271,
-    271,
-    195,
-    197,
-    94,
-    98,
-    93,
-    97,
-    89,
-    119,
-    99,
     110,
-    118,
-    105,
     115,
-    159,
-    160,
-    116,
-    117,
-    106,
-    107,
     109,
-    104,
-    113,
-    111,
-    108,
-    168,
-    95,
     96,
     161,
     162,
@@ -951,32 +890,14 @@ referer: https://apps.alsoenergy.com/powertrack/S68143/administration/config
     166,
     165,
     62,
-    47,
     75,
-    46,
-    49,
-    48,
     44,
-    90,
-    91,
-    173,
-    45,
     43,
-    60,
     67,
     169,
     170,
-    65,
-    254,
-    125,
-    269,
-    261,
-    172,
-    268,
-    85,
-    86,
-    87,
-    152
+    15,
+    255
   ],
   "approvalId": 0,
   "approvedByKey": "",
@@ -1027,7 +948,7 @@ referer: https://apps.alsoenergy.com/powertrack/S68143/administration/config
   "dc": false,
   "defaultQuery": 15,
   "degrade": false,
-  "degradeStart": "2024-03-07",
+  "degradeStart": "2023-09-22",
   "description": "",
   "energyCapacity": 0,
   "energyCapacityUnit": 11,
@@ -1049,7 +970,7 @@ referer: https://apps.alsoenergy.com/powertrack/S68143/administration/config
   },
   "excludeCommunicationOutages": false,
   "exportDataConfig": "",
-  "installDate": "2024-03-07",
+  "installDate": "2023-09-22",
   "installerKey": "",
   "isAgencyReporting": false,
   "isApproved": false,
@@ -1059,21 +980,21 @@ referer: https://apps.alsoenergy.com/powertrack/S68143/administration/config
   "isMonitored": true,
   "isPaid": false,
   "isPpaInvoice": false,
-  "key": "S68143",
+  "key": "S67109",
   "language": "en-US",
   "links": [],
   "location": {
-    "address1": "3500 Market Place Drive",
+    "address1": "1440 South Route 59",
     "address2": "",
-    "city": "Monterey Park",
+    "city": "Naperville",
     "country": "",
-    "elevation": 399,
+    "elevation": 0,
     "elevationUnit": 47,
-    "latitude": 34.0371297,
-    "longitude": -118.1014776,
-    "postalCode": "91755",
-    "state": "CA",
-    "timeZone": 16891
+    "latitude": 41.7309535,
+    "longitude": -88.2062573,
+    "postalCode": "60564",
+    "state": "IL",
+    "timeZone": 12794
   },
   "locusId": null,
   "mapTargetKey": "",
@@ -1096,7 +1017,7 @@ referer: https://apps.alsoenergy.com/powertrack/S68143/administration/config
     "sep": 0
   },
   "minSun": 0,
-  "minSunUp": 101,
+  "minSunUp": 100,
   "minTemperature": 0,
   "minYearlyPerformanceRatio": 0,
   "mode": 0,
@@ -1110,21 +1031,8 @@ referer: https://apps.alsoenergy.com/powertrack/S68143/administration/config
   "monitoringContractStartDate": null,
   "monitoringContractTerminateDate": null,
   "monitoringContractWarnDate": null,
-  "monthlyOutput": {
-    "apr": 0,
-    "aug": 0,
-    "dec": 0,
-    "feb": 0,
-    "jan": 0,
-    "jul": 0,
-    "jun": 0,
-    "mar": 0,
-    "may": 0,
-    "nov": 0,
-    "oct": 0,
-    "sep": 0
-  },
-  "name": "*** LOST?* THD CA - 2304 Monterey Park",
+  "monthlyOutput": null,
+  "name": "Lowe's IL - 1711 - Naperville, IL",
   "netSuiteFields": {
     "netSuiteContractedPartyId": null,
     "netSuiteCustomerId": null,
@@ -1142,7 +1050,7 @@ referer: https://apps.alsoenergy.com/powertrack/S68143/administration/config
   "operations": false,
   "overviewChart1": "255",
   "overviewChart2": "0",
-  "parentKey": "C25228",
+  "parentKey": "C20909",
   "paymentStatus": 0,
   "performanceRatioMap": "",
   "powerThreshold": 0,
@@ -1158,7 +1066,7 @@ referer: https://apps.alsoenergy.com/powertrack/S68143/administration/config
   "requiresPubIp": false,
   "ruleToolPreferencesKey": "",
   "runRulesDaily": false,
-  "salesforceSystemId": "",
+  "salesforceSystemId": "S-0076549",
   "showEnvironment": false,
   "showGuide": false,
   "siteCommissioningComplete": false,
@@ -1171,17 +1079,55 @@ referer: https://apps.alsoenergy.com/powertrack/S68143/administration/config
   "tagLine": "",
   "tags": {
     "attributes": [],
-    "key": "{\"ancestorKey\":\"S68143\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"powerdisplay\"]}",
+    "key": "{\"ancestorKey\":\"S67109\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"powerdisplay\"]}",
     "keywords": [],
     "lastChanged": null,
     "notes": [],
-    "powerDisplays": []
+    "powerDisplays": [
+      {
+        "chart": "15",
+        "customUrls": [
+          {
+            "purl": "",
+            "purlRoot": "/go/solar"
+          }
+        ],
+        "displayInSiteOverview": true,
+        "environmentalComparisons": {
+          "carbon": false,
+          "cars": false,
+          "gas": true,
+          "homes": false,
+          "methane": true,
+          "oil": false,
+          "televisions": false,
+          "trees": true,
+          "water": true
+        },
+        "isPublic": true,
+        "key": "T8650413",
+        "mainLogo": {
+          "contentType": "",
+          "key": "",
+          "lastChanged": null,
+          "name": "",
+          "uri": "/Content/images/kiosk/solar_sun.png"
+        },
+        "name": "Lowe's IL - 1711 - Naperville, IL",
+        "nonStandardEnvironmentalComparisons": {},
+        "overviewChart": "15",
+        "title": "",
+        "titleIsSiteName": true,
+        "ts": null,
+        "url": "https://pubdisplay.alsoenergy.com/kiosk/18014398509549093?dashkey=2a5669734b65326a4143413d3d&tag=8650413"
+      }
+    ]
   },
   "taskId": null,
   "testMode": false,
   "timelineReportKey": "",
   "transpositionMethod": 0,
-  "ts": "2025-12-22T21:58:47Z",
+  "ts": "2025-12-22T17:42:15Z",
   "tuneUpCompleted": false,
   "tuneUpCompletedDate": null,
   "tuneUpCompletedUser": "",
@@ -1195,7 +1141,7 @@ referer: https://apps.alsoenergy.com/powertrack/S68143/administration/config
   "tuneUpValidatedDate": null,
   "tuneUpValidatedUser": "",
   "turnOnDate": null,
-  "tz": "US/Eastern",
+  "tz": "US/Central",
   "url": "",
   "useDegradeStart": false,
   "useFilterAverageWeather": false,
