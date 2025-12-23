@@ -17,12 +17,6 @@
 {
   "type": "object",
   "properties": {
-    "key": {
-      "type": "string"
-    },
-    "lastChanged": {
-      "type": "string"
-    },
     "assetCode": {
       "type": "number"
     },
@@ -35,32 +29,11 @@
     "defaultTriggers": {
       "type": "object",
       "properties": {
-        "key": {
-          "type": "string"
-        },
-        "lastChanged": {
-          "type": "string"
-        },
-        "id": {
-          "type": "number"
-        },
         "alertTypeKey": {
           "type": "string"
         },
-        "parentKey": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        },
-        "isActive": {
+        "checkNoSnow": {
           "type": "boolean"
-        },
-        "priorityLevel": {
-          "type": "number"
         },
         "checkSun": {
           "type": "boolean"
@@ -68,99 +41,105 @@
         "checkTime": {
           "type": "boolean"
         },
-        "checkNoSnow": {
-          "type": "boolean"
-        },
-        "hasImpact": {
-          "type": "boolean"
-        },
-        "impact": {
+        "delayHoursResolve": {
           "type": "number"
         },
         "delayHoursTrigger": {
           "type": "number"
         },
-        "delayHoursResolve": {
-          "type": "number"
-        },
-        "startTime": {
-          "type": "number"
+        "description": {
+          "type": "string"
         },
         "endTime": {
           "type": "number"
         },
-        "sunMinElevation": {
+        "hasImpact": {
+          "type": "boolean"
+        },
+        "id": {
           "type": "number"
         },
-        "sunMinAzimuth": {
+        "impact": {
           "type": "number"
         },
-        "sunMaxAzimuth": {
-          "type": "number"
+        "isActive": {
+          "type": "boolean"
+        },
+        "key": {
+          "type": "string"
+        },
+        "lastChanged": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "ownerKey": {
+          "type": "string"
         },
         "parameters": {
           "type": "object",
           "properties": {
-            "source": {
+            "index": {
               "type": "number"
             },
             "info": {
               "type": "string"
             },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "index": {
-              "type": "number"
-            },
             "name": {
               "type": "string"
             },
-            "value": {
+            "readOnly": {
+              "type": "boolean"
+            },
+            "source": {
               "type": "number"
             },
             "type": {
               "type": "number"
+            },
+            "value": {
+              "type": "number"
             }
           }
-        },
-        "ownerKey": {
-          "type": "string"
-        },
-        "sharing": {
-          "type": "number"
-        }
-      }
-    },
-    "triggers": {
-      "type": "object",
-      "properties": {
-        "key": {
-          "type": "string"
-        },
-        "lastChanged": {
-          "type": "string"
-        },
-        "id": {
-          "type": "number"
-        },
-        "alertTypeKey": {
-          "type": "string"
         },
         "parentKey": {
           "type": "string"
         },
-        "name": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        },
-        "isActive": {
-          "type": "boolean"
-        },
         "priorityLevel": {
           "type": "number"
+        },
+        "sharing": {
+          "type": "number"
+        },
+        "startTime": {
+          "type": "number"
+        },
+        "sunMaxAzimuth": {
+          "type": "number"
+        },
+        "sunMinAzimuth": {
+          "type": "number"
+        },
+        "sunMinElevation": {
+          "type": "number"
+        }
+      }
+    },
+    "key": {
+      "type": "string"
+    },
+    "lastChanged": {
+      "type": "string"
+    },
+    "triggers": {
+      "type": "object",
+      "properties": {
+        "alertTypeKey": {
+          "type": "string"
+        },
+        "checkNoSnow": {
+          "type": "boolean"
         },
         "checkSun": {
           "type": "boolean"
@@ -168,35 +147,41 @@
         "checkTime": {
           "type": "boolean"
         },
-        "checkNoSnow": {
-          "type": "boolean"
-        },
-        "hasImpact": {
-          "type": "boolean"
-        },
-        "impact": {
+        "delayHoursResolve": {
           "type": "number"
         },
         "delayHoursTrigger": {
           "type": "number"
         },
-        "delayHoursResolve": {
-          "type": "number"
-        },
-        "startTime": {
-          "type": "number"
+        "description": {
+          "type": "string"
         },
         "endTime": {
           "type": "number"
         },
-        "sunMinElevation": {
+        "hasImpact": {
+          "type": "boolean"
+        },
+        "id": {
           "type": "number"
         },
-        "sunMinAzimuth": {
+        "impact": {
           "type": "number"
         },
-        "sunMaxAzimuth": {
-          "type": "number"
+        "isActive": {
+          "type": "boolean"
+        },
+        "key": {
+          "type": "string"
+        },
+        "lastChanged": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "ownerKey": {
+          "type": "string"
         },
         "parameters": {
           "type": "array",
@@ -204,10 +189,25 @@
             "type": "unknown"
           }
         },
-        "ownerKey": {
+        "parentKey": {
           "type": "string"
         },
+        "priorityLevel": {
+          "type": "number"
+        },
         "sharing": {
+          "type": "number"
+        },
+        "startTime": {
+          "type": "number"
+        },
+        "sunMaxAzimuth": {
+          "type": "number"
+        },
+        "sunMinAzimuth": {
+          "type": "number"
+        },
+        "sunMinElevation": {
           "type": "number"
         }
       }
@@ -223,148 +223,112 @@
 **Request:**
 
 ```http
-GET /api/alerttrigger/H511568?lastChanged=2025-12-22T22:06:35Z
+GET /api/alerttrigger/H511568?lastChanged=2025-12-22T22:05:47Z
+Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-Accept: application/json
-referer: https://apps.alsoenergy.com/powertrack/H511568/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H511568/administration/alertsettings
 ```
 
 **Response:**
 
 ```json
 {
-  "key": "H511568",
-  "lastChanged": "2025-12-22T22:06:35Z",
   "assetCode": 1,
   "calculatedCapacity": 63,
   "capacity": 63,
   "defaultTriggers": [
     {
-      "key": "",
-      "lastChanged": "2025-12-22T22:06:35Z",
-      "id": 0,
       "alertTypeKey": "AI250",
-      "parentKey": "H511568",
-      "name": "Device communication",
-      "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
-      "isActive": false,
-      "priorityLevel": 0,
+      "checkNoSnow": false,
       "checkSun": false,
       "checkTime": false,
-      "checkNoSnow": false,
-      "hasImpact": false,
-      "impact": 0,
-      "delayHoursTrigger": 0,
       "delayHoursResolve": 0,
-      "startTime": 0,
+      "delayHoursTrigger": 0,
+      "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
       "endTime": 0,
-      "sunMinElevation": 0,
-      "sunMinAzimuth": 0,
-      "sunMaxAzimuth": 0,
+      "hasImpact": false,
+      "id": 0,
+      "impact": 0,
+      "isActive": false,
+      "key": "",
+      "lastChanged": "2025-12-22T22:06:05Z",
+      "name": "Device communication",
+      "ownerKey": "",
       "parameters": [
         {
-          "source": 2,
-          "info": "Ignore invalid data",
-          "readOnly": true,
           "index": 0,
+          "info": "Ignore invalid data",
           "name": "IgnoreInvalidData",
-          "value": 0,
-          "type": 7
+          "readOnly": true,
+          "source": 2,
+          "type": 7,
+          "value": 0
         }
       ],
-      "ownerKey": "",
-      "sharing": 0
+      "parentKey": "H511568",
+      "priorityLevel": 0,
+      "sharing": 0,
+      "startTime": 0,
+      "sunMaxAzimuth": 0,
+      "sunMinAzimuth": 0,
+      "sunMinElevation": 0
     },
     {
-      "key": "",
-      "lastChanged": "2025-12-22T22:06:35Z",
-      "id": 0,
       "alertTypeKey": "AI862",
-      "parentKey": "H511568",
-      "name": "SMA STP/TriPower Fault Alert",
-      "description": "SMA TriPower Fault Alert following the SMA Event Messages Document.",
-      "isActive": false,
-      "priorityLevel": 0,
+      "checkNoSnow": false,
       "checkSun": false,
       "checkTime": false,
-      "checkNoSnow": false,
-      "hasImpact": false,
-      "impact": 0,
-      "delayHoursTrigger": 0,
       "delayHoursResolve": 0,
-      "startTime": 0,
+      "delayHoursTrigger": 0,
+      "description": "SMA TriPower Fault Alert following the SMA Event Messages Document.",
       "endTime": 0,
-      "sunMinElevation": 0,
-      "sunMinAzimuth": 0,
-      "sunMaxAzimuth": 0,
-      "parameters": [],
+      "hasImpact": false,
+      "id": 0,
+      "impact": 0,
+      "isActive": false,
+      "key": "",
+      "lastChanged": "2025-12-22T22:06:05Z",
+      "name": "SMA STP/TriPower Fault Alert",
       "ownerKey": "",
-      "sharing": 0
+      "parameters": [],
+      "parentKey": "H511568",
+      "priorityLevel": 0,
+      "sharing": 0,
+      "startTime": 0,
+      "sunMaxAzimuth": 0,
+      "sunMinAzimuth": 0,
+      "sunMinElevation": 0
     }
   ],
+  "key": "H511568",
+  "lastChanged": "2025-12-22T22:06:05Z",
   "triggers": [
     {
-      "key": "x2d18e7f6",
-      "lastChanged": "2025-12-22T22:06:35Z",
-      "id": 1632246,
       "alertTypeKey": "AI862",
-      "parentKey": "H511568",
-      "name": "SMA STP/TriPower Fault Alert",
-      "description": "SMA TriPower Fault Alert following the SMA Event Messages Document.",
-      "isActive": true,
-      "priorityLevel": 0,
+      "checkNoSnow": false,
       "checkSun": false,
       "checkTime": false,
-      "checkNoSnow": false,
-      "hasImpact": false,
-      "impact": 0,
-      "delayHoursTrigger": 0,
       "delayHoursResolve": 0,
-      "startTime": 0,
+      "delayHoursTrigger": 0,
+      "description": "SMA TriPower Fault Alert following the SMA Event Messages Document.",
       "endTime": 0,
-      "sunMinElevation": 0,
-      "sunMinAzimuth": 0,
-      "sunMaxAzimuth": 0,
-      "parameters": [],
-      "ownerKey": "",
-      "sharing": 0
-    },
-    {
-      "key": "x2d1c32f2",
-      "lastChanged": "2025-12-22T22:06:35Z",
-      "id": 1848050,
-      "alertTypeKey": "AI250",
-      "parentKey": "H511568",
-      "name": "Device communication",
-      "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
-      "isActive": true,
-      "priorityLevel": 0,
-      "checkSun": true,
-      "checkTime": false,
-      "checkNoSnow": true,
       "hasImpact": false,
+      "id": 1632246,
       "impact": 0,
-      "delayHoursTrigger": 1,
-      "delayHoursResolve": 0.5,
-      "startTime": 0,
-      "endTime": 0,
-      "sunMinElevation": 10,
-      "sunMinAzimuth": 0,
-      "sunMaxAzimuth": 0,
-      "parameters": [
-        {
-          "source": 2,
-          "info": "Ignore invalid data",
-          "readOnly": true,
-          "index": 0,
-          "name": "IgnoreInvalidData",
-          "value": 0,
-          "type": 7
-        }
-      ],
+      "isActive": true,
+      "key": "x2d18e7f6",
+      "lastChanged": "2025-12-22T22:06:05Z",
+      "name": "SMA STP/TriPower Fault Alert",
       "ownerKey": "",
-      "sharing": 0
+      "parameters": [],
+      "parentKey": "H511568",
+      "priorityLevel": 0,
+      "sharing": 0,
+      "startTime": 0,
+      "sunMaxAzimuth": 0,
+      "sunMinAzimuth": 0,
+      "sunMinElevation": 0
     }
   ]
 }
