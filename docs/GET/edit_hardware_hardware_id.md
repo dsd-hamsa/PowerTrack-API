@@ -4,7 +4,7 @@
 [← Back to Index](../logs.md)
 
 **Methods:** GET  
-**Status Codes:** 200  
+**Status Codes:** 200, 200  
 
 ## Table of Contents
 
@@ -163,7 +163,7 @@
       "type": "object",
       "properties": {
         "originalValue": {
-          "type": "string"
+          "type": "number"
         },
         "index": {
           "type": "number"
@@ -172,7 +172,7 @@
           "type": "string"
         },
         "value": {
-          "type": "string"
+          "type": "number"
         },
         "type": {
           "type": "number"
@@ -378,44 +378,7 @@
     },
     "virtualWeather": {
       "type": "object",
-      "properties": {
-        "installationType": {
-          "type": "number"
-        },
-        "serviceWeight": {
-          "type": "number"
-        },
-        "remoteSourceId": {
-          "type": "number"
-        },
-        "sourceList": {
-          "type": "array",
-          "items": {
-            "type": "unknown"
-          }
-        },
-        "forecast": {
-          "type": "boolean"
-        },
-        "virtualIrradiance": {
-          "type": "boolean"
-        },
-        "moduleTempEstimate": {
-          "type": "boolean"
-        },
-        "hasSolarAnywhereLicense": {
-          "type": "boolean"
-        },
-        "saUser": {
-          "type": "string"
-        },
-        "saPassword": {
-          "type": "string"
-        },
-        "saLicense": {
-          "type": "string"
-        }
-      }
+      "properties": {}
     },
     "weather": {
       "type": "object",
@@ -584,8 +547,7 @@
           "type": "boolean"
         },
         "refPyranometerData": {
-          "type": "object",
-          "properties": {}
+          "type": "string"
         },
         "isRefPyranometerHigh": {
           "type": "boolean"
@@ -708,57 +670,57 @@
 **Request:**
 
 ```http
-GET /api/edit/hardware/H494021
+GET /api/edit/hardware/H511576
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 Accept: application/json
-referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H511576/administration/config
 ```
 
 **Response:**
 
 ```json
 {
-  "key": "H494021",
+  "key": "H511576",
   "parentKey": "S68143",
-  "ts": "2024-03-08T14:48:26Z",
-  "description": "Solcast Virtual Weather Station",
+  "ts": "2024-07-11T21:18:06Z",
+  "description": "WEATHER STATION",
   "assetId": "",
-  "hardwareId": "C8458_S68143_WS0",
-  "instance": 0,
-  "functionId": "WS0",
+  "hardwareId": "C20909_S68143_WS2",
+  "instance": 2,
+  "functionId": "WS2",
   "functionCode": 5,
   "hardwareStatus": 1,
   "capacityKw": 0,
-  "sort": 0,
-  "gatewayKey": "",
-  "gatewayId": "",
+  "sort": 42,
+  "gatewayKey": "H511564",
+  "gatewayId": "000CC68FAF30",
   "gatewayFwVersion": "",
   "gatewayScriptCount": "",
-  "gatewayType": 0,
-  "serialNum": "",
-  "modelNum": "",
-  "installDate": "2024-03-09",
-  "driverId": 19015,
-  "driverDescription": "Weather data from external sources such as SolarGIS and Clean Power Research, including DNI, DHI, Rain and Snow",
-  "driverFlags": 64,
-  "driverName": "External Weather Source (full)",
-  "driverNotes": "",
+  "gatewayType": 2,
+  "serialNum": "1V0177-8",
+  "modelNum": "ALSOENERGY INTEGRATED WEATHER STATION",
+  "installDate": "2024-07-12",
+  "driverId": 8164,
+  "driverDescription": "1 pyranometer, Wind speed/dir, Ambient and Module",
+  "driverFlags": 65,
+  "driverName": "AE Integrated WS Standard (FW 114+) (Qualified)",
+  "driverNotes": "* denotes standard WS\r\r\"Wind or Extra Pyranometer\"  \rP2 = W*(Wind Dir) A(Apogee) K(Kipp) L(LiCor LI-200SL)\r\r\"First Pyranometer Type\"       \rP1 = A*(Apogee) K(Kipp) L(LiCor LI-200SL)\r\r\"Ambient or Dual Module\"      \rT1 = 1*(Ambient) 0(Module 2)\r\r\"Temp Sensor Type Ambient\"\rTR1 = S*(Standard) H(High Temp) A(AlsoEnergy) W(Wide)\r\r\"Temp Sensor Type Module\"\rTR2 = S*(Standard) H(High Temp) P(Precise) W(Wide) HH(high special)\r\rSwap GHI and POA\rSWAP = 1",
   "validatedByKey": "",
   "validatedDateTime": "0001-01-01T00:00:00",
   "debug": false,
   "outOfService": false,
   "outOfServiceNote": "",
-  "outOfServiceUntil": "2025-12-23T00:07:06.7884151Z",
+  "outOfServiceUntil": "2025-12-23T00:11:44.8551475Z",
   "reportExclude": false,
   "limitedCommunication": false,
   "primary": false,
-  "address": "0",
+  "address": "16",
   "unitId": 0,
   "isTcp": false,
-  "port": 0,
-  "serialMode": -1,
-  "baud": "",
+  "port": 2,
+  "serialMode": 2,
+  "baud": "9600",
   "newNote": "",
   "dashboardKey": "",
   "dcRating": 0,
@@ -768,38 +730,108 @@ referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
   "isConflictAcknowledged": false,
   "settings": [
     {
-      "originalValue": "SolCast",
+      "originalValue": 9600,
       "index": 0,
-      "name": "Source",
-      "value": "SolCast",
+      "name": "dev:baud",
+      "value": 9600,
+      "type": 1
+    },
+    {
+      "originalValue": "rs485",
+      "index": 1,
+      "name": "dev:portMode",
+      "value": "rs485",
       "type": 0
     },
     {
+      "originalValue": 0,
+      "index": 2,
+      "name": "dev:RegOffset",
+      "value": 0,
+      "type": 1
+    },
+    {
+      "originalValue": -30,
+      "index": 3,
+      "name": "MinTemp",
+      "value": -30,
+      "type": 2
+    },
+    {
+      "originalValue": 160,
+      "index": 4,
+      "name": "MaxTemp",
+      "value": 160,
+      "type": 2
+    },
+    {
       "originalValue": 1057,
-      "index": 1,
-      "name": "Weather",
+      "index": 5,
+      "name": "weather",
       "value": 1057,
       "type": 1
     },
     {
-      "originalValue": "0",
-      "index": 2,
-      "name": "MinTemp",
-      "value": "0",
+      "originalValue": "K",
+      "index": 6,
+      "name": "dev:P1",
+      "value": "K",
       "type": 0
     },
     {
-      "originalValue": "160",
-      "index": 3,
-      "name": "MaxTemp",
-      "value": "160",
+      "originalValue": "W",
+      "index": 7,
+      "name": "dev:P2",
+      "value": "W",
       "type": 0
     },
     {
-      "originalValue": "WS0",
-      "index": 4,
+      "originalValue": "1.00",
+      "index": 8,
+      "name": "dev:K1",
+      "value": "1.00",
+      "type": 0
+    },
+    {
+      "originalValue": "10.0",
+      "index": 9,
+      "name": "dev:K2",
+      "value": "10.0",
+      "type": 0
+    },
+    {
+      "originalValue": "1",
+      "index": 10,
+      "name": "dev:T1",
+      "value": "1",
+      "type": 0
+    },
+    {
+      "originalValue": "S",
+      "index": 11,
+      "name": "dev:TR1",
+      "value": "S",
+      "type": 0
+    },
+    {
+      "originalValue": "W",
+      "index": 12,
+      "name": "dev:TR2",
+      "value": "W",
+      "type": 0
+    },
+    {
+      "originalValue": "1",
+      "index": 13,
+      "name": "dev:SWAP",
+      "value": "1",
+      "type": 0
+    },
+    {
+      "originalValue": "WS2",
+      "index": 14,
       "name": "ShortName",
-      "value": "WS0",
+      "value": "WS2",
       "type": 0
     }
   ],
@@ -818,9 +850,9 @@ referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
     },
     {
       "index": 1,
-      "name": "Global Horizontal Irradiance ",
+      "name": "Sun (GHI)",
       "localizedName": "Global Horizontal Irradiance (with Offset)",
-      "dataName": "GHI",
+      "dataName": "Sun2",
       "standardDataName": "GHI_Irradiance",
       "isIgnored": false,
       "isRaw": true,
@@ -830,33 +862,21 @@ referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
     },
     {
       "index": 2,
-      "name": "Direct Normal Irradiance",
-      "localizedName": "Direct Normal Irradiance",
-      "dataName": "DNI",
-      "standardDataName": "DNI_Irradiance",
+      "name": "Sun (POA)",
+      "localizedName": "Plane of Array Irradiation (with Offset)",
+      "dataName": "Sun",
+      "standardDataName": "",
       "isIgnored": false,
-      "isRaw": true,
-      "isArchived": true,
+      "isRaw": false,
+      "isArchived": false,
       "units": "W/m²",
       "dataNameDetail": null
     },
     {
       "index": 3,
-      "name": "Direct Horizontal Irradiance",
-      "localizedName": "Diffuse Horizontal Irradiance",
-      "dataName": "DHI",
-      "standardDataName": "DHI_Irradiance",
-      "isIgnored": false,
-      "isRaw": true,
-      "isArchived": true,
-      "units": "W/m²",
-      "dataNameDetail": null
-    },
-    {
-      "index": 4,
-      "name": "Ambient Temperature",
+      "name": "Ambient temp",
       "localizedName": "Ambient Air Temperature",
-      "dataName": "Ambient",
+      "dataName": "TempF",
       "standardDataName": "Temp_Ambient",
       "isIgnored": false,
       "isRaw": true,
@@ -865,8 +885,32 @@ referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
       "dataNameDetail": null
     },
     {
+      "index": 4,
+      "name": "Module temp 2",
+      "localizedName": "Module temperature 2",
+      "dataName": "Temp2",
+      "standardDataName": "",
+      "isIgnored": false,
+      "isRaw": false,
+      "isArchived": false,
+      "units": "°F",
+      "dataNameDetail": null
+    },
+    {
       "index": 5,
-      "name": "Wind Speed",
+      "name": "Module temp",
+      "localizedName": "Module Temperature",
+      "dataName": "Temp1",
+      "standardDataName": "",
+      "isIgnored": false,
+      "isRaw": false,
+      "isArchived": false,
+      "units": "°F",
+      "dataNameDetail": null
+    },
+    {
+      "index": 6,
+      "name": "Wind speed",
       "localizedName": "Wind Speed",
       "dataName": "WindSpeed",
       "standardDataName": "Wind_Speed",
@@ -877,27 +921,63 @@ referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
       "dataNameDetail": null
     },
     {
-      "index": 6,
-      "name": "Absolute Precipitation",
-      "localizedName": "Absolute Precipitation",
-      "dataName": "Rain",
+      "index": 7,
+      "name": "CabHigh",
+      "localizedName": "CabHigh",
+      "dataName": "Temp_Cabinet_High",
+      "standardDataName": "Temp_Cabinet_High",
+      "isIgnored": false,
+      "isRaw": true,
+      "isArchived": true,
+      "units": "",
+      "dataNameDetail": null
+    },
+    {
+      "index": 8,
+      "name": "CabLow",
+      "localizedName": "CabLow",
+      "dataName": "Temp_Cabinet_Low",
+      "standardDataName": "Temp_Cabinet_Low",
+      "isIgnored": false,
+      "isRaw": true,
+      "isArchived": true,
+      "units": "",
+      "dataNameDetail": null
+    },
+    {
+      "index": 9,
+      "name": "CabF",
+      "localizedName": "Cabinet Temperature",
+      "dataName": "CabF",
+      "standardDataName": "Temp_Cabinet",
+      "isIgnored": false,
+      "isRaw": true,
+      "isArchived": true,
+      "units": "°F",
+      "dataNameDetail": null
+    },
+    {
+      "index": 10,
+      "name": "Max Sun (POA)",
+      "localizedName": "Max Sun (POA)",
+      "dataName": "MaxSun",
       "standardDataName": "",
       "isIgnored": false,
       "isRaw": false,
       "isArchived": false,
-      "units": "in",
+      "units": "W/m²",
       "dataNameDetail": null
     },
     {
-      "index": 7,
-      "name": "Snow Depth",
-      "localizedName": "Snow Depth",
-      "dataName": "Snow",
-      "standardDataName": "Snow_Depth",
+      "index": 11,
+      "name": "Max Sun (GHI)",
+      "localizedName": "Max Sun (GHI)",
+      "dataName": "MaxSun2",
+      "standardDataName": "",
       "isIgnored": false,
-      "isRaw": true,
-      "isArchived": true,
-      "units": "in",
+      "isRaw": false,
+      "isArchived": false,
+      "units": "W/m²",
       "dataNameDetail": null
     }
   ],
@@ -913,7 +993,7 @@ referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
   "driverRegisters": [],
   "virtualRegisters": [],
   "tags": {
-    "key": "{\"ancestorKey\":\"H494021\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
+    "key": "{\"ancestorKey\":\"H511576\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
     "lastChanged": null,
     "attributes": [],
     "keywords": [],
@@ -934,8 +1014,7 @@ referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
   "weatherStationKey1": "",
   "weatherStationKey2": "",
   "configs": [
-    "VirtualWeather",
-    "VirtualWeatherDevice"
+    "Weather"
   ],
   "array": null,
   "eGauge": null,
@@ -945,25 +1024,13 @@ referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
   "pvConfig": null,
   "thermal": null,
   "turbine": null,
-  "virtualWeather": {
-    "installationType": 2,
-    "serviceWeight": 1,
-    "remoteSourceId": 0,
-    "sourceList": [],
-    "forecast": false,
-    "virtualIrradiance": false,
-    "moduleTempEstimate": true,
-    "hasSolarAnywhereLicense": false,
-    "saUser": "",
-    "saPassword": "",
-    "saLicense": ""
-  },
+  "virtualWeather": null,
   "weather": {
     "azimuth": 0,
     "tilt": 0,
     "tracking": 0,
     "maxTempF": 160,
-    "minTempF": 0,
+    "minTempF": -30,
     "sensors": {
       "ambientTemp": {
         "isChecked": true,
@@ -979,15 +1046,15 @@ referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
       },
       "panelTemp1": {
         "isChecked": false,
-        "isAllowed": false
+        "isAllowed": true
       },
       "panelTemp2": {
         "isChecked": false,
-        "isAllowed": false
+        "isAllowed": true
       },
       "pyranometer1": {
         "isChecked": false,
-        "isAllowed": false
+        "isAllowed": true
       },
       "pyranometer2": {
         "isChecked": true,
@@ -999,11 +1066,11 @@ referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
       },
       "rain": {
         "isChecked": false,
-        "isAllowed": true
+        "isAllowed": false
       },
       "snow": {
         "isChecked": false,
-        "isAllowed": true
+        "isAllowed": false
       },
       "wind": {
         "isChecked": true,
@@ -1016,10 +1083,10 @@ referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
     "pyranometerData": null,
     "isPyranometerHigh": false,
     "pyranometerUnit": 0,
-    "hasRefPyranometer": false,
-    "refPyranometerData": null,
+    "hasRefPyranometer": true,
+    "refPyranometerData": "NaN",
     "isRefPyranometerHigh": false,
-    "refPyranometerUnit": 0,
+    "refPyranometerUnit": 57,
     "tracker": {
       "hid": 0,
       "dataName": ""
