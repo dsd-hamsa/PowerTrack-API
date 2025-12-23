@@ -4,7 +4,7 @@
 [← Back to Index](../logs.md)
 
 **Methods:** POST  
-**Status Codes:** 200, 200, 200, 200, 200, 200, 200, 200  
+**Status Codes:** 200, 200, 200, 200, 200, 200, 200, 200, 200, 200  
 
 ## Table of Contents
 
