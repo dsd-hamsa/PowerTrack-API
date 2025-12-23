@@ -4,7 +4,7 @@
 [← Back to Index](../logs.md)
 
 **Methods:** POST  
-**Status Codes:** 200  
+**Status Codes:** 200, 200  
 
 ## Table of Contents
 
@@ -18,20 +18,20 @@
 {
   "type": "object",
   "properties": {
-    "context": {
-      "type": "string"
-    },
-    "filter": {
-      "type": "string"
-    },
-    "filterBy": {
-      "type": "string"
-    },
     "key": {
+      "type": "string"
+    },
+    "context": {
       "type": "string"
     },
     "kinds": {
       "type": "string"
+    },
+    "subKinds": {
+      "type": "array",
+      "items": {
+        "type": "unknown"
+      }
     },
     "nodes": {
       "type": "array",
@@ -39,11 +39,11 @@
         "type": "unknown"
       }
     },
-    "subKinds": {
-      "type": "array",
-      "items": {
-        "type": "unknown"
-      }
+    "filter": {
+      "type": "string"
+    },
+    "filterBy": {
+      "type": "string"
     }
   }
 }
@@ -68,51 +68,7 @@
       "properties": {}
     },
     "nodes": {
-      "type": "object",
-      "properties": {
-        "flags": {
-          "type": "number"
-        },
-        "icon": {
-          "type": "string"
-        },
-        "isHidden": {
-          "type": "boolean"
-        },
-        "key": {
-          "type": "string"
-        },
-        "kind": {
-          "type": "string"
-        },
-        "lastChanged": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "parentKey": {
-          "type": "string"
-        },
-        "path": {
-          "type": "array",
-          "items": {
-            "type": "unknown"
-          }
-        },
-        "permissions": {
-          "type": "number"
-        },
-        "sort": {
-          "type": "number"
-        },
-        "subKind": {
-          "type": "number"
-        },
-        "validationStatus": {
-          "type": "number"
-        }
-      }
+      "type": "object"
     }
   }
 }
@@ -125,22 +81,20 @@
 **Request:**
 
 ```http
-POST /api/node?lastChanged=2025-12-22T19:21:26Z
-Accept: application/json
-Content-Type: application/json
+POST /api/node?lastChanged=2025-12-23T00:11:41Z
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/H511568/administration/config
+Content-Type: application/json
+Accept: application/json
+referer: https://apps.alsoenergy.com/powertrack/H511576/administration/config
 ```
 
 **Payload:**
 
 ```json
 {
+  "key": "H511576",
   "context": "path",
-  "filter": "",
-  "filterBy": "",
-  "key": "H511568",
   "kinds": [
     "customer",
     "hardware",
@@ -150,8 +104,10 @@ referer: https://apps.alsoenergy.com/powertrack/H511568/administration/config
     "folder",
     "report"
   ],
+  "subKinds": [],
   "nodes": [],
-  "subKinds": []
+  "filter": "",
+  "filterBy": ""
 }
 ```
 
@@ -159,78 +115,78 @@ referer: https://apps.alsoenergy.com/powertrack/H511568/administration/config
 
 ```json
 {
-  "key": "{\"key\":\"H511568\",\"context\":\"path\",\"kinds\":[\"customer\",\"hardware\",\"site\",\"user\",\"file\",\"folder\",\"report\"],\"subKinds\":[],\"nodes\":[],\"filter\":\"\",\"filterBy\":\"\"}",
-  "lastChanged": "2025-12-22T19:21:53Z",
+  "key": "{\"key\":\"H511576\",\"context\":\"path\",\"kinds\":[\"customer\",\"hardware\",\"site\",\"user\",\"file\",\"folder\",\"report\"],\"subKinds\":[],\"nodes\":[],\"filter\":\"\",\"filterBy\":\"\"}",
+  "lastChanged": "2025-12-23T00:11:51Z",
   "node": null,
   "nodes": [
     {
-      "flags": 0,
-      "icon": "CustAccount",
-      "isHidden": false,
       "key": "C8458",
-      "kind": "customer",
       "lastChanged": "2023-11-01T20:51:32Z",
       "name": "Distributed Solar Development",
-      "parentKey": "C2",
-      "path": [],
-      "permissions": 27,
       "sort": 2147483647,
+      "icon": "CustAccount",
+      "flags": 0,
+      "parentKey": "C2",
+      "kind": "customer",
       "subKind": 0,
-      "validationStatus": 0
+      "path": [],
+      "isHidden": false,
+      "validationStatus": 0,
+      "permissions": 27
     },
     {
-      "flags": 0,
-      "icon": "Customer",
-      "isHidden": false,
       "key": "C25228",
-      "kind": "customer",
       "lastChanged": "2023-09-26T16:51:20Z",
       "name": "1.1_Direct",
+      "sort": 2147483647,
+      "icon": "Customer",
+      "flags": 0,
       "parentKey": "C8458",
+      "kind": "customer",
+      "subKind": 0,
       "path": [
         "C8458"
       ],
-      "permissions": 27,
-      "sort": 2147483647,
-      "subKind": 0,
-      "validationStatus": 0
+      "isHidden": false,
+      "validationStatus": 0,
+      "permissions": 27
     },
     {
-      "flags": 0,
-      "icon": "Site",
-      "isHidden": false,
       "key": "S68143",
-      "kind": "site",
-      "lastChanged": "2025-12-16T16:37:49Z",
+      "lastChanged": "2025-12-22T22:02:50Z",
       "name": "*** LOST?* THD CA - 2304 Monterey Park",
+      "sort": 2147483647,
+      "icon": "Site",
+      "flags": 0,
       "parentKey": "C25228",
+      "kind": "site",
+      "subKind": 0,
       "path": [
         "C8458",
         "C25228"
       ],
-      "permissions": 27,
-      "sort": 2147483647,
-      "subKind": 0,
-      "validationStatus": 1
+      "isHidden": false,
+      "validationStatus": 1,
+      "permissions": 27
     },
     {
+      "key": "H511576",
+      "lastChanged": "2025-12-23T00:11:51Z",
+      "name": "WEATHER STATION",
+      "sort": 42,
+      "icon": "https://www.alsoenergy.com/pub/Images/Device/8164.png",
       "flags": 0,
-      "icon": "https://www.alsoenergy.com/pub/Images/Device/19880.png",
-      "isHidden": false,
-      "key": "H511568",
-      "kind": "hardware",
-      "lastChanged": "2025-12-22T19:21:53Z",
-      "name": "INVERTER 1",
       "parentKey": "S68143",
+      "kind": "hardware",
+      "subKind": 5,
       "path": [
         "C8458",
         "C25228",
         "S68143"
       ],
-      "permissions": 27,
-      "sort": 11,
-      "subKind": 1,
-      "validationStatus": 0
+      "isHidden": false,
+      "validationStatus": 0,
+      "permissions": 27
     }
   ]
 }
