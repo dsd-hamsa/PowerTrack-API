@@ -4,7 +4,7 @@
 [← Back to Index](../logs.md)
 
 **Methods:** GET  
-**Status Codes:** 200, 200  
+**Status Codes:** 200  
 
 ## Table of Contents
 
@@ -15,17 +15,9 @@
 
 ```json
 {
-  "type": "object",
-  "properties": {
-    "name": {
-      "type": "string"
-    },
-    "value": {
-      "type": "string"
-    },
-    "type": {
-      "type": "number"
-    }
+  "type": "array",
+  "items": {
+    "type": "unknown"
   }
 }
 ```
@@ -37,33 +29,17 @@
 **Request:**
 
 ```http
-GET /api/view/driversettings/list/19759
+GET /api/view/driversettings/list/19015
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 Accept: application/json
-referer: https://apps.alsoenergy.com/powertrack/H511563/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
 ```
 
 **Response:**
 
 ```json
-[
-  {
-    "name": "dev:community",
-    "value": "ae",
-    "type": 0
-  },
-  {
-    "name": "dev:authentication",
-    "value": "alsoenergy",
-    "type": 0
-  },
-  {
-    "name": "dev:privacy",
-    "value": "alsoenergy",
-    "type": 0
-  }
-]
+[]
 ```
 
 [Return to top](#top)
