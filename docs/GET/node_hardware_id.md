@@ -67,22 +67,22 @@
 **Request:**
 
 ```http
-GET /api/node/H511576?lastChanged=2025-12-23T00:11:41Z
+GET /api/node/H511575?lastChanged=2025-12-23T00:11:34Z
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 Accept: application/json
-referer: https://apps.alsoenergy.com/powertrack/H511576/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H511575/administration/config
 ```
 
 **Response:**
 
 ```json
 {
-  "key": "H511576",
-  "lastChanged": "2025-12-23T00:11:51Z",
-  "name": "WEATHER STATION",
-  "sort": 42,
-  "icon": "https://www.alsoenergy.com/pub/Images/Device/8164.png",
+  "key": "H511575",
+  "lastChanged": "2025-12-23T00:11:41Z",
+  "name": "REFERENCE CELL - POA",
+  "sort": 41,
+  "icon": "https://www.alsoenergy.com/pub/Images/Device/3588.png",
   "flags": 0,
   "parentKey": "S68143",
   "kind": "hardware",
