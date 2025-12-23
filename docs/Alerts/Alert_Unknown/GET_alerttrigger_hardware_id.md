@@ -17,6 +17,12 @@
 {
   "type": "object",
   "properties": {
+    "key": {
+      "type": "string"
+    },
+    "lastChanged": {
+      "type": "string"
+    },
     "assetCode": {
       "type": "number"
     },
@@ -29,11 +35,32 @@
     "defaultTriggers": {
       "type": "object",
       "properties": {
+        "key": {
+          "type": "string"
+        },
+        "lastChanged": {
+          "type": "string"
+        },
+        "id": {
+          "type": "number"
+        },
         "alertTypeKey": {
           "type": "string"
         },
-        "checkNoSnow": {
+        "parentKey": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "isActive": {
           "type": "boolean"
+        },
+        "priorityLevel": {
+          "type": "number"
         },
         "checkSun": {
           "type": "boolean"
@@ -41,105 +68,99 @@
         "checkTime": {
           "type": "boolean"
         },
-        "delayHoursResolve": {
+        "checkNoSnow": {
+          "type": "boolean"
+        },
+        "hasImpact": {
+          "type": "boolean"
+        },
+        "impact": {
           "type": "number"
         },
         "delayHoursTrigger": {
           "type": "number"
         },
-        "description": {
-          "type": "string"
-        },
-        "endTime": {
-          "type": "number"
-        },
-        "hasImpact": {
-          "type": "boolean"
-        },
-        "id": {
-          "type": "number"
-        },
-        "impact": {
-          "type": "number"
-        },
-        "isActive": {
-          "type": "boolean"
-        },
-        "key": {
-          "type": "string"
-        },
-        "lastChanged": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "ownerKey": {
-          "type": "string"
-        },
-        "parameters": {
-          "type": "object",
-          "properties": {
-            "index": {
-              "type": "number"
-            },
-            "info": {
-              "type": "string"
-            },
-            "name": {
-              "type": "string"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "source": {
-              "type": "number"
-            },
-            "type": {
-              "type": "number"
-            },
-            "value": {
-              "type": "number"
-            }
-          }
-        },
-        "parentKey": {
-          "type": "string"
-        },
-        "priorityLevel": {
-          "type": "number"
-        },
-        "sharing": {
+        "delayHoursResolve": {
           "type": "number"
         },
         "startTime": {
           "type": "number"
         },
-        "sunMaxAzimuth": {
+        "endTime": {
+          "type": "number"
+        },
+        "sunMinElevation": {
           "type": "number"
         },
         "sunMinAzimuth": {
           "type": "number"
         },
-        "sunMinElevation": {
+        "sunMaxAzimuth": {
+          "type": "number"
+        },
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "source": {
+              "type": "number"
+            },
+            "info": {
+              "type": "string"
+            },
+            "readOnly": {
+              "type": "boolean"
+            },
+            "index": {
+              "type": "number"
+            },
+            "name": {
+              "type": "string"
+            },
+            "value": {
+              "type": "number"
+            },
+            "type": {
+              "type": "number"
+            }
+          }
+        },
+        "ownerKey": {
+          "type": "string"
+        },
+        "sharing": {
           "type": "number"
         }
       }
     },
-    "key": {
-      "type": "string"
-    },
-    "lastChanged": {
-      "type": "string"
-    },
     "triggers": {
       "type": "object",
       "properties": {
+        "key": {
+          "type": "string"
+        },
+        "lastChanged": {
+          "type": "string"
+        },
+        "id": {
+          "type": "number"
+        },
         "alertTypeKey": {
           "type": "string"
         },
-        "checkNoSnow": {
+        "parentKey": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "isActive": {
           "type": "boolean"
+        },
+        "priorityLevel": {
+          "type": "number"
         },
         "checkSun": {
           "type": "boolean"
@@ -147,87 +168,66 @@
         "checkTime": {
           "type": "boolean"
         },
-        "delayHoursResolve": {
+        "checkNoSnow": {
+          "type": "boolean"
+        },
+        "hasImpact": {
+          "type": "boolean"
+        },
+        "impact": {
           "type": "number"
         },
         "delayHoursTrigger": {
           "type": "number"
         },
-        "description": {
-          "type": "string"
-        },
-        "endTime": {
-          "type": "number"
-        },
-        "hasImpact": {
-          "type": "boolean"
-        },
-        "id": {
-          "type": "number"
-        },
-        "impact": {
-          "type": "number"
-        },
-        "isActive": {
-          "type": "boolean"
-        },
-        "key": {
-          "type": "string"
-        },
-        "lastChanged": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "ownerKey": {
-          "type": "string"
-        },
-        "parameters": {
-          "type": "object",
-          "properties": {
-            "index": {
-              "type": "number"
-            },
-            "info": {
-              "type": "string"
-            },
-            "name": {
-              "type": "string"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "source": {
-              "type": "number"
-            },
-            "type": {
-              "type": "number"
-            },
-            "value": {
-              "type": "number"
-            }
-          }
-        },
-        "parentKey": {
-          "type": "string"
-        },
-        "priorityLevel": {
-          "type": "number"
-        },
-        "sharing": {
+        "delayHoursResolve": {
           "type": "number"
         },
         "startTime": {
           "type": "number"
         },
-        "sunMaxAzimuth": {
+        "endTime": {
+          "type": "number"
+        },
+        "sunMinElevation": {
           "type": "number"
         },
         "sunMinAzimuth": {
           "type": "number"
         },
-        "sunMinElevation": {
+        "sunMaxAzimuth": {
+          "type": "number"
+        },
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "source": {
+              "type": "number"
+            },
+            "info": {
+              "type": "string"
+            },
+            "readOnly": {
+              "type": "boolean"
+            },
+            "index": {
+              "type": "number"
+            },
+            "name": {
+              "type": "string"
+            },
+            "value": {
+              "type": "number"
+            },
+            "type": {
+              "type": "number"
+            }
+          }
+        },
+        "ownerKey": {
+          "type": "string"
+        },
+        "sharing": {
           "type": "number"
         }
       }
@@ -243,148 +243,148 @@
 **Request:**
 
 ```http
-GET /api/alerttrigger/H511568?lastChanged=2025-12-22T17:51:15Z
-Accept: application/json
+GET /api/alerttrigger/H582342?lastChanged=2025-12-22T18:51:15Z
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
-ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/H511568/administration/config
+ae_v: e4dcd1
+Accept: application/json
+referer: https://apps.alsoenergy.com/powertrack/H582342/administration/config
 ```
 
 **Response:**
 
 ```json
 {
-  "assetCode": 1,
-  "calculatedCapacity": 63,
-  "capacity": 63,
+  "key": "H582342",
+  "lastChanged": "2025-10-14T14:42:58Z",
+  "assetCode": 34,
+  "calculatedCapacity": 0,
+  "capacity": 0,
   "defaultTriggers": [
     {
-      "alertTypeKey": "AI250",
-      "checkNoSnow": false,
+      "key": "",
+      "lastChanged": "2025-10-14T14:42:58Z",
+      "id": 0,
+      "alertTypeKey": "AI344",
+      "parentKey": "H582342",
+      "name": "Device heartbeat",
+      "description": "Detects missing communication from a device that uploads directly (without a data logger or gateway). NOTE: This alert will trigger after the expected communication delay (a built-in constant) plus the Threshold.  To override the expected communication delay, add a Setting named \"UploadRateMins\" (type = integer) and set it to the maximum number of minutes expected between uploads.  The alert will trigger if an upload doesn't occur within the total amount of time specified by the UploadRateMins setting plus the Threshold.",
+      "isActive": false,
+      "priorityLevel": 0,
       "checkSun": false,
       "checkTime": false,
-      "delayHoursResolve": 0,
-      "delayHoursTrigger": 0,
-      "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
-      "endTime": 0,
+      "checkNoSnow": false,
       "hasImpact": false,
-      "id": 0,
       "impact": 0,
-      "isActive": false,
-      "key": "",
-      "lastChanged": "2025-12-22T19:21:53Z",
-      "name": "Device communication",
-      "ownerKey": "",
+      "delayHoursTrigger": 0,
+      "delayHoursResolve": 0,
+      "startTime": 0,
+      "endTime": 0,
+      "sunMinElevation": 0,
+      "sunMinAzimuth": 0,
+      "sunMaxAzimuth": 0,
       "parameters": [
         {
-          "index": 0,
-          "info": "Ignore invalid data",
-          "name": "IgnoreInvalidData",
-          "readOnly": true,
           "source": 2,
-          "type": 7,
-          "value": 0
+          "info": "Delays the \"detected\" phase of the alert until the specified hours since event occurance has passed",
+          "readOnly": false,
+          "index": 0,
+          "name": "DetectedTriggerHours",
+          "value": 0,
+          "type": 2
         }
       ],
-      "parentKey": "H511568",
-      "priorityLevel": 0,
-      "sharing": 0,
-      "startTime": 0,
-      "sunMaxAzimuth": 0,
-      "sunMinAzimuth": 0,
-      "sunMinElevation": 0
+      "ownerKey": "",
+      "sharing": 0
     },
     {
-      "alertTypeKey": "AI862",
-      "checkNoSnow": false,
+      "key": "",
+      "lastChanged": "2025-10-14T14:42:58Z",
+      "id": 0,
+      "alertTypeKey": "AI1233",
+      "parentKey": "H582342",
+      "name": "LocusNOC SEL 351 Faults",
+      "description": "LocusNOC SEL 351 Faults (DMID 2701)",
+      "isActive": false,
+      "priorityLevel": 0,
       "checkSun": false,
       "checkTime": false,
-      "delayHoursResolve": 0,
-      "delayHoursTrigger": 0,
-      "description": "SMA TriPower Fault Alert following the SMA Event Messages Document.",
-      "endTime": 0,
+      "checkNoSnow": false,
       "hasImpact": false,
-      "id": 0,
       "impact": 0,
-      "isActive": false,
-      "key": "",
-      "lastChanged": "2025-12-22T19:21:53Z",
-      "name": "SMA STP/TriPower Fault Alert",
-      "ownerKey": "",
-      "parameters": [],
-      "parentKey": "H511568",
-      "priorityLevel": 0,
-      "sharing": 0,
+      "delayHoursTrigger": 0,
+      "delayHoursResolve": 0,
       "startTime": 0,
-      "sunMaxAzimuth": 0,
+      "endTime": 0,
+      "sunMinElevation": 0,
       "sunMinAzimuth": 0,
-      "sunMinElevation": 0
+      "sunMaxAzimuth": 0,
+      "parameters": [],
+      "ownerKey": "",
+      "sharing": 0
     }
   ],
-  "key": "H511568",
-  "lastChanged": "2025-12-22T19:21:53Z",
   "triggers": [
     {
-      "alertTypeKey": "AI250",
-      "checkNoSnow": true,
-      "checkSun": true,
-      "checkTime": false,
-      "delayHoursResolve": 0.5,
-      "delayHoursTrigger": 1,
-      "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
-      "endTime": 0,
-      "hasImpact": false,
-      "id": 1632245,
-      "impact": 0,
+      "key": "x2d1b82fe",
+      "lastChanged": "2025-10-14T14:42:58Z",
+      "id": 1803006,
+      "alertTypeKey": "AI344",
+      "parentKey": "H582342",
+      "name": "Device heartbeat",
+      "description": "Detects missing communication from a device that uploads directly (without a data logger or gateway). NOTE: This alert will trigger after the expected communication delay (a built-in constant) plus the Threshold.  To override the expected communication delay, add a Setting named \"UploadRateMins\" (type = integer) and set it to the maximum number of minutes expected between uploads.  The alert will trigger if an upload doesn't occur within the total amount of time specified by the UploadRateMins setting plus the Threshold.",
       "isActive": true,
-      "key": "x2d18e7f5",
-      "lastChanged": "2025-12-22T19:21:53Z",
-      "name": "Device communication",
-      "ownerKey": "",
-      "parameters": [
-        {
-          "index": 0,
-          "info": "Ignore invalid data",
-          "name": "IgnoreInvalidData",
-          "readOnly": true,
-          "source": 2,
-          "type": 7,
-          "value": 0
-        }
-      ],
-      "parentKey": "H511568",
       "priorityLevel": 0,
-      "sharing": 0,
-      "startTime": 0,
-      "sunMaxAzimuth": 0,
-      "sunMinAzimuth": 0,
-      "sunMinElevation": 10
-    },
-    {
-      "alertTypeKey": "AI862",
-      "checkNoSnow": false,
       "checkSun": false,
       "checkTime": false,
-      "delayHoursResolve": 0,
-      "delayHoursTrigger": 0,
-      "description": "SMA TriPower Fault Alert following the SMA Event Messages Document.",
-      "endTime": 0,
+      "checkNoSnow": false,
       "hasImpact": false,
-      "id": 1632246,
       "impact": 0,
-      "isActive": true,
-      "key": "x2d18e7f6",
-      "lastChanged": "2025-12-22T19:21:53Z",
-      "name": "SMA STP/TriPower Fault Alert",
-      "ownerKey": "",
-      "parameters": [],
-      "parentKey": "H511568",
-      "priorityLevel": 0,
-      "sharing": 0,
+      "delayHoursTrigger": 0,
+      "delayHoursResolve": 0,
       "startTime": 0,
-      "sunMaxAzimuth": 0,
+      "endTime": 0,
+      "sunMinElevation": 0,
       "sunMinAzimuth": 0,
-      "sunMinElevation": 0
+      "sunMaxAzimuth": 0,
+      "parameters": [
+        {
+          "source": 2,
+          "info": "Delays the \"detected\" phase of the alert until the specified hours since event occurance has passed",
+          "readOnly": false,
+          "index": 0,
+          "name": "DetectedTriggerHours",
+          "value": 0,
+          "type": 2
+        }
+      ],
+      "ownerKey": "",
+      "sharing": 0
+    },
+    {
+      "key": "x2d1b82ff",
+      "lastChanged": "2025-10-14T14:42:58Z",
+      "id": 1803007,
+      "alertTypeKey": "AI1233",
+      "parentKey": "H582342",
+      "name": "LocusNOC SEL 351 Faults",
+      "description": "LocusNOC SEL 351 Faults (DMID 2701)",
+      "isActive": true,
+      "priorityLevel": 0,
+      "checkSun": false,
+      "checkTime": false,
+      "checkNoSnow": false,
+      "hasImpact": false,
+      "impact": 0,
+      "delayHoursTrigger": 0,
+      "delayHoursResolve": 0,
+      "startTime": 0,
+      "endTime": 0,
+      "sunMinElevation": 0,
+      "sunMinAzimuth": 0,
+      "sunMaxAzimuth": 0,
+      "parameters": [],
+      "ownerKey": "",
+      "sharing": 0
     }
   ]
 }
