@@ -8,10 +8,10 @@
 
 ## Table of Contents
 
-- [Weather Station (functionCode: 5)](#weather-station-functioncode-5)
+- [Cell Modem (functionCode: 31)](#cell-modem-functioncode-31)
 - [Example](#example)
 
-## Weather Station (functionCode: 5)
+## Cell Modem (functionCode: 31)
 
 ```json
 {
@@ -283,9 +283,32 @@
           }
         },
         "notes": {
-          "type": "array",
-          "items": {
-            "type": "unknown"
+          "type": "object",
+          "properties": {
+            "key": {
+              "type": "string"
+            },
+            "parentKey": {
+              "type": "string"
+            },
+            "authorKey": {
+              "type": "string"
+            },
+            "authorName": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "kind": {
+              "type": "string"
+            },
+            "isEvent": {
+              "type": "boolean"
+            },
+            "text": {
+              "type": "string"
+            }
           }
         },
         "powerDisplays": {
@@ -342,7 +365,10 @@
       "type": "string"
     },
     "configs": {
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "unknown"
+      }
     },
     "array": {
       "type": "object",
@@ -378,278 +404,11 @@
     },
     "virtualWeather": {
       "type": "object",
-      "properties": {
-        "installationType": {
-          "type": "number"
-        },
-        "serviceWeight": {
-          "type": "number"
-        },
-        "remoteSourceId": {
-          "type": "number"
-        },
-        "sourceList": {
-          "type": "array",
-          "items": {
-            "type": "unknown"
-          }
-        },
-        "forecast": {
-          "type": "boolean"
-        },
-        "virtualIrradiance": {
-          "type": "boolean"
-        },
-        "moduleTempEstimate": {
-          "type": "boolean"
-        },
-        "hasSolarAnywhereLicense": {
-          "type": "boolean"
-        },
-        "saUser": {
-          "type": "string"
-        },
-        "saPassword": {
-          "type": "string"
-        },
-        "saLicense": {
-          "type": "string"
-        }
-      }
+      "properties": {}
     },
     "weather": {
       "type": "object",
-      "properties": {
-        "azimuth": {
-          "type": "number"
-        },
-        "tilt": {
-          "type": "number"
-        },
-        "tracking": {
-          "type": "number"
-        },
-        "maxTempF": {
-          "type": "number"
-        },
-        "minTempF": {
-          "type": "number"
-        },
-        "sensors": {
-          "type": "object",
-          "properties": {
-            "ambientTemp": {
-              "type": "object",
-              "properties": {
-                "isChecked": {
-                  "type": "boolean"
-                },
-                "isAllowed": {
-                  "type": "boolean"
-                }
-              }
-            },
-            "barometer": {
-              "type": "object",
-              "properties": {
-                "isChecked": {
-                  "type": "boolean"
-                },
-                "isAllowed": {
-                  "type": "boolean"
-                }
-              }
-            },
-            "humidity": {
-              "type": "object",
-              "properties": {
-                "isChecked": {
-                  "type": "boolean"
-                },
-                "isAllowed": {
-                  "type": "boolean"
-                }
-              }
-            },
-            "panelTemp1": {
-              "type": "object",
-              "properties": {
-                "isChecked": {
-                  "type": "boolean"
-                },
-                "isAllowed": {
-                  "type": "boolean"
-                }
-              }
-            },
-            "panelTemp2": {
-              "type": "object",
-              "properties": {
-                "isChecked": {
-                  "type": "boolean"
-                },
-                "isAllowed": {
-                  "type": "boolean"
-                }
-              }
-            },
-            "pyranometer1": {
-              "type": "object",
-              "properties": {
-                "isChecked": {
-                  "type": "boolean"
-                },
-                "isAllowed": {
-                  "type": "boolean"
-                }
-              }
-            },
-            "pyranometer2": {
-              "type": "object",
-              "properties": {
-                "isChecked": {
-                  "type": "boolean"
-                },
-                "isAllowed": {
-                  "type": "boolean"
-                }
-              }
-            },
-            "pyrheliometer": {
-              "type": "object",
-              "properties": {
-                "isChecked": {
-                  "type": "boolean"
-                },
-                "isAllowed": {
-                  "type": "boolean"
-                }
-              }
-            },
-            "rain": {
-              "type": "object",
-              "properties": {
-                "isChecked": {
-                  "type": "boolean"
-                },
-                "isAllowed": {
-                  "type": "boolean"
-                }
-              }
-            },
-            "snow": {
-              "type": "object",
-              "properties": {
-                "isChecked": {
-                  "type": "boolean"
-                },
-                "isAllowed": {
-                  "type": "boolean"
-                }
-              }
-            },
-            "wind": {
-              "type": "object",
-              "properties": {
-                "isChecked": {
-                  "type": "boolean"
-                },
-                "isAllowed": {
-                  "type": "boolean"
-                }
-              }
-            }
-          }
-        },
-        "insolationType": {
-          "type": "number"
-        },
-        "interpolateDailyInsolation": {
-          "type": "boolean"
-        },
-        "hasPyranometer": {
-          "type": "boolean"
-        },
-        "pyranometerData": {
-          "type": "object",
-          "properties": {}
-        },
-        "isPyranometerHigh": {
-          "type": "boolean"
-        },
-        "pyranometerUnit": {
-          "type": "number"
-        },
-        "hasRefPyranometer": {
-          "type": "boolean"
-        },
-        "refPyranometerData": {
-          "type": "object",
-          "properties": {}
-        },
-        "isRefPyranometerHigh": {
-          "type": "boolean"
-        },
-        "refPyranometerUnit": {
-          "type": "number"
-        },
-        "tracker": {
-          "type": "object",
-          "properties": {
-            "hid": {
-              "type": "number"
-            },
-            "dataName": {
-              "type": "string"
-            }
-          }
-        },
-        "trackerOptions": {
-          "type": "object",
-          "properties": {}
-        },
-        "monthlyInsolation": {
-          "type": "object",
-          "properties": {
-            "jan": {
-              "type": "number"
-            },
-            "feb": {
-              "type": "number"
-            },
-            "mar": {
-              "type": "number"
-            },
-            "apr": {
-              "type": "number"
-            },
-            "may": {
-              "type": "number"
-            },
-            "jun": {
-              "type": "number"
-            },
-            "jul": {
-              "type": "number"
-            },
-            "aug": {
-              "type": "number"
-            },
-            "sep": {
-              "type": "number"
-            },
-            "oct": {
-              "type": "number"
-            },
-            "nov": {
-              "type": "number"
-            },
-            "dec": {
-              "type": "number"
-            }
-          }
-        }
-      }
+      "properties": {}
     },
     "zone": {
       "type": "object",
@@ -708,48 +467,48 @@
 **Request:**
 
 ```http
-GET /api/edit/hardware/H494021
+GET /api/edit/hardware/H511563
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 Accept: application/json
-referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H511563/administration/config
 ```
 
 **Response:**
 
 ```json
 {
-  "key": "H494021",
+  "key": "H511563",
   "parentKey": "S68143",
-  "ts": "2024-03-08T14:48:26Z",
-  "description": "Solcast Virtual Weather Station",
+  "ts": "2025-03-13T18:25:44Z",
+  "description": "Cell Modem (Pepwave)",
   "assetId": "",
-  "hardwareId": "C8458_S68143_WS0",
+  "hardwareId": "C20909_S68143_CE0",
   "instance": 0,
-  "functionId": "WS0",
-  "functionCode": 5,
+  "functionId": "CE0",
+  "functionCode": 31,
   "hardwareStatus": 1,
   "capacityKw": 0,
-  "sort": 0,
+  "sort": 1,
   "gatewayKey": "",
-  "gatewayId": "",
+  "gatewayId": "1932-1C3F-8F71",
   "gatewayFwVersion": "",
   "gatewayScriptCount": "",
-  "gatewayType": 0,
-  "serialNum": "",
-  "modelNum": "",
-  "installDate": "2024-03-09",
-  "driverId": 19015,
-  "driverDescription": "Weather data from external sources such as SolarGIS and Clean Power Research, including DNI, DHI, Rain and Snow",
-  "driverFlags": 64,
-  "driverName": "External Weather Source (full)",
+  "gatewayType": 2,
+  "serialNum": "1932-1C3F-8F71",
+  "modelNum": "PEPLINK MAX-BR1-MINI-LTE-US-DC-T-M-RPM",
+  "installDate": "2024-07-12",
+  "driverId": 19759,
+  "driverDescription": "SNMP from a pepwave wireless modem",
+  "driverFlags": 0,
+  "driverName": "Pepwave Wireless SNMP",
   "driverNotes": "",
   "validatedByKey": "",
   "validatedDateTime": "0001-01-01T00:00:00",
   "debug": false,
   "outOfService": false,
   "outOfServiceNote": "",
-  "outOfServiceUntil": "2025-12-23T00:07:06.7884151Z",
+  "outOfServiceUntil": "2025-12-23T00:06:57.4370644Z",
   "reportExclude": false,
   "limitedCommunication": false,
   "primary": false,
@@ -757,147 +516,87 @@ referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
   "unitId": 0,
   "isTcp": false,
   "port": 0,
-  "serialMode": -1,
+  "serialMode": 0,
   "baud": "",
   "newNote": "",
   "dashboardKey": "",
   "dcRating": 0,
-  "defaultChart": 21,
-  "chartSectionCode": 4,
+  "defaultChart": 0,
+  "chartSectionCode": 0,
   "conflictNames": null,
   "isConflictAcknowledged": false,
   "settings": [
     {
-      "originalValue": "SolCast",
+      "originalValue": "N/A",
       "index": 0,
-      "name": "Source",
-      "value": "SolCast",
+      "name": "dev:portMode",
+      "value": "N/A",
       "type": 0
     },
     {
-      "originalValue": 1057,
+      "originalValue": "ae",
       "index": 1,
-      "name": "Weather",
-      "value": 1057,
-      "type": 1
+      "name": "dev:community",
+      "value": "ae",
+      "type": 0
     },
     {
-      "originalValue": "0",
+      "originalValue": "alsoenergy",
       "index": 2,
-      "name": "MinTemp",
-      "value": "0",
+      "name": "dev:authentication",
+      "value": "alsoenergy",
       "type": 0
     },
     {
-      "originalValue": "160",
+      "originalValue": "alsoenergy",
       "index": 3,
-      "name": "MaxTemp",
-      "value": "160",
+      "name": "dev:privacy",
+      "value": "alsoenergy",
       "type": 0
     },
     {
-      "originalValue": "WS0",
+      "originalValue": "CE0",
       "index": 4,
       "name": "ShortName",
-      "value": "WS0",
+      "value": "CE0",
       "type": 0
     }
   ],
   "deviceRegisters": [
     {
       "index": 0,
-      "name": "Wind Direction",
-      "localizedName": "Wind Direction",
-      "dataName": "WindDirection",
-      "standardDataName": "Wind_Direction",
+      "name": "RSSI",
+      "localizedName": "RSSI",
+      "dataName": "RSSI",
+      "standardDataName": "",
       "isIgnored": false,
-      "isRaw": true,
+      "isRaw": false,
       "isArchived": true,
-      "units": "°",
+      "units": "dB",
       "dataNameDetail": null
     },
     {
       "index": 1,
-      "name": "Global Horizontal Irradiance ",
-      "localizedName": "Global Horizontal Irradiance (with Offset)",
-      "dataName": "GHI",
-      "standardDataName": "GHI_Irradiance",
+      "name": "Cell Bytes Sent Since Install",
+      "localizedName": "Cell Bytes Sent Since Install",
+      "dataName": "BytesSent",
+      "standardDataName": "",
       "isIgnored": false,
       "isRaw": true,
       "isArchived": true,
-      "units": "W/m²",
+      "units": "MB",
       "dataNameDetail": null
     },
     {
       "index": 2,
-      "name": "Direct Normal Irradiance",
-      "localizedName": "Direct Normal Irradiance",
-      "dataName": "DNI",
-      "standardDataName": "DNI_Irradiance",
-      "isIgnored": false,
-      "isRaw": true,
-      "isArchived": true,
-      "units": "W/m²",
-      "dataNameDetail": null
-    },
-    {
-      "index": 3,
-      "name": "Direct Horizontal Irradiance",
-      "localizedName": "Diffuse Horizontal Irradiance",
-      "dataName": "DHI",
-      "standardDataName": "DHI_Irradiance",
-      "isIgnored": false,
-      "isRaw": true,
-      "isArchived": true,
-      "units": "W/m²",
-      "dataNameDetail": null
-    },
-    {
-      "index": 4,
-      "name": "Ambient Temperature",
-      "localizedName": "Ambient Air Temperature",
-      "dataName": "Ambient",
-      "standardDataName": "Temp_Ambient",
-      "isIgnored": false,
-      "isRaw": true,
-      "isArchived": true,
-      "units": "°F",
-      "dataNameDetail": null
-    },
-    {
-      "index": 5,
-      "name": "Wind Speed",
-      "localizedName": "Wind Speed",
-      "dataName": "WindSpeed",
-      "standardDataName": "Wind_Speed",
-      "isIgnored": false,
-      "isRaw": true,
-      "isArchived": true,
-      "units": "mph",
-      "dataNameDetail": null
-    },
-    {
-      "index": 6,
-      "name": "Absolute Precipitation",
-      "localizedName": "Absolute Precipitation",
-      "dataName": "Rain",
+      "name": "Cell Bytes Received Since Install",
+      "localizedName": "Cell Bytes Received Since Install",
+      "dataName": "BytesReceived",
       "standardDataName": "",
       "isIgnored": false,
-      "isRaw": false,
-      "isArchived": false,
-      "units": "in",
-      "dataNameDetail": null
-    },
-    {
-      "index": 7,
-      "name": "Snow Depth",
-      "localizedName": "Snow Depth",
-      "dataName": "Snow",
-      "standardDataName": "Snow_Depth",
-      "isIgnored": false,
       "isRaw": true,
       "isArchived": true,
-      "units": "in",
+      "units": "MB",
       "dataNameDetail": null
     }
   ],
@@ -913,11 +612,32 @@ referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
   "driverRegisters": [],
   "virtualRegisters": [],
   "tags": {
-    "key": "{\"ancestorKey\":\"H494021\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
+    "key": "{\"ancestorKey\":\"H511563\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
     "lastChanged": null,
     "attributes": [],
     "keywords": [],
-    "notes": [],
+    "notes": [
+      {
+        "key": "x050b5387",
+        "parentKey": "H511563",
+        "authorKey": "U39142",
+        "authorName": "Reuben Brazeal",
+        "date": "2024-07-11T21:20:46Z",
+        "kind": "text",
+        "isEvent": true,
+        "text": "Password created"
+      },
+      {
+        "key": "x050b53e2",
+        "parentKey": "H511563",
+        "authorKey": "U39142",
+        "authorName": "Reuben Brazeal",
+        "date": "2024-07-11T21:22:08Z",
+        "kind": "text",
+        "isEvent": true,
+        "text": "Password updated"
+      }
+    ],
     "powerDisplays": []
   },
   "sampleRate": 0,
@@ -933,10 +653,7 @@ referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
   "outputKey": "",
   "weatherStationKey1": "",
   "weatherStationKey2": "",
-  "configs": [
-    "VirtualWeather",
-    "VirtualWeatherDevice"
-  ],
+  "configs": [],
   "array": null,
   "eGauge": null,
   "gateway": null,
@@ -945,101 +662,8 @@ referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
   "pvConfig": null,
   "thermal": null,
   "turbine": null,
-  "virtualWeather": {
-    "installationType": 2,
-    "serviceWeight": 1,
-    "remoteSourceId": 0,
-    "sourceList": [],
-    "forecast": false,
-    "virtualIrradiance": false,
-    "moduleTempEstimate": true,
-    "hasSolarAnywhereLicense": false,
-    "saUser": "",
-    "saPassword": "",
-    "saLicense": ""
-  },
-  "weather": {
-    "azimuth": 0,
-    "tilt": 0,
-    "tracking": 0,
-    "maxTempF": 160,
-    "minTempF": 0,
-    "sensors": {
-      "ambientTemp": {
-        "isChecked": true,
-        "isAllowed": true
-      },
-      "barometer": {
-        "isChecked": false,
-        "isAllowed": false
-      },
-      "humidity": {
-        "isChecked": false,
-        "isAllowed": false
-      },
-      "panelTemp1": {
-        "isChecked": false,
-        "isAllowed": false
-      },
-      "panelTemp2": {
-        "isChecked": false,
-        "isAllowed": false
-      },
-      "pyranometer1": {
-        "isChecked": false,
-        "isAllowed": false
-      },
-      "pyranometer2": {
-        "isChecked": true,
-        "isAllowed": true
-      },
-      "pyrheliometer": {
-        "isChecked": false,
-        "isAllowed": false
-      },
-      "rain": {
-        "isChecked": false,
-        "isAllowed": true
-      },
-      "snow": {
-        "isChecked": false,
-        "isAllowed": true
-      },
-      "wind": {
-        "isChecked": true,
-        "isAllowed": true
-      }
-    },
-    "insolationType": 0,
-    "interpolateDailyInsolation": true,
-    "hasPyranometer": false,
-    "pyranometerData": null,
-    "isPyranometerHigh": false,
-    "pyranometerUnit": 0,
-    "hasRefPyranometer": false,
-    "refPyranometerData": null,
-    "isRefPyranometerHigh": false,
-    "refPyranometerUnit": 0,
-    "tracker": {
-      "hid": 0,
-      "dataName": ""
-    },
-    "trackerOptions": {},
-    "monthlyInsolation": {
-      "jan": 0,
-      "feb": 0,
-      "mar": 0,
-      "apr": 0,
-      "may": 0,
-      "jun": 0,
-      "jul": 0,
-      "aug": 0,
-      "sep": 0,
-      "oct": 0,
-      "nov": 0,
-      "dec": 0
-    }
-  },
+  "virtualWeather": null,
+  "weather": null,
   "zone": null,
   "commonDC": false,
   "commonDCAllMatch": true,
