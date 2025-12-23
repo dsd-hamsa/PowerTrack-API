@@ -4,7 +4,7 @@
 [← Back to Index](../logs.md)
 
 **Methods:** GET  
-**Status Codes:** 200, 200  
+**Status Codes:** 200  
 
 ## Table of Contents
 
@@ -26,11 +26,11 @@
 **Request:**
 
 ```http
-GET /api/view/hardwarenavigatorstatus/S68143?lastChanged=1900-01-01T00:00:00.000Z
+GET /api/view/hardwarenavigatorstatus/S67109?lastChanged=1900-01-01T00:00:00.000Z
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/S68143/administration/hardware/list
+referer: https://apps.alsoenergy.com/powertrack/S67109/overview/sites
 ```
 
 **Response:**
