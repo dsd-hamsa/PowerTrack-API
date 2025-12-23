@@ -17,103 +17,100 @@
 {
   "type": "object",
   "properties": {
-    "key": {
-      "type": "str"
-    },
-    "lastChanged": {
-      "type": "str"
-    },
-    "id": {
-      "type": "int"
-    },
     "alertTypeKey": {
-      "type": "str"
-    },
-    "parentKey": {
-      "type": "str"
-    },
-    "name": {
-      "type": "str"
-    },
-    "description": {
-      "type": "str"
-    },
-    "isActive": {
-      "type": "bool"
-    },
-    "priorityLevel": {
-      "type": "int"
-    },
-    "checkSun": {
-      "type": "bool"
-    },
-    "checkTime": {
-      "type": "bool"
+      "type": "string"
     },
     "checkNoSnow": {
-      "type": "bool"
+      "type": "boolean"
     },
-    "hasImpact": {
-      "type": "bool"
+    "checkSun": {
+      "type": "boolean"
     },
-    "impact": {
-      "type": "float"
-    },
-    "delayHoursTrigger": {
-      "type": "float"
+    "checkTime": {
+      "type": "boolean"
     },
     "delayHoursResolve": {
-      "type": "float"
+      "type": "number"
     },
-    "startTime": {
-      "type": "int"
+    "delayHoursTrigger": {
+      "type": "number"
+    },
+    "description": {
+      "type": "string"
     },
     "endTime": {
-      "type": "int"
+      "type": "number"
     },
-    "sunMinElevation": {
-      "type": "int"
+    "hasImpact": {
+      "type": "boolean"
     },
-    "sunMinAzimuth": {
-      "type": "int"
+    "id": {
+      "type": "number"
     },
-    "sunMaxAzimuth": {
-      "type": "int"
+    "impact": {
+      "type": "number"
+    },
+    "isActive": {
+      "type": "boolean"
+    },
+    "key": {
+      "type": "string"
+    },
+    "lastChanged": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "ownerKey": {
+      "type": "string"
     },
     "parameters": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "source": {
-            "type": "int"
-          },
-          "info": {
-            "type": "str"
-          },
-          "readOnly": {
-            "type": "bool"
-          },
-          "index": {
-            "type": "int"
-          },
-          "name": {
-            "type": "str"
-          },
-          "value": {
-            "type": "int"
-          },
-          "type": {
-            "type": "int"
-          }
+      "type": "object",
+      "properties": {
+        "index": {
+          "type": "number"
+        },
+        "info": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "readOnly": {
+          "type": "boolean"
+        },
+        "source": {
+          "type": "number"
+        },
+        "type": {
+          "type": "number"
+        },
+        "value": {
+          "type": "number"
         }
       }
     },
-    "ownerKey": {
-      "type": "str"
+    "parentKey": {
+      "type": "string"
+    },
+    "priorityLevel": {
+      "type": "number"
     },
     "sharing": {
-      "type": "int"
+      "type": "number"
+    },
+    "startTime": {
+      "type": "number"
+    },
+    "sunMaxAzimuth": {
+      "type": "number"
+    },
+    "sunMinAzimuth": {
+      "type": "number"
+    },
+    "sunMinElevation": {
+      "type": "number"
     }
   }
 }
@@ -126,48 +123,53 @@
 **Request:**
 
 ```http
-GET /api/alerttrigger/{alert_id}?lastChanged=1900-01-01T00:00:00.000Z
+GET /api/alerttrigger/x2d189cfb?lastChanged=1900-01-01T00:00:00.000Z
+Accept: application/json
+ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
+ae_v: c75711
+referer: https://apps.alsoenergy.com/powertrack/H504132/administration/alertsettings
 ```
 
 **Response:**
 
 ```json
 {
-  "key": "x2d1558e2",
-  "lastChanged": "2025-12-23T00:51:03Z",
-  "id": 1399010,
   "alertTypeKey": "AI250",
-  "parentKey": "H419666",
-  "name": "Device communication",
-  "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
-  "isActive": true,
-  "priorityLevel": 0,
-  "checkSun": true,
-  "checkTime": false,
   "checkNoSnow": false,
-  "hasImpact": false,
-  "impact": 0.0,
-  "delayHoursTrigger": 1.0,
-  "delayHoursResolve": 0.5,
-  "startTime": 0,
+  "checkSun": false,
+  "checkTime": false,
+  "delayHoursResolve": 0,
+  "delayHoursTrigger": 0,
+  "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
   "endTime": 0,
-  "sunMinElevation": 10,
-  "sunMinAzimuth": 0,
-  "sunMaxAzimuth": 0,
+  "hasImpact": false,
+  "id": 1613051,
+  "impact": 0,
+  "isActive": true,
+  "key": "x2d189cfb",
+  "lastChanged": "2025-12-23T01:12:32Z",
+  "name": "Device communication",
+  "ownerKey": "",
   "parameters": [
     {
-      "source": 2,
-      "info": "Ignore invalid data",
-      "readOnly": true,
       "index": 0,
+      "info": "Ignore invalid data",
       "name": "IgnoreInvalidData",
-      "value": 0,
-      "type": 7
+      "readOnly": true,
+      "source": 2,
+      "type": 7,
+      "value": 0
     }
   ],
-  "ownerKey": "",
-  "sharing": 0
+  "parentKey": "H504132",
+  "priorityLevel": 0,
+  "sharing": 0,
+  "startTime": 0,
+  "sunMaxAzimuth": 0,
+  "sunMinAzimuth": 0,
+  "sunMinElevation": 0
 }
 ```
 
 [Return to top](#top)
+
