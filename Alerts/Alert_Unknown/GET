@@ -1,5 +1,5 @@
 <a id="top"></a>
-# /api/alerttrigger/{hardware_id}
+# /api/lookuplist/alertTypes/{hardware_id}
 
 [← Back to Index](../logs.md)
 
@@ -17,200 +17,26 @@
 {
   "type": "object",
   "properties": {
-    "assetCode": {
-      "type": "number"
-    },
-    "calculatedCapacity": {
-      "type": "number"
-    },
-    "capacity": {
-      "type": "number"
-    },
-    "defaultTriggers": {
-      "type": "object",
-      "properties": {
-        "alertTypeKey": {
-          "type": "string"
-        },
-        "checkNoSnow": {
-          "type": "boolean"
-        },
-        "checkSun": {
-          "type": "boolean"
-        },
-        "checkTime": {
-          "type": "boolean"
-        },
-        "delayHoursResolve": {
-          "type": "number"
-        },
-        "delayHoursTrigger": {
-          "type": "number"
-        },
-        "description": {
-          "type": "string"
-        },
-        "endTime": {
-          "type": "number"
-        },
-        "hasImpact": {
-          "type": "boolean"
-        },
-        "id": {
-          "type": "number"
-        },
-        "impact": {
-          "type": "number"
-        },
-        "isActive": {
-          "type": "boolean"
-        },
-        "key": {
-          "type": "string"
-        },
-        "lastChanged": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "ownerKey": {
-          "type": "string"
-        },
-        "parameters": {
-          "type": "object",
-          "properties": {
-            "index": {
-              "type": "number"
-            },
-            "info": {
-              "type": "string"
-            },
-            "name": {
-              "type": "string"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "source": {
-              "type": "number"
-            },
-            "type": {
-              "type": "number"
-            },
-            "value": {
-              "type": "number"
-            }
-          }
-        },
-        "parentKey": {
-          "type": "string"
-        },
-        "priorityLevel": {
-          "type": "number"
-        },
-        "sharing": {
-          "type": "number"
-        },
-        "startTime": {
-          "type": "number"
-        },
-        "sunMaxAzimuth": {
-          "type": "number"
-        },
-        "sunMinAzimuth": {
-          "type": "number"
-        },
-        "sunMinElevation": {
-          "type": "number"
-        }
-      }
-    },
-    "key": {
+    "description": {
       "type": "string"
     },
-    "lastChanged": {
+    "deviceIds": {
+      "type": "array",
+      "items": {
+        "type": "unknown"
+      }
+    },
+    "functionCodes": {
+      "type": "array",
+      "items": {
+        "type": "unknown"
+      }
+    },
+    "name": {
       "type": "string"
     },
-    "triggers": {
-      "type": "object",
-      "properties": {
-        "alertTypeKey": {
-          "type": "string"
-        },
-        "checkNoSnow": {
-          "type": "boolean"
-        },
-        "checkSun": {
-          "type": "boolean"
-        },
-        "checkTime": {
-          "type": "boolean"
-        },
-        "delayHoursResolve": {
-          "type": "number"
-        },
-        "delayHoursTrigger": {
-          "type": "number"
-        },
-        "description": {
-          "type": "string"
-        },
-        "endTime": {
-          "type": "number"
-        },
-        "hasImpact": {
-          "type": "boolean"
-        },
-        "id": {
-          "type": "number"
-        },
-        "impact": {
-          "type": "number"
-        },
-        "isActive": {
-          "type": "boolean"
-        },
-        "key": {
-          "type": "string"
-        },
-        "lastChanged": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "ownerKey": {
-          "type": "string"
-        },
-        "parameters": {
-          "type": "array",
-          "items": {
-            "type": "unknown"
-          }
-        },
-        "parentKey": {
-          "type": "string"
-        },
-        "priorityLevel": {
-          "type": "number"
-        },
-        "sharing": {
-          "type": "number"
-        },
-        "startTime": {
-          "type": "number"
-        },
-        "sunMaxAzimuth": {
-          "type": "number"
-        },
-        "sunMinAzimuth": {
-          "type": "number"
-        },
-        "sunMinElevation": {
-          "type": "number"
-        }
-      }
+    "value": {
+      "type": "string"
     }
   }
 }
@@ -223,151 +49,151 @@
 **Request:**
 
 ```http
-GET /api/alerttrigger/H511568?lastChanged=2025-12-22T22:06:35Z
+GET /api/lookuplist/alertTypes/H511568
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/H511568/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H511568/administration/alertsettings
 ```
 
 **Response:**
 
 ```json
-{
-  "assetCode": 1,
-  "calculatedCapacity": 63,
-  "capacity": 63,
-  "defaultTriggers": [
-    {
-      "alertTypeKey": "AI250",
-      "checkNoSnow": false,
-      "checkSun": false,
-      "checkTime": false,
-      "delayHoursResolve": 0,
-      "delayHoursTrigger": 0,
-      "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
-      "endTime": 0,
-      "hasImpact": false,
-      "id": 0,
-      "impact": 0,
-      "isActive": false,
-      "key": "",
-      "lastChanged": "2025-12-22T22:06:35Z",
-      "name": "Device communication",
-      "ownerKey": "",
-      "parameters": [
-        {
-          "index": 0,
-          "info": "Ignore invalid data",
-          "name": "IgnoreInvalidData",
-          "readOnly": true,
-          "source": 2,
-          "type": 7,
-          "value": 0
-        }
-      ],
-      "parentKey": "H511568",
-      "priorityLevel": 0,
-      "sharing": 0,
-      "startTime": 0,
-      "sunMaxAzimuth": 0,
-      "sunMinAzimuth": 0,
-      "sunMinElevation": 0
-    },
-    {
-      "alertTypeKey": "AI862",
-      "checkNoSnow": false,
-      "checkSun": false,
-      "checkTime": false,
-      "delayHoursResolve": 0,
-      "delayHoursTrigger": 0,
-      "description": "SMA TriPower Fault Alert following the SMA Event Messages Document.",
-      "endTime": 0,
-      "hasImpact": false,
-      "id": 0,
-      "impact": 0,
-      "isActive": false,
-      "key": "",
-      "lastChanged": "2025-12-22T22:06:35Z",
-      "name": "SMA STP/TriPower Fault Alert",
-      "ownerKey": "",
-      "parameters": [],
-      "parentKey": "H511568",
-      "priorityLevel": 0,
-      "sharing": 0,
-      "startTime": 0,
-      "sunMaxAzimuth": 0,
-      "sunMinAzimuth": 0,
-      "sunMinElevation": 0
-    }
-  ],
-  "key": "H511568",
-  "lastChanged": "2025-12-22T22:06:35Z",
-  "triggers": [
-    {
-      "alertTypeKey": "AI862",
-      "checkNoSnow": false,
-      "checkSun": false,
-      "checkTime": false,
-      "delayHoursResolve": 0,
-      "delayHoursTrigger": 0,
-      "description": "SMA TriPower Fault Alert following the SMA Event Messages Document.",
-      "endTime": 0,
-      "hasImpact": false,
-      "id": 1632246,
-      "impact": 0,
-      "isActive": true,
-      "key": "x2d18e7f6",
-      "lastChanged": "2025-12-22T22:06:35Z",
-      "name": "SMA STP/TriPower Fault Alert",
-      "ownerKey": "",
-      "parameters": [],
-      "parentKey": "H511568",
-      "priorityLevel": 0,
-      "sharing": 0,
-      "startTime": 0,
-      "sunMaxAzimuth": 0,
-      "sunMinAzimuth": 0,
-      "sunMinElevation": 0
-    },
-    {
-      "alertTypeKey": "AI250",
-      "checkNoSnow": true,
-      "checkSun": true,
-      "checkTime": false,
-      "delayHoursResolve": 0.5,
-      "delayHoursTrigger": 1,
-      "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
-      "endTime": 0,
-      "hasImpact": false,
-      "id": 1848050,
-      "impact": 0,
-      "isActive": true,
-      "key": "x2d1c32f2",
-      "lastChanged": "2025-12-22T22:06:35Z",
-      "name": "Device communication",
-      "ownerKey": "",
-      "parameters": [
-        {
-          "index": 0,
-          "info": "Ignore invalid data",
-          "name": "IgnoreInvalidData",
-          "readOnly": true,
-          "source": 2,
-          "type": 7,
-          "value": 0
-        }
-      ],
-      "parentKey": "H511568",
-      "priorityLevel": 0,
-      "sharing": 0,
-      "startTime": 0,
-      "sunMaxAzimuth": 0,
-      "sunMinAzimuth": 0,
-      "sunMinElevation": 10
-    }
-  ]
-}
+[
+  {
+    "description": "Always generate an alert (for testing.)",
+    "deviceIds": [],
+    "functionCodes": [],
+    "name": "Always alert",
+    "value": "AI248"
+  },
+  {
+    "description": "Generate an alert for how a register value compares to a setpoint.",
+    "deviceIds": [],
+    "functionCodes": [],
+    "name": "Data Comparison Alert",
+    "value": "AI443"
+  },
+  {
+    "description": "Generate an alert if a register value is outside of the specified range.",
+    "deviceIds": [],
+    "functionCodes": [],
+    "name": "Data range alert",
+    "value": "AI399"
+  },
+  {
+    "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
+    "deviceIds": [],
+    "functionCodes": [],
+    "name": "Device communication",
+    "value": "AI250"
+  },
+  {
+    "description": "Detects missing communication from a device that uploads directly (without a data logger or gateway). NOTE: This alert will trigger after the expected communication delay (a built-in constant) plus the Threshold.  To override the expected communication delay, add a Setting named \"UploadRateMins\" (type = integer) and set it to the maximum number of minutes expected between uploads.  The alert will trigger if an upload doesn't occur within the total amount of time specified by the UploadRateMins setting plus the Threshold.",
+    "deviceIds": [],
+    "functionCodes": [],
+    "name": "Device heartbeat",
+    "value": "AI344"
+  },
+  {
+    "description": "SUNGROW SG60KU Draker Alerts.",
+    "deviceIds": [],
+    "functionCodes": [],
+    "name": "Draker SUNGROW SG60KU",
+    "value": "AI812"
+  },
+  {
+    "description": "Detects missing communication from a device that uploads directly (without a data logger or gateway). The default delay has been up updated (diff from 344) to accomodate residential egauge installs.",
+    "deviceIds": [],
+    "functionCodes": [],
+    "name": "Egauge Heartbeat Check for Guam",
+    "value": "AI517"
+  },
+  {
+    "description": "Reports changes in energy readings that exceed the device offset settings",
+    "deviceIds": [],
+    "functionCodes": [],
+    "name": "Energy check",
+    "value": "AI352"
+  },
+  {
+    "description": "String Alert for Huawei Sun 2000 with 14 DC Strings.\rCustom Alert for the Project La Victoria, PTW.eu\rUsed for Inverters with 12 Strings Connected, but in tis Case String 5 and String 12 are not connected",
+    "deviceIds": [],
+    "functionCodes": [],
+    "name": "Huawei DC String Alert (14 String DC)_LaVictoria#3",
+    "value": "AI2812"
+  },
+  {
+    "description": "Generate an alert if the inverter is not running for 60 minutes while the irradiance exceeds a threshold.",
+    "deviceIds": [],
+    "functionCodes": [],
+    "name": "Inverter / irradiance check",
+    "value": "AI362"
+  },
+  {
+    "description": "Generate an alert if the inverter is not running while the irradiance exceeds a threshold of 100M/W2 on POA",
+    "deviceIds": [],
+    "functionCodes": [],
+    "name": "Inverter / irradiance check Altiplano-LaPuna",
+    "value": "AI2485"
+  },
+  {
+    "description": "Check inverter output vs. measured irradiance in real time during inverter data upload. NOTE: Requires a weather station with POA and Module temperature (1).",
+    "deviceIds": [],
+    "functionCodes": [],
+    "name": "Inverter Performance Ratio (upload)",
+    "value": "AI393"
+  },
+  {
+    "description": "Generate an alert if the inverter power and energy outputs don't change.  Use this alert only when inverter status data is unavailable.",
+    "deviceIds": [],
+    "functionCodes": [],
+    "name": "Inverter stopped alert",
+    "value": "AI509"
+  },
+  {
+    "description": "Detects the inverter's line to line voltage fluctuation by a given lower and upper percentage.",
+    "deviceIds": [],
+    "functionCodes": [],
+    "name": "Inverter Voltage Fluctuation Alert",
+    "value": "AI684"
+  },
+  {
+    "description": "Alerts for Skytron_Kostal PIKO 12L_Faults",
+    "deviceIds": [],
+    "functionCodes": [],
+    "name": "Skytron_Kostal PIKO 12L_Faults",
+    "value": "AI1130"
+  },
+  {
+    "description": "Detects fault conditions for SMA inverters that are uploading using a data logger via Modbus and a Cluster controller.",
+    "deviceIds": [],
+    "functionCodes": [],
+    "name": "SMA Inverter  / Cluster controller (copy)",
+    "value": "AI2838"
+  },
+  {
+    "description": "Alerts for SMA SC250U Modbus TCP from Draker",
+    "deviceIds": [],
+    "functionCodes": [],
+    "name": "SMA SC250U Draker Modbus TCP Codes",
+    "value": "AI758"
+  },
+  {
+    "description": "Generate an alert for how a register string compares to a user-defined string",
+    "deviceIds": [],
+    "functionCodes": [],
+    "name": "String Comparison Alert",
+    "value": "AI1302"
+  },
+  {
+    "description": "Triggers when a register value changes.  This must be manually reset and will retrigger when a change occurs.",
+    "deviceIds": [],
+    "functionCodes": [],
+    "name": "Value changed alert",
+    "value": "AI1045"
+  }
+]
 ```
 
 [Return to top](#top)
