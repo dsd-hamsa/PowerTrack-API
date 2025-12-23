@@ -17,12 +17,6 @@
 {
   "type": "object",
   "properties": {
-    "key": {
-      "type": "string"
-    },
-    "lastChanged": {
-      "type": "string"
-    },
     "assetCode": {
       "type": "number"
     },
@@ -35,32 +29,11 @@
     "defaultTriggers": {
       "type": "object",
       "properties": {
-        "key": {
-          "type": "string"
-        },
-        "lastChanged": {
-          "type": "string"
-        },
-        "id": {
-          "type": "number"
-        },
         "alertTypeKey": {
           "type": "string"
         },
-        "parentKey": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        },
-        "isActive": {
+        "checkNoSnow": {
           "type": "boolean"
-        },
-        "priorityLevel": {
-          "type": "number"
         },
         "checkSun": {
           "type": "boolean"
@@ -68,99 +41,105 @@
         "checkTime": {
           "type": "boolean"
         },
-        "checkNoSnow": {
-          "type": "boolean"
-        },
-        "hasImpact": {
-          "type": "boolean"
-        },
-        "impact": {
+        "delayHoursResolve": {
           "type": "number"
         },
         "delayHoursTrigger": {
           "type": "number"
         },
-        "delayHoursResolve": {
-          "type": "number"
-        },
-        "startTime": {
-          "type": "number"
+        "description": {
+          "type": "string"
         },
         "endTime": {
           "type": "number"
         },
-        "sunMinElevation": {
+        "hasImpact": {
+          "type": "boolean"
+        },
+        "id": {
           "type": "number"
         },
-        "sunMinAzimuth": {
+        "impact": {
           "type": "number"
         },
-        "sunMaxAzimuth": {
-          "type": "number"
+        "isActive": {
+          "type": "boolean"
+        },
+        "key": {
+          "type": "string"
+        },
+        "lastChanged": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "ownerKey": {
+          "type": "string"
         },
         "parameters": {
           "type": "object",
           "properties": {
-            "source": {
+            "index": {
               "type": "number"
             },
             "info": {
               "type": "string"
             },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "index": {
-              "type": "number"
-            },
             "name": {
               "type": "string"
             },
-            "value": {
+            "readOnly": {
+              "type": "boolean"
+            },
+            "source": {
               "type": "number"
             },
             "type": {
               "type": "number"
+            },
+            "value": {
+              "type": "number"
             }
           }
         },
-        "ownerKey": {
+        "parentKey": {
           "type": "string"
         },
+        "priorityLevel": {
+          "type": "number"
+        },
         "sharing": {
+          "type": "number"
+        },
+        "startTime": {
+          "type": "number"
+        },
+        "sunMaxAzimuth": {
+          "type": "number"
+        },
+        "sunMinAzimuth": {
+          "type": "number"
+        },
+        "sunMinElevation": {
           "type": "number"
         }
       }
     },
+    "key": {
+      "type": "string"
+    },
+    "lastChanged": {
+      "type": "string"
+    },
     "triggers": {
       "type": "object",
       "properties": {
-        "key": {
-          "type": "string"
-        },
-        "lastChanged": {
-          "type": "string"
-        },
-        "id": {
-          "type": "number"
-        },
         "alertTypeKey": {
           "type": "string"
         },
-        "parentKey": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        },
-        "isActive": {
+        "checkNoSnow": {
           "type": "boolean"
-        },
-        "priorityLevel": {
-          "type": "number"
         },
         "checkSun": {
           "type": "boolean"
@@ -168,66 +147,87 @@
         "checkTime": {
           "type": "boolean"
         },
-        "checkNoSnow": {
-          "type": "boolean"
-        },
-        "hasImpact": {
-          "type": "boolean"
-        },
-        "impact": {
+        "delayHoursResolve": {
           "type": "number"
         },
         "delayHoursTrigger": {
           "type": "number"
         },
-        "delayHoursResolve": {
-          "type": "number"
-        },
-        "startTime": {
-          "type": "number"
+        "description": {
+          "type": "string"
         },
         "endTime": {
           "type": "number"
         },
-        "sunMinElevation": {
+        "hasImpact": {
+          "type": "boolean"
+        },
+        "id": {
           "type": "number"
         },
-        "sunMinAzimuth": {
+        "impact": {
           "type": "number"
         },
-        "sunMaxAzimuth": {
-          "type": "number"
+        "isActive": {
+          "type": "boolean"
+        },
+        "key": {
+          "type": "string"
+        },
+        "lastChanged": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "ownerKey": {
+          "type": "string"
         },
         "parameters": {
           "type": "object",
           "properties": {
-            "source": {
+            "index": {
               "type": "number"
             },
             "info": {
               "type": "string"
             },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "index": {
-              "type": "number"
-            },
             "name": {
               "type": "string"
             },
-            "value": {
+            "readOnly": {
+              "type": "boolean"
+            },
+            "source": {
               "type": "number"
             },
             "type": {
               "type": "number"
+            },
+            "value": {
+              "type": "number"
             }
           }
         },
-        "ownerKey": {
+        "parentKey": {
           "type": "string"
         },
+        "priorityLevel": {
+          "type": "number"
+        },
         "sharing": {
+          "type": "number"
+        },
+        "startTime": {
+          "type": "number"
+        },
+        "sunMaxAzimuth": {
+          "type": "number"
+        },
+        "sunMinAzimuth": {
+          "type": "number"
+        },
+        "sunMinElevation": {
           "type": "number"
         }
       }
@@ -243,96 +243,174 @@
 **Request:**
 
 ```http
-GET /api/alerttrigger/H298742?lastChanged=2025-12-22T18:51:15Z
+GET /api/alerttrigger/H462027?lastChanged=2025-12-22T18:51:15Z
+Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: e4dcd1
-Accept: application/json
-referer: https://apps.alsoenergy.com/powertrack/H298742/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H462027/administration/config
 ```
 
 **Response:**
 
 ```json
 {
-  "key": "H298742",
-  "lastChanged": "2024-09-24T18:33:24Z",
-  "assetCode": 25,
+  "assetCode": 24,
   "calculatedCapacity": 0,
   "capacity": 0,
   "defaultTriggers": [
     {
-      "key": "",
-      "lastChanged": "2024-09-24T18:33:24Z",
-      "id": 0,
       "alertTypeKey": "AI250",
-      "parentKey": "H298742",
-      "name": "Device communication",
-      "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
-      "isActive": false,
-      "priorityLevel": 0,
+      "checkNoSnow": false,
       "checkSun": false,
       "checkTime": false,
-      "checkNoSnow": false,
-      "hasImpact": false,
-      "impact": 0,
-      "delayHoursTrigger": 0,
       "delayHoursResolve": 0,
-      "startTime": 0,
+      "delayHoursTrigger": 0,
+      "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
       "endTime": 0,
-      "sunMinElevation": 0,
-      "sunMinAzimuth": 0,
-      "sunMaxAzimuth": 0,
+      "hasImpact": false,
+      "id": 0,
+      "impact": 0,
+      "isActive": false,
+      "key": "",
+      "lastChanged": "2024-09-27T11:55:09Z",
+      "name": "Device communication",
+      "ownerKey": "",
       "parameters": [
         {
-          "source": 2,
-          "info": "Ignore invalid data",
-          "readOnly": true,
           "index": 0,
+          "info": "Ignore invalid data",
           "name": "IgnoreInvalidData",
-          "value": 0,
-          "type": 7
+          "readOnly": true,
+          "source": 2,
+          "type": 7,
+          "value": 0
         }
       ],
+      "parentKey": "H462027",
+      "priorityLevel": 0,
+      "sharing": 0,
+      "startTime": 0,
+      "sunMaxAzimuth": 0,
+      "sunMinAzimuth": 0,
+      "sunMinElevation": 0
+    },
+    {
+      "alertTypeKey": "AI3635",
+      "checkNoSnow": false,
+      "checkSun": false,
+      "checkTime": false,
+      "delayHoursResolve": 0,
+      "delayHoursTrigger": 0,
+      "description": "Detects alert conditions for Solar FlexRack and OMCO trackers.",
+      "endTime": 0,
+      "hasImpact": false,
+      "id": 0,
+      "impact": 0,
+      "isActive": false,
+      "key": "",
+      "lastChanged": "2024-09-27T11:55:09Z",
+      "name": "Solar FlexRack/OMCO Tracker Alert (revM)",
       "ownerKey": "",
-      "sharing": 0
+      "parameters": [],
+      "parentKey": "H462027",
+      "priorityLevel": 0,
+      "sharing": 0,
+      "startTime": 0,
+      "sunMaxAzimuth": 0,
+      "sunMinAzimuth": 0,
+      "sunMinElevation": 0
     }
   ],
+  "key": "H462027",
+  "lastChanged": "2024-09-27T11:55:09Z",
   "triggers": [
     {
-      "key": "x2d141706",
-      "lastChanged": "2024-09-24T18:33:24Z",
-      "id": 1316614,
       "alertTypeKey": "AI250",
-      "parentKey": "H298742",
-      "name": "Device communication",
-      "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
-      "isActive": true,
-      "priorityLevel": 0,
+      "checkNoSnow": true,
       "checkSun": true,
       "checkTime": false,
-      "checkNoSnow": true,
-      "hasImpact": false,
-      "impact": 0,
-      "delayHoursTrigger": 0.5,
       "delayHoursResolve": 0.5,
-      "startTime": 0,
+      "delayHoursTrigger": 0.5,
+      "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
       "endTime": 0,
-      "sunMinElevation": 10,
-      "sunMinAzimuth": 0,
-      "sunMaxAzimuth": 0,
+      "hasImpact": false,
+      "id": 1515018,
+      "impact": 0,
+      "isActive": true,
+      "key": "x2d171e0a",
+      "lastChanged": "2024-09-27T11:55:09Z",
+      "name": "Device communication",
+      "ownerKey": "",
       "parameters": [
         {
-          "source": 2,
-          "info": "Ignore invalid data",
-          "readOnly": true,
           "index": 0,
+          "info": "Ignore invalid data",
           "name": "IgnoreInvalidData",
-          "value": 0,
-          "type": 7
+          "readOnly": true,
+          "source": 2,
+          "type": 7,
+          "value": 0
         }
       ],
+      "parentKey": "H462027",
+      "priorityLevel": 0,
+      "sharing": 0,
+      "startTime": 0,
+      "sunMaxAzimuth": 0,
+      "sunMinAzimuth": 0,
+      "sunMinElevation": 10
+    },
+    {
+      "alertTypeKey": "AI974",
+      "checkNoSnow": true,
+      "checkSun": true,
+      "checkTime": false,
+      "delayHoursResolve": 0.5,
+      "delayHoursTrigger": 0.5,
+      "description": "Detects alert conditions for 3 and 4 motor Solar FlexRack Trackers. Case 109694- revG Bit 0x80 was swapped in new revision with Bit 0x8000",
+      "endTime": 0,
+      "hasImpact": false,
+      "id": 1560765,
+      "impact": 0,
+      "isActive": false,
+      "key": "x2d17d0bd",
+      "lastChanged": "2024-09-27T11:55:09Z",
+      "name": "Solar FlexRack Tracker Alert (revG)",
       "ownerKey": "",
-      "sharing": 0
+      "parameters": [],
+      "parentKey": "H462027",
+      "priorityLevel": 0,
+      "sharing": 0,
+      "startTime": 0,
+      "sunMaxAzimuth": 0,
+      "sunMinAzimuth": 0,
+      "sunMinElevation": 10
+    },
+    {
+      "alertTypeKey": "AI3635",
+      "checkNoSnow": true,
+      "checkSun": true,
+      "checkTime": false,
+      "delayHoursResolve": 0.5,
+      "delayHoursTrigger": 0.5,
+      "description": "Detects alert conditions for Solar FlexRack and OMCO trackers.",
+      "endTime": 0,
+      "hasImpact": false,
+      "id": 1578742,
+      "impact": 0,
+      "isActive": true,
+      "key": "x2d1816f6",
+      "lastChanged": "2024-09-27T11:55:09Z",
+      "name": "Solar FlexRack/OMCO Tracker Alert (revM)",
+      "ownerKey": "",
+      "parameters": [],
+      "parentKey": "H462027",
+      "priorityLevel": 0,
+      "sharing": 0,
+      "startTime": 0,
+      "sunMaxAzimuth": 0,
+      "sunMinAzimuth": 0,
+      "sunMinElevation": 10
     }
   ]
 }
