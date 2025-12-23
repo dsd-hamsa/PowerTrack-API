@@ -4,7 +4,7 @@
 [← Back to Index](../logs.md)
 
 **Methods:** GET  
-**Status Codes:** 200  
+**Status Codes:** 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200  
 
 ## Table of Contents
 
@@ -17,16 +17,16 @@
 {
   "type": "object",
   "properties": {
-    "total": {
-      "type": "number"
+    "hardwareSummary": {
+      "type": "object",
+      "properties": {}
     },
     "siteSummary": {
       "type": "object",
       "properties": {}
     },
-    "hardwareSummary": {
-      "type": "object",
-      "properties": {}
+    "total": {
+      "type": "number"
     }
   }
 }
@@ -39,20 +39,20 @@
 **Request:**
 
 ```http
-GET /api/view/activealerts/activesummary/H511567?lastChanged=1900-01-01T00:00:00.000Z
+GET /api/view/activealerts/activesummary/H511568?lastChanged=1900-01-01T00:00:00.000Z
+Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-Accept: application/json
-referer: https://apps.alsoenergy.com/powertrack/H511567/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H511568/administration/alertsettings
 ```
 
 **Response:**
 
 ```json
 {
-  "total": 0,
+  "hardwareSummary": {},
   "siteSummary": {},
-  "hardwareSummary": {}
+  "total": 0
 }
 ```
 
