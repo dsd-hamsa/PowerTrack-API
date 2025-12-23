@@ -93,7 +93,7 @@ This repository contains automatically generated documentation for the AlsoEnerg
     if (toc[method].length > 0) {
       content += `### ${method} Endpoints\n`;
       toc[method].forEach(item => {
-        content += `- [${item.endpoint}](${DOCS_DIR}/${item.file})\n`;
+        content += `- [${item.endpoint}](${encodeURI(DOCS_DIR + '/' + item.file)})\n`;
       });
       content += '\n';
     }
@@ -104,7 +104,7 @@ This repository contains automatically generated documentation for the AlsoEnerg
     if (toc[category].length > 0) {
       content += `### ${category}\n`;
       toc[category].forEach(item => {
-        content += `- [${item.endpoint}](${DOCS_DIR}/${item.file})\n`;
+        content += `- [${item.endpoint}](${encodeURI(DOCS_DIR + '/' + item.file)})\n`;
       });
       content += '\n';
     }
