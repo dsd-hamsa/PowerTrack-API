@@ -243,31 +243,31 @@
 **Request:**
 
 ```http
-GET /api/alerttrigger/H582342?lastChanged=2025-12-22T18:51:15Z
+GET /api/alerttrigger/H298742?lastChanged=2025-12-22T18:51:15Z
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: e4dcd1
 Accept: application/json
-referer: https://apps.alsoenergy.com/powertrack/H582342/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H298742/administration/config
 ```
 
 **Response:**
 
 ```json
 {
-  "key": "H582342",
-  "lastChanged": "2025-10-14T14:42:58Z",
-  "assetCode": 34,
+  "key": "H298742",
+  "lastChanged": "2024-09-24T18:33:24Z",
+  "assetCode": 25,
   "calculatedCapacity": 0,
   "capacity": 0,
   "defaultTriggers": [
     {
       "key": "",
-      "lastChanged": "2025-10-14T14:42:58Z",
+      "lastChanged": "2024-09-24T18:33:24Z",
       "id": 0,
-      "alertTypeKey": "AI344",
-      "parentKey": "H582342",
-      "name": "Device heartbeat",
-      "description": "Detects missing communication from a device that uploads directly (without a data logger or gateway). NOTE: This alert will trigger after the expected communication delay (a built-in constant) plus the Threshold.  To override the expected communication delay, add a Setting named \"UploadRateMins\" (type = integer) and set it to the maximum number of minutes expected between uploads.  The alert will trigger if an upload doesn't occur within the total amount of time specified by the UploadRateMins setting plus the Threshold.",
+      "alertTypeKey": "AI250",
+      "parentKey": "H298742",
+      "name": "Device communication",
+      "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
       "isActive": false,
       "priorityLevel": 0,
       "checkSun": false,
@@ -285,104 +285,52 @@ referer: https://apps.alsoenergy.com/powertrack/H582342/administration/config
       "parameters": [
         {
           "source": 2,
-          "info": "Delays the \"detected\" phase of the alert until the specified hours since event occurance has passed",
-          "readOnly": false,
+          "info": "Ignore invalid data",
+          "readOnly": true,
           "index": 0,
-          "name": "DetectedTriggerHours",
+          "name": "IgnoreInvalidData",
           "value": 0,
-          "type": 2
+          "type": 7
         }
       ],
-      "ownerKey": "",
-      "sharing": 0
-    },
-    {
-      "key": "",
-      "lastChanged": "2025-10-14T14:42:58Z",
-      "id": 0,
-      "alertTypeKey": "AI1233",
-      "parentKey": "H582342",
-      "name": "LocusNOC SEL 351 Faults",
-      "description": "LocusNOC SEL 351 Faults (DMID 2701)",
-      "isActive": false,
-      "priorityLevel": 0,
-      "checkSun": false,
-      "checkTime": false,
-      "checkNoSnow": false,
-      "hasImpact": false,
-      "impact": 0,
-      "delayHoursTrigger": 0,
-      "delayHoursResolve": 0,
-      "startTime": 0,
-      "endTime": 0,
-      "sunMinElevation": 0,
-      "sunMinAzimuth": 0,
-      "sunMaxAzimuth": 0,
-      "parameters": [],
       "ownerKey": "",
       "sharing": 0
     }
   ],
   "triggers": [
     {
-      "key": "x2d1b82fe",
-      "lastChanged": "2025-10-14T14:42:58Z",
-      "id": 1803006,
-      "alertTypeKey": "AI344",
-      "parentKey": "H582342",
-      "name": "Device heartbeat",
-      "description": "Detects missing communication from a device that uploads directly (without a data logger or gateway). NOTE: This alert will trigger after the expected communication delay (a built-in constant) plus the Threshold.  To override the expected communication delay, add a Setting named \"UploadRateMins\" (type = integer) and set it to the maximum number of minutes expected between uploads.  The alert will trigger if an upload doesn't occur within the total amount of time specified by the UploadRateMins setting plus the Threshold.",
+      "key": "x2d141706",
+      "lastChanged": "2024-09-24T18:33:24Z",
+      "id": 1316614,
+      "alertTypeKey": "AI250",
+      "parentKey": "H298742",
+      "name": "Device communication",
+      "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
       "isActive": true,
       "priorityLevel": 0,
-      "checkSun": false,
+      "checkSun": true,
       "checkTime": false,
-      "checkNoSnow": false,
+      "checkNoSnow": true,
       "hasImpact": false,
       "impact": 0,
-      "delayHoursTrigger": 0,
-      "delayHoursResolve": 0,
+      "delayHoursTrigger": 0.5,
+      "delayHoursResolve": 0.5,
       "startTime": 0,
       "endTime": 0,
-      "sunMinElevation": 0,
+      "sunMinElevation": 10,
       "sunMinAzimuth": 0,
       "sunMaxAzimuth": 0,
       "parameters": [
         {
           "source": 2,
-          "info": "Delays the \"detected\" phase of the alert until the specified hours since event occurance has passed",
-          "readOnly": false,
+          "info": "Ignore invalid data",
+          "readOnly": true,
           "index": 0,
-          "name": "DetectedTriggerHours",
+          "name": "IgnoreInvalidData",
           "value": 0,
-          "type": 2
+          "type": 7
         }
       ],
-      "ownerKey": "",
-      "sharing": 0
-    },
-    {
-      "key": "x2d1b82ff",
-      "lastChanged": "2025-10-14T14:42:58Z",
-      "id": 1803007,
-      "alertTypeKey": "AI1233",
-      "parentKey": "H582342",
-      "name": "LocusNOC SEL 351 Faults",
-      "description": "LocusNOC SEL 351 Faults (DMID 2701)",
-      "isActive": true,
-      "priorityLevel": 0,
-      "checkSun": false,
-      "checkTime": false,
-      "checkNoSnow": false,
-      "hasImpact": false,
-      "impact": 0,
-      "delayHoursTrigger": 0,
-      "delayHoursResolve": 0,
-      "startTime": 0,
-      "endTime": 0,
-      "sunMinElevation": 0,
-      "sunMinAzimuth": 0,
-      "sunMaxAzimuth": 0,
-      "parameters": [],
       "ownerKey": "",
       "sharing": 0
     }
