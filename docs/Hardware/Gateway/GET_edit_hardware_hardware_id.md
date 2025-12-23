@@ -4,7 +4,7 @@
 [← Back to Index](../logs.md)
 
 **Methods:** GET  
-**Status Codes:** 200, 200  
+**Status Codes:** 200  
 
 ## Table of Contents
 
@@ -507,11 +507,11 @@
 **Request:**
 
 ```http
-GET /api/edit/hardware/H511564
+GET /api/edit/hardware/H419928
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
-ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/H511564/administration/config
+ae_v: e4dcd1
+referer: https://apps.alsoenergy.com/powertrack/H419928/administration/config
 ```
 
 **Response:**
@@ -527,7 +527,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511564/administration/config
   "autoCorrectDecrease": false,
   "autoCorrectIncrease": false,
   "baud": "",
-  "capacityKw": 62.5,
+  "capacityKw": 437.5,
   "chartSectionCode": 0,
   "commonDC": false,
   "commonDCAllMatch": true,
@@ -587,12 +587,12 @@ referer: https://apps.alsoenergy.com/powertrack/H511564/administration/config
       "client": "maki.exe;1.16.3.6|protobuf-net.dll;2.0.0.668\rModel:, Version:, Build:, ExtIP:172.24.96.118\rModel:, Version:, Build:, ExtIP:172.24.96.118",
       "debug": false,
       "enable": true,
-      "gatewayId": "000CC68FAF30",
+      "gatewayId": "000CC68CC109",
       "gatewayParams": [],
       "ip1": "192.168.13.151",
       "ip2": "",
-      "lastBoot": "528 d 10:01 (h:m)",
-      "lastUpdate": "528 d 5:18 (h:m)",
+      "lastBoot": "46 d 9:57 (h:m)",
+      "lastUpdate": "45 seconds",
       "server": "maki.exe;1.16.3.6|protobuf-net.dll;2.0.0.668"
     },
     "gatewayIp": "192.168.13.1",
@@ -601,40 +601,40 @@ referer: https://apps.alsoenergy.com/powertrack/H511564/administration/config
     "mask": "255.255.255.0"
   },
   "gatewayFwVersion": "",
-  "gatewayId": "000CC68FAF30",
-  "gatewayKey": "H511564",
+  "gatewayId": "000CC68CC109",
+  "gatewayKey": "H419928",
   "gatewayScriptCount": "",
   "gatewayType": 7,
   "groupAllowed": [],
   "groupKey": "",
-  "hardwareId": "C20909_S68143_GW0",
+  "hardwareId": "C20909_S64641_GW0",
   "hardwareStatus": 1,
   "hasCapacity": true,
   "hash": "",
   "increaseDifference": -1,
-  "installDate": "2024-07-12",
+  "installDate": "2022-11-22",
   "instance": 0,
-  "inverterKw": 1050,
+  "inverterKw": 584,
   "isConflictAcknowledged": false,
   "isReportable": false,
   "isTcp": false,
   "isThermal": false,
-  "key": "H511564",
+  "key": "H419928",
   "kiosk": null,
-  "latitude": 34.0371297,
+  "latitude": 41.0659841,
   "limitedCommunication": false,
   "locusId": "",
-  "longitude": -118.1014776,
+  "longitude": -74.7513621,
   "meter": null,
-  "modelNum": "ALSOENERGY POWERLOGGER 1000",
+  "modelNum": "",
   "newNote": "",
   "oneMinuteData": false,
   "outOfService": false,
   "outOfServiceNote": "",
-  "outOfServiceUntil": "2025-12-23T00:10:22.7746295Z",
+  "outOfServiceUntil": "2025-12-23T00:50:10.0592744Z",
   "outputAllowed": [],
   "outputKey": "",
-  "parentKey": "S68143",
+  "parentKey": "S64641",
   "port": 0,
   "primary": false,
   "pullData": false,
@@ -644,38 +644,24 @@ referer: https://apps.alsoenergy.com/powertrack/H511564/administration/config
   "reportExclude": false,
   "reverse": false,
   "sampleRate": 0,
-  "serialMode": 0,
+  "serialMode": -1,
   "serialNum": "",
   "settings": [
     {
       "index": 0,
-      "name": "dev:portMode",
-      "originalValue": "N/A",
-      "type": 0,
-      "value": "N/A"
-    },
-    {
-      "index": 1,
       "name": "dev:rate",
       "originalValue": "200",
       "type": 0,
       "value": "200"
-    },
-    {
-      "index": 2,
-      "name": "ShortName",
-      "originalValue": "GW0",
-      "type": 0,
-      "value": "GW0"
     }
   ],
   "siteDcShare": 0,
-  "siteHasInverterGroups": true,
+  "siteHasInverterGroups": false,
   "sort": 2,
   "syncToLocus": false,
   "tags": {
     "attributes": [],
-    "key": "{\"ancestorKey\":\"H511564\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
+    "key": "{\"ancestorKey\":\"H419928\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
     "keywords": [],
     "lastChanged": null,
     "notes": [],
@@ -684,7 +670,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511564/administration/config
   "taskKey": "",
   "thermal": null,
   "thread": 0,
-  "ts": "2024-07-15T13:27:46Z",
+  "ts": "2024-11-15T02:41:27Z",
   "turbine": null,
   "unitId": 0,
   "uploadRate": 0,
