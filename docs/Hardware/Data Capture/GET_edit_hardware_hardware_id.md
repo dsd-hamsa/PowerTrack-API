@@ -4,7 +4,7 @@
 [← Back to Index](../logs.md)
 
 **Methods:** GET  
-**Status Codes:** 200, 200, 200, 200  
+**Status Codes:** 200  
 
 ## Table of Contents
 
@@ -367,9 +367,32 @@
           "properties": {}
         },
         "notes": {
-          "type": "array",
-          "items": {
-            "type": "unknown"
+          "type": "object",
+          "properties": {
+            "authorKey": {
+              "type": "string"
+            },
+            "authorName": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "isEvent": {
+              "type": "boolean"
+            },
+            "key": {
+              "type": "string"
+            },
+            "kind": {
+              "type": "string"
+            },
+            "parentKey": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
           }
         },
         "powerDisplays": {
@@ -444,11 +467,11 @@
 **Request:**
 
 ```http
-GET /api/edit/hardware/H488308
+GET /api/edit/hardware/H419666
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: e4dcd1
-referer: https://apps.alsoenergy.com/powertrack/H488308/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H419666/administration/config
 ```
 
 **Response:**
@@ -456,7 +479,7 @@ referer: https://apps.alsoenergy.com/powertrack/H488308/administration/config
 ```json
 {
   "additionalRegisters": [],
-  "address": "192.168.13.161",
+  "address": "0",
   "alsoHardwareId": 0,
   "alsoSiteId": 0,
   "array": null,
@@ -475,64 +498,76 @@ referer: https://apps.alsoenergy.com/powertrack/H488308/administration/config
   "debug": false,
   "decreaseDifference": 100,
   "defaultChart": 0,
-  "description": "SMA Data Manager",
+  "description": "Cell Modem (Pepwave)",
   "deviceRegisters": [
     {
-      "dataName": "KwhAC",
+      "dataName": "RSSI",
       "dataNameDetail": null,
       "index": 0,
       "isArchived": true,
       "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Active Energy Net (with Offset)",
-      "name": "Total AC Energy",
+      "isRaw": false,
+      "localizedName": "RSSI",
+      "name": "RSSI",
       "standardDataName": "",
-      "units": "kWh"
+      "units": "dB"
     },
     {
-      "dataName": "KwAC",
+      "dataName": "BytesSent",
       "dataNameDetail": null,
       "index": 1,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Active Power",
-      "name": "Total AC Active Power",
+      "localizedName": "Cell Bytes Sent Since Install",
+      "name": "Cell Bytes Sent Since Install",
       "standardDataName": "",
-      "units": "kW"
+      "units": "MB"
+    },
+    {
+      "dataName": "BytesReceived",
+      "dataNameDetail": null,
+      "index": 2,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Cell Bytes Received Since Install",
+      "name": "Cell Bytes Received Since Install",
+      "standardDataName": "",
+      "units": "MB"
     }
   ],
-  "driverDescription": "SMA Data Manager",
-  "driverFlags": 2113,
-  "driverId": 2442,
-  "driverName": "SMA Data Manager M",
-  "driverNotes": "Nominal replacement to the Cluster Controller. Default Unit ID is 1.\n\n**Speedwire and TCP/IP (Modbus) exist simultaneously on the same network. There is no longer a need to isolate the two.\n\nTo completely reset the device to defaults, press and hold the reset button for 15-20 seconds.",
+  "driverDescription": "SNMP from a pepwave wireless modem",
+  "driverFlags": 0,
+  "driverId": 19759,
+  "driverName": "Pepwave Wireless SNMP",
+  "driverNotes": "",
   "driverRegisters": [],
   "eGauge": null,
   "fixedEnergyOffset": 0,
   "functionCode": 11,
-  "functionId": "DA2",
+  "functionId": "DA0",
   "gateway": null,
   "gatewayFwVersion": "",
-  "gatewayId": "000CC68CC109",
-  "gatewayKey": "H419928",
+  "gatewayId": "293B-60CE-A6F4",
+  "gatewayKey": "",
   "gatewayScriptCount": "",
-  "gatewayType": 7,
+  "gatewayType": 2,
   "groupAllowed": [],
   "groupKey": "",
-  "hardwareId": "C25435_S64641_DA2",
+  "hardwareId": "C20909_S64641_DA0",
   "hardwareStatus": 1,
   "hasCapacity": false,
   "hash": "",
   "increaseDifference": -1,
-  "installDate": "2024-01-24",
-  "instance": 2,
+  "installDate": "2022-11-19",
+  "instance": 0,
   "inverterKw": 0,
   "isConflictAcknowledged": false,
   "isReportable": false,
-  "isTcp": true,
+  "isTcp": false,
   "isThermal": false,
-  "key": "H488308",
+  "key": "H419666",
   "kiosk": null,
   "latitude": 41.0659841,
   "limitedCommunication": false,
@@ -544,7 +579,7 @@ referer: https://apps.alsoenergy.com/powertrack/H488308/administration/config
   "oneMinuteData": false,
   "outOfService": false,
   "outOfServiceNote": "",
-  "outOfServiceUntil": "2025-12-23T00:52:21.0057233Z",
+  "outOfServiceUntil": "2025-12-23T00:50:47.7759587Z",
   "outputAllowed": [],
   "outputKey": "",
   "parentKey": "S64641",
@@ -558,48 +593,59 @@ referer: https://apps.alsoenergy.com/powertrack/H488308/administration/config
   "reverse": false,
   "sampleRate": 0,
   "serialMode": -1,
-  "serialNum": "",
+  "serialNum": "293B-60CE-A6F4",
   "settings": [
     {
       "index": 0,
-      "name": "dev:RegOffset",
-      "originalValue": "0",
+      "name": "dev:community",
+      "originalValue": "ae",
       "type": 0,
-      "value": "0"
+      "value": "ae"
     },
     {
       "index": 1,
-      "name": "dev:UnitID",
-      "originalValue": 1,
-      "type": 1,
-      "value": 1
+      "name": "dev:authentication",
+      "originalValue": "alsoenergy",
+      "type": 0,
+      "value": "alsoenergy"
     },
     {
       "index": 2,
-      "name": "ShortName",
-      "originalValue": "DA2",
+      "name": "dev:privacy",
+      "originalValue": "alsoenergy",
       "type": 0,
-      "value": "DA2"
+      "value": "alsoenergy"
     }
   ],
   "siteDcShare": 0,
   "siteHasInverterGroups": false,
-  "sort": 10,
+  "sort": 1,
   "syncToLocus": false,
   "tags": {
     "attributes": [],
-    "key": "{\"ancestorKey\":\"H488308\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
+    "key": "{\"ancestorKey\":\"H419666\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
     "keywords": [],
     "lastChanged": null,
-    "notes": [],
+    "notes": [
+      {
+        "authorKey": "U39144",
+        "authorName": "Xavi Morales",
+        "date": "2022-11-18T16:19:33Z",
+        "isEvent": true,
+        "key": "x05282fb9",
+        "kind": "text",
+        "parentKey": "H419666",
+        "text": "Password created"
+      }
+    ],
     "powerDisplays": []
   },
   "taskKey": "",
   "thermal": null,
   "thread": 0,
-  "ts": "2024-10-30T03:32:46Z",
+  "ts": "2024-11-15T02:41:22Z",
   "turbine": null,
-  "unitId": 1,
+  "unitId": 0,
   "uploadRate": 0,
   "validatedByKey": "",
   "validatedDateTime": "0001-01-01T00:00:00",
