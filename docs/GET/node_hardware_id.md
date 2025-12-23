@@ -67,26 +67,26 @@
 **Request:**
 
 ```http
-GET /api/node/H511568?lastChanged=2025-12-23T00:11:18Z
+GET /api/node/H511567?lastChanged=2025-12-23T00:11:10Z
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 Accept: application/json
-referer: https://apps.alsoenergy.com/powertrack/H511568/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H511567/administration/config
 ```
 
 **Response:**
 
 ```json
 {
-  "key": "H511568",
-  "lastChanged": "2025-12-23T00:11:25Z",
-  "name": "INVERTER 1",
-  "sort": 11,
-  "icon": "https://www.alsoenergy.com/pub/Images/Device/19880.png",
+  "key": "H511567",
+  "lastChanged": "2025-12-23T00:11:18Z",
+  "name": "SMA Data Manager",
+  "sort": 10,
+  "icon": "https://www.alsoenergy.com/pub/Images/Device/2442.png",
   "flags": 0,
   "parentKey": "S68143",
   "kind": "hardware",
-  "subKind": 1,
+  "subKind": 28,
   "path": [
     "C8458",
     "C25228",
