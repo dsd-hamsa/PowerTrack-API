@@ -4,7 +4,7 @@
 [← Back to Index](../logs.md)
 
 **Methods:** PUT  
-**Status Codes:** 200, 200  
+**Status Codes:** 200  
 
 ## Table of Contents
 
