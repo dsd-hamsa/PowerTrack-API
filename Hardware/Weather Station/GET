@@ -4,7 +4,7 @@
 [← Back to Index](../logs.md)
 
 **Methods:** GET  
-**Status Codes:** 200, 200  
+**Status Codes:** 200  
 
 ## Table of Contents
 
@@ -319,13 +319,13 @@
           "type": "string"
         },
         "originalValue": {
-          "type": "number"
+          "type": "string"
         },
         "type": {
           "type": "number"
         },
         "value": {
-          "type": "number"
+          "type": "string"
         }
       }
     },
@@ -414,7 +414,44 @@
     },
     "virtualWeather": {
       "type": "object",
-      "properties": {}
+      "properties": {
+        "forecast": {
+          "type": "boolean"
+        },
+        "hasSolarAnywhereLicense": {
+          "type": "boolean"
+        },
+        "installationType": {
+          "type": "number"
+        },
+        "moduleTempEstimate": {
+          "type": "boolean"
+        },
+        "remoteSourceId": {
+          "type": "number"
+        },
+        "saLicense": {
+          "type": "string"
+        },
+        "saPassword": {
+          "type": "string"
+        },
+        "saUser": {
+          "type": "string"
+        },
+        "serviceWeight": {
+          "type": "number"
+        },
+        "sourceList": {
+          "type": "array",
+          "items": {
+            "type": "unknown"
+          }
+        },
+        "virtualIrradiance": {
+          "type": "boolean"
+        }
+      }
     },
     "weather": {
       "type": "object",
@@ -488,7 +525,8 @@
           }
         },
         "pyranometerData": {
-          "type": "string"
+          "type": "object",
+          "properties": {}
         },
         "pyranometerUnit": {
           "type": "number"
@@ -670,11 +708,11 @@
 **Request:**
 
 ```http
-GET /api/edit/hardware/H511575
+GET /api/edit/hardware/H494021
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/H511575/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
 ```
 
 **Response:**
@@ -682,20 +720,21 @@ referer: https://apps.alsoenergy.com/powertrack/H511575/administration/config
 ```json
 {
   "additionalRegisters": [],
-  "address": "6",
+  "address": "0",
   "alsoHardwareId": 0,
   "alsoSiteId": 0,
   "array": null,
   "assetId": "",
   "autoCorrectDecrease": false,
   "autoCorrectIncrease": false,
-  "baud": "9600",
+  "baud": "",
   "capacityKw": 0,
   "chartSectionCode": 4,
   "commonDC": false,
   "commonDCAllMatch": true,
   "configs": [
-    "Weather"
+    "VirtualWeather",
+    "VirtualWeatherDevice"
   ],
   "conflictNames": null,
   "dashboardKey": "",
@@ -703,152 +742,152 @@ referer: https://apps.alsoenergy.com/powertrack/H511575/administration/config
   "debug": false,
   "decreaseDifference": 100,
   "defaultChart": 21,
-  "description": "REFERENCE CELL - POA",
+  "description": "Solcast Virtual Weather Station",
   "deviceRegisters": [
     {
-      "dataName": "Sun",
+      "dataName": "WindDirection",
       "dataNameDetail": null,
       "index": 0,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Plane of Array Irradiation (with Offset)",
-      "name": "Plane of Array Irradiance",
-      "standardDataName": "POA_Irradiance",
+      "localizedName": "Wind Direction",
+      "name": "Wind Direction",
+      "standardDataName": "Wind_Direction",
+      "units": "°"
+    },
+    {
+      "dataName": "GHI",
+      "dataNameDetail": null,
+      "index": 1,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Global Horizontal Irradiance (with Offset)",
+      "name": "Global Horizontal Irradiance ",
+      "standardDataName": "GHI_Irradiance",
       "units": "W/m²"
     },
     {
-      "dataName": "Temp2",
-      "dataNameDetail": null,
-      "index": 1,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "Module temperature 2",
-      "name": "Module Temperature 1",
-      "standardDataName": "",
-      "units": "°F"
-    },
-    {
-      "dataName": "Temp1",
+      "dataName": "DNI",
       "dataNameDetail": null,
       "index": 2,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Module Temperature",
-      "name": "Module Temperature",
-      "standardDataName": "Temp_Module",
+      "localizedName": "Direct Normal Irradiance",
+      "name": "Direct Normal Irradiance",
+      "standardDataName": "DNI_Irradiance",
+      "units": "W/m²"
+    },
+    {
+      "dataName": "DHI",
+      "dataNameDetail": null,
+      "index": 3,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Diffuse Horizontal Irradiance",
+      "name": "Direct Horizontal Irradiance",
+      "standardDataName": "DHI_Irradiance",
+      "units": "W/m²"
+    },
+    {
+      "dataName": "Ambient",
+      "dataNameDetail": null,
+      "index": 4,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Ambient Air Temperature",
+      "name": "Ambient Temperature",
+      "standardDataName": "Temp_Ambient",
       "units": "°F"
     },
     {
       "dataName": "WindSpeed",
       "dataNameDetail": null,
-      "index": 3,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "Wind Speed",
-      "name": "Wind Speed",
-      "standardDataName": "",
-      "units": "mph"
-    },
-    {
-      "dataName": "TempF",
-      "dataNameDetail": null,
-      "index": 4,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "Ambient Air Temperature",
-      "name": "Ambient Air Temperature",
-      "standardDataName": "",
-      "units": "°F"
-    },
-    {
-      "dataName": "Temp3",
-      "dataNameDetail": null,
       "index": 5,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Module temperature 3",
-      "name": "Module Temperature 2",
-      "standardDataName": "Temp_Module3",
-      "units": "°F"
+      "localizedName": "Wind Speed",
+      "name": "Wind Speed",
+      "standardDataName": "Wind_Speed",
+      "units": "mph"
     },
     {
-      "dataName": "Ambient1",
+      "dataName": "Rain",
       "dataNameDetail": null,
       "index": 6,
       "isArchived": false,
       "isIgnored": false,
       "isRaw": false,
-      "localizedName": "Ambient temperature 1",
-      "name": "Ambient Air Temperature 1",
+      "localizedName": "Absolute Precipitation",
+      "name": "Absolute Precipitation",
       "standardDataName": "",
-      "units": "°F"
+      "units": "in"
     },
     {
-      "dataName": "Sun2",
+      "dataName": "Snow",
       "dataNameDetail": null,
       "index": 7,
-      "isArchived": false,
+      "isArchived": true,
       "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "Global Horizontal Irradiance (with Offset)",
-      "name": "Global Horizontal Irradiance",
-      "standardDataName": "",
-      "units": "W/m²"
+      "isRaw": true,
+      "localizedName": "Snow Depth",
+      "name": "Snow Depth",
+      "standardDataName": "Snow_Depth",
+      "units": "in"
     }
   ],
-  "driverDescription": "Reference cell standard driver",
-  "driverFlags": 16384,
-  "driverId": 3588,
-  "driverName": "IMT Reference Cell (Standard) 3x Mod Temp",
-  "driverNotes": "Legacy DID : 3580\rStandard DID : 3588\r--------------------------------------------------------------------------------------------------------\rDriver Manual link : https://www.dropbox.com/home/_AE%20Vendor%20Docs/IMT%20solar?preview=Specification_Si-RS485_MODBUS.pdf\r--------------------------------------------------------------------------------------------------------\rThis standard driver can be consolidated with 3580, 250.",
+  "driverDescription": "Weather data from external sources such as SolarGIS and Clean Power Research, including DNI, DHI, Rain and Snow",
+  "driverFlags": 64,
+  "driverId": 19015,
+  "driverName": "External Weather Source (full)",
+  "driverNotes": "",
   "driverRegisters": [],
   "eGauge": null,
   "fixedEnergyOffset": 0,
   "functionCode": 5,
-  "functionId": "WS1",
+  "functionId": "WS0",
   "gateway": null,
   "gatewayFwVersion": "",
-  "gatewayId": "000CC68FAF30",
-  "gatewayKey": "H511564",
+  "gatewayId": "",
+  "gatewayKey": "",
   "gatewayScriptCount": "",
-  "gatewayType": 2,
+  "gatewayType": 0,
   "groupAllowed": [],
   "groupKey": "",
-  "hardwareId": "C20909_S68143_WS1",
+  "hardwareId": "C8458_S68143_WS0",
   "hardwareStatus": 1,
   "hasCapacity": false,
   "hash": "",
   "increaseDifference": -1,
-  "installDate": "2024-07-12",
-  "instance": 1,
+  "installDate": "2024-03-09",
+  "instance": 0,
   "inverterKw": 0,
   "isConflictAcknowledged": false,
   "isReportable": false,
   "isTcp": false,
   "isThermal": false,
-  "key": "H511575",
+  "key": "H494021",
   "kiosk": null,
   "latitude": 34.0371297,
   "limitedCommunication": false,
   "locusId": "",
   "longitude": -118.1014776,
   "meter": null,
-  "modelNum": "IMT Si-RS485TC-2T-v-MB",
+  "modelNum": "",
   "newNote": "",
   "oneMinuteData": false,
   "outOfService": false,
   "outOfServiceNote": "",
-  "outOfServiceUntil": "2025-12-23T00:11:30.00433Z",
+  "outOfServiceUntil": "2025-12-23T00:07:06.7884151Z",
   "outputAllowed": [],
   "outputKey": "",
   "parentKey": "S68143",
-  "port": 2,
+  "port": 0,
   "primary": false,
   "pullData": false,
   "pvConfig": null,
@@ -857,108 +896,52 @@ referer: https://apps.alsoenergy.com/powertrack/H511575/administration/config
   "reportExclude": false,
   "reverse": false,
   "sampleRate": 0,
-  "serialMode": 2,
-  "serialNum": "485-32003-23-24211210",
+  "serialMode": -1,
+  "serialNum": "",
   "settings": [
     {
       "index": 0,
-      "name": "dev:baud",
-      "originalValue": 9600,
-      "type": 1,
-      "value": 9600
+      "name": "Source",
+      "originalValue": "SolCast",
+      "type": 0,
+      "value": "SolCast"
     },
     {
       "index": 1,
-      "name": "dev:portMode",
-      "originalValue": "rs485",
-      "type": 0,
-      "value": "rs485"
+      "name": "Weather",
+      "originalValue": 1057,
+      "type": 1,
+      "value": 1057
     },
     {
       "index": 2,
-      "name": "dev:RegOffset",
-      "originalValue": 0,
-      "type": 1,
-      "value": 0
+      "name": "MinTemp",
+      "originalValue": "0",
+      "type": 0,
+      "value": "0"
     },
     {
       "index": 3,
-      "name": "MinTemp",
-      "originalValue": -30,
-      "type": 2,
-      "value": -30
+      "name": "MaxTemp",
+      "originalValue": "160",
+      "type": 0,
+      "value": "160"
     },
     {
       "index": 4,
-      "name": "MaxTemp",
-      "originalValue": 160,
-      "type": 2,
-      "value": 160
-    },
-    {
-      "index": 5,
-      "name": "weather",
-      "originalValue": 132,
-      "type": 1,
-      "value": 132
-    },
-    {
-      "index": 6,
-      "name": "dev:ScalePOA",
-      "originalValue": "0.1",
-      "type": 0,
-      "value": "0.1"
-    },
-    {
-      "index": 7,
-      "name": "dev:POAOffset",
-      "originalValue": "0",
-      "type": 0,
-      "value": "0"
-    },
-    {
-      "index": 8,
-      "name": "dev:ScaleT",
-      "originalValue": "0.1",
-      "type": 0,
-      "value": "0.1"
-    },
-    {
-      "index": 9,
-      "name": "dev:ScaleWindSP",
-      "originalValue": "0.1",
-      "type": 0,
-      "value": "0.1"
-    },
-    {
-      "index": 10,
-      "name": "dev:ScaleGHI",
-      "originalValue": "0.1",
-      "type": 0,
-      "value": "0.1"
-    },
-    {
-      "index": 11,
-      "name": "dev:GHIOffset",
-      "originalValue": "0",
-      "type": 0,
-      "value": "0"
-    },
-    {
-      "index": 12,
       "name": "ShortName",
-      "originalValue": "WS1",
+      "originalValue": "WS0",
       "type": 0,
-      "value": "WS1"
+      "value": "WS0"
     }
   ],
   "siteDcShare": 0,
   "siteHasInverterGroups": true,
-  "sort": 41,
+  "sort": 0,
   "syncToLocus": false,
   "tags": {
     "attributes": [],
-    "key": "{\"ancestorKey\":\"H511575\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
+    "key": "{\"ancestorKey\":\"H494021\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
     "keywords": [],
     "lastChanged": null,
     "notes": [],
@@ -967,24 +950,36 @@ referer: https://apps.alsoenergy.com/powertrack/H511575/administration/config
   "taskKey": "",
   "thermal": null,
   "thread": 0,
-  "ts": "2024-07-11T21:17:30Z",
+  "ts": "2024-03-08T14:48:26Z",
   "turbine": null,
   "unitId": 0,
   "uploadRate": 0,
   "validatedByKey": "",
   "validatedDateTime": "0001-01-01T00:00:00",
   "virtualRegisters": [],
-  "virtualWeather": null,
+  "virtualWeather": {
+    "forecast": false,
+    "hasSolarAnywhereLicense": false,
+    "installationType": 2,
+    "moduleTempEstimate": true,
+    "remoteSourceId": 0,
+    "saLicense": "",
+    "saPassword": "",
+    "saUser": "",
+    "serviceWeight": 1,
+    "sourceList": [],
+    "virtualIrradiance": false
+  },
   "weather": {
     "azimuth": 0,
-    "hasPyranometer": true,
+    "hasPyranometer": false,
     "hasRefPyranometer": false,
     "insolationType": 0,
     "interpolateDailyInsolation": true,
     "isPyranometerHigh": false,
     "isRefPyranometerHigh": false,
     "maxTempF": 160,
-    "minTempF": -30,
+    "minTempF": 0,
     "monthlyInsolation": {
       "apr": 0,
       "aug": 0,
@@ -999,14 +994,14 @@ referer: https://apps.alsoenergy.com/powertrack/H511575/administration/config
       "oct": 0,
       "sep": 0
     },
-    "pyranometerData": "NaN",
-    "pyranometerUnit": 57,
+    "pyranometerData": null,
+    "pyranometerUnit": 0,
     "refPyranometerData": null,
     "refPyranometerUnit": 0,
     "sensors": {
       "ambientTemp": {
         "isAllowed": true,
-        "isChecked": false
+        "isChecked": true
       },
       "barometer": {
         "isAllowed": false,
@@ -1017,36 +1012,36 @@ referer: https://apps.alsoenergy.com/powertrack/H511575/administration/config
         "isChecked": false
       },
       "panelTemp1": {
-        "isAllowed": true,
-        "isChecked": true
+        "isAllowed": false,
+        "isChecked": false
       },
       "panelTemp2": {
-        "isAllowed": true,
+        "isAllowed": false,
         "isChecked": false
       },
       "pyranometer1": {
-        "isAllowed": true,
-        "isChecked": true
+        "isAllowed": false,
+        "isChecked": false
       },
       "pyranometer2": {
         "isAllowed": true,
-        "isChecked": false
+        "isChecked": true
       },
       "pyrheliometer": {
         "isAllowed": false,
         "isChecked": false
       },
       "rain": {
-        "isAllowed": false,
+        "isAllowed": true,
         "isChecked": false
       },
       "snow": {
-        "isAllowed": false,
+        "isAllowed": true,
         "isChecked": false
       },
       "wind": {
         "isAllowed": true,
-        "isChecked": false
+        "isChecked": true
       }
     },
     "tilt": 0,
