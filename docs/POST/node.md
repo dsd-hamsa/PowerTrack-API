@@ -81,19 +81,19 @@
 **Request:**
 
 ```http
-POST /api/node?lastChanged=2025-12-23T00:10:37Z
+POST /api/node?lastChanged=2025-12-23T00:10:27Z
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 Content-Type: application/json
 Accept: application/json
-referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H511564/administration/config
 ```
 
 **Payload:**
 
 ```json
 {
-  "key": "H511565",
+  "key": "H511564",
   "context": "path",
   "kinds": [
     "customer",
@@ -115,8 +115,8 @@ referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
 
 ```json
 {
-  "key": "{\"key\":\"H511565\",\"context\":\"path\",\"kinds\":[\"customer\",\"hardware\",\"site\",\"user\",\"file\",\"folder\",\"report\"],\"subKinds\":[],\"nodes\":[],\"filter\":\"\",\"filterBy\":\"\"}",
-  "lastChanged": "2025-12-23T00:10:58Z",
+  "key": "{\"key\":\"H511564\",\"context\":\"path\",\"kinds\":[\"customer\",\"hardware\",\"site\",\"user\",\"file\",\"folder\",\"report\"],\"subKinds\":[],\"nodes\":[],\"filter\":\"\",\"filterBy\":\"\"}",
+  "lastChanged": "2025-12-23T00:10:37Z",
   "node": null,
   "nodes": [
     {
@@ -170,15 +170,15 @@ referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
       "permissions": 27
     },
     {
-      "key": "H511565",
-      "lastChanged": "2025-12-23T00:10:58Z",
-      "name": "Accuvim II - PV Prod Meter - M0",
-      "sort": 3,
-      "icon": "https://www.alsoenergy.com/pub/Images/meter.png",
+      "key": "H511564",
+      "lastChanged": "2025-12-23T00:10:37Z",
+      "name": "PowerLogger 1000",
+      "sort": 2,
+      "icon": "https://www.alsoenergy.com/pub/Images/Device/325.png",
       "flags": 0,
       "parentKey": "S68143",
       "kind": "hardware",
-      "subKind": 2,
+      "subKind": 10,
       "path": [
         "C8458",
         "C25228",
