@@ -40,11 +40,11 @@
 **Request:**
 
 ```http
-GET /api/task/all?lastChanged=2025-12-23T00:05:48Z
+GET /api/task/all?lastChanged=2025-12-22T21:59:52Z
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/H511575/administration/config
+referer: https://apps.alsoenergy.com/powertrack/S68143/administration/hardware
 ```
 
 **Response:**
@@ -52,7 +52,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511575/administration/config
 ```json
 {
   "key": "all",
-  "lastChanged": "2025-12-23T00:06:11Z",
+  "lastChanged": "2025-12-22T22:00:51Z",
   "tasks": []
 }
 ```
