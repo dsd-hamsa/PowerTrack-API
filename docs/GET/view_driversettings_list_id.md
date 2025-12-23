@@ -37,11 +37,11 @@
 **Request:**
 
 ```http
-GET /api/view/driversettings/list/2442
+GET /api/view/driversettings/list/8164
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 Accept: application/json
-referer: https://apps.alsoenergy.com/powertrack/H511567/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H511576/administration/config
 ```
 
 **Response:**
@@ -49,13 +49,43 @@ referer: https://apps.alsoenergy.com/powertrack/H511567/administration/config
 ```json
 [
   {
-    "name": "dev:RegOffset",
-    "value": "0",
+    "name": "dev:P1",
+    "value": "A",
     "type": 0
   },
   {
-    "name": "dev:UnitID",
+    "name": "dev:P2",
+    "value": "W",
+    "type": 0
+  },
+  {
+    "name": "dev:K1",
+    "value": "1.00",
+    "type": 0
+  },
+  {
+    "name": "dev:K2",
+    "value": "1.00",
+    "type": 0
+  },
+  {
+    "name": "dev:T1",
     "value": "1",
+    "type": 0
+  },
+  {
+    "name": "dev:TR1",
+    "value": "S",
+    "type": 0
+  },
+  {
+    "name": "dev:TR2",
+    "value": "W",
+    "type": 0
+  },
+  {
+    "name": "dev:SWAP",
+    "value": "0",
     "type": 0
   }
 ]
