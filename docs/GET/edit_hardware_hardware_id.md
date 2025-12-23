@@ -527,35 +527,35 @@
 **Request:**
 
 ```http
-GET /api/edit/hardware/H511566
+GET /api/edit/hardware/H511565
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 Accept: application/json
-referer: https://apps.alsoenergy.com/powertrack/H511566/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
 ```
 
 **Response:**
 
 ```json
 {
-  "key": "H511566",
+  "key": "H511565",
   "parentKey": "S68143",
-  "ts": "2025-12-22T22:01:11Z",
-  "description": "Accuvim II - SITE??  Meter - M1",
+  "ts": "2024-07-15T13:28:32Z",
+  "description": "Accuvim II - PV Prod Meter - M0",
   "assetId": "",
-  "hardwareId": "C20909_S68143_PM1",
-  "instance": 1,
-  "functionId": "PM1",
+  "hardwareId": "C20909_S68143_PM0",
+  "instance": 0,
+  "functionId": "PM0",
   "functionCode": 2,
   "hardwareStatus": 1,
   "capacityKw": 524.88,
-  "sort": 4,
+  "sort": 3,
   "gatewayKey": "H511564",
   "gatewayId": "000CC68FAF30",
   "gatewayFwVersion": "",
   "gatewayScriptCount": "",
   "gatewayType": 2,
-  "serialNum": "AHB54010502",
+  "serialNum": "AHB54010438",
   "modelNum": "ACCUENERGY IIR-D-mV-P1V3",
   "installDate": "2024-07-12",
   "driverId": 19601,
@@ -568,11 +568,11 @@ referer: https://apps.alsoenergy.com/powertrack/H511566/administration/config
   "debug": false,
   "outOfService": false,
   "outOfServiceNote": "",
-  "outOfServiceUntil": "2025-12-23T00:11:03.0440156Z",
+  "outOfServiceUntil": "2025-12-23T00:10:41.0028736Z",
   "reportExclude": false,
   "limitedCommunication": false,
   "primary": false,
-  "address": "192.168.13.42",
+  "address": "192.168.13.41",
   "unitId": 1,
   "isTcp": true,
   "port": 0,
@@ -650,10 +650,10 @@ referer: https://apps.alsoenergy.com/powertrack/H511566/administration/config
       "type": 2
     },
     {
-      "originalValue": "PM1",
+      "originalValue": "PM0",
       "index": 9,
       "name": "ShortName",
-      "value": "PM1",
+      "value": "PM0",
       "type": 0
     }
   ],
@@ -1151,17 +1151,17 @@ referer: https://apps.alsoenergy.com/powertrack/H511566/administration/config
   "driverRegisters": [],
   "virtualRegisters": [],
   "tags": {
-    "key": "{\"ancestorKey\":\"H511566\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
+    "key": "{\"ancestorKey\":\"H511565\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
     "lastChanged": null,
     "attributes": [],
     "keywords": [],
     "notes": [
       {
-        "key": "x050bf173",
-        "parentKey": "H511566",
+        "key": "x050bee4d",
+        "parentKey": "H511565",
         "authorKey": "U39142",
         "authorName": "Reuben Brazeal",
-        "date": "2024-07-12T14:05:31Z",
+        "date": "2024-07-12T13:59:07Z",
         "kind": "text",
         "isEvent": true,
         "text": "Password created"
