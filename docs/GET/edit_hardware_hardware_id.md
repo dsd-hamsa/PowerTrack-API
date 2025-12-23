@@ -8,10 +8,10 @@
 
 ## Table of Contents
 
-- [Gateway (functionCode: 10)](#gateway-functioncode-10)
+- [Cell Modem (functionCode: 31)](#cell-modem-functioncode-31)
 - [Example](#example)
 
-## Gateway (functionCode: 10)
+## Cell Modem (functionCode: 31)
 
 ```json
 {
@@ -283,9 +283,32 @@
           }
         },
         "notes": {
-          "type": "array",
-          "items": {
-            "type": "unknown"
+          "type": "object",
+          "properties": {
+            "key": {
+              "type": "string"
+            },
+            "parentKey": {
+              "type": "string"
+            },
+            "authorKey": {
+              "type": "string"
+            },
+            "authorName": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "kind": {
+              "type": "string"
+            },
+            "isEvent": {
+              "type": "boolean"
+            },
+            "text": {
+              "type": "string"
+            }
           }
         },
         "powerDisplays": {
@@ -342,7 +365,10 @@
       "type": "string"
     },
     "configs": {
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "unknown"
+      }
     },
     "array": {
       "type": "object",
@@ -354,73 +380,7 @@
     },
     "gateway": {
       "type": "object",
-      "properties": {
-        "gatewayType": {
-          "type": "number"
-        },
-        "deviceGatewayType": {
-          "type": "number"
-        },
-        "connectionType": {
-          "type": "number"
-        },
-        "ipAddress": {
-          "type": "string"
-        },
-        "mask": {
-          "type": "string"
-        },
-        "gatewayIp": {
-          "type": "string"
-        },
-        "dns1": {
-          "type": "string"
-        },
-        "dns2": {
-          "type": "string"
-        },
-        "firmware": {
-          "type": "object",
-          "properties": {
-            "gatewayId": {
-              "type": "string"
-            },
-            "client": {
-              "type": "string"
-            },
-            "server": {
-              "type": "string"
-            },
-            "enable": {
-              "type": "boolean"
-            },
-            "debug": {
-              "type": "boolean"
-            },
-            "lastUpdate": {
-              "type": "string"
-            },
-            "lastBoot": {
-              "type": "string"
-            },
-            "ip1": {
-              "type": "string"
-            },
-            "ip2": {
-              "type": "string"
-            },
-            "gatewayParams": {
-              "type": "array",
-              "items": {
-                "type": "unknown"
-              }
-            }
-          }
-        },
-        "commandAccessLevel": {
-          "type": "number"
-        }
-      }
+      "properties": {}
     },
     "kiosk": {
       "type": "object",
@@ -507,48 +467,48 @@
 **Request:**
 
 ```http
-GET /api/edit/hardware/H511564
+GET /api/edit/hardware/H511563
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 Accept: application/json
-referer: https://apps.alsoenergy.com/powertrack/H511564/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H511563/administration/config
 ```
 
 **Response:**
 
 ```json
 {
-  "key": "H511564",
+  "key": "H511563",
   "parentKey": "S68143",
-  "ts": "2024-07-15T13:27:46Z",
-  "description": "PowerLogger 1000",
+  "ts": "2025-03-13T18:25:44Z",
+  "description": "Cell Modem (Pepwave)",
   "assetId": "",
-  "hardwareId": "C20909_S68143_GW0",
+  "hardwareId": "C20909_S68143_CE0",
   "instance": 0,
-  "functionId": "GW0",
-  "functionCode": 10,
+  "functionId": "CE0",
+  "functionCode": 31,
   "hardwareStatus": 1,
-  "capacityKw": 62.5,
-  "sort": 2,
-  "gatewayKey": "H511564",
-  "gatewayId": "000CC68FAF30",
+  "capacityKw": 0,
+  "sort": 1,
+  "gatewayKey": "",
+  "gatewayId": "1932-1C3F-8F71",
   "gatewayFwVersion": "",
   "gatewayScriptCount": "",
-  "gatewayType": 7,
-  "serialNum": "",
-  "modelNum": "ALSOENERGY POWERLOGGER 1000",
+  "gatewayType": 2,
+  "serialNum": "1932-1C3F-8F71",
+  "modelNum": "PEPLINK MAX-BR1-MINI-LTE-US-DC-T-M-RPM",
   "installDate": "2024-07-12",
-  "driverId": 325,
-  "driverDescription": "Interactive Data Logger",
-  "driverFlags": 18497,
-  "driverName": "PowerLogger 1000",
+  "driverId": 19759,
+  "driverDescription": "SNMP from a pepwave wireless modem",
+  "driverFlags": 0,
+  "driverName": "Pepwave Wireless SNMP",
   "driverNotes": "",
   "validatedByKey": "",
   "validatedDateTime": "0001-01-01T00:00:00",
   "debug": false,
   "outOfService": false,
   "outOfServiceNote": "",
-  "outOfServiceUntil": "2025-12-23T00:10:22.7746295Z",
+  "outOfServiceUntil": "2025-12-23T00:09:14.7662372Z",
   "reportExclude": false,
   "limitedCommunication": false,
   "primary": false,
@@ -574,43 +534,69 @@ referer: https://apps.alsoenergy.com/powertrack/H511564/administration/config
       "type": 0
     },
     {
-      "originalValue": "200",
+      "originalValue": "ae",
       "index": 1,
-      "name": "dev:rate",
-      "value": "200",
+      "name": "dev:community",
+      "value": "ae",
       "type": 0
     },
     {
-      "originalValue": "GW0",
+      "originalValue": "alsoenergy",
       "index": 2,
+      "name": "dev:authentication",
+      "value": "alsoenergy",
+      "type": 0
+    },
+    {
+      "originalValue": "alsoenergy",
+      "index": 3,
+      "name": "dev:privacy",
+      "value": "alsoenergy",
+      "type": 0
+    },
+    {
+      "originalValue": "CE0",
+      "index": 4,
       "name": "ShortName",
-      "value": "GW0",
+      "value": "CE0",
       "type": 0
     }
   ],
   "deviceRegisters": [
     {
       "index": 0,
-      "name": "Firmware Build",
-      "localizedName": "Firmware Build",
-      "dataName": "fw",
-      "standardDataName": "",
-      "isIgnored": false,
-      "isRaw": false,
-      "isArchived": false,
-      "units": "",
-      "dataNameDetail": null
-    },
-    {
-      "index": 1,
-      "name": "LAN IPv4 Address",
-      "localizedName": "LAN IPv4 Address",
-      "dataName": "localip",
+      "name": "RSSI",
+      "localizedName": "RSSI",
+      "dataName": "RSSI",
       "standardDataName": "",
       "isIgnored": false,
       "isRaw": false,
       "isArchived": true,
-      "units": "",
+      "units": "dB",
+      "dataNameDetail": null
+    },
+    {
+      "index": 1,
+      "name": "Cell Bytes Sent Since Install",
+      "localizedName": "Cell Bytes Sent Since Install",
+      "dataName": "BytesSent",
+      "standardDataName": "",
+      "isIgnored": false,
+      "isRaw": true,
+      "isArchived": true,
+      "units": "MB",
+      "dataNameDetail": null
+    },
+    {
+      "index": 2,
+      "name": "Cell Bytes Received Since Install",
+      "localizedName": "Cell Bytes Received Since Install",
+      "dataName": "BytesReceived",
+      "standardDataName": "",
+      "isIgnored": false,
+      "isRaw": true,
+      "isArchived": true,
+      "units": "MB",
       "dataNameDetail": null
     }
   ],
@@ -626,11 +612,32 @@ referer: https://apps.alsoenergy.com/powertrack/H511564/administration/config
   "driverRegisters": [],
   "virtualRegisters": [],
   "tags": {
-    "key": "{\"ancestorKey\":\"H511564\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
+    "key": "{\"ancestorKey\":\"H511563\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
     "lastChanged": null,
     "attributes": [],
     "keywords": [],
-    "notes": [],
+    "notes": [
+      {
+        "key": "x050b5387",
+        "parentKey": "H511563",
+        "authorKey": "U39142",
+        "authorName": "Reuben Brazeal",
+        "date": "2024-07-11T21:20:46Z",
+        "kind": "text",
+        "isEvent": true,
+        "text": "Password created"
+      },
+      {
+        "key": "x050b53e2",
+        "parentKey": "H511563",
+        "authorKey": "U39142",
+        "authorName": "Reuben Brazeal",
+        "date": "2024-07-11T21:22:08Z",
+        "kind": "text",
+        "isEvent": true,
+        "text": "Password updated"
+      }
+    ],
     "powerDisplays": []
   },
   "sampleRate": 0,
@@ -646,34 +653,10 @@ referer: https://apps.alsoenergy.com/powertrack/H511564/administration/config
   "outputKey": "",
   "weatherStationKey1": "",
   "weatherStationKey2": "",
-  "configs": [
-    "Gateway"
-  ],
+  "configs": [],
   "array": null,
   "eGauge": null,
-  "gateway": {
-    "gatewayType": 0,
-    "deviceGatewayType": 7,
-    "connectionType": 2,
-    "ipAddress": "192.168.13.151",
-    "mask": "255.255.255.0",
-    "gatewayIp": "192.168.13.1",
-    "dns1": "8.8.8.8",
-    "dns2": "8.8.4.4",
-    "firmware": {
-      "gatewayId": "000CC68FAF30",
-      "client": "maki.exe;1.16.3.6|protobuf-net.dll;2.0.0.668\rModel:, Version:, Build:, ExtIP:172.24.96.118\rModel:, Version:, Build:, ExtIP:172.24.96.118",
-      "server": "maki.exe;1.16.3.6|protobuf-net.dll;2.0.0.668",
-      "enable": true,
-      "debug": false,
-      "lastUpdate": "528 d 5:18 (h:m)",
-      "lastBoot": "528 d 10:01 (h:m)",
-      "ip1": "192.168.13.151",
-      "ip2": "",
-      "gatewayParams": []
-    },
-    "commandAccessLevel": 1
-  },
+  "gateway": null,
   "kiosk": null,
   "meter": null,
   "pvConfig": null,
@@ -692,8 +675,8 @@ referer: https://apps.alsoenergy.com/powertrack/H511564/administration/config
   "latitude": 34.0371297,
   "longitude": -118.1014776,
   "hash": "",
-  "hasCapacity": true,
-  "inverterKw": 1050,
+  "hasCapacity": false,
+  "inverterKw": 0,
   "siteDcShare": 0,
   "pullData": false
 }
