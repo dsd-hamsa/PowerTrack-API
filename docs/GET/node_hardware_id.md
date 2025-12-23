@@ -17,7 +17,19 @@
 {
   "type": "object",
   "properties": {
+    "flags": {
+      "type": "number"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "isHidden": {
+      "type": "boolean"
+    },
     "key": {
+      "type": "string"
+    },
+    "kind": {
       "type": "string"
     },
     "lastChanged": {
@@ -26,34 +38,22 @@
     "name": {
       "type": "string"
     },
-    "sort": {
-      "type": "number"
-    },
-    "icon": {
-      "type": "string"
-    },
-    "flags": {
-      "type": "number"
-    },
     "parentKey": {
       "type": "string"
-    },
-    "kind": {
-      "type": "string"
-    },
-    "subKind": {
-      "type": "number"
     },
     "path": {
       "type": "string"
     },
-    "isHidden": {
-      "type": "boolean"
-    },
-    "validationStatus": {
+    "permissions": {
       "type": "number"
     },
-    "permissions": {
+    "sort": {
+      "type": "number"
+    },
+    "subKind": {
+      "type": "number"
+    },
+    "validationStatus": {
       "type": "number"
     }
   }
@@ -67,34 +67,34 @@
 **Request:**
 
 ```http
-GET /api/node/H494021?lastChanged=2025-12-22T22:02:50Z
+GET /api/node/H511568?lastChanged=2025-12-22T19:21:26Z
+Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-Accept: application/json
-referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H511568/administration/config
 ```
 
 **Response:**
 
 ```json
 {
-  "key": "H494021",
-  "lastChanged": "2025-12-23T00:09:09Z",
-  "name": "Solcast Virtual Weather Station",
-  "sort": 0,
-  "icon": "https://www.alsoenergy.com/pub/Images/weather.png",
   "flags": 0,
-  "parentKey": "S68143",
+  "icon": "https://www.alsoenergy.com/pub/Images/Device/19880.png",
+  "isHidden": false,
+  "key": "H511568",
   "kind": "hardware",
-  "subKind": 5,
+  "lastChanged": "2025-12-22T19:21:53Z",
+  "name": "INVERTER 1",
+  "parentKey": "S68143",
   "path": [
     "C8458",
     "C25228",
     "S68143"
   ],
-  "isHidden": false,
-  "validationStatus": 0,
-  "permissions": 27
+  "permissions": 27,
+  "sort": 11,
+  "subKind": 1,
+  "validationStatus": 0
 }
 ```
 
