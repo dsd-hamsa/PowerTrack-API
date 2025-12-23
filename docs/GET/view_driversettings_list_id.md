@@ -37,11 +37,11 @@
 **Request:**
 
 ```http
-GET /api/view/driversettings/list/8164
+GET /api/view/driversettings/list/3588
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 Accept: application/json
-referer: https://apps.alsoenergy.com/powertrack/H511576/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H511575/administration/config
 ```
 
 **Response:**
@@ -49,42 +49,37 @@ referer: https://apps.alsoenergy.com/powertrack/H511576/administration/config
 ```json
 [
   {
-    "name": "dev:P1",
-    "value": "A",
+    "name": "dev:ScalePOA",
+    "value": "0.1",
     "type": 0
   },
   {
-    "name": "dev:P2",
-    "value": "W",
+    "name": "dev:POAOffset",
+    "value": "0",
     "type": 0
   },
   {
-    "name": "dev:K1",
-    "value": "1.00",
+    "name": "dev:ScaleT",
+    "value": "0.1",
     "type": 0
   },
   {
-    "name": "dev:K2",
-    "value": "1.00",
+    "name": "dev:ScaleWindSP",
+    "value": "0.1",
     "type": 0
   },
   {
-    "name": "dev:T1",
-    "value": "1",
+    "name": "dev:RegOffset",
+    "value": "0",
     "type": 0
   },
   {
-    "name": "dev:TR1",
-    "value": "S",
+    "name": "dev:ScaleGHI",
+    "value": "0.1",
     "type": 0
   },
   {
-    "name": "dev:TR2",
-    "value": "W",
-    "type": 0
-  },
-  {
-    "name": "dev:SWAP",
+    "name": "dev:GHIOffset",
     "value": "0",
     "type": 0
   }
