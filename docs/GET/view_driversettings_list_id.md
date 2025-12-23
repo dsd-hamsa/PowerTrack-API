@@ -20,11 +20,11 @@
     "name": {
       "type": "string"
     },
-    "type": {
-      "type": "number"
-    },
     "value": {
       "type": "string"
+    },
+    "type": {
+      "type": "number"
     }
   }
 }
@@ -37,11 +37,11 @@
 **Request:**
 
 ```http
-GET /api/view/driversettings/list/19880
-Accept: application/json
+GET /api/view/driversettings/list/8164
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/H511568/administration/config
+Accept: application/json
+referer: https://apps.alsoenergy.com/powertrack/H511576/administration/config
 ```
 
 **Response:**
@@ -49,69 +49,44 @@ referer: https://apps.alsoenergy.com/powertrack/H511568/administration/config
 ```json
 [
   {
-    "name": "dev:RegOffset",
-    "type": 0,
-    "value": "0"
+    "name": "dev:P1",
+    "value": "A",
+    "type": 0
   },
   {
-    "name": "dev:UnitID",
-    "type": 1,
-    "value": "3"
+    "name": "dev:P2",
+    "value": "W",
+    "type": 0
   },
   {
-    "name": "dev:tcpretry",
-    "type": 0,
-    "value": "3"
+    "name": "dev:K1",
+    "value": "1.00",
+    "type": 0
   },
   {
-    "name": "dev:KWHoffset",
-    "type": 0,
-    "value": "0"
+    "name": "dev:K2",
+    "value": "1.00",
+    "type": 0
   },
   {
-    "name": "dev:ScaleKWH",
-    "type": 0,
-    "value": "1"
+    "name": "dev:T1",
+    "value": "1",
+    "type": 0
   },
   {
-    "name": "dev:ScaleKW",
-    "type": 0,
-    "value": "0.001"
+    "name": "dev:TR1",
+    "value": "S",
+    "type": 0
   },
   {
-    "name": "dev:ScaleV",
-    "type": 0,
-    "value": "0.01"
+    "name": "dev:TR2",
+    "value": "W",
+    "type": 0
   },
   {
-    "name": "dev:ScaleI",
-    "type": 0,
-    "value": "0.001"
-  },
-  {
-    "name": "dev:ScaleFrequency",
-    "type": 0,
-    "value": "0.01"
-  },
-  {
-    "name": "dev:ScaleKVAR",
-    "type": 0,
-    "value": "0.001"
-  },
-  {
-    "name": "dev:ScalePF",
-    "type": 0,
-    "value": "0.001"
-  },
-  {
-    "name": "dev:ScaleTemp",
-    "type": 0,
-    "value": "0.1"
-  },
-  {
-    "name": "dev:ScaleKVA",
-    "type": 0,
-    "value": "0.001"
+    "name": "dev:SWAP",
+    "value": "0",
+    "type": 0
   }
 ]
 ```
