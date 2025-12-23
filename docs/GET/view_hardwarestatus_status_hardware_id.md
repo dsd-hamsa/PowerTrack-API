@@ -26,11 +26,11 @@
 **Request:**
 
 ```http
-GET /api/view/hardwarestatus/status/H511567
+GET /api/view/hardwarestatus/status/H511566
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 Accept: application/json
-referer: https://apps.alsoenergy.com/powertrack/H511567/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H511566/administration/config
 ```
 
 **Response:**
