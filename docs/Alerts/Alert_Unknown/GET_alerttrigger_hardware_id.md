@@ -24,7 +24,8 @@
       "type": "number"
     },
     "capacity": {
-      "type": "number"
+      "type": "object",
+      "properties": {}
     },
     "defaultTriggers": {
       "type": "object",
@@ -243,20 +244,20 @@
 **Request:**
 
 ```http
-GET /api/alerttrigger/H534513?lastChanged=2024-11-15T02:45:56Z
+GET /api/alerttrigger/H488308?lastChanged=2024-11-15T02:45:56Z
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: e4dcd1
-referer: https://apps.alsoenergy.com/powertrack/H534513/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H488308/administration/config
 ```
 
 **Response:**
 
 ```json
 {
-  "assetCode": 14,
+  "assetCode": 11,
   "calculatedCapacity": 0,
-  "capacity": 0,
+  "capacity": null,
   "defaultTriggers": [
     {
       "alertTypeKey": "AI250",
@@ -272,7 +273,7 @@ referer: https://apps.alsoenergy.com/powertrack/H534513/administration/config
       "impact": 0,
       "isActive": false,
       "key": "",
-      "lastChanged": "2025-12-22T18:51:15Z",
+      "lastChanged": "2024-10-30T03:32:46Z",
       "name": "Device communication",
       "ownerKey": "",
       "parameters": [
@@ -286,7 +287,7 @@ referer: https://apps.alsoenergy.com/powertrack/H534513/administration/config
           "value": 0
         }
       ],
-      "parentKey": "H534513",
+      "parentKey": "H488308",
       "priorityLevel": 0,
       "sharing": 0,
       "startTime": 0,
@@ -295,24 +296,24 @@ referer: https://apps.alsoenergy.com/powertrack/H534513/administration/config
       "sunMinElevation": 0
     }
   ],
-  "key": "H534513",
-  "lastChanged": "2025-12-22T18:51:15Z",
+  "key": "H488308",
+  "lastChanged": "2024-10-30T03:32:46Z",
   "triggers": [
     {
       "alertTypeKey": "AI250",
-      "checkNoSnow": false,
-      "checkSun": false,
+      "checkNoSnow": true,
+      "checkSun": true,
       "checkTime": false,
-      "delayHoursResolve": 0,
-      "delayHoursTrigger": 0.25,
+      "delayHoursResolve": 0.5,
+      "delayHoursTrigger": 0.5,
       "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
       "endTime": 0,
       "hasImpact": false,
-      "id": 1683855,
+      "id": 1574653,
       "impact": 0,
       "isActive": true,
-      "key": "x2d19b18f",
-      "lastChanged": "2025-12-22T18:51:15Z",
+      "key": "x2d1806fd",
+      "lastChanged": "2024-10-30T03:32:46Z",
       "name": "Device communication",
       "ownerKey": "",
       "parameters": [
@@ -326,13 +327,13 @@ referer: https://apps.alsoenergy.com/powertrack/H534513/administration/config
           "value": 0
         }
       ],
-      "parentKey": "H534513",
+      "parentKey": "H488308",
       "priorityLevel": 0,
       "sharing": 0,
       "startTime": 0,
       "sunMaxAzimuth": 0,
       "sunMinAzimuth": 0,
-      "sunMinElevation": 0
+      "sunMinElevation": 10
     }
   ]
 }
