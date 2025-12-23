@@ -4,7 +4,7 @@
 [← Back to Index](../logs.md)
 
 **Methods:** POST  
-**Status Codes:** 200  
+**Status Codes:** 200, 200  
 
 ## Table of Contents
 
@@ -95,10 +95,7 @@
           "type": "string"
         },
         "path": {
-          "type": "array",
-          "items": {
-            "type": "unknown"
-          }
+          "type": "array"
         },
         "permissions": {
           "type": "number"
@@ -125,12 +122,12 @@
 **Request:**
 
 ```http
-POST /api/node?lastChanged=2025-12-22T19:21:26Z
+POST /api/node?lastChanged=2025-12-22T22:01:11Z
 Accept: application/json
 Content-Type: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/H511568/administration/config
+referer: https://apps.alsoenergy.com/powertrack/S68143/administration/config
 ```
 
 **Payload:**
@@ -140,7 +137,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511568/administration/config
   "context": "path",
   "filter": "",
   "filterBy": "",
-  "key": "H511568",
+  "key": "S68143",
   "kinds": [
     "customer",
     "hardware",
@@ -159,8 +156,8 @@ referer: https://apps.alsoenergy.com/powertrack/H511568/administration/config
 
 ```json
 {
-  "key": "{\"key\":\"H511568\",\"context\":\"path\",\"kinds\":[\"customer\",\"hardware\",\"site\",\"user\",\"file\",\"folder\",\"report\"],\"subKinds\":[],\"nodes\":[],\"filter\":\"\",\"filterBy\":\"\"}",
-  "lastChanged": "2025-12-22T19:21:53Z",
+  "key": "{\"key\":\"S68143\",\"context\":\"path\",\"kinds\":[\"customer\",\"hardware\",\"site\",\"user\",\"file\",\"folder\",\"report\"],\"subKinds\":[],\"nodes\":[],\"filter\":\"\",\"filterBy\":\"\"}",
+  "lastChanged": "2025-12-22T22:02:50Z",
   "node": null,
   "nodes": [
     {
@@ -201,7 +198,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511568/administration/config
       "isHidden": false,
       "key": "S68143",
       "kind": "site",
-      "lastChanged": "2025-12-16T16:37:49Z",
+      "lastChanged": "2025-12-22T22:02:50Z",
       "name": "*** LOST?* THD CA - 2304 Monterey Park",
       "parentKey": "C25228",
       "path": [
@@ -212,25 +209,6 @@ referer: https://apps.alsoenergy.com/powertrack/H511568/administration/config
       "sort": 2147483647,
       "subKind": 0,
       "validationStatus": 1
-    },
-    {
-      "flags": 0,
-      "icon": "https://www.alsoenergy.com/pub/Images/Device/19880.png",
-      "isHidden": false,
-      "key": "H511568",
-      "kind": "hardware",
-      "lastChanged": "2025-12-22T19:21:53Z",
-      "name": "INVERTER 1",
-      "parentKey": "S68143",
-      "path": [
-        "C8458",
-        "C25228",
-        "S68143"
-      ],
-      "permissions": 27,
-      "sort": 11,
-      "subKind": 1,
-      "validationStatus": 0
     }
   ]
 }
