@@ -527,11 +527,11 @@
 **Request:**
 
 ```http
-GET /api/edit/hardware/H511566
+GET /api/edit/hardware/H511565
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/H511566/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
 ```
 
 **Response:**
@@ -539,7 +539,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511566/administration/config
 ```json
 {
   "additionalRegisters": [],
-  "address": "192.168.13.42",
+  "address": "192.168.13.41",
   "alsoHardwareId": 0,
   "alsoSiteId": 0,
   "array": null,
@@ -560,7 +560,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511566/administration/config
   "debug": false,
   "decreaseDifference": 100,
   "defaultChart": 15,
-  "description": "Accuvim II - SITE??  Meter - M1",
+  "description": "Accuvim II - PV Prod Meter - M0",
   "deviceRegisters": [
     {
       "dataName": "Hz",
@@ -1052,7 +1052,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511566/administration/config
   "eGauge": null,
   "fixedEnergyOffset": 0,
   "functionCode": 2,
-  "functionId": "PM1",
+  "functionId": "PM0",
   "gateway": null,
   "gatewayFwVersion": "",
   "gatewayId": "000CC68FAF30",
@@ -1061,19 +1061,19 @@ referer: https://apps.alsoenergy.com/powertrack/H511566/administration/config
   "gatewayType": 2,
   "groupAllowed": [],
   "groupKey": "",
-  "hardwareId": "C20909_S68143_PM1",
+  "hardwareId": "C20909_S68143_PM0",
   "hardwareStatus": 1,
   "hasCapacity": true,
   "hash": "",
   "increaseDifference": -1,
   "installDate": "2024-07-12",
-  "instance": 1,
+  "instance": 0,
   "inverterKw": 0,
   "isConflictAcknowledged": false,
   "isReportable": true,
   "isTcp": true,
   "isThermal": false,
-  "key": "H511566",
+  "key": "H511565",
   "kiosk": null,
   "latitude": 34.0371297,
   "limitedCommunication": false,
@@ -1117,7 +1117,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511566/administration/config
   "oneMinuteData": false,
   "outOfService": false,
   "outOfServiceNote": "",
-  "outOfServiceUntil": "2025-12-23T00:11:03.0440156Z",
+  "outOfServiceUntil": "2025-12-23T00:10:41.0028736Z",
   "outputAllowed": [],
   "outputKey": "",
   "parentKey": "S68143",
@@ -1131,7 +1131,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511566/administration/config
   "reverse": false,
   "sampleRate": 0,
   "serialMode": 0,
-  "serialNum": "AHB54010502",
+  "serialNum": "AHB54010438",
   "settings": [
     {
       "index": 0,
@@ -1199,29 +1199,29 @@ referer: https://apps.alsoenergy.com/powertrack/H511566/administration/config
     {
       "index": 9,
       "name": "ShortName",
-      "originalValue": "PM1",
+      "originalValue": "PM0",
       "type": 0,
-      "value": "PM1"
+      "value": "PM0"
     }
   ],
   "siteDcShare": 0,
   "siteHasInverterGroups": true,
-  "sort": 4,
+  "sort": 3,
   "syncToLocus": false,
   "tags": {
     "attributes": [],
-    "key": "{\"ancestorKey\":\"H511566\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
+    "key": "{\"ancestorKey\":\"H511565\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
     "keywords": [],
     "lastChanged": null,
     "notes": [
       {
         "authorKey": "U39142",
         "authorName": "Reuben Brazeal",
-        "date": "2024-07-12T14:05:31Z",
+        "date": "2024-07-12T13:59:07Z",
         "isEvent": true,
-        "key": "x050bf173",
+        "key": "x050bee4d",
         "kind": "text",
-        "parentKey": "H511566",
+        "parentKey": "H511565",
         "text": "Password created"
       }
     ],
@@ -1230,7 +1230,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511566/administration/config
   "taskKey": "",
   "thermal": null,
   "thread": 0,
-  "ts": "2025-12-22T22:01:11Z",
+  "ts": "2024-07-15T13:28:32Z",
   "turbine": null,
   "unitId": 1,
   "uploadRate": 0,
