@@ -57,9 +57,9 @@ function generateTOC() {
         const filePath = path.join(typePath, file);
         const endpoint = extractEndpointFromMD(filePath);
         if (endpoint) {
-          const typeName = typeDir.replace('Unknown_', 'Unknown ').replace('Alert_', '');
-          // Extract method from filename (e.g., _GET.md)
-          const methodMatch = file.match(/_(GET|POST|PUT|DELETE)\.md$/);
+            const typeName = typeDir.replace('Unknown_', 'Unknown ');
+          // Extract method from filename (e.g., GET_)
+          const methodMatch = file.match(/^(GET|POST|PUT|DELETE)_/);
           const method = methodMatch ? methodMatch[1] : 'UNKNOWN';
           toc[category].push({ endpoint: `${endpoint} (${typeName}, ${method})`, file: `${category}/${typeDir}/${file}` });
         }
