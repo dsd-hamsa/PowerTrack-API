@@ -81,19 +81,19 @@
 **Request:**
 
 ```http
-POST /api/node?lastChanged=2025-12-23T00:11:41Z
+POST /api/node?lastChanged=2025-12-23T00:11:34Z
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 Content-Type: application/json
 Accept: application/json
-referer: https://apps.alsoenergy.com/powertrack/H511576/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H511575/administration/config
 ```
 
 **Payload:**
 
 ```json
 {
-  "key": "H511576",
+  "key": "H511575",
   "context": "path",
   "kinds": [
     "customer",
@@ -115,8 +115,8 @@ referer: https://apps.alsoenergy.com/powertrack/H511576/administration/config
 
 ```json
 {
-  "key": "{\"key\":\"H511576\",\"context\":\"path\",\"kinds\":[\"customer\",\"hardware\",\"site\",\"user\",\"file\",\"folder\",\"report\"],\"subKinds\":[],\"nodes\":[],\"filter\":\"\",\"filterBy\":\"\"}",
-  "lastChanged": "2025-12-23T00:11:51Z",
+  "key": "{\"key\":\"H511575\",\"context\":\"path\",\"kinds\":[\"customer\",\"hardware\",\"site\",\"user\",\"file\",\"folder\",\"report\"],\"subKinds\":[],\"nodes\":[],\"filter\":\"\",\"filterBy\":\"\"}",
+  "lastChanged": "2025-12-23T00:11:41Z",
   "node": null,
   "nodes": [
     {
@@ -170,11 +170,11 @@ referer: https://apps.alsoenergy.com/powertrack/H511576/administration/config
       "permissions": 27
     },
     {
-      "key": "H511576",
-      "lastChanged": "2025-12-23T00:11:51Z",
-      "name": "WEATHER STATION",
-      "sort": 42,
-      "icon": "https://www.alsoenergy.com/pub/Images/Device/8164.png",
+      "key": "H511575",
+      "lastChanged": "2025-12-23T00:11:41Z",
+      "name": "REFERENCE CELL - POA",
+      "sort": 41,
+      "icon": "https://www.alsoenergy.com/pub/Images/Device/3588.png",
       "flags": 0,
       "parentKey": "S68143",
       "kind": "hardware",
