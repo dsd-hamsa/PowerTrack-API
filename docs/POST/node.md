@@ -18,20 +18,20 @@
 {
   "type": "object",
   "properties": {
-    "key": {
+    "context": {
       "type": "string"
     },
-    "context": {
+    "filter": {
+      "type": "string"
+    },
+    "filterBy": {
+      "type": "string"
+    },
+    "key": {
       "type": "string"
     },
     "kinds": {
       "type": "string"
-    },
-    "subKinds": {
-      "type": "array",
-      "items": {
-        "type": "unknown"
-      }
     },
     "nodes": {
       "type": "array",
@@ -39,11 +39,11 @@
         "type": "unknown"
       }
     },
-    "filter": {
-      "type": "string"
-    },
-    "filterBy": {
-      "type": "string"
+    "subKinds": {
+      "type": "array",
+      "items": {
+        "type": "unknown"
+      }
     }
   }
 }
@@ -68,7 +68,48 @@
       "properties": {}
     },
     "nodes": {
-      "type": "object"
+      "type": "object",
+      "properties": {
+        "flags": {
+          "type": "number"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "isHidden": {
+          "type": "boolean"
+        },
+        "key": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "lastChanged": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "parentKey": {
+          "type": "string"
+        },
+        "path": {
+          "type": "array"
+        },
+        "permissions": {
+          "type": "number"
+        },
+        "sort": {
+          "type": "number"
+        },
+        "subKind": {
+          "type": "number"
+        },
+        "validationStatus": {
+          "type": "number"
+        }
+      }
     }
   }
 }
@@ -81,20 +122,22 @@
 **Request:**
 
 ```http
-POST /api/node?lastChanged=2025-12-22T22:02:50Z
+POST /api/node?lastChanged=2025-12-22T22:01:11Z
+Accept: application/json
+Content-Type: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-Content-Type: application/json
-Accept: application/json
-referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
+referer: https://apps.alsoenergy.com/powertrack/S68143/administration/config
 ```
 
 **Payload:**
 
 ```json
 {
-  "key": "H494021",
   "context": "path",
+  "filter": "",
+  "filterBy": "",
+  "key": "S68143",
   "kinds": [
     "customer",
     "hardware",
@@ -104,10 +147,8 @@ referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
     "folder",
     "report"
   ],
-  "subKinds": [],
   "nodes": [],
-  "filter": "",
-  "filterBy": ""
+  "subKinds": []
 }
 ```
 
@@ -115,78 +156,59 @@ referer: https://apps.alsoenergy.com/powertrack/H494021/administration/config
 
 ```json
 {
-  "key": "{\"key\":\"H494021\",\"context\":\"path\",\"kinds\":[\"customer\",\"hardware\",\"site\",\"user\",\"file\",\"folder\",\"report\"],\"subKinds\":[],\"nodes\":[],\"filter\":\"\",\"filterBy\":\"\"}",
-  "lastChanged": "2025-12-23T00:09:09Z",
+  "key": "{\"key\":\"S68143\",\"context\":\"path\",\"kinds\":[\"customer\",\"hardware\",\"site\",\"user\",\"file\",\"folder\",\"report\"],\"subKinds\":[],\"nodes\":[],\"filter\":\"\",\"filterBy\":\"\"}",
+  "lastChanged": "2025-12-22T22:02:50Z",
   "node": null,
   "nodes": [
     {
+      "flags": 0,
+      "icon": "CustAccount",
+      "isHidden": false,
       "key": "C8458",
+      "kind": "customer",
       "lastChanged": "2023-11-01T20:51:32Z",
       "name": "Distributed Solar Development",
-      "sort": 2147483647,
-      "icon": "CustAccount",
-      "flags": 0,
       "parentKey": "C2",
-      "kind": "customer",
-      "subKind": 0,
       "path": [],
-      "isHidden": false,
-      "validationStatus": 0,
-      "permissions": 27
+      "permissions": 27,
+      "sort": 2147483647,
+      "subKind": 0,
+      "validationStatus": 0
     },
     {
+      "flags": 0,
+      "icon": "Customer",
+      "isHidden": false,
       "key": "C25228",
+      "kind": "customer",
       "lastChanged": "2023-09-26T16:51:20Z",
       "name": "1.1_Direct",
-      "sort": 2147483647,
-      "icon": "Customer",
-      "flags": 0,
       "parentKey": "C8458",
-      "kind": "customer",
-      "subKind": 0,
       "path": [
         "C8458"
       ],
-      "isHidden": false,
-      "validationStatus": 0,
-      "permissions": 27
+      "permissions": 27,
+      "sort": 2147483647,
+      "subKind": 0,
+      "validationStatus": 0
     },
     {
+      "flags": 0,
+      "icon": "Site",
+      "isHidden": false,
       "key": "S68143",
+      "kind": "site",
       "lastChanged": "2025-12-22T22:02:50Z",
       "name": "*** LOST?* THD CA - 2304 Monterey Park",
-      "sort": 2147483647,
-      "icon": "Site",
-      "flags": 0,
       "parentKey": "C25228",
-      "kind": "site",
-      "subKind": 0,
       "path": [
         "C8458",
         "C25228"
       ],
-      "isHidden": false,
-      "validationStatus": 1,
-      "permissions": 27
-    },
-    {
-      "key": "H494021",
-      "lastChanged": "2025-12-23T00:09:09Z",
-      "name": "Solcast Virtual Weather Station",
-      "sort": 0,
-      "icon": "https://www.alsoenergy.com/pub/Images/weather.png",
-      "flags": 0,
-      "parentKey": "S68143",
-      "kind": "hardware",
-      "subKind": 5,
-      "path": [
-        "C8458",
-        "C25228",
-        "S68143"
-      ],
-      "isHidden": false,
-      "validationStatus": 0,
-      "permissions": 27
+      "permissions": 27,
+      "sort": 2147483647,
+      "subKind": 0,
+      "validationStatus": 1
     }
   ]
 }
