@@ -4,7 +4,7 @@
 [← Back to Index](../logs.md)
 
 **Methods:** GET  
-**Status Codes:** 200, 200, 200  
+**Status Codes:** 200, 200, 200, 200  
 
 ## Table of Contents
 
@@ -30,7 +30,7 @@ GET /api/node/favorites
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/C8458/overview/sites
+referer: https://apps.alsoenergy.com/powertrack/H511575/administration/config
 ```
 
 **Response:**
