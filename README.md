@@ -13,8 +13,8 @@ This repository contains automatically generated documentation for the AlsoEnerg
 ### GET Endpoints
 - [/api/alerttrigger/{alert_id}](docs/GET/alerttrigger_alert_id.md)
 - [/api/alerttrigger/{hardware_id}](docs/GET/alerttrigger_hardware_id.md)
-- [/api/alerttrigger/new/{hardware_id}/AI250](docs/GET/alerttrigger_new_hardware_id_AI250.md)
 - [/api/alerttrigger/{site_id}](docs/GET/alerttrigger_site_id.md)
+- [/api/alerttrigger/new/{hardware_id}/AI250](docs/GET/alerttrigger_new_hardware_id_AI250.md)
 - [/api/applinks](docs/GET/applinks.md)
 - [/api/appsettings/powertrack](docs/GET/appsettings_powertrack.md)
 - [/api/edit/customer/{customer_id}](docs/GET/edit_customer_customer_id.md)
@@ -26,20 +26,20 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/lookuplist/alertTypes/{hardware_id}](docs/GET/lookuplist_alertTypes_hardware_id.md)
 - [/api/lookuplist/timeZones](docs/GET/lookuplist_timeZones.md)
 - [/api/netsuite/cases/{site_id}](docs/GET/netsuite_cases_site_id.md)
-- [/api/node/favorites](docs/GET/node_favorites.md)
 - [/api/node/{hardware_id}](docs/GET/node_hardware_id.md)
 - [/api/node/{site_id}](docs/GET/node_site_id.md)
 - [/api/node/{user_id}](docs/GET/node_user_id.md)
+- [/api/node/favorites](docs/GET/node_favorites.md)
 - [/api/production/{site_id}](docs/GET/production_site_id.md)
 - [/api/projectmanagement/{site_id}](docs/GET/projectmanagement_site_id.md)
 - [/api/subscription/{hardware_id}](docs/GET/subscription_hardware_id.md)
 - [/api/subscription/{site_id}](docs/GET/subscription_site_id.md)
 - [/api/task/all](docs/GET/task_all.md)
 - [/api/userpreferences](docs/GET/userpreferences.md)
+- [/api/view/activealerts/{customer_id}](docs/GET/view_activealerts_customer_id.md)
 - [/api/view/activealerts/activesummary/{customer_id}](docs/GET/view_activealerts_activesummary_customer_id.md)
 - [/api/view/activealerts/activesummary/{hardware_id}](docs/GET/view_activealerts_activesummary_hardware_id.md)
 - [/api/view/activealerts/activesummary/{site_id}](docs/GET/view_activealerts_activesummary_site_id.md)
-- [/api/view/activealerts/{customer_id}](docs/GET/view_activealerts_customer_id.md)
 - [/api/view/driversettings/list/{id}](docs/GET/view_driversettings_list_id.md)
 - [/api/view/hardwarenavigatorstatus/{site_id}](docs/GET/view_hardwarenavigatorstatus_site_id.md)
 - [/api/view/hardwarestatus/status/{hardware_id}](docs/GET/view_hardwarestatus_status_hardware_id.md)
@@ -78,8 +78,8 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/alerttrigger/{hardware_id}/{alert_id}](docs/DELETE/alerttrigger_hardware_id_alert_id.md)
 
 ## Generation Details
-- Generated: 2025-12-22
-- Total Endpoints: 52
+- Generated: 2025-12-23
+- Total Endpoints: 59
 - Source: Browser-intercepted API calls from PowerTrack web application
 - Tool: Custom extension for AlsoEnergy PowerTrack API documentation
 
