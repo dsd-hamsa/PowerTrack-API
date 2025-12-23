@@ -81,7 +81,7 @@
 **Request:**
 
 ```http
-POST /api/node?lastChanged=2025-12-23T00:09:52Z
+POST /api/node?lastChanged=2025-12-23T00:09:09Z
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 Content-Type: application/json
@@ -116,7 +116,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511563/administration/config
 ```json
 {
   "key": "{\"key\":\"H511563\",\"context\":\"path\",\"kinds\":[\"customer\",\"hardware\",\"site\",\"user\",\"file\",\"folder\",\"report\"],\"subKinds\":[],\"nodes\":[],\"filter\":\"\",\"filterBy\":\"\"}",
-  "lastChanged": "2025-12-23T00:10:00Z",
+  "lastChanged": "2025-12-23T00:09:52Z",
   "node": null,
   "nodes": [
     {
@@ -171,7 +171,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511563/administration/config
     },
     {
       "key": "H511563",
-      "lastChanged": "2025-12-23T00:10:00Z",
+      "lastChanged": "2025-12-23T00:09:52Z",
       "name": "Cell Modem (Pepwave)",
       "sort": 1,
       "icon": "https://www.alsoenergy.com/pub/Images/Device/19759.png",
