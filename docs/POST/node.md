@@ -81,7 +81,7 @@
 **Request:**
 
 ```http
-POST /api/node?lastChanged=2025-12-23T00:11:34Z
+POST /api/node?lastChanged=2025-12-23T00:11:25Z
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
 Content-Type: application/json
@@ -116,7 +116,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511575/administration/config
 ```json
 {
   "key": "{\"key\":\"H511575\",\"context\":\"path\",\"kinds\":[\"customer\",\"hardware\",\"site\",\"user\",\"file\",\"folder\",\"report\"],\"subKinds\":[],\"nodes\":[],\"filter\":\"\",\"filterBy\":\"\"}",
-  "lastChanged": "2025-12-23T00:11:41Z",
+  "lastChanged": "2025-12-23T00:11:34Z",
   "node": null,
   "nodes": [
     {
@@ -171,7 +171,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511575/administration/config
     },
     {
       "key": "H511575",
-      "lastChanged": "2025-12-23T00:11:41Z",
+      "lastChanged": "2025-12-23T00:11:34Z",
       "name": "REFERENCE CELL - POA",
       "sort": 41,
       "icon": "https://www.alsoenergy.com/pub/Images/Device/3588.png",
