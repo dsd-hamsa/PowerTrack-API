@@ -4,7 +4,7 @@
 [← Back to Index](../logs.md)
 
 **Methods:** POST  
-**Status Codes:** 200, 200  
+**Status Codes:** 200, 200, 200  
 
 ## Table of Contents
 
@@ -95,7 +95,7 @@
           "type": "string"
         },
         "path": {
-          "type": "array"
+          "type": "string"
         },
         "permissions": {
           "type": "number"
@@ -122,30 +122,26 @@
 **Request:**
 
 ```http
-POST /api/node?lastChanged=2025-12-22T22:01:11Z
+POST /api/node?lastChanged=2025-12-22T21:58:47Z
 Accept: application/json
 Content-Type: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/S68143/administration/config
+referer: https://apps.alsoenergy.com/powertrack/S68143/administration/hardware/list
 ```
 
 **Payload:**
 
 ```json
 {
-  "context": "path",
+  "context": "query",
   "filter": "",
-  "filterBy": "",
+  "filterBy": "Name",
   "key": "S68143",
   "kinds": [
     "customer",
-    "hardware",
     "site",
-    "user",
-    "file",
-    "folder",
-    "report"
+    "hardware"
   ],
   "nodes": [],
   "subKinds": []
@@ -156,59 +152,311 @@ referer: https://apps.alsoenergy.com/powertrack/S68143/administration/config
 
 ```json
 {
-  "key": "{\"key\":\"S68143\",\"context\":\"path\",\"kinds\":[\"customer\",\"hardware\",\"site\",\"user\",\"file\",\"folder\",\"report\"],\"subKinds\":[],\"nodes\":[],\"filter\":\"\",\"filterBy\":\"\"}",
-  "lastChanged": "2025-12-22T22:02:50Z",
-  "node": null,
+  "key": "{\"key\":\"S68143\",\"context\":\"query\",\"kinds\":[\"customer\",\"site\",\"hardware\"],\"subKinds\":[],\"nodes\":[],\"filter\":\"\",\"filterBy\":\"Name\"}",
+  "lastChanged": "2025-12-22T22:01:11Z",
+  "node": {
+    "flags": 0,
+    "icon": "Site",
+    "isHidden": false,
+    "key": "S68143",
+    "kind": "site",
+    "lastChanged": "2025-12-22T21:58:47Z",
+    "name": "*** LOST?* THD CA - 2304 Monterey Park",
+    "parentKey": "C25228",
+    "path": [
+      "C8458",
+      "C25228"
+    ],
+    "permissions": 27,
+    "sort": 2147483647,
+    "subKind": 0,
+    "validationStatus": 1
+  },
   "nodes": [
     {
       "flags": 0,
-      "icon": "CustAccount",
+      "icon": "https://www.alsoenergy.com/pub/Images/Device/19880.png",
       "isHidden": false,
-      "key": "C8458",
-      "kind": "customer",
-      "lastChanged": "2023-11-01T20:51:32Z",
-      "name": "Distributed Solar Development",
-      "parentKey": "C2",
-      "path": [],
-      "permissions": 27,
-      "sort": 2147483647,
-      "subKind": 0,
-      "validationStatus": 0
-    },
-    {
-      "flags": 0,
-      "icon": "Customer",
-      "isHidden": false,
-      "key": "C25228",
-      "kind": "customer",
-      "lastChanged": "2023-09-26T16:51:20Z",
-      "name": "1.1_Direct",
-      "parentKey": "C8458",
-      "path": [
-        "C8458"
-      ],
-      "permissions": 27,
-      "sort": 2147483647,
-      "subKind": 0,
-      "validationStatus": 0
-    },
-    {
-      "flags": 0,
-      "icon": "Site",
-      "isHidden": false,
-      "key": "S68143",
-      "kind": "site",
-      "lastChanged": "2025-12-22T22:02:50Z",
-      "name": "*** LOST?* THD CA - 2304 Monterey Park",
-      "parentKey": "C25228",
+      "key": "H511568",
+      "kind": "hardware",
+      "lastChanged": "2025-12-22T19:21:53Z",
+      "name": "INVERTER 1",
+      "parentKey": "S68143",
       "path": [
         "C8458",
-        "C25228"
+        "C25228",
+        "S68143"
       ],
       "permissions": 27,
-      "sort": 2147483647,
-      "subKind": 0,
-      "validationStatus": 1
+      "sort": 11,
+      "subKind": 1,
+      "validationStatus": 0
+    },
+    {
+      "flags": 0,
+      "icon": "https://www.alsoenergy.com/pub/Images/weather.png",
+      "isHidden": false,
+      "key": "H494021",
+      "kind": "hardware",
+      "lastChanged": "2024-03-08T14:48:26Z",
+      "name": "Solcast Virtual Weather Station",
+      "parentKey": "S68143",
+      "path": [
+        "C8458",
+        "C25228",
+        "S68143"
+      ],
+      "permissions": 27,
+      "sort": 0,
+      "subKind": 5,
+      "validationStatus": 0
+    },
+    {
+      "flags": 0,
+      "icon": "https://www.alsoenergy.com/pub/Images/Device/19759.png",
+      "isHidden": false,
+      "key": "H511563",
+      "kind": "hardware",
+      "lastChanged": "2025-03-13T18:25:44Z",
+      "name": "Cell Modem (Pepwave)",
+      "parentKey": "S68143",
+      "path": [
+        "C8458",
+        "C25228",
+        "S68143"
+      ],
+      "permissions": 27,
+      "sort": 1,
+      "subKind": 31,
+      "validationStatus": 0
+    },
+    {
+      "flags": 0,
+      "icon": "https://www.alsoenergy.com/pub/Images/Device/325.png",
+      "isHidden": false,
+      "key": "H511564",
+      "kind": "hardware",
+      "lastChanged": "2024-07-15T13:27:46Z",
+      "name": "PowerLogger 1000",
+      "parentKey": "S68143",
+      "path": [
+        "C8458",
+        "C25228",
+        "S68143"
+      ],
+      "permissions": 27,
+      "sort": 2,
+      "subKind": 10,
+      "validationStatus": 0
+    },
+    {
+      "flags": 0,
+      "icon": "https://www.alsoenergy.com/pub/Images/meter.png",
+      "isHidden": false,
+      "key": "H511565",
+      "kind": "hardware",
+      "lastChanged": "2024-07-15T13:28:32Z",
+      "name": "Accuvim II - PV Prod Meter - M0",
+      "parentKey": "S68143",
+      "path": [
+        "C8458",
+        "C25228",
+        "S68143"
+      ],
+      "permissions": 27,
+      "sort": 3,
+      "subKind": 2,
+      "validationStatus": 0
+    },
+    {
+      "flags": 0,
+      "icon": "https://www.alsoenergy.com/pub/Images/meter.png",
+      "isHidden": false,
+      "key": "H511566",
+      "kind": "hardware",
+      "lastChanged": "2025-12-22T22:01:11Z",
+      "name": "Accuvim II - SITE??  Meter - M1",
+      "parentKey": "S68143",
+      "path": [
+        "C8458",
+        "C25228",
+        "S68143"
+      ],
+      "permissions": 27,
+      "sort": 4,
+      "subKind": 2,
+      "validationStatus": 0
+    },
+    {
+      "flags": 0,
+      "icon": "https://www.alsoenergy.com/pub/Images/Device/2442.png",
+      "isHidden": false,
+      "key": "H511567",
+      "kind": "hardware",
+      "lastChanged": "2024-07-15T13:29:12Z",
+      "name": "SMA Data Manager",
+      "parentKey": "S68143",
+      "path": [
+        "C8458",
+        "C25228",
+        "S68143"
+      ],
+      "permissions": 27,
+      "sort": 10,
+      "subKind": 28,
+      "validationStatus": 0
+    },
+    {
+      "flags": 0,
+      "icon": "https://www.alsoenergy.com/pub/Images/Device/19880.png",
+      "isHidden": false,
+      "key": "H511569",
+      "kind": "hardware",
+      "lastChanged": "2025-11-25T22:12:40Z",
+      "name": "INVERTER 2",
+      "parentKey": "S68143",
+      "path": [
+        "C8458",
+        "C25228",
+        "S68143"
+      ],
+      "permissions": 27,
+      "sort": 12,
+      "subKind": 1,
+      "validationStatus": 0
+    },
+    {
+      "flags": 0,
+      "icon": "https://www.alsoenergy.com/pub/Images/Device/19880.png",
+      "isHidden": false,
+      "key": "H511570",
+      "kind": "hardware",
+      "lastChanged": "2025-11-25T22:12:43Z",
+      "name": "INVERTER 3",
+      "parentKey": "S68143",
+      "path": [
+        "C8458",
+        "C25228",
+        "S68143"
+      ],
+      "permissions": 27,
+      "sort": 13,
+      "subKind": 1,
+      "validationStatus": 0
+    },
+    {
+      "flags": 0,
+      "icon": "https://www.alsoenergy.com/pub/Images/Device/19880.png",
+      "isHidden": false,
+      "key": "H511571",
+      "kind": "hardware",
+      "lastChanged": "2025-11-25T22:12:47Z",
+      "name": "INVERTER 4",
+      "parentKey": "S68143",
+      "path": [
+        "C8458",
+        "C25228",
+        "S68143"
+      ],
+      "permissions": 27,
+      "sort": 14,
+      "subKind": 1,
+      "validationStatus": 0
+    },
+    {
+      "flags": 0,
+      "icon": "https://www.alsoenergy.com/pub/Images/Device/19880.png",
+      "isHidden": false,
+      "key": "H511572",
+      "kind": "hardware",
+      "lastChanged": "2025-11-25T22:12:52Z",
+      "name": "INVERTER 5",
+      "parentKey": "S68143",
+      "path": [
+        "C8458",
+        "C25228",
+        "S68143"
+      ],
+      "permissions": 27,
+      "sort": 15,
+      "subKind": 1,
+      "validationStatus": 0
+    },
+    {
+      "flags": 0,
+      "icon": "https://www.alsoenergy.com/pub/Images/Device/19880.png",
+      "isHidden": false,
+      "key": "H511573",
+      "kind": "hardware",
+      "lastChanged": "2025-11-25T22:12:55Z",
+      "name": "INVERTER 6",
+      "parentKey": "S68143",
+      "path": [
+        "C8458",
+        "C25228",
+        "S68143"
+      ],
+      "permissions": 27,
+      "sort": 16,
+      "subKind": 1,
+      "validationStatus": 0
+    },
+    {
+      "flags": 0,
+      "icon": "https://www.alsoenergy.com/pub/Images/Device/19880.png",
+      "isHidden": false,
+      "key": "H511574",
+      "kind": "hardware",
+      "lastChanged": "2025-11-25T22:12:59Z",
+      "name": "INVERTER 7",
+      "parentKey": "S68143",
+      "path": [
+        "C8458",
+        "C25228",
+        "S68143"
+      ],
+      "permissions": 27,
+      "sort": 17,
+      "subKind": 1,
+      "validationStatus": 0
+    },
+    {
+      "flags": 0,
+      "icon": "https://www.alsoenergy.com/pub/Images/Device/3588.png",
+      "isHidden": false,
+      "key": "H511575",
+      "kind": "hardware",
+      "lastChanged": "2024-07-11T21:17:30Z",
+      "name": "REFERENCE CELL - POA",
+      "parentKey": "S68143",
+      "path": [
+        "C8458",
+        "C25228",
+        "S68143"
+      ],
+      "permissions": 27,
+      "sort": 41,
+      "subKind": 5,
+      "validationStatus": 0
+    },
+    {
+      "flags": 0,
+      "icon": "https://www.alsoenergy.com/pub/Images/Device/8164.png",
+      "isHidden": false,
+      "key": "H511576",
+      "kind": "hardware",
+      "lastChanged": "2024-07-11T21:18:06Z",
+      "name": "WEATHER STATION",
+      "parentKey": "S68143",
+      "path": [
+        "C8458",
+        "C25228",
+        "S68143"
+      ],
+      "permissions": 27,
+      "sort": 42,
+      "subKind": 5,
+      "validationStatus": 0
     }
   ]
 }
