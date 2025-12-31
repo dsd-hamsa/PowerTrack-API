@@ -4,7 +4,7 @@
 [← Back to Index](../logs.md)
 
 **Methods:** GET  
-**Status Codes:** 200, 200  
+**Status Codes:** 200  
 
 ## Table of Contents
 
@@ -24,8 +24,7 @@
       "type": "number"
     },
     "capacity": {
-      "type": "object",
-      "properties": {}
+      "type": "number"
     },
     "defaultTriggers": {
       "type": "object",
@@ -244,20 +243,20 @@
 **Request:**
 
 ```http
-GET /api/alerttrigger/H504132?lastChanged=1900-01-01T00:00:00.000Z
+GET /api/alerttrigger/H563256?lastChanged=2025-11-25T22:46:47Z
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/H504132/administration/alertsettings
+referer: https://apps.alsoenergy.com/powertrack/H563256/administration/config
 ```
 
 **Response:**
 
 ```json
 {
-  "assetCode": 11,
+  "assetCode": 1,
   "calculatedCapacity": 0,
-  "capacity": null,
+  "capacity": 0,
   "defaultTriggers": [
     {
       "alertTypeKey": "AI250",
@@ -273,7 +272,7 @@ referer: https://apps.alsoenergy.com/powertrack/H504132/administration/alertsett
       "impact": 0,
       "isActive": false,
       "key": "",
-      "lastChanged": "2025-12-23T01:13:04Z",
+      "lastChanged": "2025-11-25T22:46:18Z",
       "name": "Device communication",
       "ownerKey": "",
       "parameters": [
@@ -287,7 +286,7 @@ referer: https://apps.alsoenergy.com/powertrack/H504132/administration/alertsett
           "value": 0
         }
       ],
-      "parentKey": "H504132",
+      "parentKey": "H563256",
       "priorityLevel": 0,
       "sharing": 0,
       "startTime": 0,
@@ -296,24 +295,24 @@ referer: https://apps.alsoenergy.com/powertrack/H504132/administration/alertsett
       "sunMinElevation": 0
     },
     {
-      "alertTypeKey": "AI534",
+      "alertTypeKey": "AI862",
       "checkNoSnow": false,
       "checkSun": false,
       "checkTime": false,
       "delayHoursResolve": 0,
       "delayHoursTrigger": 0,
-      "description": "Transformer Monitor 5 conditions for Normally Closed",
+      "description": "SMA TriPower Fault Alert following the SMA Event Messages Document.",
       "endTime": 0,
       "hasImpact": false,
       "id": 0,
       "impact": 0,
       "isActive": false,
       "key": "",
-      "lastChanged": "2025-12-23T01:13:04Z",
-      "name": "Transformer Monitor",
+      "lastChanged": "2025-11-25T22:46:18Z",
+      "name": "SMA STP/TriPower Fault Alert",
       "ownerKey": "",
       "parameters": [],
-      "parentKey": "H504132",
+      "parentKey": "H563256",
       "priorityLevel": 0,
       "sharing": 0,
       "startTime": 0,
@@ -322,24 +321,24 @@ referer: https://apps.alsoenergy.com/powertrack/H504132/administration/alertsett
       "sunMinElevation": 0
     }
   ],
-  "key": "H504132",
-  "lastChanged": "2025-12-23T01:13:04Z",
+  "key": "H563256",
+  "lastChanged": "2025-11-25T22:46:18Z",
   "triggers": [
     {
       "alertTypeKey": "AI250",
-      "checkNoSnow": false,
-      "checkSun": false,
+      "checkNoSnow": true,
+      "checkSun": true,
       "checkTime": false,
-      "delayHoursResolve": 0,
-      "delayHoursTrigger": 0.25,
+      "delayHoursResolve": 0.5,
+      "delayHoursTrigger": 1,
       "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
       "endTime": 0,
       "hasImpact": false,
-      "id": 1613051,
+      "id": 1761966,
       "impact": 0,
       "isActive": true,
-      "key": "x2d189cfb",
-      "lastChanged": "2025-12-23T01:13:04Z",
+      "key": "x2d1ae2ae",
+      "lastChanged": "2025-11-25T22:46:18Z",
       "name": "Device communication",
       "ownerKey": "",
       "parameters": [
@@ -353,39 +352,39 @@ referer: https://apps.alsoenergy.com/powertrack/H504132/administration/alertsett
           "value": 0
         }
       ],
-      "parentKey": "H504132",
+      "parentKey": "H563256",
       "priorityLevel": 0,
       "sharing": 0,
       "startTime": 0,
       "sunMaxAzimuth": 0,
       "sunMinAzimuth": 0,
-      "sunMinElevation": 0
+      "sunMinElevation": 10
     },
     {
-      "alertTypeKey": "AI534",
+      "alertTypeKey": "AI862",
       "checkNoSnow": false,
-      "checkSun": false,
+      "checkSun": true,
       "checkTime": false,
-      "delayHoursResolve": 0,
-      "delayHoursTrigger": 0,
-      "description": "Transformer Monitor 5 conditions for Normally Closed",
+      "delayHoursResolve": 0.5,
+      "delayHoursTrigger": 1,
+      "description": "SMA TriPower Fault Alert following the SMA Event Messages Document.",
       "endTime": 0,
       "hasImpact": false,
-      "id": 1613052,
+      "id": 1761967,
       "impact": 0,
       "isActive": true,
-      "key": "x2d189cfc",
-      "lastChanged": "2025-12-23T01:13:04Z",
-      "name": "Transformer Monitor",
+      "key": "x2d1ae2af",
+      "lastChanged": "2025-11-25T22:46:18Z",
+      "name": "SMA STP/TriPower Fault Alert",
       "ownerKey": "",
       "parameters": [],
-      "parentKey": "H504132",
+      "parentKey": "H563256",
       "priorityLevel": 0,
       "sharing": 0,
       "startTime": 0,
       "sunMaxAzimuth": 0,
       "sunMinAzimuth": 0,
-      "sunMinElevation": 0
+      "sunMinElevation": 10
     }
   ]
 }
