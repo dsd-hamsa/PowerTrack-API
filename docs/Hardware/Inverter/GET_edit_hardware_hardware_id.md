@@ -4,7 +4,7 @@
 [← Back to Index](../logs.md)
 
 **Methods:** GET  
-**Status Codes:** 200, 200, 200, 200, 200, 200  
+**Status Codes:** 200, 200  
 
 ## Table of Contents
 
@@ -585,9 +585,17 @@
                   }
                 },
                 "regions": {
-                  "type": "array",
-                  "items": {
-                    "type": "unknown"
+                  "type": "object",
+                  "properties": {
+                    "factors": {
+                      "type": "string"
+                    },
+                    "index": {
+                      "type": "number"
+                    },
+                    "points": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -733,13 +741,13 @@
           "type": "string"
         },
         "originalValue": {
-          "type": "string"
+          "type": "number"
         },
         "type": {
           "type": "number"
         },
         "value": {
-          "type": "string"
+          "type": "number"
         }
       }
     },
@@ -855,11 +863,11 @@
 **Request:**
 
 ```http
-GET /api/edit/hardware/H208927
+GET /api/edit/hardware/H537773
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/H208927/analysis/chartbuilder?start=2025-12-29&end=2025-12-31&d=3day&bin=15&c=2&k=%7B%7D&m=k&a=0&s=1&r=1%7BFault0-1-0-0%2CFault1-1-0-0%2CFault2-1-0-0%2CFault3-1-0-0%2CFault4-1-0-0%2CFault5-1-0-0%2CFault6-1-0-0
+referer: https://apps.alsoenergy.com/powertrack/H537773/administration/config
 ```
 
 **Response:**
@@ -867,7 +875,7 @@ referer: https://apps.alsoenergy.com/powertrack/H208927/analysis/chartbuilder?st
 ```json
 {
   "additionalRegisters": [],
-  "address": "51",
+  "address": "3",
   "alsoHardwareId": 0,
   "alsoSiteId": 0,
   "array": null,
@@ -875,7 +883,7 @@ referer: https://apps.alsoenergy.com/powertrack/H208927/analysis/chartbuilder?st
   "autoCorrectDecrease": false,
   "autoCorrectIncrease": false,
   "baud": "9600",
-  "capacityKw": 50,
+  "capacityKw": 60,
   "chartSectionCode": 1,
   "commonDC": false,
   "commonDCAllMatch": true,
@@ -884,112 +892,196 @@ referer: https://apps.alsoenergy.com/powertrack/H208927/analysis/chartbuilder?st
   ],
   "conflictNames": null,
   "dashboardKey": "",
-  "dcRating": 67500,
+  "dcRating": 84960,
   "debug": false,
   "decreaseDifference": 100,
   "defaultChart": 2,
-  "description": "Inv 1A - 50kW - Chint SCA50KTL-DO/US-480",
+  "description": "INV 3 (60KW) CPS SCA60KTL-DO/US-480",
   "deviceRegisters": [
     {
-      "dataName": "KwhAC",
+      "dataName": "KwAC",
       "dataNameDetail": null,
       "index": 0,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Active Energy Net (with Offset)",
-      "name": "AC Energy",
-      "standardDataName": "Active_Energy_Gross",
-      "units": "kWh"
+      "localizedName": "Active Power",
+      "name": "Active Power",
+      "standardDataName": "Active_Power",
+      "units": "kW"
     },
     {
-      "dataName": "KwAC",
+      "dataName": "KwhAC",
       "dataNameDetail": null,
       "index": 1,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Active Power",
-      "name": "AC Power Output",
-      "standardDataName": "Active_Power",
-      "units": "kW"
+      "localizedName": "Active Energy Net (with Offset)",
+      "name": "Active Energy Gross",
+      "standardDataName": "Active_Energy_Gross",
+      "units": "kWh"
     },
     {
-      "dataName": "VacAB",
+      "dataName": "KwhACraw",
       "dataNameDetail": null,
       "index": 2,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
+      "localizedName": "Active Energy Net (without Offset)",
+      "name": "Active Energy Gross Raw",
+      "standardDataName": "",
+      "units": "kWh"
+    },
+    {
+      "dataName": "Frequency",
+      "dataNameDetail": null,
+      "index": 3,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Frequency",
+      "name": "Frequency",
+      "standardDataName": "Frequency",
+      "units": "Hz"
+    },
+    {
+      "dataName": "VacAB",
+      "dataNameDetail": null,
+      "index": 4,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
       "localizedName": "AC Voltage A-B (Line-Line)",
-      "name": "L1-L2 AC Voltage",
+      "name": "AC Voltage AB",
       "standardDataName": "Voltage_AB",
       "units": "V"
     },
     {
       "dataName": "VacBC",
       "dataNameDetail": null,
-      "index": 3,
+      "index": 5,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
       "localizedName": "AC Voltage B-C (Line-Line)",
-      "name": "L2-L3 AC Voltage",
+      "name": "AC Voltage BC",
       "standardDataName": "Voltage_BC",
       "units": "V"
     },
     {
       "dataName": "VacCA",
       "dataNameDetail": null,
-      "index": 4,
+      "index": 6,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
       "localizedName": "AC Voltage C-A (Line-Line)",
-      "name": "L1-L3 AC Voltage",
+      "name": "AC Voltage CA",
       "standardDataName": "Voltage_CA",
       "units": "V"
     },
     {
       "dataName": "IacA",
       "dataNameDetail": null,
-      "index": 5,
+      "index": 7,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
       "localizedName": "AC Current A",
-      "name": "Phase A Current",
+      "name": "AC Current A",
       "standardDataName": "Current_A",
       "units": "A"
     },
     {
       "dataName": "IacB",
       "dataNameDetail": null,
-      "index": 6,
+      "index": 8,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
       "localizedName": "AC Current B",
-      "name": "Phase B Current",
+      "name": "AC Current B",
       "standardDataName": "Current_B",
       "units": "A"
     },
     {
       "dataName": "IacC",
       "dataNameDetail": null,
-      "index": 7,
+      "index": 9,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
       "localizedName": "AC Current C",
-      "name": "Phase C Current",
+      "name": "AC Current C",
       "standardDataName": "Current_C",
       "units": "A"
     },
     {
+      "dataName": "Iac",
+      "dataNameDetail": null,
+      "index": 10,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "AC Current Average",
+      "name": "AC Current Average",
+      "standardDataName": "Current_Avg",
+      "units": "A"
+    },
+    {
+      "dataName": "Vac",
+      "dataNameDetail": null,
+      "index": 11,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "AC Voltage Average L-N",
+      "name": "AC Voltage Average L-N",
+      "standardDataName": "Voltage_LN_Avg",
+      "units": "V"
+    },
+    {
+      "dataName": "KVA",
+      "dataNameDetail": null,
+      "index": 12,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Apparent Power",
+      "name": "Apparent Power",
+      "standardDataName": "Apparent_Power",
+      "units": "kVA"
+    },
+    {
+      "dataName": "KVAR",
+      "dataNameDetail": null,
+      "index": 13,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Reactive Power",
+      "name": "Reactive Power",
+      "standardDataName": "Reactive_Power",
+      "units": "kVAR"
+    },
+    {
+      "dataName": "PowerFactor",
+      "dataNameDetail": null,
+      "index": 14,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Power Factor",
+      "name": "Power Factor",
+      "standardDataName": "Power_Factor",
+      "units": "PF"
+    },
+    {
       "dataName": "Vdc1",
       "dataNameDetail": null,
-      "index": 8,
+      "index": 15,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -1001,7 +1093,7 @@ referer: https://apps.alsoenergy.com/powertrack/H208927/analysis/chartbuilder?st
     {
       "dataName": "Idc1",
       "dataNameDetail": null,
-      "index": 9,
+      "index": 16,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -1013,7 +1105,7 @@ referer: https://apps.alsoenergy.com/powertrack/H208927/analysis/chartbuilder?st
     {
       "dataName": "Vdc2",
       "dataNameDetail": null,
-      "index": 10,
+      "index": 17,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -1025,7 +1117,7 @@ referer: https://apps.alsoenergy.com/powertrack/H208927/analysis/chartbuilder?st
     {
       "dataName": "Idc2",
       "dataNameDetail": null,
-      "index": 11,
+      "index": 18,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -1037,7 +1129,7 @@ referer: https://apps.alsoenergy.com/powertrack/H208927/analysis/chartbuilder?st
     {
       "dataName": "Vdc3",
       "dataNameDetail": null,
-      "index": 12,
+      "index": 19,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -1049,7 +1141,7 @@ referer: https://apps.alsoenergy.com/powertrack/H208927/analysis/chartbuilder?st
     {
       "dataName": "Idc3",
       "dataNameDetail": null,
-      "index": 13,
+      "index": 20,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -1061,7 +1153,7 @@ referer: https://apps.alsoenergy.com/powertrack/H208927/analysis/chartbuilder?st
     {
       "dataName": "Idc",
       "dataNameDetail": null,
-      "index": 14,
+      "index": 21,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -1073,204 +1165,240 @@ referer: https://apps.alsoenergy.com/powertrack/H208927/analysis/chartbuilder?st
     {
       "dataName": "Vdc",
       "dataNameDetail": null,
-      "index": 15,
+      "index": 22,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
       "localizedName": "DC Voltage Average",
-      "name": "DC Voltage Avg",
+      "name": "DC Voltage Average",
       "standardDataName": "DC_Voltage_Avg",
       "units": "V"
     },
     {
-      "dataName": "Iac",
+      "dataName": "KwDC",
       "dataNameDetail": null,
-      "index": 16,
+      "index": 23,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "AC Current Average",
-      "name": "AC Phase Current",
-      "standardDataName": "Current_Avg",
-      "units": "A"
-    },
-    {
-      "dataName": "Vac",
-      "dataNameDetail": null,
-      "index": 17,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "AC Voltage Average L-N",
-      "name": "AC Line Voltage",
-      "standardDataName": "Voltage_LN_Avg",
-      "units": "V"
+      "localizedName": "DC Power",
+      "name": "DC Power Total",
+      "standardDataName": "DC_Power_Total",
+      "units": "kW"
     },
     {
       "dataName": "DeviceTemp",
       "dataNameDetail": null,
-      "index": 18,
+      "index": 24,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
       "localizedName": "Device Temperature",
-      "name": "Module Temp",
+      "name": "Device Temperature",
       "standardDataName": "Temp_Device",
       "units": "°F"
     },
     {
       "dataName": "InternalTemp",
       "dataNameDetail": null,
-      "index": 19,
+      "index": 25,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
       "localizedName": "Internal Temperature",
-      "name": "Internal Temp",
+      "name": "Internal Temperature",
       "standardDataName": "Temp_Internal",
       "units": "°F"
     },
     {
-      "dataName": "Fault0",
+      "dataName": "Temp_XMFR",
       "dataNameDetail": null,
-      "index": 20,
+      "index": 26,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "XMFR Temperature",
+      "name": "XMFR Temperature",
+      "standardDataName": "Temp_XMFR",
+      "units": "°F"
+    },
+    {
+      "dataName": "Fault",
+      "dataNameDetail": null,
+      "index": 27,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
       "localizedName": "Fault Code",
       "name": "Fault Code",
+      "standardDataName": "Fault",
+      "units": ""
+    },
+    {
+      "dataName": "Warning",
+      "dataNameDetail": null,
+      "index": 28,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Warn Code",
+      "name": "Warn Code",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "Fault0",
+      "dataNameDetail": null,
+      "index": 29,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Fault Code 0",
+      "name": "Fault Code 0",
       "standardDataName": "Fault0",
       "units": ""
     },
     {
       "dataName": "Fault1",
       "dataNameDetail": null,
-      "index": 21,
+      "index": 30,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
       "localizedName": "Fault 1",
-      "name": "Warn Code",
+      "name": "Fault Code 1",
       "standardDataName": "Fault1",
       "units": ""
     },
     {
       "dataName": "Fault2",
       "dataNameDetail": null,
-      "index": 22,
+      "index": 31,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
       "localizedName": "Fault 2",
-      "name": "Fault Code 0",
+      "name": "Fault Code 2",
       "standardDataName": "Fault2",
       "units": ""
     },
     {
       "dataName": "Fault3",
       "dataNameDetail": null,
-      "index": 23,
+      "index": 32,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
       "localizedName": "Fault 3",
-      "name": "Fault Code 1",
+      "name": "Fault Code 3",
       "standardDataName": "Fault3",
       "units": ""
     },
     {
       "dataName": "Fault4",
       "dataNameDetail": null,
-      "index": 24,
+      "index": 33,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
       "localizedName": "Fault 4",
-      "name": "Fault Code 2",
+      "name": "Fault Code 4",
       "standardDataName": "Fault4",
       "units": ""
     },
     {
-      "dataName": "Fault5",
+      "dataName": "opmode",
       "dataNameDetail": null,
-      "index": 25,
+      "index": 34,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Fault 5",
-      "name": "Fault Code 3",
-      "standardDataName": "Fault5",
+      "localizedName": "Operating Mode",
+      "name": "Inverter Work Mode",
+      "standardDataName": "Op_Mode",
+      "units": "Derate: 0x800;Running:0x1000;Standby:0x2000;Check:0x4000;Fault:0x8000"
+    },
+    {
+      "dataName": "Firmware_Version",
+      "dataNameDetail": null,
+      "index": 35,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "Firmware Version",
+      "name": "Firmware Version",
+      "standardDataName": "Firmware_Version",
       "units": ""
     },
     {
-      "dataName": "Fault6",
+      "dataName": "Serial_Number",
       "dataNameDetail": null,
-      "index": 26,
-      "isArchived": true,
+      "index": 36,
+      "isArchived": false,
       "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Fault 6",
-      "name": "Fault Code 4",
-      "standardDataName": "Fault6",
+      "isRaw": false,
+      "localizedName": "Serial Number",
+      "name": "Serial Number",
+      "standardDataName": "Serial_Number",
       "units": ""
     }
   ],
-  "driverDescription": "Chint / Solectria 50/60 KW Inverter driver that archives MPPT",
-  "driverFlags": 67,
-  "driverId": 8317,
-  "driverName": "Chint/Solectria 50/60kw w/ MPPT Data (Qual)",
-  "driverNotes": "*Qualified\rCopy of Device ID 1596 > with DB Energy set to Double",
+  "driverDescription": "Chint / Solectria TL String Inverter [without Control]",
+  "driverFlags": 16386,
+  "driverId": 20630,
+  "driverName": "Chint / Solectria TL String Inverter w/o Control (SS) Standard",
+  "driverNotes": "Know issue on some firmware with kWh Energy not counting through the day, and only adding daily values everynight, FW 1797, 2053, 1284\r\rModbus Map: https://www.chintpowersystems.com/downloads/\r\r14-20-23-28-36kW Modbus Map\r25kW-208V Modbus Map\r25kW-408V Modbus Map\r50-60kW Modbus Map\r100/125kW-600V and 100kW-480 Modbus Map\r250/275kW-800 Modbus Map",
   "driverRegisters": [],
   "eGauge": null,
   "fixedEnergyOffset": 0,
   "functionCode": 1,
-  "functionId": "PV1",
+  "functionId": "PV2",
   "gateway": null,
   "gatewayFwVersion": "",
-  "gatewayId": "SCADARONNUNN",
-  "gatewayKey": "H208923",
+  "gatewayId": "000CC68E62AA",
+  "gatewayKey": "H537769",
   "gatewayScriptCount": "",
   "gatewayType": 2,
   "groupAllowed": [
     28
   ],
   "groupKey": "",
-  "hardwareId": "C16293_S51059_PV1",
+  "hardwareId": "C44486_S70352_PV2",
   "hardwareStatus": 1,
   "hasCapacity": true,
   "hash": "",
   "increaseDifference": -1,
-  "installDate": "2019-07-22",
-  "instance": 1,
+  "installDate": "2024-12-10",
+  "instance": 2,
   "inverterKw": 0,
   "isConflictAcknowledged": false,
   "isReportable": true,
   "isTcp": false,
   "isThermal": false,
-  "key": "H208927",
+  "key": "H537773",
   "kiosk": null,
-  "latitude": 37.930243,
+  "latitude": 41.7779948,
   "limitedCommunication": false,
   "locusId": "",
-  "longitude": -121.730363,
+  "longitude": -87.5892944,
   "meter": null,
-  "modelNum": "",
+  "modelNum": "CHINT SCA60KTL-DO/US-480",
   "newNote": "",
   "oneMinuteData": false,
   "outOfService": false,
   "outOfServiceNote": "",
-  "outOfServiceUntil": "2025-12-31T19:03:46.6192138Z",
+  "outOfServiceUntil": "2025-12-31T18:38:43.5729704Z",
   "outputAllowed": [
     2
   ],
-  "outputKey": "H208924",
-  "parentKey": "S51059",
+  "outputKey": "H537770",
+  "parentKey": "S70352",
   "port": 1,
   "primary": false,
   "pullData": false,
   "pvConfig": {
     "acDcType": 0,
-    "acInfo": 2,
+    "acInfo": 1,
     "canIntegrateCombiners": true,
     "combinerInputs": [
       {
@@ -1294,13 +1422,13 @@ referer: https://apps.alsoenergy.com/powertrack/H208927/analysis/chartbuilder?st
       {
         "acLoss": 0,
         "acVoltage": 480,
-        "azimuth": 121,
+        "azimuth": 180,
         "bifacialRatio": 0,
         "dcAmps": 204,
         "dcLoss": 0,
-        "dcSize": 67.5,
+        "dcSize": 84.96,
         "dcVoltage": 1000,
-        "derate": 0.95,
+        "derate": 0.9,
         "derateDetail": false,
         "efficiency": 0,
         "efficiencyCurveId": 0,
@@ -1324,8 +1452,8 @@ referer: https://apps.alsoenergy.com/powertrack/H208927/analysis/chartbuilder?st
           "scaleY": 0
         },
         "installationType": 2,
-        "inverterKva": 55,
-        "inverterKw": 50,
+        "inverterKva": 66,
+        "inverterKw": 60,
         "inverterLoss": 1,
         "inverterName": "",
         "lightInducedDegradation": 0,
@@ -1335,11 +1463,11 @@ referer: https://apps.alsoenergy.com/powertrack/H208927/analysis/chartbuilder?st
         "limitTwo": 0,
         "mismatch": 0,
         "moduleArea": 0,
-        "mppAmps": 9.44,
-        "mppVoltage": 39.75,
-        "mppWatts": 375.23999999999995,
-        "numOfStrings": 10,
-        "panelsPerString": 18,
+        "mppAmps": 13.12,
+        "mppVoltage": 44.96,
+        "mppWatts": 589.8752,
+        "numOfStrings": 9,
+        "panelsPerString": 16,
         "pmaxDeviation": 0,
         "pvSystConfig": {
           "cellArea": 0,
@@ -1370,8 +1498,8 @@ referer: https://apps.alsoenergy.com/powertrack/H208927/analysis/chartbuilder?st
         },
         "regressionFunctionList": [],
         "shadeModel": {
-          "albedoWeight": 0,
-          "diffuseWeight": 0,
+          "albedoWeight": 0.907,
+          "diffuseWeight": 0.031,
           "hasInterRowShadeModel": 0,
           "interRowShadeModel": {
             "azimuth": 0,
@@ -1381,14 +1509,485 @@ referer: https://apps.alsoenergy.com/powertrack/H208927/analysis/chartbuilder?st
             "tilt": 0,
             "topBorderLength": 0
           },
-          "regions": []
+          "regions": [
+            {
+              "factors": "0.000, 0.000, 0.986, 0.975",
+              "index": 0,
+              "points": [
+                "40,0",
+                "60,0",
+                "60,10",
+                "40,10"
+              ]
+            },
+            {
+              "factors": "0.000, 0.628, 0.986, 0.986",
+              "index": 1,
+              "points": [
+                "60,0",
+                "80,0",
+                "80,10",
+                "60,10"
+              ]
+            },
+            {
+              "factors": "0.628, 0.132, 0.381, 0.986",
+              "index": 2,
+              "points": [
+                "80,0",
+                "100,0",
+                "100,10",
+                "80,10"
+              ]
+            },
+            {
+              "factors": "0.132, 0.141, 0.834, 0.381",
+              "index": 3,
+              "points": [
+                "100,0",
+                "120,0",
+                "120,10",
+                "100,10"
+              ]
+            },
+            {
+              "factors": "0.141, 0.086, 0.721, 0.834",
+              "index": 4,
+              "points": [
+                "120,0",
+                "140,0",
+                "140,10",
+                "120,10"
+              ]
+            },
+            {
+              "factors": "0.091, 0.174, 0.852, 0.742",
+              "index": 5,
+              "points": [
+                "220,0",
+                "240,0",
+                "240,10",
+                "220,10"
+              ]
+            },
+            {
+              "factors": "0.174, 0.254, 0.945, 0.852",
+              "index": 6,
+              "points": [
+                "240,0",
+                "260,0",
+                "260,10",
+                "240,10"
+              ]
+            },
+            {
+              "factors": "0.254, 0.234, 0.940, 0.945",
+              "index": 7,
+              "points": [
+                "260,0",
+                "280,0",
+                "280,10",
+                "260,10"
+              ]
+            },
+            {
+              "factors": "0.234, 0.000, 0.972, 0.940",
+              "index": 8,
+              "points": [
+                "280,0",
+                "300,0",
+                "300,10",
+                "280,10"
+              ]
+            },
+            {
+              "factors": "0.000, 0.000, 0.973, 0.972",
+              "index": 9,
+              "points": [
+                "300,0",
+                "320,0",
+                "320,10",
+                "300,10"
+              ]
+            },
+            {
+              "factors": "0.986, 0.986, 0.993, 0.994",
+              "index": 10,
+              "points": [
+                "60,10",
+                "80,10",
+                "80,20",
+                "60,20"
+              ]
+            },
+            {
+              "factors": "0.986, 0.381, 0.993, 0.993",
+              "index": 11,
+              "points": [
+                "80,10",
+                "100,10",
+                "100,20",
+                "80,20"
+              ]
+            },
+            {
+              "factors": "0.381, 0.834, 0.991, 0.993",
+              "index": 12,
+              "points": [
+                "100,10",
+                "120,10",
+                "120,20",
+                "100,20"
+              ]
+            },
+            {
+              "factors": "0.834, 0.721, 0.933, 0.991",
+              "index": 13,
+              "points": [
+                "120,10",
+                "140,10",
+                "140,20",
+                "120,20"
+              ]
+            },
+            {
+              "factors": "0.721, 0.659, 0.886, 0.933",
+              "index": 14,
+              "points": [
+                "140,10",
+                "160,10",
+                "160,20",
+                "140,20"
+              ]
+            },
+            {
+              "factors": "0.684, 0.742, 0.948, 0.897",
+              "index": 15,
+              "points": [
+                "200,10",
+                "220,10",
+                "220,20",
+                "200,20"
+              ]
+            },
+            {
+              "factors": "0.742, 0.852, 1.000, 0.948",
+              "index": 16,
+              "points": [
+                "220,10",
+                "240,10",
+                "240,20",
+                "220,20"
+              ]
+            },
+            {
+              "factors": "0.852, 0.945, 0.999, 1.000",
+              "index": 17,
+              "points": [
+                "240,10",
+                "260,10",
+                "260,20",
+                "240,20"
+              ]
+            },
+            {
+              "factors": "0.945, 0.940, 0.999, 0.999",
+              "index": 18,
+              "points": [
+                "260,10",
+                "280,10",
+                "280,20",
+                "260,20"
+              ]
+            },
+            {
+              "factors": "0.940, 0.972, 1.000, 0.999",
+              "index": 19,
+              "points": [
+                "280,10",
+                "300,10",
+                "300,20",
+                "280,20"
+              ]
+            },
+            {
+              "factors": "0.994, 0.993, 0.996, 0.996",
+              "index": 20,
+              "points": [
+                "60,20",
+                "80,20",
+                "80,30",
+                "60,30"
+              ]
+            },
+            {
+              "factors": "0.993, 0.993, 0.996, 0.996",
+              "index": 21,
+              "points": [
+                "80,20",
+                "100,20",
+                "100,30",
+                "80,30"
+              ]
+            },
+            {
+              "factors": "0.993, 0.991, 0.996, 0.996",
+              "index": 22,
+              "points": [
+                "100,20",
+                "120,20",
+                "120,30",
+                "100,30"
+              ]
+            },
+            {
+              "factors": "0.991, 0.933, 0.996, 0.996",
+              "index": 23,
+              "points": [
+                "120,20",
+                "140,20",
+                "140,30",
+                "120,30"
+              ]
+            },
+            {
+              "factors": "0.933, 0.886, 0.995, 0.996",
+              "index": 24,
+              "points": [
+                "140,20",
+                "160,20",
+                "160,30",
+                "140,30"
+              ]
+            },
+            {
+              "factors": "0.886, 0.879, 0.986, 0.995",
+              "index": 25,
+              "points": [
+                "160,20",
+                "180,20",
+                "180,30",
+                "160,30"
+              ]
+            },
+            {
+              "factors": "0.879, 0.897, 0.999, 0.986",
+              "index": 26,
+              "points": [
+                "180,20",
+                "200,20",
+                "200,30",
+                "180,30"
+              ]
+            },
+            {
+              "factors": "0.897, 0.948, 1.000, 0.999",
+              "index": 27,
+              "points": [
+                "200,20",
+                "220,20",
+                "220,30",
+                "200,30"
+              ]
+            },
+            {
+              "factors": "0.948, 1.000, 1.000, 1.000",
+              "index": 28,
+              "points": [
+                "220,20",
+                "240,20",
+                "240,30",
+                "220,30"
+              ]
+            },
+            {
+              "factors": "1.000, 0.999, 1.000, 1.000",
+              "index": 29,
+              "points": [
+                "240,20",
+                "260,20",
+                "260,30",
+                "240,30"
+              ]
+            },
+            {
+              "factors": "0.999, 0.999, 1.000, 1.000",
+              "index": 30,
+              "points": [
+                "260,20",
+                "280,20",
+                "280,30",
+                "260,30"
+              ]
+            },
+            {
+              "factors": "0.999, 1.000, 1.000, 1.000",
+              "index": 31,
+              "points": [
+                "280,20",
+                "300,20",
+                "300,30",
+                "280,30"
+              ]
+            },
+            {
+              "factors": "0.996, 0.996, 0.997, 0.997",
+              "index": 32,
+              "points": [
+                "80,30",
+                "100,30",
+                "100,40",
+                "80,40"
+              ]
+            },
+            {
+              "factors": "0.996, 0.996, 0.998, 0.997",
+              "index": 33,
+              "points": [
+                "100,30",
+                "120,30",
+                "120,40",
+                "100,40"
+              ]
+            },
+            {
+              "factors": "0.996, 0.996, 0.998, 0.998",
+              "index": 34,
+              "points": [
+                "120,30",
+                "140,30",
+                "140,40",
+                "120,40"
+              ]
+            },
+            {
+              "factors": "0.996, 0.995, 1.000, 0.998",
+              "index": 35,
+              "points": [
+                "140,30",
+                "160,30",
+                "160,40",
+                "140,40"
+              ]
+            },
+            {
+              "factors": "0.995, 0.986, 1.000, 1.000",
+              "index": 36,
+              "points": [
+                "160,30",
+                "180,30",
+                "180,40",
+                "160,40"
+              ]
+            },
+            {
+              "factors": "0.986, 0.999, 1.000, 1.000",
+              "index": 37,
+              "points": [
+                "180,30",
+                "200,30",
+                "200,40",
+                "180,40"
+              ]
+            },
+            {
+              "factors": "0.999, 1.000, 1.000, 1.000",
+              "index": 38,
+              "points": [
+                "200,30",
+                "220,30",
+                "220,40",
+                "200,40"
+              ]
+            },
+            {
+              "factors": "0.997, 0.997, 0.998, 0.998",
+              "index": 39,
+              "points": [
+                "80,40",
+                "100,40",
+                "100,50",
+                "80,50"
+              ]
+            },
+            {
+              "factors": "0.997, 0.998, 0.999, 0.998",
+              "index": 40,
+              "points": [
+                "100,40",
+                "120,40",
+                "120,50",
+                "100,50"
+              ]
+            },
+            {
+              "factors": "0.998, 0.998, 0.999, 0.999",
+              "index": 41,
+              "points": [
+                "120,40",
+                "140,40",
+                "140,50",
+                "120,50"
+              ]
+            },
+            {
+              "factors": "0.998, 1.000, 1.000, 0.999",
+              "index": 42,
+              "points": [
+                "140,40",
+                "160,40",
+                "160,50",
+                "140,50"
+              ]
+            },
+            {
+              "factors": "0.998, 0.999, 1.000, 0.999",
+              "index": 43,
+              "points": [
+                "100,50",
+                "120,50",
+                "120,60",
+                "100,60"
+              ]
+            },
+            {
+              "factors": "0.999, 0.999, 1.000, 1.000",
+              "index": 44,
+              "points": [
+                "120,50",
+                "140,50",
+                "140,60",
+                "120,60"
+              ]
+            },
+            {
+              "factors": "0.999, 1.000, 1.000, 1.000",
+              "index": 45,
+              "points": [
+                "140,50",
+                "160,50",
+                "160,60",
+                "140,60"
+              ]
+            },
+            {
+              "factors": "0.999, 1.000, 1.000, 1.000",
+              "index": 46,
+              "points": [
+                "100,60",
+                "120,60",
+                "120,70",
+                "100,70"
+              ]
+            }
+          ]
         },
-        "tempCoefficient": -0.38,
-        "tilt": 7.5,
+        "tempCoefficient": -0.34,
+        "tilt": 10,
         "tracking": 0,
         "trackingAngle": 0,
         "transformerLoss": 0,
-        "wattsPerPanel": 375
+        "wattsPerPanel": 590
       }
     ],
     "monthlyDerate": {
@@ -1406,18 +2005,18 @@ referer: https://apps.alsoenergy.com/powertrack/H208927/analysis/chartbuilder?st
       "sep": 1
     },
     "monthlyOutput": {
-      "apr": 10206,
-      "aug": 11975,
-      "dec": 3241,
-      "feb": 5040,
-      "jan": 3541,
-      "jul": 13112,
-      "jun": 12726,
-      "mar": 7775,
-      "may": 12339,
-      "nov": 4175,
-      "oct": 7142,
-      "sep": 9661
+      "apr": 11503,
+      "aug": 12707,
+      "dec": 4449,
+      "feb": 6395,
+      "jan": 4757,
+      "jul": 14289,
+      "jun": 13706,
+      "mar": 9558,
+      "may": 12572,
+      "nov": 5370,
+      "oct": 7666,
+      "sep": 10564
     },
     "pvModelType": 0
   },
@@ -1431,26 +2030,138 @@ referer: https://apps.alsoenergy.com/powertrack/H208927/analysis/chartbuilder?st
   "settings": [
     {
       "index": 0,
+      "name": "dev:baud",
+      "originalValue": 9600,
+      "type": 1,
+      "value": 9600
+    },
+    {
+      "index": 1,
       "name": "dev:portMode",
       "originalValue": "rs485",
       "type": 0,
       "value": "rs485"
     },
     {
-      "index": 1,
-      "name": "dev:baud",
-      "originalValue": 9600,
+      "index": 2,
+      "name": "dev:RegOffset",
+      "originalValue": 0,
       "type": 1,
-      "value": 9600
+      "value": 0
+    },
+    {
+      "index": 3,
+      "name": "dev:ScaleKW",
+      "originalValue": 0.1,
+      "type": 2,
+      "value": 0.1
+    },
+    {
+      "index": 4,
+      "name": "dev:ScaleV",
+      "originalValue": "0.1",
+      "type": 0,
+      "value": "0.1"
+    },
+    {
+      "index": 5,
+      "name": "dev:ScaleI",
+      "originalValue": "0.1",
+      "type": 0,
+      "value": "0.1"
+    },
+    {
+      "index": 6,
+      "name": "dev:ScaleVDC",
+      "originalValue": "0.1",
+      "type": 0,
+      "value": "0.1"
+    },
+    {
+      "index": 7,
+      "name": "dev:ScaleIDC",
+      "originalValue": "0.1",
+      "type": 0,
+      "value": "0.1"
+    },
+    {
+      "index": 8,
+      "name": "dev:ScaleFrequency",
+      "originalValue": "0.1",
+      "type": 0,
+      "value": "0.1"
+    },
+    {
+      "index": 9,
+      "name": "dev:ScaleKWH",
+      "originalValue": 0.1,
+      "type": 2,
+      "value": 0.1
+    },
+    {
+      "index": 10,
+      "name": "dev:ScaleT",
+      "originalValue": "0.1",
+      "type": 0,
+      "value": "0.1"
+    },
+    {
+      "index": 11,
+      "name": "dev:ScaleKVA",
+      "originalValue": "0.1",
+      "type": 0,
+      "value": "0.1"
+    },
+    {
+      "index": 12,
+      "name": "dev:ScalePF",
+      "originalValue": "0.001",
+      "type": 0,
+      "value": "0.001"
+    },
+    {
+      "index": 13,
+      "name": "dev:ScaleKVAR",
+      "originalValue": "0.1",
+      "type": 0,
+      "value": "0.1"
+    },
+    {
+      "index": 14,
+      "name": "dev:Rollover",
+      "originalValue": "Neg:100x,Pos:100x",
+      "type": 0,
+      "value": "Neg:100x,Pos:100x"
+    },
+    {
+      "index": 15,
+      "name": "dev:ScaleKWDC",
+      "originalValue": "0.1",
+      "type": 0,
+      "value": "0.1"
+    },
+    {
+      "index": 16,
+      "name": "dev:Alias",
+      "originalValue": "Status=opmode",
+      "type": 0,
+      "value": "Status=opmode"
+    },
+    {
+      "index": 17,
+      "name": "ShortName",
+      "originalValue": "PV2",
+      "type": 0,
+      "value": "PV2"
     }
   ],
-  "siteDcShare": 148.5,
+  "siteDcShare": 371.10999999999996,
   "siteHasInverterGroups": false,
-  "sort": 11,
+  "sort": 13,
   "syncToLocus": false,
   "tags": {
     "attributes": [],
-    "key": "{\"ancestorKey\":\"H208927\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
+    "key": "{\"ancestorKey\":\"H537773\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
     "keywords": [],
     "lastChanged": null,
     "notes": [],
@@ -1459,7 +2170,7 @@ referer: https://apps.alsoenergy.com/powertrack/H208927/analysis/chartbuilder?st
   "taskKey": "",
   "thermal": null,
   "thread": 0,
-  "ts": "2024-11-27T07:28:49Z",
+  "ts": "2025-11-20T21:07:44Z",
   "turbine": null,
   "unitId": 0,
   "uploadRate": 0,
@@ -1468,8 +2179,8 @@ referer: https://apps.alsoenergy.com/powertrack/H208927/analysis/chartbuilder?st
   "virtualRegisters": [],
   "virtualWeather": null,
   "weather": null,
-  "weatherStationKey1": "H208932",
-  "weatherStationKey2": "H430463",
+  "weatherStationKey1": "H537776",
+  "weatherStationKey2": "",
   "zone": null
 }
 ```
