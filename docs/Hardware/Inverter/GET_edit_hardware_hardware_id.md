@@ -4,7 +4,7 @@
 [← Back to Index](../logs.md)
 
 **Methods:** GET  
-**Status Codes:** 200, 200  
+**Status Codes:** 200  
 
 ## Table of Contents
 
@@ -863,11 +863,11 @@
 **Request:**
 
 ```http
-GET /api/edit/hardware/H537773
+GET /api/edit/hardware/H537771
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/H537773/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
 ```
 
 **Response:**
@@ -875,7 +875,7 @@ referer: https://apps.alsoenergy.com/powertrack/H537773/administration/config
 ```json
 {
   "additionalRegisters": [],
-  "address": "3",
+  "address": "1",
   "alsoHardwareId": 0,
   "alsoSiteId": 0,
   "array": null,
@@ -892,11 +892,11 @@ referer: https://apps.alsoenergy.com/powertrack/H537773/administration/config
   ],
   "conflictNames": null,
   "dashboardKey": "",
-  "dcRating": 84960,
+  "dcRating": 56640,
   "debug": false,
   "decreaseDifference": 100,
   "defaultChart": 2,
-  "description": "INV 3 (60KW) CPS SCA60KTL-DO/US-480",
+  "description": "INV 1 (60KW) CPS SCA60KTL-DO/US-480",
   "deviceRegisters": [
     {
       "dataName": "KwAC",
@@ -1352,7 +1352,7 @@ referer: https://apps.alsoenergy.com/powertrack/H537773/administration/config
   "eGauge": null,
   "fixedEnergyOffset": 0,
   "functionCode": 1,
-  "functionId": "PV2",
+  "functionId": "PV0",
   "gateway": null,
   "gatewayFwVersion": "",
   "gatewayId": "000CC68E62AA",
@@ -1363,19 +1363,19 @@ referer: https://apps.alsoenergy.com/powertrack/H537773/administration/config
     28
   ],
   "groupKey": "",
-  "hardwareId": "C44486_S70352_PV2",
+  "hardwareId": "C44486_S70352_PV0",
   "hardwareStatus": 1,
   "hasCapacity": true,
   "hash": "",
   "increaseDifference": -1,
   "installDate": "2024-12-10",
-  "instance": 2,
+  "instance": 0,
   "inverterKw": 0,
   "isConflictAcknowledged": false,
   "isReportable": true,
   "isTcp": false,
   "isThermal": false,
-  "key": "H537773",
+  "key": "H537771",
   "kiosk": null,
   "latitude": 41.7779948,
   "limitedCommunication": false,
@@ -1387,7 +1387,7 @@ referer: https://apps.alsoenergy.com/powertrack/H537773/administration/config
   "oneMinuteData": false,
   "outOfService": false,
   "outOfServiceNote": "",
-  "outOfServiceUntil": "2025-12-31T18:38:43.5729704Z",
+  "outOfServiceUntil": "2025-12-31T18:34:35.6809837Z",
   "outputAllowed": [
     2
   ],
@@ -1397,7 +1397,7 @@ referer: https://apps.alsoenergy.com/powertrack/H537773/administration/config
   "primary": false,
   "pullData": false,
   "pvConfig": {
-    "acDcType": 0,
+    "acDcType": 1,
     "acInfo": 1,
     "canIntegrateCombiners": true,
     "combinerInputs": [
@@ -1426,7 +1426,7 @@ referer: https://apps.alsoenergy.com/powertrack/H537773/administration/config
         "bifacialRatio": 0,
         "dcAmps": 204,
         "dcLoss": 0,
-        "dcSize": 84.96,
+        "dcSize": 56.64,
         "dcVoltage": 1000,
         "derate": 0.9,
         "derateDetail": false,
@@ -1466,7 +1466,7 @@ referer: https://apps.alsoenergy.com/powertrack/H537773/administration/config
         "mppAmps": 13.12,
         "mppVoltage": 44.96,
         "mppWatts": 589.8752,
-        "numOfStrings": 9,
+        "numOfStrings": 6,
         "panelsPerString": 16,
         "pmaxDeviation": 0,
         "pvSystConfig": {
@@ -1988,6 +1988,105 @@ referer: https://apps.alsoenergy.com/powertrack/H537773/administration/config
         "trackingAngle": 0,
         "transformerLoss": 0,
         "wattsPerPanel": 590
+      },
+      {
+        "acLoss": 0,
+        "acVoltage": 480,
+        "azimuth": 180,
+        "bifacialRatio": 0,
+        "dcAmps": 204,
+        "dcLoss": 0,
+        "dcSize": 26.55,
+        "dcVoltage": 1000,
+        "derate": 0.9,
+        "derateDetail": false,
+        "efficiency": 0,
+        "efficiencyCurveId": 0,
+        "efficiencyCurveModel": {
+          "key": "",
+          "manufacturer": "",
+          "modelName": "",
+          "modelType": 0,
+          "pointsList": [],
+          "scaleX": 0,
+          "scaleY": 0
+        },
+        "incidenceAngleCurveId": 0,
+        "incidenceAngleCurveModel": {
+          "key": "",
+          "manufacturer": "",
+          "modelName": "",
+          "modelType": 0,
+          "pointsList": [],
+          "scaleX": 0,
+          "scaleY": 0
+        },
+        "installationType": 2,
+        "inverterKva": 66,
+        "inverterKw": 60,
+        "inverterLoss": 1,
+        "inverterName": "",
+        "lightInducedDegradation": 0,
+        "limitOne": 0,
+        "limitTempOne": 0,
+        "limitTempTwo": 0,
+        "limitTwo": 0,
+        "mismatch": 0,
+        "moduleArea": 0,
+        "mppAmps": 13.12,
+        "mppVoltage": 44.96,
+        "mppWatts": 589.8752,
+        "numOfStrings": 3,
+        "panelsPerString": 15,
+        "pmaxDeviation": 0,
+        "pvSystConfig": {
+          "cellArea": 0,
+          "cellType": -1,
+          "cellsParallel": 0,
+          "cellsSeries": 0,
+          "impp": 0,
+          "isc": 0,
+          "key": "",
+          "manufacturer": "",
+          "model": "",
+          "muIsc": 0,
+          "muPMax": 0,
+          "rSeries": 0,
+          "rShunt": 0,
+          "rShuntExp": 0,
+          "rShuntGinc": 0,
+          "vmpp": 0,
+          "voc": 0
+        },
+        "pvSystModuleId": 0,
+        "pvSystOutOfSync": false,
+        "pvUsaConfig": {
+          "ambientTemperature": 0,
+          "irradiance": 0,
+          "irradianceSquared": 0,
+          "windSpeed": 0
+        },
+        "regressionFunctionList": [],
+        "shadeModel": {
+          "albedoWeight": 0,
+          "diffuseWeight": 0,
+          "hasInterRowShadeModel": 0,
+          "interRowShadeModel": {
+            "azimuth": 0,
+            "panelLength": 0,
+            "pitch": 0,
+            "rows": 0,
+            "tilt": 0,
+            "topBorderLength": 0
+          },
+          "regions": []
+        },
+        "tempCoefficient": -0.34,
+        "tilt": 10,
+        "tracking": 0,
+        "trackingAngle": 0,
+        "transformerLoss": 0,
+        "wattsPerPanel": 590
       }
     ],
     "monthlyDerate": {
@@ -2005,18 +2104,18 @@ referer: https://apps.alsoenergy.com/powertrack/H537773/administration/config
       "sep": 1
     },
     "monthlyOutput": {
-      "apr": 11503,
-      "aug": 12707,
-      "dec": 4449,
-      "feb": 6395,
-      "jan": 4757,
-      "jul": 14289,
-      "jun": 13706,
-      "mar": 9558,
-      "may": 12572,
-      "nov": 5370,
-      "oct": 7666,
-      "sep": 10564
+      "apr": 11263,
+      "aug": 12442,
+      "dec": 4356,
+      "feb": 6261,
+      "jan": 4657,
+      "jul": 13991,
+      "jun": 13420,
+      "mar": 9359,
+      "may": 12310,
+      "nov": 5258,
+      "oct": 7506,
+      "sep": 10344
     },
     "pvModelType": 0
   },
@@ -2150,18 +2249,18 @@ referer: https://apps.alsoenergy.com/powertrack/H537773/administration/config
     {
       "index": 17,
       "name": "ShortName",
-      "originalValue": "PV2",
+      "originalValue": "PV0",
       "type": 0,
-      "value": "PV2"
+      "value": "PV0"
     }
   ],
   "siteDcShare": 371.10999999999996,
   "siteHasInverterGroups": false,
-  "sort": 13,
+  "sort": 11,
   "syncToLocus": false,
   "tags": {
     "attributes": [],
-    "key": "{\"ancestorKey\":\"H537773\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
+    "key": "{\"ancestorKey\":\"H537771\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
     "keywords": [],
     "lastChanged": null,
     "notes": [],
@@ -2170,7 +2269,7 @@ referer: https://apps.alsoenergy.com/powertrack/H537773/administration/config
   "taskKey": "",
   "thermal": null,
   "thread": 0,
-  "ts": "2025-11-20T21:07:44Z",
+  "ts": "2025-11-20T21:06:27Z",
   "turbine": null,
   "unitId": 0,
   "uploadRate": 0,
