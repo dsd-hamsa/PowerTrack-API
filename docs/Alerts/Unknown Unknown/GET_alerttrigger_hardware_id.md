@@ -24,7 +24,8 @@
       "type": "number"
     },
     "capacity": {
-      "type": "number"
+      "type": "object",
+      "properties": {}
     },
     "defaultTriggers": {
       "type": "object",
@@ -243,76 +244,50 @@
 **Request:**
 
 ```http
-GET /api/alerttrigger/H563256?lastChanged=2025-11-25T22:46:47Z
+GET /api/alerttrigger/H332772?lastChanged=2025-11-25T22:46:47Z
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/H563256/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H332772/administration/config
 ```
 
 **Response:**
 
 ```json
 {
-  "assetCode": 1,
+  "assetCode": 11,
   "calculatedCapacity": 0,
-  "capacity": 0,
+  "capacity": null,
   "defaultTriggers": [
     {
-      "alertTypeKey": "AI250",
+      "alertTypeKey": "AI344",
       "checkNoSnow": false,
       "checkSun": false,
       "checkTime": false,
       "delayHoursResolve": 0,
       "delayHoursTrigger": 0,
-      "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
+      "description": "Detects missing communication from a device that uploads directly (without a data logger or gateway). NOTE: This alert will trigger after the expected communication delay (a built-in constant) plus the Threshold.  To override the expected communication delay, add a Setting named \"UploadRateMins\" (type = integer) and set it to the maximum number of minutes expected between uploads.  The alert will trigger if an upload doesn't occur within the total amount of time specified by the UploadRateMins setting plus the Threshold.",
       "endTime": 0,
       "hasImpact": false,
       "id": 0,
       "impact": 0,
       "isActive": false,
       "key": "",
-      "lastChanged": "2025-11-25T22:46:18Z",
-      "name": "Device communication",
+      "lastChanged": "2025-06-05T21:55:47Z",
+      "name": "Device heartbeat",
       "ownerKey": "",
       "parameters": [
         {
           "index": 0,
-          "info": "Ignore invalid data",
-          "name": "IgnoreInvalidData",
-          "readOnly": true,
+          "info": "Delays the \"detected\" phase of the alert until the specified hours since event occurance has passed",
+          "name": "DetectedTriggerHours",
+          "readOnly": false,
           "source": 2,
-          "type": 7,
+          "type": 2,
           "value": 0
         }
       ],
-      "parentKey": "H563256",
-      "priorityLevel": 0,
-      "sharing": 0,
-      "startTime": 0,
-      "sunMaxAzimuth": 0,
-      "sunMinAzimuth": 0,
-      "sunMinElevation": 0
-    },
-    {
-      "alertTypeKey": "AI862",
-      "checkNoSnow": false,
-      "checkSun": false,
-      "checkTime": false,
-      "delayHoursResolve": 0,
-      "delayHoursTrigger": 0,
-      "description": "SMA TriPower Fault Alert following the SMA Event Messages Document.",
-      "endTime": 0,
-      "hasImpact": false,
-      "id": 0,
-      "impact": 0,
-      "isActive": false,
-      "key": "",
-      "lastChanged": "2025-11-25T22:46:18Z",
-      "name": "SMA STP/TriPower Fault Alert",
-      "ownerKey": "",
-      "parameters": [],
-      "parentKey": "H563256",
+      "parentKey": "H332772",
       "priorityLevel": 0,
       "sharing": 0,
       "startTime": 0,
@@ -321,64 +296,38 @@ referer: https://apps.alsoenergy.com/powertrack/H563256/administration/config
       "sunMinElevation": 0
     }
   ],
-  "key": "H563256",
-  "lastChanged": "2025-11-25T22:46:18Z",
+  "key": "H332772",
+  "lastChanged": "2025-06-05T21:55:47Z",
   "triggers": [
     {
-      "alertTypeKey": "AI250",
-      "checkNoSnow": true,
-      "checkSun": true,
-      "checkTime": false,
-      "delayHoursResolve": 0.5,
-      "delayHoursTrigger": 1,
-      "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
-      "endTime": 0,
-      "hasImpact": false,
-      "id": 1761966,
-      "impact": 0,
-      "isActive": true,
-      "key": "x2d1ae2ae",
-      "lastChanged": "2025-11-25T22:46:18Z",
-      "name": "Device communication",
-      "ownerKey": "",
-      "parameters": [
-        {
-          "index": 0,
-          "info": "Ignore invalid data",
-          "name": "IgnoreInvalidData",
-          "readOnly": true,
-          "source": 2,
-          "type": 7,
-          "value": 0
-        }
-      ],
-      "parentKey": "H563256",
-      "priorityLevel": 0,
-      "sharing": 0,
-      "startTime": 0,
-      "sunMaxAzimuth": 0,
-      "sunMinAzimuth": 0,
-      "sunMinElevation": 10
-    },
-    {
-      "alertTypeKey": "AI862",
+      "alertTypeKey": "AI344",
       "checkNoSnow": false,
       "checkSun": true,
       "checkTime": false,
       "delayHoursResolve": 0.5,
-      "delayHoursTrigger": 1,
-      "description": "SMA TriPower Fault Alert following the SMA Event Messages Document.",
+      "delayHoursTrigger": 0.5,
+      "description": "Detects missing communication from a device that uploads directly (without a data logger or gateway). NOTE: This alert will trigger after the expected communication delay (a built-in constant) plus the Threshold.  To override the expected communication delay, add a Setting named \"UploadRateMins\" (type = integer) and set it to the maximum number of minutes expected between uploads.  The alert will trigger if an upload doesn't occur within the total amount of time specified by the UploadRateMins setting plus the Threshold.",
       "endTime": 0,
       "hasImpact": false,
-      "id": 1761967,
+      "id": 1196574,
       "impact": 0,
       "isActive": true,
-      "key": "x2d1ae2af",
-      "lastChanged": "2025-11-25T22:46:18Z",
-      "name": "SMA STP/TriPower Fault Alert",
+      "key": "x2d12421e",
+      "lastChanged": "2025-06-05T21:55:47Z",
+      "name": "Device heartbeat",
       "ownerKey": "",
-      "parameters": [],
-      "parentKey": "H563256",
+      "parameters": [
+        {
+          "index": 0,
+          "info": "Delays the \"detected\" phase of the alert until the specified hours since event occurance has passed",
+          "name": "DetectedTriggerHours",
+          "readOnly": false,
+          "source": 2,
+          "type": 2,
+          "value": 0
+        }
+      ],
+      "parentKey": "H332772",
       "priorityLevel": 0,
       "sharing": 0,
       "startTime": 0,
