@@ -313,23 +313,9 @@
       "type": "string"
     },
     "settings": {
-      "type": "object",
-      "properties": {
-        "index": {
-          "type": "number"
-        },
-        "name": {
-          "type": "string"
-        },
-        "originalValue": {
-          "type": "string"
-        },
-        "type": {
-          "type": "number"
-        },
-        "value": {
-          "type": "string"
-        }
+      "type": "array",
+      "items": {
+        "type": "unknown"
       }
     },
     "siteDcShare": {
@@ -467,11 +453,11 @@
 **Request:**
 
 ```http
-GET /api/edit/hardware/H419666
+GET /api/edit/hardware/H332772
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
-ae_v: e4dcd1
-referer: https://apps.alsoenergy.com/powertrack/H419666/administration/config
+ae_v: c75711
+referer: https://apps.alsoenergy.com/powertrack/H332772/administration/config
 ```
 
 **Response:**
@@ -498,49 +484,157 @@ referer: https://apps.alsoenergy.com/powertrack/H419666/administration/config
   "debug": false,
   "decreaseDifference": 100,
   "defaultChart": 0,
-  "description": "Cell Modem (Pepwave)",
+  "description": "Cell Modem (RV55) - 1 (RT)",
   "deviceRegisters": [
+    {
+      "dataName": "DevicePower",
+      "dataNameDetail": null,
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Power In",
+      "name": "Power In",
+      "standardDataName": "",
+      "units": "V"
+    },
     {
       "dataName": "RSSI",
       "dataNameDetail": null,
-      "index": 0,
-      "isArchived": true,
+      "index": 1,
+      "isArchived": false,
       "isIgnored": false,
-      "isRaw": false,
+      "isRaw": true,
       "localizedName": "RSSI",
       "name": "RSSI",
       "standardDataName": "",
-      "units": "dB"
+      "units": ""
+    },
+    {
+      "dataName": "BoardTemp",
+      "dataNameDetail": null,
+      "index": 2,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Board Temp",
+      "name": "Board Temp",
+      "standardDataName": "",
+      "units": "°F"
     },
     {
       "dataName": "BytesSent",
       "dataNameDetail": null,
-      "index": 1,
-      "isArchived": true,
+      "index": 3,
+      "isArchived": false,
       "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Cell Bytes Sent Since Install",
-      "name": "Cell Bytes Sent Since Install",
+      "isRaw": false,
+      "localizedName": "Bytes Sent",
+      "name": "Bytes Sent",
       "standardDataName": "",
-      "units": "MB"
+      "units": "bytes"
     },
     {
       "dataName": "BytesReceived",
       "dataNameDetail": null,
-      "index": 2,
-      "isArchived": true,
+      "index": 4,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "Bytes Received",
+      "name": "Bytes Received",
+      "standardDataName": "",
+      "units": "bytes"
+    },
+    {
+      "dataName": "IP",
+      "dataNameDetail": null,
+      "index": 5,
+      "isArchived": false,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Cell Bytes Received Since Install",
-      "name": "Cell Bytes Received Since Install",
+      "localizedName": "IP Address",
+      "name": "IP Address",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "DailyUsage",
+      "dataNameDetail": null,
+      "index": 6,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "Daily Usage",
+      "name": "Daily Usage",
+      "standardDataName": "",
+      "units": "MB"
+    },
+    {
+      "dataName": "MonthlyUsage",
+      "dataNameDetail": null,
+      "index": 7,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "Monthly Usage",
+      "name": "Monthly Usage",
+      "standardDataName": "",
+      "units": "MB"
+    },
+    {
+      "dataName": "DailyUsageSIM1",
+      "dataNameDetail": null,
+      "index": 8,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "Daily Usage SIM 1",
+      "name": "Daily Usage SIM 1",
+      "standardDataName": "",
+      "units": "MB"
+    },
+    {
+      "dataName": "MonthlyUsageSIM1",
+      "dataNameDetail": null,
+      "index": 9,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "Monthly Usage SIM 1",
+      "name": "Monthly Usage SIM 1",
+      "standardDataName": "",
+      "units": "MB"
+    },
+    {
+      "dataName": "DailyUsageN",
+      "dataNameDetail": null,
+      "index": 10,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Daily Usage Normalized",
+      "name": "Daily Usage Normalized",
+      "standardDataName": "",
+      "units": "MB"
+    },
+    {
+      "dataName": "MonthlyUsageN",
+      "dataNameDetail": null,
+      "index": 11,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Monthly Usage Normalized",
+      "name": "Monthly Usage Normalized",
       "standardDataName": "",
       "units": "MB"
     }
   ],
-  "driverDescription": "SNMP from a pepwave wireless modem",
+  "driverDescription": "Events Reporting Upload",
   "driverFlags": 0,
-  "driverId": 19759,
-  "driverName": "Pepwave Wireless SNMP",
+  "driverId": 1562,
+  "driverName": "Sierra Wireless Event Reporting",
   "driverNotes": "",
   "driverRegisters": [],
   "eGauge": null,
@@ -549,40 +643,40 @@ referer: https://apps.alsoenergy.com/powertrack/H419666/administration/config
   "functionId": "DA0",
   "gateway": null,
   "gatewayFwVersion": "",
-  "gatewayId": "293B-60CE-A6F4",
+  "gatewayId": "601125779901B101",
   "gatewayKey": "",
   "gatewayScriptCount": "",
-  "gatewayType": 2,
+  "gatewayType": 14,
   "groupAllowed": [],
   "groupKey": "",
-  "hardwareId": "C20909_S64641_DA0",
+  "hardwareId": "C16293_S60308_DA0",
   "hardwareStatus": 1,
   "hasCapacity": false,
   "hash": "",
   "increaseDifference": -1,
-  "installDate": "2022-11-19",
+  "installDate": "2021-10-15",
   "instance": 0,
   "inverterKw": 0,
   "isConflictAcknowledged": false,
   "isReportable": false,
   "isTcp": false,
   "isThermal": false,
-  "key": "H419666",
+  "key": "H332772",
   "kiosk": null,
-  "latitude": 41.0659841,
+  "latitude": 39.6825824,
   "limitedCommunication": false,
   "locusId": "",
-  "longitude": -74.7513621,
+  "longitude": -75.01073,
   "meter": null,
   "modelNum": "",
   "newNote": "",
   "oneMinuteData": false,
   "outOfService": false,
   "outOfServiceNote": "",
-  "outOfServiceUntil": "2025-12-23T00:50:47.7759587Z",
+  "outOfServiceUntil": "2025-12-31T19:18:58.5867913Z",
   "outputAllowed": [],
   "outputKey": "",
-  "parentKey": "S64641",
+  "parentKey": "S60308",
   "port": 0,
   "primary": false,
   "pullData": false,
@@ -593,48 +687,26 @@ referer: https://apps.alsoenergy.com/powertrack/H419666/administration/config
   "reverse": false,
   "sampleRate": 0,
   "serialMode": -1,
-  "serialNum": "293B-60CE-A6F4",
-  "settings": [
-    {
-      "index": 0,
-      "name": "dev:community",
-      "originalValue": "ae",
-      "type": 0,
-      "value": "ae"
-    },
-    {
-      "index": 1,
-      "name": "dev:authentication",
-      "originalValue": "alsoenergy",
-      "type": 0,
-      "value": "alsoenergy"
-    },
-    {
-      "index": 2,
-      "name": "dev:privacy",
-      "originalValue": "alsoenergy",
-      "type": 0,
-      "value": "alsoenergy"
-    }
-  ],
+  "serialNum": "601125779901B101",
+  "settings": [],
   "siteDcShare": 0,
   "siteHasInverterGroups": false,
   "sort": 1,
   "syncToLocus": false,
   "tags": {
     "attributes": [],
-    "key": "{\"ancestorKey\":\"H419666\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
+    "key": "{\"ancestorKey\":\"H332772\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
     "keywords": [],
     "lastChanged": null,
     "notes": [
       {
-        "authorKey": "U39144",
-        "authorName": "Xavi Morales",
-        "date": "2022-11-18T16:19:33Z",
+        "authorKey": "U36721",
+        "authorName": "Tashi Nangchen",
+        "date": "2021-10-14T15:46:18Z",
         "isEvent": true,
-        "key": "x05282fb9",
+        "key": "x058aff4b",
         "kind": "text",
-        "parentKey": "H419666",
+        "parentKey": "H332772",
         "text": "Password created"
       }
     ],
@@ -643,7 +715,7 @@ referer: https://apps.alsoenergy.com/powertrack/H419666/administration/config
   "taskKey": "",
   "thermal": null,
   "thread": 0,
-  "ts": "2024-11-15T02:41:22Z",
+  "ts": "2025-06-05T21:55:47Z",
   "turbine": null,
   "unitId": 0,
   "uploadRate": 0,
