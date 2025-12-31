@@ -243,11 +243,11 @@
 **Request:**
 
 ```http
-GET /api/alerttrigger/H537773?lastChanged=2025-11-25T22:46:47Z
+GET /api/alerttrigger/H537771?lastChanged=2025-11-25T22:46:47Z
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/H537773/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
 ```
 
 **Response:**
@@ -272,7 +272,7 @@ referer: https://apps.alsoenergy.com/powertrack/H537773/administration/config
       "impact": 0,
       "isActive": false,
       "key": "",
-      "lastChanged": "2025-11-20T21:07:44Z",
+      "lastChanged": "2025-11-20T21:06:27Z",
       "name": "Device communication",
       "ownerKey": "",
       "parameters": [
@@ -286,7 +286,7 @@ referer: https://apps.alsoenergy.com/powertrack/H537773/administration/config
           "value": 0
         }
       ],
-      "parentKey": "H537773",
+      "parentKey": "H537771",
       "priorityLevel": 0,
       "sharing": 0,
       "startTime": 0,
@@ -308,11 +308,11 @@ referer: https://apps.alsoenergy.com/powertrack/H537773/administration/config
       "impact": 0,
       "isActive": false,
       "key": "",
-      "lastChanged": "2025-11-20T21:07:44Z",
+      "lastChanged": "2025-11-20T21:06:27Z",
       "name": "Chint/Solectria/String Inverter Standard Faults",
       "ownerKey": "",
       "parameters": [],
-      "parentKey": "H537773",
+      "parentKey": "H537771",
       "priorityLevel": 0,
       "sharing": 0,
       "startTime": 0,
@@ -321,8 +321,8 @@ referer: https://apps.alsoenergy.com/powertrack/H537773/administration/config
       "sunMinElevation": 0
     }
   ],
-  "key": "H537773",
-  "lastChanged": "2025-11-20T21:07:44Z",
+  "key": "H537771",
+  "lastChanged": "2025-11-20T21:06:27Z",
   "triggers": [
     {
       "alertTypeKey": "AI250",
@@ -334,11 +334,11 @@ referer: https://apps.alsoenergy.com/powertrack/H537773/administration/config
       "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
       "endTime": 0,
       "hasImpact": false,
-      "id": 1691879,
+      "id": 1691875,
       "impact": 0,
       "isActive": true,
-      "key": "x2d19d0e7",
-      "lastChanged": "2025-11-20T21:07:44Z",
+      "key": "x2d19d0e3",
+      "lastChanged": "2025-11-20T21:06:27Z",
       "name": "Device communication",
       "ownerKey": "",
       "parameters": [
@@ -352,7 +352,7 @@ referer: https://apps.alsoenergy.com/powertrack/H537773/administration/config
           "value": 0
         }
       ],
-      "parentKey": "H537773",
+      "parentKey": "H537771",
       "priorityLevel": 0,
       "sharing": 0,
       "startTime": 0,
@@ -370,15 +370,15 @@ referer: https://apps.alsoenergy.com/powertrack/H537773/administration/config
       "description": "Alert for Updated Chint/Solectria/Candadian String INV faults",
       "endTime": 0,
       "hasImpact": false,
-      "id": 1691880,
+      "id": 1691876,
       "impact": 0,
       "isActive": true,
-      "key": "x2d19d0e8",
-      "lastChanged": "2025-11-20T21:07:44Z",
+      "key": "x2d19d0e4",
+      "lastChanged": "2025-11-20T21:06:27Z",
       "name": "Chint/Solectria/String Inverter Standard Faults",
       "ownerKey": "",
       "parameters": [],
-      "parentKey": "H537773",
+      "parentKey": "H537771",
       "priorityLevel": 0,
       "sharing": 0,
       "startTime": 0,
