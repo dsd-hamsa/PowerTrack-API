@@ -4,7 +4,7 @@
 [← Back to Index](../logs.md)
 
 **Methods:** POST  
-**Status Codes:** 0  
+**Status Codes:** 200, 200, 200, 200, 200, 200  
 
 ## Table of Contents
 
@@ -36,6 +36,17 @@
 
 [Return to top](#top)
 
+## Alert Type: General
+
+```json
+{
+  "type": "object",
+  "properties": {}
+}
+```
+
+[Return to top](#top)
+
 ## Example
 
 **Request:**
@@ -46,17 +57,27 @@ Accept: application/json
 Content-Type: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/S66345/analysis/inverterheatmap
+referer: https://apps.alsoenergy.com/powertrack/H511568/operations/alerts
 ```
 
 **Payload:**
 
 ```json
 {
-  "from": "2025-12-28",
-  "key": "S66345",
+  "from": "2026-01-07",
+  "key": "H511568",
   "offset": 480,
-  "to": "2025-12-30"
+  "to": "2026-01-07"
+}
+```
+
+**Response:**
+
+```json
+{
+  "key": "H511568",
+  "lastChanged": "1900-01-01T00:00:00Z",
+  "list": []
 }
 ```
 
