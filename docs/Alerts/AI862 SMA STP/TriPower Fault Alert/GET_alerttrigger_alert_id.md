@@ -17,68 +17,53 @@
 {
   "type": "object",
   "properties": {
-    "key": {
-      "type": "str"
-    },
-    "lastChanged": {
-      "type": "str"
-    },
-    "id": {
-      "type": "int"
-    },
     "alertTypeKey": {
-      "type": "str"
-    },
-    "parentKey": {
-      "type": "str"
-    },
-    "name": {
-      "type": "str"
-    },
-    "description": {
-      "type": "str"
-    },
-    "isActive": {
-      "type": "bool"
-    },
-    "priorityLevel": {
-      "type": "int"
-    },
-    "checkSun": {
-      "type": "bool"
-    },
-    "checkTime": {
-      "type": "bool"
+      "type": "string"
     },
     "checkNoSnow": {
-      "type": "bool"
+      "type": "boolean"
     },
-    "hasImpact": {
-      "type": "bool"
+    "checkSun": {
+      "type": "boolean"
     },
-    "impact": {
-      "type": "float"
-    },
-    "delayHoursTrigger": {
-      "type": "float"
+    "checkTime": {
+      "type": "boolean"
     },
     "delayHoursResolve": {
-      "type": "float"
+      "type": "number"
     },
-    "startTime": {
-      "type": "int"
+    "delayHoursTrigger": {
+      "type": "number"
+    },
+    "description": {
+      "type": "string"
     },
     "endTime": {
-      "type": "int"
+      "type": "number"
     },
-    "sunMinElevation": {
-      "type": "int"
+    "hasImpact": {
+      "type": "boolean"
     },
-    "sunMinAzimuth": {
-      "type": "int"
+    "id": {
+      "type": "number"
     },
-    "sunMaxAzimuth": {
-      "type": "int"
+    "impact": {
+      "type": "number"
+    },
+    "isActive": {
+      "type": "boolean"
+    },
+    "key": {
+      "type": "string"
+    },
+    "lastChanged": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "ownerKey": {
+      "type": "string"
     },
     "parameters": {
       "type": "array",
@@ -86,11 +71,26 @@
         "type": "unknown"
       }
     },
-    "ownerKey": {
-      "type": "str"
+    "parentKey": {
+      "type": "string"
+    },
+    "priorityLevel": {
+      "type": "number"
     },
     "sharing": {
-      "type": "int"
+      "type": "number"
+    },
+    "startTime": {
+      "type": "number"
+    },
+    "sunMaxAzimuth": {
+      "type": "number"
+    },
+    "sunMinAzimuth": {
+      "type": "number"
+    },
+    "sunMinElevation": {
+      "type": "number"
     }
   }
 }
@@ -103,38 +103,43 @@
 **Request:**
 
 ```http
-GET /api/alerttrigger/{alert_id}?lastChanged=1900-01-01T00:00:00.000Z
+GET /api/alerttrigger/x2d1c4232?lastChanged=1900-01-01T00:00:00.000Z
+Accept: application/json
+ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
+ae_v: c75711
+referer: https://apps.alsoenergy.com/powertrack/H511568/administration/alertsettings
 ```
 
 **Response:**
 
 ```json
 {
-  "key": "x2d1558eb",
-  "lastChanged": "2025-11-17T18:53:06Z",
-  "id": 1399019,
   "alertTypeKey": "AI862",
-  "parentKey": "H419672",
-  "name": "SMA STP/TriPower Fault Alert",
-  "description": "SMA TriPower Fault Alert following the SMA Event Messages Document.",
-  "isActive": true,
-  "priorityLevel": 0,
-  "checkSun": true,
+  "checkNoSnow": false,
+  "checkSun": false,
   "checkTime": false,
-  "checkNoSnow": true,
-  "hasImpact": false,
-  "impact": 0.0,
-  "delayHoursTrigger": 1.0,
-  "delayHoursResolve": 0.5,
-  "startTime": 0,
+  "delayHoursResolve": 1,
+  "delayHoursTrigger": 1,
+  "description": "SMA TriPower Fault Alert following the SMA Event Messages Document.",
   "endTime": 0,
-  "sunMinElevation": 10,
-  "sunMinAzimuth": 0,
-  "sunMaxAzimuth": 0,
-  "parameters": [],
+  "hasImpact": false,
+  "id": 1851954,
+  "impact": 0,
+  "isActive": true,
+  "key": "x2d1c4232",
+  "lastChanged": "2026-01-07T19:05:55Z",
+  "name": "SMA STP/TriPower Fault Alert",
   "ownerKey": "",
-  "sharing": 0
+  "parameters": [],
+  "parentKey": "H511568",
+  "priorityLevel": 0,
+  "sharing": 0,
+  "startTime": 0,
+  "sunMaxAzimuth": 0,
+  "sunMinAzimuth": 0,
+  "sunMinElevation": 0
 }
 ```
 
 [Return to top](#top)
+
