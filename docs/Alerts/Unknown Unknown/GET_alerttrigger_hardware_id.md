@@ -184,29 +184,9 @@
           "type": "string"
         },
         "parameters": {
-          "type": "object",
-          "properties": {
-            "index": {
-              "type": "number"
-            },
-            "info": {
-              "type": "string"
-            },
-            "name": {
-              "type": "string"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "source": {
-              "type": "number"
-            },
-            "type": {
-              "type": "number"
-            },
-            "value": {
-              "type": "number"
-            }
+          "type": "array",
+          "items": {
+            "type": "unknown"
           }
         },
         "parentKey": {
@@ -243,20 +223,20 @@
 **Request:**
 
 ```http
-GET /api/alerttrigger/H537771?lastChanged=2025-11-25T22:46:47Z
+GET /api/alerttrigger/H511568?lastChanged=2026-01-07T18:27:48Z
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H511568/administration/alertsettings
 ```
 
 **Response:**
 
 ```json
 {
-  "assetCode": 1,
-  "calculatedCapacity": 60,
-  "capacity": 60,
+  "assetCode": 7,
+  "calculatedCapacity": 63,
+  "capacity": 63,
   "defaultTriggers": [
     {
       "alertTypeKey": "AI250",
@@ -272,7 +252,7 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
       "impact": 0,
       "isActive": false,
       "key": "",
-      "lastChanged": "2025-11-20T21:06:27Z",
+      "lastChanged": "2026-01-07T19:04:18Z",
       "name": "Device communication",
       "ownerKey": "",
       "parameters": [
@@ -286,7 +266,7 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
           "value": 0
         }
       ],
-      "parentKey": "H537771",
+      "parentKey": "H511568",
       "priorityLevel": 0,
       "sharing": 0,
       "startTime": 0,
@@ -295,24 +275,24 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
       "sunMinElevation": 0
     },
     {
-      "alertTypeKey": "AI2640",
+      "alertTypeKey": "AI862",
       "checkNoSnow": false,
       "checkSun": false,
       "checkTime": false,
       "delayHoursResolve": 0,
       "delayHoursTrigger": 0,
-      "description": "Alert for Updated Chint/Solectria/Candadian String INV faults",
+      "description": "SMA TriPower Fault Alert following the SMA Event Messages Document.",
       "endTime": 0,
       "hasImpact": false,
       "id": 0,
       "impact": 0,
       "isActive": false,
       "key": "",
-      "lastChanged": "2025-11-20T21:06:27Z",
-      "name": "Chint/Solectria/String Inverter Standard Faults",
+      "lastChanged": "2026-01-07T19:04:18Z",
+      "name": "SMA STP/TriPower Fault Alert",
       "ownerKey": "",
       "parameters": [],
-      "parentKey": "H537771",
+      "parentKey": "H511568",
       "priorityLevel": 0,
       "sharing": 0,
       "startTime": 0,
@@ -321,9 +301,35 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
       "sunMinElevation": 0
     }
   ],
-  "key": "H537771",
-  "lastChanged": "2025-11-20T21:06:27Z",
+  "key": "H511568",
+  "lastChanged": "2026-01-07T19:04:18Z",
   "triggers": [
+    {
+      "alertTypeKey": "AI862",
+      "checkNoSnow": false,
+      "checkSun": false,
+      "checkTime": false,
+      "delayHoursResolve": 1,
+      "delayHoursTrigger": 1,
+      "description": "SMA TriPower Fault Alert following the SMA Event Messages Document.",
+      "endTime": 0,
+      "hasImpact": false,
+      "id": 1851954,
+      "impact": 0,
+      "isActive": true,
+      "key": "x2d1c4232",
+      "lastChanged": "2026-01-07T19:04:18Z",
+      "name": "SMA STP/TriPower Fault Alert",
+      "ownerKey": "",
+      "parameters": [],
+      "parentKey": "H511568",
+      "priorityLevel": 0,
+      "sharing": 0,
+      "startTime": 0,
+      "sunMaxAzimuth": 0,
+      "sunMinAzimuth": 0,
+      "sunMinElevation": 0
+    },
     {
       "alertTypeKey": "AI250",
       "checkNoSnow": true,
@@ -334,11 +340,11 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
       "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
       "endTime": 0,
       "hasImpact": false,
-      "id": 1691875,
+      "id": 1851955,
       "impact": 0,
       "isActive": true,
-      "key": "x2d19d0e3",
-      "lastChanged": "2025-11-20T21:06:27Z",
+      "key": "x2d1c4233",
+      "lastChanged": "2026-01-07T19:04:18Z",
       "name": "Device communication",
       "ownerKey": "",
       "parameters": [
@@ -352,33 +358,7 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
           "value": 0
         }
       ],
-      "parentKey": "H537771",
-      "priorityLevel": 0,
-      "sharing": 0,
-      "startTime": 0,
-      "sunMaxAzimuth": 0,
-      "sunMinAzimuth": 0,
-      "sunMinElevation": 10
-    },
-    {
-      "alertTypeKey": "AI2640",
-      "checkNoSnow": true,
-      "checkSun": true,
-      "checkTime": false,
-      "delayHoursResolve": 0.5,
-      "delayHoursTrigger": 1,
-      "description": "Alert for Updated Chint/Solectria/Candadian String INV faults",
-      "endTime": 0,
-      "hasImpact": false,
-      "id": 1691876,
-      "impact": 0,
-      "isActive": true,
-      "key": "x2d19d0e4",
-      "lastChanged": "2025-11-20T21:06:27Z",
-      "name": "Chint/Solectria/String Inverter Standard Faults",
-      "ownerKey": "",
-      "parameters": [],
-      "parentKey": "H537771",
+      "parentKey": "H511568",
       "priorityLevel": 0,
       "sharing": 0,
       "startTime": 0,
