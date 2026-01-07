@@ -585,17 +585,9 @@
                   }
                 },
                 "regions": {
-                  "type": "object",
-                  "properties": {
-                    "factors": {
-                      "type": "string"
-                    },
-                    "index": {
-                      "type": "number"
-                    },
-                    "points": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "type": "unknown"
                   }
                 }
               }
@@ -741,13 +733,13 @@
           "type": "string"
         },
         "originalValue": {
-          "type": "number"
+          "type": "string"
         },
         "type": {
           "type": "number"
         },
         "value": {
-          "type": "number"
+          "type": "string"
         }
       }
     },
@@ -863,11 +855,11 @@
 **Request:**
 
 ```http
-GET /api/edit/hardware/H537771
+GET /api/edit/hardware/H511568
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H511568/administration/config
 ```
 
 **Response:**
@@ -875,15 +867,15 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
 ```json
 {
   "additionalRegisters": [],
-  "address": "1",
+  "address": "192.168.13.51",
   "alsoHardwareId": 0,
   "alsoSiteId": 0,
   "array": null,
   "assetId": "",
   "autoCorrectDecrease": false,
   "autoCorrectIncrease": false,
-  "baud": "9600",
-  "capacityKw": 60,
+  "baud": "",
+  "capacityKw": 62.5,
   "chartSectionCode": 1,
   "commonDC": false,
   "commonDCAllMatch": true,
@@ -892,16 +884,28 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
   ],
   "conflictNames": null,
   "dashboardKey": "",
-  "dcRating": 56640,
+  "dcRating": 8720,
   "debug": false,
   "decreaseDifference": 100,
   "defaultChart": 2,
-  "description": "INV 1 (60KW) CPS SCA60KTL-DO/US-480",
+  "description": "INVERTER 1",
   "deviceRegisters": [
+    {
+      "dataName": "KwhAC",
+      "dataNameDetail": null,
+      "index": 0,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Active Energy Net (with Offset)",
+      "name": "Active Energy Net",
+      "standardDataName": "Active_Energy_Gross",
+      "units": "kWh"
+    },
     {
       "dataName": "KwAC",
       "dataNameDetail": null,
-      "index": 0,
+      "index": 1,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -911,81 +915,93 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
       "units": "kW"
     },
     {
-      "dataName": "KwhAC",
-      "dataNameDetail": null,
-      "index": 1,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Active Energy Net (with Offset)",
-      "name": "Active Energy Gross",
-      "standardDataName": "Active_Energy_Gross",
-      "units": "kWh"
-    },
-    {
-      "dataName": "KwhACraw",
+      "dataName": "Active_Power_A",
       "dataNameDetail": null,
       "index": 2,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Active Energy Net (without Offset)",
-      "name": "Active Energy Gross Raw",
-      "standardDataName": "",
-      "units": "kWh"
+      "localizedName": "Active Power A",
+      "name": "Active Power A",
+      "standardDataName": "Active_Power_A",
+      "units": "kW"
     },
     {
-      "dataName": "Frequency",
+      "dataName": "Active_Power_B",
       "dataNameDetail": null,
       "index": 3,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Frequency",
-      "name": "Frequency",
-      "standardDataName": "Frequency",
-      "units": "Hz"
+      "localizedName": "Active Power B",
+      "name": "Active Power B",
+      "standardDataName": "Active_Power_B",
+      "units": "kW"
     },
     {
-      "dataName": "VacAB",
+      "dataName": "Active_Power_C",
       "dataNameDetail": null,
       "index": 4,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "AC Voltage A-B (Line-Line)",
-      "name": "AC Voltage AB",
-      "standardDataName": "Voltage_AB",
-      "units": "V"
+      "localizedName": "Active Power C",
+      "name": "Active Power C",
+      "standardDataName": "Active_Power_C",
+      "units": "kW"
     },
     {
-      "dataName": "VacBC",
+      "dataName": "VacA",
       "dataNameDetail": null,
       "index": 5,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "AC Voltage B-C (Line-Line)",
-      "name": "AC Voltage BC",
-      "standardDataName": "Voltage_BC",
+      "localizedName": "AC Voltage A (Line-Neutral)",
+      "name": "AC Voltage AN",
+      "standardDataName": "Voltage_AN",
       "units": "V"
     },
     {
-      "dataName": "VacCA",
+      "dataName": "VacB",
       "dataNameDetail": null,
       "index": 6,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "AC Voltage C-A (Line-Line)",
-      "name": "AC Voltage CA",
-      "standardDataName": "Voltage_CA",
+      "localizedName": "AC Voltage B (Line-Neutral)",
+      "name": "AC Voltage BN",
+      "standardDataName": "Voltage_BN",
       "units": "V"
+    },
+    {
+      "dataName": "VacC",
+      "dataNameDetail": null,
+      "index": 7,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "AC Voltage C (Line-Neutral)",
+      "name": "AC Voltage CN",
+      "standardDataName": "Voltage_CN",
+      "units": "V"
+    },
+    {
+      "dataName": "Iac",
+      "dataNameDetail": null,
+      "index": 8,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "AC Current Average",
+      "name": "AC Current Average",
+      "standardDataName": "Current_Avg",
+      "units": "A"
     },
     {
       "dataName": "IacA",
       "dataNameDetail": null,
-      "index": 7,
+      "index": 9,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -997,7 +1013,7 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
     {
       "dataName": "IacB",
       "dataNameDetail": null,
-      "index": 8,
+      "index": 10,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -1009,7 +1025,7 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
     {
       "dataName": "IacC",
       "dataNameDetail": null,
-      "index": 9,
+      "index": 11,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -1019,177 +1035,21 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
       "units": "A"
     },
     {
-      "dataName": "Iac",
-      "dataNameDetail": null,
-      "index": 10,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "AC Current Average",
-      "name": "AC Current Average",
-      "standardDataName": "Current_Avg",
-      "units": "A"
-    },
-    {
-      "dataName": "Vac",
-      "dataNameDetail": null,
-      "index": 11,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "AC Voltage Average L-N",
-      "name": "AC Voltage Average L-N",
-      "standardDataName": "Voltage_LN_Avg",
-      "units": "V"
-    },
-    {
-      "dataName": "KVA",
+      "dataName": "Frequency",
       "dataNameDetail": null,
       "index": 12,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Apparent Power",
-      "name": "Apparent Power",
-      "standardDataName": "Apparent_Power",
-      "units": "kVA"
-    },
-    {
-      "dataName": "KVAR",
-      "dataNameDetail": null,
-      "index": 13,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Reactive Power",
-      "name": "Reactive Power",
-      "standardDataName": "Reactive_Power",
-      "units": "kVAR"
-    },
-    {
-      "dataName": "PowerFactor",
-      "dataNameDetail": null,
-      "index": 14,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Power Factor",
-      "name": "Power Factor",
-      "standardDataName": "Power_Factor",
-      "units": "PF"
-    },
-    {
-      "dataName": "Vdc1",
-      "dataNameDetail": null,
-      "index": 15,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC Voltage 1",
-      "name": "DC Voltage 1",
-      "standardDataName": "DC_Voltage1",
-      "units": "V"
-    },
-    {
-      "dataName": "Idc1",
-      "dataNameDetail": null,
-      "index": 16,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC current 1",
-      "name": "DC Current 1",
-      "standardDataName": "DC_Current1",
-      "units": "A"
-    },
-    {
-      "dataName": "Vdc2",
-      "dataNameDetail": null,
-      "index": 17,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC Voltage 2",
-      "name": "DC Voltage 2",
-      "standardDataName": "DC_Voltage2",
-      "units": "V"
-    },
-    {
-      "dataName": "Idc2",
-      "dataNameDetail": null,
-      "index": 18,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC current 2",
-      "name": "DC Current 2",
-      "standardDataName": "DC_Current2",
-      "units": "A"
-    },
-    {
-      "dataName": "Vdc3",
-      "dataNameDetail": null,
-      "index": 19,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC Voltage 3",
-      "name": "DC Voltage 3",
-      "standardDataName": "DC_Voltage3",
-      "units": "V"
-    },
-    {
-      "dataName": "Idc3",
-      "dataNameDetail": null,
-      "index": 20,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC current 3",
-      "name": "DC Current 3",
-      "standardDataName": "DC_Current3",
-      "units": "A"
-    },
-    {
-      "dataName": "Idc",
-      "dataNameDetail": null,
-      "index": 21,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC Current Total",
-      "name": "DC Current Total",
-      "standardDataName": "DC_Current_Total",
-      "units": "A"
-    },
-    {
-      "dataName": "Vdc",
-      "dataNameDetail": null,
-      "index": 22,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC Voltage Average",
-      "name": "DC Voltage Average",
-      "standardDataName": "DC_Voltage_Avg",
-      "units": "V"
-    },
-    {
-      "dataName": "KwDC",
-      "dataNameDetail": null,
-      "index": 23,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC Power",
-      "name": "DC Power Total",
-      "standardDataName": "DC_Power_Total",
-      "units": "kW"
+      "localizedName": "Frequency",
+      "name": "Frequency",
+      "standardDataName": "Frequency",
+      "units": "Hz"
     },
     {
       "dataName": "DeviceTemp",
       "dataNameDetail": null,
-      "index": 24,
+      "index": 13,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -1199,9 +1059,117 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
       "units": "°F"
     },
     {
+      "dataName": "VacAB",
+      "dataNameDetail": null,
+      "index": 14,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "AC Voltage A-B (Line-Line)",
+      "name": "AC Voltage AB",
+      "standardDataName": "Voltage_AB",
+      "units": "V"
+    },
+    {
+      "dataName": "VacBC",
+      "dataNameDetail": null,
+      "index": 15,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "AC Voltage B-C (Line-Line)",
+      "name": "AC Voltage BC",
+      "standardDataName": "Voltage_BC",
+      "units": "V"
+    },
+    {
+      "dataName": "VacCA",
+      "dataNameDetail": null,
+      "index": 16,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "AC Voltage C-A (Line-Line)",
+      "name": "AC Voltage CA",
+      "standardDataName": "Voltage_CA",
+      "units": "V"
+    },
+    {
+      "dataName": "Reactive_Power_A",
+      "dataNameDetail": null,
+      "index": 17,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Reactive Power A",
+      "name": "Reactive Power ",
+      "standardDataName": "",
+      "units": "kVAR"
+    },
+    {
+      "dataName": "Reactive_Power_B",
+      "dataNameDetail": null,
+      "index": 18,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Reactive Power B",
+      "name": "Reactive Power B",
+      "standardDataName": "",
+      "units": "kVAR"
+    },
+    {
+      "dataName": "Reactive_Power_C",
+      "dataNameDetail": null,
+      "index": 19,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Reactive Power C",
+      "name": "Reactive Power C",
+      "standardDataName": "",
+      "units": "kVAR"
+    },
+    {
+      "dataName": "KVAR",
+      "dataNameDetail": null,
+      "index": 20,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Reactive Power",
+      "name": "Reactive Power",
+      "standardDataName": "Reactive_Power",
+      "units": "kVAR"
+    },
+    {
+      "dataName": "KVA",
+      "dataNameDetail": null,
+      "index": 21,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Apparent Power",
+      "name": "Apparent Power",
+      "standardDataName": "Apparent_Power",
+      "units": "kVA"
+    },
+    {
+      "dataName": "PowerFactor",
+      "dataNameDetail": null,
+      "index": 22,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Power Factor",
+      "name": "Power Factor",
+      "standardDataName": "Power_Factor",
+      "units": "PF"
+    },
+    {
       "dataName": "InternalTemp",
       "dataNameDetail": null,
-      "index": 25,
+      "index": 23,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -1211,129 +1179,273 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
       "units": "°F"
     },
     {
-      "dataName": "Temp_XMFR",
+      "dataName": "KwhACraw",
+      "dataNameDetail": null,
+      "index": 24,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Active Energy Net (without Offset)",
+      "name": "Active Energy Net Raw",
+      "standardDataName": "",
+      "units": "kWh"
+    },
+    {
+      "dataName": "Idc1",
+      "dataNameDetail": null,
+      "index": 25,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC current 1",
+      "name": "DC Current Input 1",
+      "standardDataName": "DC_Current1",
+      "units": "A"
+    },
+    {
+      "dataName": "Vdc1",
       "dataNameDetail": null,
       "index": 26,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "XMFR Temperature",
-      "name": "XMFR Temperature",
-      "standardDataName": "Temp_XMFR",
-      "units": "°F"
+      "localizedName": "DC Voltage 1",
+      "name": "DC Voltage Input 1",
+      "standardDataName": "DC_Voltage1",
+      "units": "V"
     },
     {
-      "dataName": "Fault",
+      "dataName": "KwDC1",
       "dataNameDetail": null,
       "index": 27,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Fault Code",
-      "name": "Fault Code",
-      "standardDataName": "Fault",
-      "units": ""
+      "localizedName": "DC power 1",
+      "name": "DC Power 1",
+      "standardDataName": "DC_Power1",
+      "units": "kW"
     },
     {
-      "dataName": "Warning",
+      "dataName": "Idc2",
       "dataNameDetail": null,
       "index": 28,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Warn Code",
-      "name": "Warn Code",
-      "standardDataName": "",
-      "units": ""
+      "localizedName": "DC current 2",
+      "name": "DC Current Input 2",
+      "standardDataName": "DC_Current2",
+      "units": "A"
     },
     {
-      "dataName": "Fault0",
+      "dataName": "Vdc2",
       "dataNameDetail": null,
       "index": 29,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Fault Code 0",
-      "name": "Fault Code 0",
-      "standardDataName": "Fault0",
-      "units": ""
+      "localizedName": "DC Voltage 2",
+      "name": "DC Voltage Input 2",
+      "standardDataName": "DC_Voltage2",
+      "units": "V"
     },
     {
-      "dataName": "Fault1",
+      "dataName": "KwDC2",
       "dataNameDetail": null,
       "index": 30,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Fault 1",
-      "name": "Fault Code 1",
-      "standardDataName": "Fault1",
-      "units": ""
+      "localizedName": "DC power 2",
+      "name": "DC Power 2",
+      "standardDataName": "DC_Power2",
+      "units": "kW"
     },
     {
-      "dataName": "Fault2",
+      "dataName": "Idc3",
       "dataNameDetail": null,
       "index": 31,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Fault 2",
-      "name": "Fault Code 2",
-      "standardDataName": "Fault2",
-      "units": ""
+      "localizedName": "DC current 3",
+      "name": "DC Current Input 3",
+      "standardDataName": "DC_Current3",
+      "units": "A"
     },
     {
-      "dataName": "Fault3",
+      "dataName": "Vdc3",
       "dataNameDetail": null,
       "index": 32,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Fault 3",
-      "name": "Fault Code 3",
-      "standardDataName": "Fault3",
-      "units": ""
+      "localizedName": "DC Voltage 3",
+      "name": "DC Voltage Input 3",
+      "standardDataName": "DC_Voltage3",
+      "units": "V"
     },
     {
-      "dataName": "Fault4",
+      "dataName": "KwDC3",
       "dataNameDetail": null,
       "index": 33,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Fault 4",
-      "name": "Fault Code 4",
-      "standardDataName": "Fault4",
-      "units": ""
+      "localizedName": "DC power 3",
+      "name": "DC Power 3",
+      "standardDataName": "DC_Power3",
+      "units": "kW"
     },
     {
-      "dataName": "opmode",
+      "dataName": "Idc4",
       "dataNameDetail": null,
       "index": 34,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Operating Mode",
-      "name": "Inverter Work Mode",
-      "standardDataName": "Op_Mode",
-      "units": "Derate: 0x800;Running:0x1000;Standby:0x2000;Check:0x4000;Fault:0x8000"
+      "localizedName": "DC current 4",
+      "name": "DC Current Input 4",
+      "standardDataName": "DC_Current4",
+      "units": "A"
     },
     {
-      "dataName": "Firmware_Version",
+      "dataName": "Vdc4",
       "dataNameDetail": null,
       "index": 35,
-      "isArchived": false,
+      "isArchived": true,
       "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "Firmware Version",
-      "name": "Firmware Version",
-      "standardDataName": "Firmware_Version",
-      "units": ""
+      "isRaw": true,
+      "localizedName": "DC voltage 4",
+      "name": "DC Voltage Input 4",
+      "standardDataName": "DC_Voltage4",
+      "units": "V"
+    },
+    {
+      "dataName": "KwDC4",
+      "dataNameDetail": null,
+      "index": 36,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC power 4",
+      "name": "DC Power 4",
+      "standardDataName": "DC_Power4",
+      "units": "kW"
+    },
+    {
+      "dataName": "Idc5",
+      "dataNameDetail": null,
+      "index": 37,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC current 5",
+      "name": "DC Current Input 5",
+      "standardDataName": "DC_Current5",
+      "units": "A"
+    },
+    {
+      "dataName": "Vdc5",
+      "dataNameDetail": null,
+      "index": 38,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC Voltage 5",
+      "name": "DC Voltage Input 5",
+      "standardDataName": "DC_Voltage5",
+      "units": "V"
+    },
+    {
+      "dataName": "KwDC5",
+      "dataNameDetail": null,
+      "index": 39,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC power 5",
+      "name": "DC Power 5",
+      "standardDataName": "DC_Power5",
+      "units": "kW"
+    },
+    {
+      "dataName": "Idc6",
+      "dataNameDetail": null,
+      "index": 40,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC current 6",
+      "name": "DC Current Input 6",
+      "standardDataName": "DC_Current6",
+      "units": "A"
+    },
+    {
+      "dataName": "Vdc6",
+      "dataNameDetail": null,
+      "index": 41,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC Voltage 6",
+      "name": "DC Voltage Input 6",
+      "standardDataName": "DC_Voltage6",
+      "units": "V"
+    },
+    {
+      "dataName": "KwDC6",
+      "dataNameDetail": null,
+      "index": 42,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC power 6",
+      "name": "DC Power 6",
+      "standardDataName": "DC_Power6",
+      "units": "kW"
+    },
+    {
+      "dataName": "Idc",
+      "dataNameDetail": null,
+      "index": 43,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC Current Total",
+      "name": "DC Current Input (total)",
+      "standardDataName": "DC_Current_Total",
+      "units": "A"
+    },
+    {
+      "dataName": "Vdc",
+      "dataNameDetail": null,
+      "index": 44,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC Voltage Average",
+      "name": "DC Voltage Input (average)",
+      "standardDataName": "DC_Voltage_Avg",
+      "units": "V"
+    },
+    {
+      "dataName": "KwDC",
+      "dataNameDetail": null,
+      "index": 45,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC Power",
+      "name": "DC Power (total)",
+      "standardDataName": "DC_Power_Total",
+      "units": "kW"
     },
     {
       "dataName": "Serial_Number",
       "dataNameDetail": null,
-      "index": 36,
+      "index": 46,
       "isArchived": false,
       "isIgnored": false,
       "isRaw": false,
@@ -1341,13 +1453,49 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
       "name": "Serial Number",
       "standardDataName": "Serial_Number",
       "units": ""
+    },
+    {
+      "dataName": "Fault",
+      "dataNameDetail": null,
+      "index": 47,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "EventID",
+      "name": "EventID",
+      "standardDataName": "Fault",
+      "units": ""
+    },
+    {
+      "dataName": "Status",
+      "dataNameDetail": null,
+      "index": 48,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Operating Status",
+      "name": "Condition",
+      "standardDataName": "Op_Status",
+      "units": ""
+    },
+    {
+      "dataName": "Firmware_Version",
+      "dataNameDetail": null,
+      "index": 49,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "Firmware Version",
+      "name": "Firmware",
+      "standardDataName": "Firmware_Version",
+      "units": ""
     }
   ],
-  "driverDescription": "Chint / Solectria TL String Inverter [without Control]",
-  "driverFlags": 16386,
-  "driverId": 20630,
-  "driverName": "Chint / Solectria TL String Inverter w/o Control (SS) Standard",
-  "driverNotes": "Know issue on some firmware with kWh Energy not counting through the day, and only adding daily values everynight, FW 1797, 2053, 1284\r\rModbus Map: https://www.chintpowersystems.com/downloads/\r\r14-20-23-28-36kW Modbus Map\r25kW-208V Modbus Map\r25kW-408V Modbus Map\r50-60kW Modbus Map\r100/125kW-600V and 100kW-480 Modbus Map\r250/275kW-800 Modbus Map",
+  "driverDescription": "Tri-Power Core1 inverter with no Controls",
+  "driverFlags": 18434,
+  "driverId": 19880,
+  "driverName": "SMA Tri-Power Core1 Inverter (SS) Standard",
+  "driverNotes": "Legacy Drivers: 2136, 3227, 566, 707\r\r[06.08.2023 - Sagar]\rUpdated the frequency scaling expression.",
   "driverRegisters": [],
   "eGauge": null,
   "fixedEnergyOffset": 0,
@@ -1355,50 +1503,50 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
   "functionId": "PV0",
   "gateway": null,
   "gatewayFwVersion": "",
-  "gatewayId": "000CC68E62AA",
-  "gatewayKey": "H537769",
+  "gatewayId": "000CC68FAF30",
+  "gatewayKey": "H511564",
   "gatewayScriptCount": "",
-  "gatewayType": 2,
+  "gatewayType": 7,
   "groupAllowed": [
     28
   ],
   "groupKey": "",
-  "hardwareId": "C44486_S70352_PV0",
+  "hardwareId": "C20909_S68143_PV0",
   "hardwareStatus": 1,
   "hasCapacity": true,
   "hash": "",
   "increaseDifference": -1,
-  "installDate": "2024-12-10",
+  "installDate": "2024-07-12",
   "instance": 0,
   "inverterKw": 0,
   "isConflictAcknowledged": false,
   "isReportable": true,
-  "isTcp": false,
+  "isTcp": true,
   "isThermal": false,
-  "key": "H537771",
+  "key": "H511568",
   "kiosk": null,
-  "latitude": 41.7779948,
+  "latitude": 34.0371297,
   "limitedCommunication": false,
   "locusId": "",
-  "longitude": -87.5892944,
+  "longitude": -118.1014776,
   "meter": null,
-  "modelNum": "CHINT SCA60KTL-DO/US-480",
+  "modelNum": "SMA CORE 1 STP62-US-41",
   "newNote": "",
   "oneMinuteData": false,
   "outOfService": false,
   "outOfServiceNote": "",
-  "outOfServiceUntil": "2025-12-31T18:34:35.6809837Z",
+  "outOfServiceUntil": "2026-01-07T19:04:45.5211723Z",
   "outputAllowed": [
     2
   ],
-  "outputKey": "H537770",
-  "parentKey": "S70352",
-  "port": 1,
+  "outputKey": "",
+  "parentKey": "S68143",
+  "port": 0,
   "primary": false,
   "pullData": false,
   "pvConfig": {
     "acDcType": 1,
-    "acInfo": 1,
+    "acInfo": 2,
     "canIntegrateCombiners": true,
     "combinerInputs": [
       {
@@ -1412,6 +1560,18 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
       {
         "name": "Idc3",
         "value": 0
+      },
+      {
+        "name": "Idc4",
+        "value": 0
+      },
+      {
+        "name": "Idc5",
+        "value": 0
+      },
+      {
+        "name": "Idc6",
+        "value": 0
       }
     ],
     "degrade": 0.5,
@@ -1424,9 +1584,9 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
         "acVoltage": 480,
         "azimuth": 180,
         "bifacialRatio": 0,
-        "dcAmps": 204,
+        "dcAmps": 0,
         "dcLoss": 0,
-        "dcSize": 56.64,
+        "dcSize": 8.72,
         "dcVoltage": 1000,
         "derate": 0.9,
         "derateDetail": false,
@@ -1452,9 +1612,9 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
           "scaleY": 0
         },
         "installationType": 2,
-        "inverterKva": 66,
-        "inverterKw": 60,
-        "inverterLoss": 1,
+        "inverterKva": 0,
+        "inverterKw": 62.5,
+        "inverterLoss": 0,
         "inverterName": "",
         "lightInducedDegradation": 0,
         "limitOne": 0,
@@ -1463,32 +1623,32 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
         "limitTwo": 0,
         "mismatch": 0,
         "moduleArea": 0,
-        "mppAmps": 13.12,
-        "mppVoltage": 44.96,
-        "mppWatts": 589.8752,
-        "numOfStrings": 6,
+        "mppAmps": 13.04,
+        "mppVoltage": 41.8,
+        "mppWatts": 545.0719999999999,
+        "numOfStrings": 1,
         "panelsPerString": 16,
         "pmaxDeviation": 0,
         "pvSystConfig": {
-          "cellArea": 0,
-          "cellType": -1,
-          "cellsParallel": 0,
-          "cellsSeries": 0,
-          "impp": 0,
-          "isc": 0,
+          "cellArea": 166.5,
+          "cellType": 0,
+          "cellsParallel": 2,
+          "cellsSeries": 72,
+          "impp": 13.04,
+          "isc": 13.92,
           "key": "",
-          "manufacturer": "",
-          "model": "",
-          "muIsc": 0,
-          "muPMax": 0,
-          "rSeries": 0,
-          "rShunt": 0,
-          "rShuntExp": 0,
-          "rShuntGinc": 0,
-          "vmpp": 0,
-          "voc": 0
+          "manufacturer": "Longi Solar",
+          "model": "LR5-72HBD-545M",
+          "muIsc": 0.063971119133574,
+          "muPMax": -0.34,
+          "rSeries": 0.19,
+          "rShunt": 241,
+          "rShuntExp": 3,
+          "rShuntGinc": 3000,
+          "vmpp": 41.8,
+          "voc": 49.65
         },
-        "pvSystModuleId": 0,
+        "pvSystModuleId": 937,
         "pvSystOutOfSync": false,
         "pvUsaConfig": {
           "ambientTemperature": 0,
@@ -1498,8 +1658,8 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
         },
         "regressionFunctionList": [],
         "shadeModel": {
-          "albedoWeight": 0.907,
-          "diffuseWeight": 0.031,
+          "albedoWeight": 0,
+          "diffuseWeight": 0,
           "hasInterRowShadeModel": 0,
           "interRowShadeModel": {
             "azimuth": 0,
@@ -1509,494 +1669,419 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
             "tilt": 0,
             "topBorderLength": 0
           },
-          "regions": [
-            {
-              "factors": "0.000, 0.000, 0.986, 0.975",
-              "index": 0,
-              "points": [
-                "40,0",
-                "60,0",
-                "60,10",
-                "40,10"
-              ]
-            },
-            {
-              "factors": "0.000, 0.628, 0.986, 0.986",
-              "index": 1,
-              "points": [
-                "60,0",
-                "80,0",
-                "80,10",
-                "60,10"
-              ]
-            },
-            {
-              "factors": "0.628, 0.132, 0.381, 0.986",
-              "index": 2,
-              "points": [
-                "80,0",
-                "100,0",
-                "100,10",
-                "80,10"
-              ]
-            },
-            {
-              "factors": "0.132, 0.141, 0.834, 0.381",
-              "index": 3,
-              "points": [
-                "100,0",
-                "120,0",
-                "120,10",
-                "100,10"
-              ]
-            },
-            {
-              "factors": "0.141, 0.086, 0.721, 0.834",
-              "index": 4,
-              "points": [
-                "120,0",
-                "140,0",
-                "140,10",
-                "120,10"
-              ]
-            },
-            {
-              "factors": "0.091, 0.174, 0.852, 0.742",
-              "index": 5,
-              "points": [
-                "220,0",
-                "240,0",
-                "240,10",
-                "220,10"
-              ]
-            },
-            {
-              "factors": "0.174, 0.254, 0.945, 0.852",
-              "index": 6,
-              "points": [
-                "240,0",
-                "260,0",
-                "260,10",
-                "240,10"
-              ]
-            },
-            {
-              "factors": "0.254, 0.234, 0.940, 0.945",
-              "index": 7,
-              "points": [
-                "260,0",
-                "280,0",
-                "280,10",
-                "260,10"
-              ]
-            },
-            {
-              "factors": "0.234, 0.000, 0.972, 0.940",
-              "index": 8,
-              "points": [
-                "280,0",
-                "300,0",
-                "300,10",
-                "280,10"
-              ]
-            },
-            {
-              "factors": "0.000, 0.000, 0.973, 0.972",
-              "index": 9,
-              "points": [
-                "300,0",
-                "320,0",
-                "320,10",
-                "300,10"
-              ]
-            },
-            {
-              "factors": "0.986, 0.986, 0.993, 0.994",
-              "index": 10,
-              "points": [
-                "60,10",
-                "80,10",
-                "80,20",
-                "60,20"
-              ]
-            },
-            {
-              "factors": "0.986, 0.381, 0.993, 0.993",
-              "index": 11,
-              "points": [
-                "80,10",
-                "100,10",
-                "100,20",
-                "80,20"
-              ]
-            },
-            {
-              "factors": "0.381, 0.834, 0.991, 0.993",
-              "index": 12,
-              "points": [
-                "100,10",
-                "120,10",
-                "120,20",
-                "100,20"
-              ]
-            },
-            {
-              "factors": "0.834, 0.721, 0.933, 0.991",
-              "index": 13,
-              "points": [
-                "120,10",
-                "140,10",
-                "140,20",
-                "120,20"
-              ]
-            },
-            {
-              "factors": "0.721, 0.659, 0.886, 0.933",
-              "index": 14,
-              "points": [
-                "140,10",
-                "160,10",
-                "160,20",
-                "140,20"
-              ]
-            },
-            {
-              "factors": "0.684, 0.742, 0.948, 0.897",
-              "index": 15,
-              "points": [
-                "200,10",
-                "220,10",
-                "220,20",
-                "200,20"
-              ]
-            },
-            {
-              "factors": "0.742, 0.852, 1.000, 0.948",
-              "index": 16,
-              "points": [
-                "220,10",
-                "240,10",
-                "240,20",
-                "220,20"
-              ]
-            },
-            {
-              "factors": "0.852, 0.945, 0.999, 1.000",
-              "index": 17,
-              "points": [
-                "240,10",
-                "260,10",
-                "260,20",
-                "240,20"
-              ]
-            },
-            {
-              "factors": "0.945, 0.940, 0.999, 0.999",
-              "index": 18,
-              "points": [
-                "260,10",
-                "280,10",
-                "280,20",
-                "260,20"
-              ]
-            },
-            {
-              "factors": "0.940, 0.972, 1.000, 0.999",
-              "index": 19,
-              "points": [
-                "280,10",
-                "300,10",
-                "300,20",
-                "280,20"
-              ]
-            },
-            {
-              "factors": "0.994, 0.993, 0.996, 0.996",
-              "index": 20,
-              "points": [
-                "60,20",
-                "80,20",
-                "80,30",
-                "60,30"
-              ]
-            },
-            {
-              "factors": "0.993, 0.993, 0.996, 0.996",
-              "index": 21,
-              "points": [
-                "80,20",
-                "100,20",
-                "100,30",
-                "80,30"
-              ]
-            },
-            {
-              "factors": "0.993, 0.991, 0.996, 0.996",
-              "index": 22,
-              "points": [
-                "100,20",
-                "120,20",
-                "120,30",
-                "100,30"
-              ]
-            },
-            {
-              "factors": "0.991, 0.933, 0.996, 0.996",
-              "index": 23,
-              "points": [
-                "120,20",
-                "140,20",
-                "140,30",
-                "120,30"
-              ]
-            },
-            {
-              "factors": "0.933, 0.886, 0.995, 0.996",
-              "index": 24,
-              "points": [
-                "140,20",
-                "160,20",
-                "160,30",
-                "140,30"
-              ]
-            },
-            {
-              "factors": "0.886, 0.879, 0.986, 0.995",
-              "index": 25,
-              "points": [
-                "160,20",
-                "180,20",
-                "180,30",
-                "160,30"
-              ]
-            },
-            {
-              "factors": "0.879, 0.897, 0.999, 0.986",
-              "index": 26,
-              "points": [
-                "180,20",
-                "200,20",
-                "200,30",
-                "180,30"
-              ]
-            },
-            {
-              "factors": "0.897, 0.948, 1.000, 0.999",
-              "index": 27,
-              "points": [
-                "200,20",
-                "220,20",
-                "220,30",
-                "200,30"
-              ]
-            },
-            {
-              "factors": "0.948, 1.000, 1.000, 1.000",
-              "index": 28,
-              "points": [
-                "220,20",
-                "240,20",
-                "240,30",
-                "220,30"
-              ]
-            },
-            {
-              "factors": "1.000, 0.999, 1.000, 1.000",
-              "index": 29,
-              "points": [
-                "240,20",
-                "260,20",
-                "260,30",
-                "240,30"
-              ]
-            },
-            {
-              "factors": "0.999, 0.999, 1.000, 1.000",
-              "index": 30,
-              "points": [
-                "260,20",
-                "280,20",
-                "280,30",
-                "260,30"
-              ]
-            },
-            {
-              "factors": "0.999, 1.000, 1.000, 1.000",
-              "index": 31,
-              "points": [
-                "280,20",
-                "300,20",
-                "300,30",
-                "280,30"
-              ]
-            },
-            {
-              "factors": "0.996, 0.996, 0.997, 0.997",
-              "index": 32,
-              "points": [
-                "80,30",
-                "100,30",
-                "100,40",
-                "80,40"
-              ]
-            },
-            {
-              "factors": "0.996, 0.996, 0.998, 0.997",
-              "index": 33,
-              "points": [
-                "100,30",
-                "120,30",
-                "120,40",
-                "100,40"
-              ]
-            },
-            {
-              "factors": "0.996, 0.996, 0.998, 0.998",
-              "index": 34,
-              "points": [
-                "120,30",
-                "140,30",
-                "140,40",
-                "120,40"
-              ]
-            },
-            {
-              "factors": "0.996, 0.995, 1.000, 0.998",
-              "index": 35,
-              "points": [
-                "140,30",
-                "160,30",
-                "160,40",
-                "140,40"
-              ]
-            },
-            {
-              "factors": "0.995, 0.986, 1.000, 1.000",
-              "index": 36,
-              "points": [
-                "160,30",
-                "180,30",
-                "180,40",
-                "160,40"
-              ]
-            },
-            {
-              "factors": "0.986, 0.999, 1.000, 1.000",
-              "index": 37,
-              "points": [
-                "180,30",
-                "200,30",
-                "200,40",
-                "180,40"
-              ]
-            },
-            {
-              "factors": "0.999, 1.000, 1.000, 1.000",
-              "index": 38,
-              "points": [
-                "200,30",
-                "220,30",
-                "220,40",
-                "200,40"
-              ]
-            },
-            {
-              "factors": "0.997, 0.997, 0.998, 0.998",
-              "index": 39,
-              "points": [
-                "80,40",
-                "100,40",
-                "100,50",
-                "80,50"
-              ]
-            },
-            {
-              "factors": "0.997, 0.998, 0.999, 0.998",
-              "index": 40,
-              "points": [
-                "100,40",
-                "120,40",
-                "120,50",
-                "100,50"
-              ]
-            },
-            {
-              "factors": "0.998, 0.998, 0.999, 0.999",
-              "index": 41,
-              "points": [
-                "120,40",
-                "140,40",
-                "140,50",
-                "120,50"
-              ]
-            },
-            {
-              "factors": "0.998, 1.000, 1.000, 0.999",
-              "index": 42,
-              "points": [
-                "140,40",
-                "160,40",
-                "160,50",
-                "140,50"
-              ]
-            },
-            {
-              "factors": "0.998, 0.999, 1.000, 0.999",
-              "index": 43,
-              "points": [
-                "100,50",
-                "120,50",
-                "120,60",
-                "100,60"
-              ]
-            },
-            {
-              "factors": "0.999, 0.999, 1.000, 1.000",
-              "index": 44,
-              "points": [
-                "120,50",
-                "140,50",
-                "140,60",
-                "120,60"
-              ]
-            },
-            {
-              "factors": "0.999, 1.000, 1.000, 1.000",
-              "index": 45,
-              "points": [
-                "140,50",
-                "160,50",
-                "160,60",
-                "140,60"
-              ]
-            },
-            {
-              "factors": "0.999, 1.000, 1.000, 1.000",
-              "index": 46,
-              "points": [
-                "100,60",
-                "120,60",
-                "120,70",
-                "100,70"
-              ]
-            }
-          ]
+          "regions": []
         },
         "tempCoefficient": -0.34,
-        "tilt": 10,
+        "tilt": 1,
         "tracking": 0,
         "trackingAngle": 0,
         "transformerLoss": 0,
-        "wattsPerPanel": 590
+        "wattsPerPanel": 545
       },
       {
         "acLoss": 0,
         "acVoltage": 480,
         "azimuth": 180,
         "bifacialRatio": 0,
-        "dcAmps": 204,
+        "dcAmps": 0,
         "dcLoss": 0,
-        "dcSize": 26.55,
+        "dcSize": 16.35,
+        "dcVoltage": 0,
+        "derate": 0.9,
+        "derateDetail": false,
+        "efficiency": 0,
+        "efficiencyCurveId": 0,
+        "efficiencyCurveModel": {
+          "key": "",
+          "manufacturer": "",
+          "modelName": "",
+          "modelType": 0,
+          "pointsList": [],
+          "scaleX": 0,
+          "scaleY": 0
+        },
+        "incidenceAngleCurveId": 0,
+        "incidenceAngleCurveModel": {
+          "key": "",
+          "manufacturer": "",
+          "modelName": "",
+          "modelType": 0,
+          "pointsList": [],
+          "scaleX": 0,
+          "scaleY": 0
+        },
+        "installationType": 2,
+        "inverterKva": 0,
+        "inverterKw": 62.5,
+        "inverterLoss": 0,
+        "inverterName": "",
+        "lightInducedDegradation": 0,
+        "limitOne": 0,
+        "limitTempOne": 0,
+        "limitTempTwo": 0,
+        "limitTwo": 0,
+        "mismatch": 0,
+        "moduleArea": 0,
+        "mppAmps": 13.04,
+        "mppVoltage": 41.8,
+        "mppWatts": 545.0719999999999,
+        "numOfStrings": 2,
+        "panelsPerString": 15,
+        "pmaxDeviation": 0,
+        "pvSystConfig": {
+          "cellArea": 166.5,
+          "cellType": 0,
+          "cellsParallel": 2,
+          "cellsSeries": 72,
+          "impp": 13.04,
+          "isc": 13.92,
+          "key": "",
+          "manufacturer": "Longi Solar",
+          "model": "LR5-72HBD-545M",
+          "muIsc": 0.063971119133574,
+          "muPMax": -0.34,
+          "rSeries": 0.19,
+          "rShunt": 241,
+          "rShuntExp": 3,
+          "rShuntGinc": 3000,
+          "vmpp": 41.8,
+          "voc": 49.65
+        },
+        "pvSystModuleId": 937,
+        "pvSystOutOfSync": false,
+        "pvUsaConfig": {
+          "ambientTemperature": 0,
+          "irradiance": 0,
+          "irradianceSquared": 0,
+          "windSpeed": 0
+        },
+        "regressionFunctionList": [],
+        "shadeModel": {
+          "albedoWeight": 0,
+          "diffuseWeight": 0,
+          "hasInterRowShadeModel": 0,
+          "interRowShadeModel": {
+            "azimuth": 0,
+            "panelLength": 0,
+            "pitch": 0,
+            "rows": 0,
+            "tilt": 0,
+            "topBorderLength": 0
+          },
+          "regions": []
+        },
+        "tempCoefficient": -0.34,
+        "tilt": 2,
+        "tracking": 0,
+        "trackingAngle": 0,
+        "transformerLoss": 0,
+        "wattsPerPanel": 545
+      },
+      {
+        "acLoss": 0,
+        "acVoltage": 480,
+        "azimuth": 180,
+        "bifacialRatio": 0,
+        "dcAmps": 0,
+        "dcLoss": 0,
+        "dcSize": 8.72,
+        "dcVoltage": 0,
+        "derate": 0.9,
+        "derateDetail": false,
+        "efficiency": 0,
+        "efficiencyCurveId": 0,
+        "efficiencyCurveModel": {
+          "key": "",
+          "manufacturer": "",
+          "modelName": "",
+          "modelType": 0,
+          "pointsList": [],
+          "scaleX": 0,
+          "scaleY": 0
+        },
+        "incidenceAngleCurveId": 0,
+        "incidenceAngleCurveModel": {
+          "key": "",
+          "manufacturer": "",
+          "modelName": "",
+          "modelType": 0,
+          "pointsList": [],
+          "scaleX": 0,
+          "scaleY": 0
+        },
+        "installationType": 2,
+        "inverterKva": 0,
+        "inverterKw": 62.5,
+        "inverterLoss": 0,
+        "inverterName": "",
+        "lightInducedDegradation": 0,
+        "limitOne": 0,
+        "limitTempOne": 0,
+        "limitTempTwo": 0,
+        "limitTwo": 0,
+        "mismatch": 0,
+        "moduleArea": 0,
+        "mppAmps": 13.04,
+        "mppVoltage": 41.8,
+        "mppWatts": 545.0719999999999,
+        "numOfStrings": 1,
+        "panelsPerString": 16,
+        "pmaxDeviation": 0,
+        "pvSystConfig": {
+          "cellArea": 166.5,
+          "cellType": 0,
+          "cellsParallel": 2,
+          "cellsSeries": 72,
+          "impp": 13.04,
+          "isc": 13.92,
+          "key": "",
+          "manufacturer": "Longi Solar",
+          "model": "LR5-72HBD-545M",
+          "muIsc": 0.063971119133574,
+          "muPMax": -0.34,
+          "rSeries": 0.19,
+          "rShunt": 241,
+          "rShuntExp": 3,
+          "rShuntGinc": 3000,
+          "vmpp": 41.8,
+          "voc": 49.65
+        },
+        "pvSystModuleId": 937,
+        "pvSystOutOfSync": false,
+        "pvUsaConfig": {
+          "ambientTemperature": 0,
+          "irradiance": 0,
+          "irradianceSquared": 0,
+          "windSpeed": 0
+        },
+        "regressionFunctionList": [],
+        "shadeModel": {
+          "albedoWeight": 0,
+          "diffuseWeight": 0,
+          "hasInterRowShadeModel": 0,
+          "interRowShadeModel": {
+            "azimuth": 0,
+            "panelLength": 0,
+            "pitch": 0,
+            "rows": 0,
+            "tilt": 0,
+            "topBorderLength": 0
+          },
+          "regions": []
+        },
+        "tempCoefficient": -0.34,
+        "tilt": 3,
+        "tracking": 0,
+        "trackingAngle": 0,
+        "transformerLoss": 0,
+        "wattsPerPanel": 545
+      },
+      {
+        "acLoss": 0,
+        "acVoltage": 480,
+        "azimuth": 180,
+        "bifacialRatio": 0,
+        "dcAmps": 0,
+        "dcLoss": 0,
+        "dcSize": 16.35,
+        "dcVoltage": 0,
+        "derate": 0.9,
+        "derateDetail": false,
+        "efficiency": 0,
+        "efficiencyCurveId": 0,
+        "efficiencyCurveModel": {
+          "key": "",
+          "manufacturer": "",
+          "modelName": "",
+          "modelType": 0,
+          "pointsList": [],
+          "scaleX": 0,
+          "scaleY": 0
+        },
+        "incidenceAngleCurveId": 0,
+        "incidenceAngleCurveModel": {
+          "key": "",
+          "manufacturer": "",
+          "modelName": "",
+          "modelType": 0,
+          "pointsList": [],
+          "scaleX": 0,
+          "scaleY": 0
+        },
+        "installationType": 2,
+        "inverterKva": 0,
+        "inverterKw": 62.5,
+        "inverterLoss": 0,
+        "inverterName": "",
+        "lightInducedDegradation": 0,
+        "limitOne": 0,
+        "limitTempOne": 0,
+        "limitTempTwo": 0,
+        "limitTwo": 0,
+        "mismatch": 0,
+        "moduleArea": 0,
+        "mppAmps": 13.04,
+        "mppVoltage": 41.8,
+        "mppWatts": 545.0719999999999,
+        "numOfStrings": 2,
+        "panelsPerString": 15,
+        "pmaxDeviation": 0,
+        "pvSystConfig": {
+          "cellArea": 166.5,
+          "cellType": 0,
+          "cellsParallel": 2,
+          "cellsSeries": 72,
+          "impp": 13.04,
+          "isc": 13.92,
+          "key": "",
+          "manufacturer": "Longi Solar",
+          "model": "LR5-72HBD-545M",
+          "muIsc": 0.063971119133574,
+          "muPMax": -0.34,
+          "rSeries": 0.19,
+          "rShunt": 241,
+          "rShuntExp": 3,
+          "rShuntGinc": 3000,
+          "vmpp": 41.8,
+          "voc": 49.65
+        },
+        "pvSystModuleId": 937,
+        "pvSystOutOfSync": false,
+        "pvUsaConfig": {
+          "ambientTemperature": 0,
+          "irradiance": 0,
+          "irradianceSquared": 0,
+          "windSpeed": 0
+        },
+        "regressionFunctionList": [],
+        "shadeModel": {
+          "albedoWeight": 0,
+          "diffuseWeight": 0,
+          "hasInterRowShadeModel": 0,
+          "interRowShadeModel": {
+            "azimuth": 0,
+            "panelLength": 0,
+            "pitch": 0,
+            "rows": 0,
+            "tilt": 0,
+            "topBorderLength": 0
+          },
+          "regions": []
+        },
+        "tempCoefficient": -0.34,
+        "tilt": 5,
+        "tracking": 0,
+        "trackingAngle": 0,
+        "transformerLoss": 0,
+        "wattsPerPanel": 545
+      },
+      {
+        "acLoss": 0,
+        "acVoltage": 480,
+        "azimuth": 180,
+        "bifacialRatio": 0,
+        "dcAmps": 0,
+        "dcLoss": 0,
+        "dcSize": 8.72,
+        "dcVoltage": 0,
+        "derate": 0.9,
+        "derateDetail": false,
+        "efficiency": 0,
+        "efficiencyCurveId": 0,
+        "efficiencyCurveModel": {
+          "key": "",
+          "manufacturer": "",
+          "modelName": "",
+          "modelType": 0,
+          "pointsList": [],
+          "scaleX": 0,
+          "scaleY": 0
+        },
+        "incidenceAngleCurveId": 0,
+        "incidenceAngleCurveModel": {
+          "key": "",
+          "manufacturer": "",
+          "modelName": "",
+          "modelType": 0,
+          "pointsList": [],
+          "scaleX": 0,
+          "scaleY": 0
+        },
+        "installationType": 2,
+        "inverterKva": 0,
+        "inverterKw": 62.5,
+        "inverterLoss": 0,
+        "inverterName": "",
+        "lightInducedDegradation": 0,
+        "limitOne": 0,
+        "limitTempOne": 0,
+        "limitTempTwo": 0,
+        "limitTwo": 0,
+        "mismatch": 0,
+        "moduleArea": 0,
+        "mppAmps": 13.04,
+        "mppVoltage": 41.8,
+        "mppWatts": 545.0719999999999,
+        "numOfStrings": 1,
+        "panelsPerString": 16,
+        "pmaxDeviation": 0,
+        "pvSystConfig": {
+          "cellArea": 166.5,
+          "cellType": 0,
+          "cellsParallel": 2,
+          "cellsSeries": 72,
+          "impp": 13.04,
+          "isc": 13.92,
+          "key": "",
+          "manufacturer": "Longi Solar",
+          "model": "LR5-72HBD-545M",
+          "muIsc": 0.063971119133574,
+          "muPMax": -0.34,
+          "rSeries": 0.19,
+          "rShunt": 241,
+          "rShuntExp": 3,
+          "rShuntGinc": 3000,
+          "vmpp": 41.8,
+          "voc": 49.65
+        },
+        "pvSystModuleId": 937,
+        "pvSystOutOfSync": false,
+        "pvUsaConfig": {
+          "ambientTemperature": 0,
+          "irradiance": 0,
+          "irradianceSquared": 0,
+          "windSpeed": 0
+        },
+        "regressionFunctionList": [],
+        "shadeModel": {
+          "albedoWeight": 0,
+          "diffuseWeight": 0,
+          "hasInterRowShadeModel": 0,
+          "interRowShadeModel": {
+            "azimuth": 0,
+            "panelLength": 0,
+            "pitch": 0,
+            "rows": 0,
+            "tilt": 0,
+            "topBorderLength": 0
+          },
+          "regions": []
+        },
+        "tempCoefficient": -0.34,
+        "tilt": 6,
+        "tracking": 0,
+        "trackingAngle": 0,
+        "transformerLoss": 0,
+        "wattsPerPanel": 545
+      },
+      {
+        "acLoss": 0,
+        "acVoltage": 480,
+        "azimuth": 180,
+        "bifacialRatio": 0,
+        "dcAmps": 0,
+        "dcLoss": 0,
+        "dcSize": 16.35,
         "dcVoltage": 1000,
         "derate": 0.9,
         "derateDetail": false,
@@ -2022,9 +2107,9 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
           "scaleY": 0
         },
         "installationType": 2,
-        "inverterKva": 66,
-        "inverterKw": 60,
-        "inverterLoss": 1,
+        "inverterKva": 0,
+        "inverterKw": 62.5,
+        "inverterLoss": 0,
         "inverterName": "",
         "lightInducedDegradation": 0,
         "limitOne": 0,
@@ -2033,32 +2118,32 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
         "limitTwo": 0,
         "mismatch": 0,
         "moduleArea": 0,
-        "mppAmps": 13.12,
-        "mppVoltage": 44.96,
-        "mppWatts": 589.8752,
-        "numOfStrings": 3,
+        "mppAmps": 13.04,
+        "mppVoltage": 41.8,
+        "mppWatts": 545.0719999999999,
+        "numOfStrings": 2,
         "panelsPerString": 15,
         "pmaxDeviation": 0,
         "pvSystConfig": {
-          "cellArea": 0,
-          "cellType": -1,
-          "cellsParallel": 0,
-          "cellsSeries": 0,
-          "impp": 0,
-          "isc": 0,
+          "cellArea": 166.5,
+          "cellType": 0,
+          "cellsParallel": 2,
+          "cellsSeries": 72,
+          "impp": 13.04,
+          "isc": 13.92,
           "key": "",
-          "manufacturer": "",
-          "model": "",
-          "muIsc": 0,
-          "muPMax": 0,
-          "rSeries": 0,
-          "rShunt": 0,
-          "rShuntExp": 0,
-          "rShuntGinc": 0,
-          "vmpp": 0,
-          "voc": 0
+          "manufacturer": "Longi Solar",
+          "model": "LR5-72HBD-545M",
+          "muIsc": 0.063971119133574,
+          "muPMax": -0.34,
+          "rSeries": 0.19,
+          "rShunt": 241,
+          "rShuntExp": 3,
+          "rShuntGinc": 3000,
+          "vmpp": 41.8,
+          "voc": 49.65
         },
-        "pvSystModuleId": 0,
+        "pvSystModuleId": 937,
         "pvSystOutOfSync": false,
         "pvUsaConfig": {
           "ambientTemperature": 0,
@@ -2086,7 +2171,7 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
         "tracking": 0,
         "trackingAngle": 0,
         "transformerLoss": 0,
-        "wattsPerPanel": 590
+        "wattsPerPanel": 545
       }
     ],
     "monthlyDerate": {
@@ -2104,42 +2189,42 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
       "sep": 1
     },
     "monthlyOutput": {
-      "apr": 11263,
-      "aug": 12442,
-      "dec": 4356,
-      "feb": 6261,
-      "jan": 4657,
-      "jul": 13991,
-      "jun": 13420,
-      "mar": 9359,
-      "may": 12310,
-      "nov": 5258,
-      "oct": 7506,
-      "sep": 10344
+      "apr": 0,
+      "aug": 0,
+      "dec": 0,
+      "feb": 0,
+      "jan": 0,
+      "jul": 0,
+      "jun": 0,
+      "mar": 0,
+      "may": 0,
+      "nov": 0,
+      "oct": 0,
+      "sep": 0
     },
-    "pvModelType": 0
+    "pvModelType": 2
   },
   "readOnly": false,
   "registerOffsets": [],
   "reportExclude": false,
   "reverse": false,
   "sampleRate": 0,
-  "serialMode": 2,
-  "serialNum": "",
+  "serialMode": 0,
+  "serialNum": "1",
   "settings": [
     {
       "index": 0,
-      "name": "dev:baud",
-      "originalValue": 9600,
-      "type": 1,
-      "value": 9600
+      "name": "dev:portMode",
+      "originalValue": "N/A",
+      "type": 0,
+      "value": "N/A"
     },
     {
       "index": 1,
-      "name": "dev:portMode",
-      "originalValue": "rs485",
-      "type": 0,
-      "value": "rs485"
+      "name": "dev:UnitID",
+      "originalValue": 3,
+      "type": 1,
+      "value": 3
     },
     {
       "index": 2,
@@ -2150,117 +2235,89 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
     },
     {
       "index": 3,
-      "name": "dev:ScaleKW",
-      "originalValue": 0.1,
-      "type": 2,
-      "value": 0.1
+      "name": "dev:tcpretry",
+      "originalValue": "3",
+      "type": 0,
+      "value": "3"
     },
     {
       "index": 4,
-      "name": "dev:ScaleV",
-      "originalValue": "0.1",
-      "type": 0,
-      "value": "0.1"
+      "name": "dev:ScaleKWH",
+      "originalValue": 1,
+      "type": 2,
+      "value": 1
     },
     {
       "index": 5,
-      "name": "dev:ScaleI",
-      "originalValue": "0.1",
-      "type": 0,
-      "value": "0.1"
+      "name": "dev:ScaleKW",
+      "originalValue": 0.001,
+      "type": 2,
+      "value": 0.001
     },
     {
       "index": 6,
-      "name": "dev:ScaleVDC",
-      "originalValue": "0.1",
+      "name": "dev:ScaleV",
+      "originalValue": "0.01",
       "type": 0,
-      "value": "0.1"
+      "value": "0.01"
     },
     {
       "index": 7,
-      "name": "dev:ScaleIDC",
-      "originalValue": "0.1",
+      "name": "dev:ScaleI",
+      "originalValue": "0.001",
       "type": 0,
-      "value": "0.1"
+      "value": "0.001"
     },
     {
       "index": 8,
       "name": "dev:ScaleFrequency",
-      "originalValue": "0.1",
+      "originalValue": "0.01",
       "type": 0,
-      "value": "0.1"
+      "value": "0.01"
     },
     {
       "index": 9,
-      "name": "dev:ScaleKWH",
-      "originalValue": 0.1,
-      "type": 2,
-      "value": 0.1
+      "name": "dev:ScaleKVAR",
+      "originalValue": "0.001",
+      "type": 0,
+      "value": "0.001"
     },
     {
       "index": 10,
-      "name": "dev:ScaleT",
-      "originalValue": "0.1",
-      "type": 0,
-      "value": "0.1"
-    },
-    {
-      "index": 11,
-      "name": "dev:ScaleKVA",
-      "originalValue": "0.1",
-      "type": 0,
-      "value": "0.1"
-    },
-    {
-      "index": 12,
       "name": "dev:ScalePF",
       "originalValue": "0.001",
       "type": 0,
       "value": "0.001"
     },
     {
+      "index": 11,
+      "name": "dev:ScaleTemp",
+      "originalValue": "0.1",
+      "type": 0,
+      "value": "0.1"
+    },
+    {
+      "index": 12,
+      "name": "dev:ScaleKVA",
+      "originalValue": "0.001",
+      "type": 0,
+      "value": "0.001"
+    },
+    {
       "index": 13,
-      "name": "dev:ScaleKVAR",
-      "originalValue": "0.1",
-      "type": 0,
-      "value": "0.1"
-    },
-    {
-      "index": 14,
-      "name": "dev:Rollover",
-      "originalValue": "Neg:100x,Pos:100x",
-      "type": 0,
-      "value": "Neg:100x,Pos:100x"
-    },
-    {
-      "index": 15,
-      "name": "dev:ScaleKWDC",
-      "originalValue": "0.1",
-      "type": 0,
-      "value": "0.1"
-    },
-    {
-      "index": 16,
-      "name": "dev:Alias",
-      "originalValue": "Status=opmode",
-      "type": 0,
-      "value": "Status=opmode"
-    },
-    {
-      "index": 17,
       "name": "ShortName",
       "originalValue": "PV0",
       "type": 0,
       "value": "PV0"
     }
   ],
-  "siteDcShare": 371.10999999999996,
-  "siteHasInverterGroups": false,
+  "siteDcShare": 75.21000000000001,
+  "siteHasInverterGroups": true,
   "sort": 11,
   "syncToLocus": false,
   "tags": {
     "attributes": [],
-    "key": "{\"ancestorKey\":\"H537771\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
+    "key": "{\"ancestorKey\":\"H511568\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
     "keywords": [],
     "lastChanged": null,
     "notes": [],
@@ -2269,16 +2326,16 @@ referer: https://apps.alsoenergy.com/powertrack/H537771/administration/config
   "taskKey": "",
   "thermal": null,
   "thread": 0,
-  "ts": "2025-11-20T21:06:27Z",
+  "ts": "2026-01-07T19:04:18Z",
   "turbine": null,
-  "unitId": 0,
+  "unitId": 3,
   "uploadRate": 0,
   "validatedByKey": "",
   "validatedDateTime": "0001-01-01T00:00:00",
   "virtualRegisters": [],
   "virtualWeather": null,
   "weather": null,
-  "weatherStationKey1": "H537776",
+  "weatherStationKey1": "",
   "weatherStationKey2": "",
   "zone": null
 }
