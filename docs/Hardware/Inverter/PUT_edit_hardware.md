@@ -885,13 +885,13 @@
           "type": "string"
         },
         "originalValue": {
-          "type": "number"
+          "type": "string"
         },
         "type": {
           "type": "number"
         },
         "value": {
-          "type": "number"
+          "type": "string"
         }
       }
     },
@@ -930,32 +930,9 @@
           "properties": {}
         },
         "notes": {
-          "type": "object",
-          "properties": {
-            "authorKey": {
-              "type": "string"
-            },
-            "authorName": {
-              "type": "string"
-            },
-            "date": {
-              "type": "string"
-            },
-            "isEvent": {
-              "type": "boolean"
-            },
-            "key": {
-              "type": "string"
-            },
-            "kind": {
-              "type": "string"
-            },
-            "parentKey": {
-              "type": "string"
-            },
-            "text": {
-              "type": "string"
-            }
+          "type": "array",
+          "items": {
+            "type": "unknown"
           }
         },
         "powerDisplays": {
@@ -1747,13 +1724,13 @@
           "type": "string"
         },
         "originalValue": {
-          "type": "number"
+          "type": "string"
         },
         "type": {
           "type": "number"
         },
         "value": {
-          "type": "number"
+          "type": "string"
         }
       }
     },
@@ -1792,32 +1769,9 @@
           "properties": {}
         },
         "notes": {
-          "type": "object",
-          "properties": {
-            "authorKey": {
-              "type": "string"
-            },
-            "authorName": {
-              "type": "string"
-            },
-            "date": {
-              "type": "string"
-            },
-            "isEvent": {
-              "type": "boolean"
-            },
-            "key": {
-              "type": "string"
-            },
-            "kind": {
-              "type": "string"
-            },
-            "parentKey": {
-              "type": "string"
-            },
-            "text": {
-              "type": "string"
-            }
+          "type": "array",
+          "items": {
+            "type": "unknown"
           }
         },
         "powerDisplays": {
@@ -1897,7 +1851,7 @@ Accept: application/json
 Content-Type: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
+referer: https://apps.alsoenergy.com/powertrack/H511568/administration/config
 ```
 
 **Payload:**
@@ -1905,15 +1859,15 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
 ```json
 {
   "additionalRegisters": [],
-  "address": "4",
+  "address": "192.168.13.51",
   "alsoHardwareId": 0,
   "alsoSiteId": 0,
   "array": null,
   "assetId": "",
-  "autoCorrectDecrease": true,
-  "autoCorrectIncrease": true,
-  "baud": "9600",
-  "capacityKw": 60,
+  "autoCorrectDecrease": false,
+  "autoCorrectIncrease": false,
+  "baud": "",
+  "capacityKw": 62.5,
   "chartSectionCode": 1,
   "commonDC": false,
   "commonDCAllMatch": true,
@@ -1922,16 +1876,28 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
   ],
   "conflictNames": null,
   "dashboardKey": "",
-  "dcRating": 68040,
+  "dcRating": 8720,
   "debug": false,
-  "decreaseDifference": 6000,
+  "decreaseDifference": 100,
   "defaultChart": 2,
-  "description": "Inv 4 (60 kw) CPS-SCA60KTL-DO/US-480",
+  "description": "INVERTER 1",
   "deviceRegisters": [
+    {
+      "dataName": "KwhAC",
+      "dataNameDetail": null,
+      "index": 0,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Active Energy Net (with Offset)",
+      "name": "Active Energy Net",
+      "standardDataName": "Active_Energy_Gross",
+      "units": "kWh"
+    },
     {
       "dataName": "KwAC",
       "dataNameDetail": null,
-      "index": 0,
+      "index": 1,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -1941,81 +1907,93 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "units": "kW"
     },
     {
-      "dataName": "KwhAC",
-      "dataNameDetail": null,
-      "index": 1,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Active Energy Net (with Offset)",
-      "name": "Active Energy Gross",
-      "standardDataName": "Active_Energy_Gross",
-      "units": "kWh"
-    },
-    {
-      "dataName": "KwhACraw",
+      "dataName": "Active_Power_A",
       "dataNameDetail": null,
       "index": 2,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Active Energy Net (without Offset)",
-      "name": "Active Energy Gross Raw",
-      "standardDataName": "",
-      "units": "kWh"
+      "localizedName": "Active Power A",
+      "name": "Active Power A",
+      "standardDataName": "Active_Power_A",
+      "units": "kW"
     },
     {
-      "dataName": "Frequency",
+      "dataName": "Active_Power_B",
       "dataNameDetail": null,
       "index": 3,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Frequency",
-      "name": "Frequency",
-      "standardDataName": "Frequency",
-      "units": "Hz"
+      "localizedName": "Active Power B",
+      "name": "Active Power B",
+      "standardDataName": "Active_Power_B",
+      "units": "kW"
     },
     {
-      "dataName": "VacAB",
+      "dataName": "Active_Power_C",
       "dataNameDetail": null,
       "index": 4,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "AC Voltage A-B (Line-Line)",
-      "name": "AC Voltage AB",
-      "standardDataName": "Voltage_AB",
-      "units": "V"
+      "localizedName": "Active Power C",
+      "name": "Active Power C",
+      "standardDataName": "Active_Power_C",
+      "units": "kW"
     },
     {
-      "dataName": "VacBC",
+      "dataName": "VacA",
       "dataNameDetail": null,
       "index": 5,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "AC Voltage B-C (Line-Line)",
-      "name": "AC Voltage BC",
-      "standardDataName": "Voltage_BC",
+      "localizedName": "AC Voltage A (Line-Neutral)",
+      "name": "AC Voltage AN",
+      "standardDataName": "Voltage_AN",
       "units": "V"
     },
     {
-      "dataName": "VacCA",
+      "dataName": "VacB",
       "dataNameDetail": null,
       "index": 6,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "AC Voltage C-A (Line-Line)",
-      "name": "AC Voltage CA",
-      "standardDataName": "Voltage_CA",
+      "localizedName": "AC Voltage B (Line-Neutral)",
+      "name": "AC Voltage BN",
+      "standardDataName": "Voltage_BN",
       "units": "V"
+    },
+    {
+      "dataName": "VacC",
+      "dataNameDetail": null,
+      "index": 7,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "AC Voltage C (Line-Neutral)",
+      "name": "AC Voltage CN",
+      "standardDataName": "Voltage_CN",
+      "units": "V"
+    },
+    {
+      "dataName": "Iac",
+      "dataNameDetail": null,
+      "index": 8,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "AC Current Average",
+      "name": "AC Current Average",
+      "standardDataName": "Current_Avg",
+      "units": "A"
     },
     {
       "dataName": "IacA",
       "dataNameDetail": null,
-      "index": 7,
+      "index": 9,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -2027,7 +2005,7 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
     {
       "dataName": "IacB",
       "dataNameDetail": null,
-      "index": 8,
+      "index": 10,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -2039,7 +2017,7 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
     {
       "dataName": "IacC",
       "dataNameDetail": null,
-      "index": 9,
+      "index": 11,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -2049,177 +2027,21 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "units": "A"
     },
     {
-      "dataName": "Iac",
-      "dataNameDetail": null,
-      "index": 10,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "AC Current Average",
-      "name": "AC Current Average",
-      "standardDataName": "Current_Avg",
-      "units": "A"
-    },
-    {
-      "dataName": "Vac",
-      "dataNameDetail": null,
-      "index": 11,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "AC Voltage Average L-N",
-      "name": "AC Voltage Average L-N",
-      "standardDataName": "Voltage_LN_Avg",
-      "units": "V"
-    },
-    {
-      "dataName": "KVA",
+      "dataName": "Frequency",
       "dataNameDetail": null,
       "index": 12,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Apparent Power",
-      "name": "Apparent Power",
-      "standardDataName": "Apparent_Power",
-      "units": "kVA"
-    },
-    {
-      "dataName": "KVAR",
-      "dataNameDetail": null,
-      "index": 13,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Reactive Power",
-      "name": "Reactive Power",
-      "standardDataName": "Reactive_Power",
-      "units": "kVAR"
-    },
-    {
-      "dataName": "PowerFactor",
-      "dataNameDetail": null,
-      "index": 14,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Power Factor",
-      "name": "Power Factor",
-      "standardDataName": "Power_Factor",
-      "units": "PF"
-    },
-    {
-      "dataName": "Vdc1",
-      "dataNameDetail": null,
-      "index": 15,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC Voltage 1",
-      "name": "DC Voltage 1",
-      "standardDataName": "DC_Voltage1",
-      "units": "V"
-    },
-    {
-      "dataName": "Idc1",
-      "dataNameDetail": null,
-      "index": 16,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC current 1",
-      "name": "DC Current 1",
-      "standardDataName": "DC_Current1",
-      "units": "A"
-    },
-    {
-      "dataName": "Vdc2",
-      "dataNameDetail": null,
-      "index": 17,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC Voltage 2",
-      "name": "DC Voltage 2",
-      "standardDataName": "DC_Voltage2",
-      "units": "V"
-    },
-    {
-      "dataName": "Idc2",
-      "dataNameDetail": null,
-      "index": 18,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC current 2",
-      "name": "DC Current 2",
-      "standardDataName": "DC_Current2",
-      "units": "A"
-    },
-    {
-      "dataName": "Vdc3",
-      "dataNameDetail": null,
-      "index": 19,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC Voltage 3",
-      "name": "DC Voltage 3",
-      "standardDataName": "DC_Voltage3",
-      "units": "V"
-    },
-    {
-      "dataName": "Idc3",
-      "dataNameDetail": null,
-      "index": 20,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC current 3",
-      "name": "DC Current 3",
-      "standardDataName": "DC_Current3",
-      "units": "A"
-    },
-    {
-      "dataName": "Idc",
-      "dataNameDetail": null,
-      "index": 21,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC Current Total",
-      "name": "DC Current Total",
-      "standardDataName": "DC_Current_Total",
-      "units": "A"
-    },
-    {
-      "dataName": "Vdc",
-      "dataNameDetail": null,
-      "index": 22,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC Voltage Average",
-      "name": "DC Voltage Average",
-      "standardDataName": "DC_Voltage_Avg",
-      "units": "V"
-    },
-    {
-      "dataName": "KwDC",
-      "dataNameDetail": null,
-      "index": 23,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC Power",
-      "name": "DC Power Total",
-      "standardDataName": "DC_Power_Total",
-      "units": "kW"
+      "localizedName": "Frequency",
+      "name": "Frequency",
+      "standardDataName": "Frequency",
+      "units": "Hz"
     },
     {
       "dataName": "DeviceTemp",
       "dataNameDetail": null,
-      "index": 24,
+      "index": 13,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -2229,9 +2051,117 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "units": "°F"
     },
     {
+      "dataName": "VacAB",
+      "dataNameDetail": null,
+      "index": 14,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "AC Voltage A-B (Line-Line)",
+      "name": "AC Voltage AB",
+      "standardDataName": "Voltage_AB",
+      "units": "V"
+    },
+    {
+      "dataName": "VacBC",
+      "dataNameDetail": null,
+      "index": 15,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "AC Voltage B-C (Line-Line)",
+      "name": "AC Voltage BC",
+      "standardDataName": "Voltage_BC",
+      "units": "V"
+    },
+    {
+      "dataName": "VacCA",
+      "dataNameDetail": null,
+      "index": 16,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "AC Voltage C-A (Line-Line)",
+      "name": "AC Voltage CA",
+      "standardDataName": "Voltage_CA",
+      "units": "V"
+    },
+    {
+      "dataName": "Reactive_Power_A",
+      "dataNameDetail": null,
+      "index": 17,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Reactive Power A",
+      "name": "Reactive Power ",
+      "standardDataName": "",
+      "units": "kVAR"
+    },
+    {
+      "dataName": "Reactive_Power_B",
+      "dataNameDetail": null,
+      "index": 18,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Reactive Power B",
+      "name": "Reactive Power B",
+      "standardDataName": "",
+      "units": "kVAR"
+    },
+    {
+      "dataName": "Reactive_Power_C",
+      "dataNameDetail": null,
+      "index": 19,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Reactive Power C",
+      "name": "Reactive Power C",
+      "standardDataName": "",
+      "units": "kVAR"
+    },
+    {
+      "dataName": "KVAR",
+      "dataNameDetail": null,
+      "index": 20,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Reactive Power",
+      "name": "Reactive Power",
+      "standardDataName": "Reactive_Power",
+      "units": "kVAR"
+    },
+    {
+      "dataName": "KVA",
+      "dataNameDetail": null,
+      "index": 21,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Apparent Power",
+      "name": "Apparent Power",
+      "standardDataName": "Apparent_Power",
+      "units": "kVA"
+    },
+    {
+      "dataName": "PowerFactor",
+      "dataNameDetail": null,
+      "index": 22,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Power Factor",
+      "name": "Power Factor",
+      "standardDataName": "Power_Factor",
+      "units": "PF"
+    },
+    {
       "dataName": "InternalTemp",
       "dataNameDetail": null,
-      "index": 25,
+      "index": 23,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -2241,129 +2171,273 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "units": "°F"
     },
     {
-      "dataName": "Temp_XMFR",
+      "dataName": "KwhACraw",
+      "dataNameDetail": null,
+      "index": 24,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Active Energy Net (without Offset)",
+      "name": "Active Energy Net Raw",
+      "standardDataName": "",
+      "units": "kWh"
+    },
+    {
+      "dataName": "Idc1",
+      "dataNameDetail": null,
+      "index": 25,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC current 1",
+      "name": "DC Current Input 1",
+      "standardDataName": "DC_Current1",
+      "units": "A"
+    },
+    {
+      "dataName": "Vdc1",
       "dataNameDetail": null,
       "index": 26,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "XMFR Temperature",
-      "name": "XMFR Temperature",
-      "standardDataName": "Temp_XMFR",
-      "units": "°F"
+      "localizedName": "DC Voltage 1",
+      "name": "DC Voltage Input 1",
+      "standardDataName": "DC_Voltage1",
+      "units": "V"
     },
     {
-      "dataName": "Fault",
+      "dataName": "KwDC1",
       "dataNameDetail": null,
       "index": 27,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Fault Code",
-      "name": "Fault Code",
-      "standardDataName": "Fault",
-      "units": ""
+      "localizedName": "DC power 1",
+      "name": "DC Power 1",
+      "standardDataName": "DC_Power1",
+      "units": "kW"
     },
     {
-      "dataName": "Warning",
+      "dataName": "Idc2",
       "dataNameDetail": null,
       "index": 28,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Warn Code",
-      "name": "Warn Code",
-      "standardDataName": "",
-      "units": ""
+      "localizedName": "DC current 2",
+      "name": "DC Current Input 2",
+      "standardDataName": "DC_Current2",
+      "units": "A"
     },
     {
-      "dataName": "Fault0",
+      "dataName": "Vdc2",
       "dataNameDetail": null,
       "index": 29,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Fault Code 0",
-      "name": "Fault Code 0",
-      "standardDataName": "Fault0",
-      "units": ""
+      "localizedName": "DC Voltage 2",
+      "name": "DC Voltage Input 2",
+      "standardDataName": "DC_Voltage2",
+      "units": "V"
     },
     {
-      "dataName": "Fault1",
+      "dataName": "KwDC2",
       "dataNameDetail": null,
       "index": 30,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Fault 1",
-      "name": "Fault Code 1",
-      "standardDataName": "Fault1",
-      "units": ""
+      "localizedName": "DC power 2",
+      "name": "DC Power 2",
+      "standardDataName": "DC_Power2",
+      "units": "kW"
     },
     {
-      "dataName": "Fault2",
+      "dataName": "Idc3",
       "dataNameDetail": null,
       "index": 31,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Fault 2",
-      "name": "Fault Code 2",
-      "standardDataName": "Fault2",
-      "units": ""
+      "localizedName": "DC current 3",
+      "name": "DC Current Input 3",
+      "standardDataName": "DC_Current3",
+      "units": "A"
     },
     {
-      "dataName": "Fault3",
+      "dataName": "Vdc3",
       "dataNameDetail": null,
       "index": 32,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Fault 3",
-      "name": "Fault Code 3",
-      "standardDataName": "Fault3",
-      "units": ""
+      "localizedName": "DC Voltage 3",
+      "name": "DC Voltage Input 3",
+      "standardDataName": "DC_Voltage3",
+      "units": "V"
     },
     {
-      "dataName": "Fault4",
+      "dataName": "KwDC3",
       "dataNameDetail": null,
       "index": 33,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Fault 4",
-      "name": "Fault Code 4",
-      "standardDataName": "Fault4",
-      "units": ""
+      "localizedName": "DC power 3",
+      "name": "DC Power 3",
+      "standardDataName": "DC_Power3",
+      "units": "kW"
     },
     {
-      "dataName": "opmode",
+      "dataName": "Idc4",
       "dataNameDetail": null,
       "index": 34,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Operating Mode",
-      "name": "Inverter Work Mode",
-      "standardDataName": "Op_Mode",
-      "units": "Derate: 0x800;Running:0x1000;Standby:0x2000;Check:0x4000;Fault:0x8000"
+      "localizedName": "DC current 4",
+      "name": "DC Current Input 4",
+      "standardDataName": "DC_Current4",
+      "units": "A"
     },
     {
-      "dataName": "Firmware_Version",
+      "dataName": "Vdc4",
       "dataNameDetail": null,
       "index": 35,
-      "isArchived": false,
+      "isArchived": true,
       "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "Firmware Version",
-      "name": "Firmware Version",
-      "standardDataName": "Firmware_Version",
-      "units": ""
+      "isRaw": true,
+      "localizedName": "DC voltage 4",
+      "name": "DC Voltage Input 4",
+      "standardDataName": "DC_Voltage4",
+      "units": "V"
+    },
+    {
+      "dataName": "KwDC4",
+      "dataNameDetail": null,
+      "index": 36,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC power 4",
+      "name": "DC Power 4",
+      "standardDataName": "DC_Power4",
+      "units": "kW"
+    },
+    {
+      "dataName": "Idc5",
+      "dataNameDetail": null,
+      "index": 37,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC current 5",
+      "name": "DC Current Input 5",
+      "standardDataName": "DC_Current5",
+      "units": "A"
+    },
+    {
+      "dataName": "Vdc5",
+      "dataNameDetail": null,
+      "index": 38,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC Voltage 5",
+      "name": "DC Voltage Input 5",
+      "standardDataName": "DC_Voltage5",
+      "units": "V"
+    },
+    {
+      "dataName": "KwDC5",
+      "dataNameDetail": null,
+      "index": 39,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC power 5",
+      "name": "DC Power 5",
+      "standardDataName": "DC_Power5",
+      "units": "kW"
+    },
+    {
+      "dataName": "Idc6",
+      "dataNameDetail": null,
+      "index": 40,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC current 6",
+      "name": "DC Current Input 6",
+      "standardDataName": "DC_Current6",
+      "units": "A"
+    },
+    {
+      "dataName": "Vdc6",
+      "dataNameDetail": null,
+      "index": 41,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC Voltage 6",
+      "name": "DC Voltage Input 6",
+      "standardDataName": "DC_Voltage6",
+      "units": "V"
+    },
+    {
+      "dataName": "KwDC6",
+      "dataNameDetail": null,
+      "index": 42,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC power 6",
+      "name": "DC Power 6",
+      "standardDataName": "DC_Power6",
+      "units": "kW"
+    },
+    {
+      "dataName": "Idc",
+      "dataNameDetail": null,
+      "index": 43,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC Current Total",
+      "name": "DC Current Input (total)",
+      "standardDataName": "DC_Current_Total",
+      "units": "A"
+    },
+    {
+      "dataName": "Vdc",
+      "dataNameDetail": null,
+      "index": 44,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC Voltage Average",
+      "name": "DC Voltage Input (average)",
+      "standardDataName": "DC_Voltage_Avg",
+      "units": "V"
+    },
+    {
+      "dataName": "KwDC",
+      "dataNameDetail": null,
+      "index": 45,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC Power",
+      "name": "DC Power (total)",
+      "standardDataName": "DC_Power_Total",
+      "units": "kW"
     },
     {
       "dataName": "Serial_Number",
       "dataNameDetail": null,
-      "index": 36,
+      "index": 46,
       "isArchived": false,
       "isIgnored": false,
       "isRaw": false,
@@ -2371,14 +2445,99 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "name": "Serial Number",
       "standardDataName": "Serial_Number",
       "units": ""
+    },
+    {
+      "dataName": "Fault",
+      "dataNameDetail": null,
+      "index": 47,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "EventID",
+      "name": "EventID",
+      "standardDataName": "Fault",
+      "units": ""
+    },
+    {
+      "dataName": "Status",
+      "dataNameDetail": null,
+      "index": 48,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Operating Status",
+      "name": "Condition",
+      "standardDataName": "Op_Status",
+      "units": ""
+    },
+    {
+      "dataName": "Firmware_Version",
+      "dataNameDetail": null,
+      "index": 49,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "Firmware Version",
+      "name": "Firmware",
+      "standardDataName": "Firmware_Version",
+      "units": ""
     }
   ],
-  "driverDescription": "Chint / Solectria TL String Inverter [without Control]",
-  "driverFlags": 16386,
-  "driverId": 20630,
-  "driverName": "Chint / Solectria TL String Inverter w/o Control (SS) Standard",
-  "driverNotes": "Know issue on some firmware with kWh Energy not counting through the day, and only adding daily values everynight, FW 1797, 2053, 1284\r\rModbus Map: https://www.chintpowersystems.com/downloads/\r\r14-20-23-28-36kW Modbus Map\r25kW-208V Modbus Map\r25kW-408V Modbus Map\r50-60kW Modbus Map\r100/125kW-600V and 100kW-480 Modbus Map\r250/275kW-800 Modbus Map",
+  "driverDescription": "Tri-Power Core1 inverter with no Controls",
+  "driverFlags": 18434,
+  "driverId": 19880,
+  "driverName": "SMA Tri-Power Core1 Inverter (SS) Standard",
+  "driverNotes": "Legacy Drivers: 2136, 3227, 566, 707\r\r[06.08.2023 - Sagar]\rUpdated the frequency scaling expression.",
   "driverRegisters": [
+    {
+      "dataName": "KwhAC",
+      "dataNameDetail": {
+        "dataName": "KwhAC",
+        "description": "Active Energy Gross (Equivalent: KwhAC)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 16,
+          "dCmeter": false,
+          "doublePrecision": true,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "Active_Energy_Gross",
+          "otherAliasPTDataNames": [
+            228
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 11
+        },
+        "equivalent": 40,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": false,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          228
+        ],
+        "registerDataNameIdentifier": 40,
+        "registerName": "Active Energy Gross",
+        "registerSetsArrayDisplayedName": "",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "Active Energy Net",
+      "standardDataName": "",
+      "units": ""
+    },
     {
       "dataName": "KwAC",
       "dataNameDetail": {
@@ -2431,17 +2590,371 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "units": ""
     },
     {
-      "dataName": "KwhAC",
+      "dataName": "Active_Power_A",
       "dataNameDetail": {
-        "dataName": "KwhAC",
-        "description": "Active Energy Gross (Equivalent: KwhAC)",
+        "dataName": "Active_Power_A",
+        "description": "Active Power A (Equivalent: Active_Power_A)",
+        "details": {
+          "aCmeter": true,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [
+            2,
+            4,
+            3,
+            20,
+            16,
+            1,
+            39,
+            45
+          ],
+          "functions": "PM,GM,CM,XM,SM,PV,BI,BG",
+          "isFloat": true,
+          "isStandardDataName": true,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "kwA,kwac_a,KW_A,KwAC1,PhA_kW",
+          "otherAliasPTDataNames": [
+            234,
+            237,
+            240,
+            243,
+            246
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 10
+        },
+        "equivalent": 231,
+        "errors": [],
+        "functionCodes": [
+          2,
+          4,
+          3,
+          20,
+          16,
+          1,
+          39,
+          45
+        ],
+        "goldenDriverDataNames": [
+          {
+            "dataName": 231,
+            "dataNameAndType": "Active_Power_A (Standard)",
+            "dataNameType": "Standard",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 1
+          },
+          {
+            "dataName": 234,
+            "dataNameAndType": "kwA (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 2
+          },
+          {
+            "dataName": 237,
+            "dataNameAndType": "kwac_a (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 3
+          },
+          {
+            "dataName": 240,
+            "dataNameAndType": "KW_A (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 4
+          },
+          {
+            "dataName": 243,
+            "dataNameAndType": "KwAC1 (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 5
+          },
+          {
+            "dataName": 246,
+            "dataNameAndType": "PhA_kW (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 6
+          }
+        ],
+        "isAllowedForRegisterSetsArray": false,
+        "isStandardDataName": true,
+        "otherAliasPTDataNames": [
+          234,
+          237,
+          240,
+          243,
+          246
+        ],
+        "registerDataNameIdentifier": 231,
+        "registerName": "Active Power A",
+        "registerSetsArrayDisplayedName": "",
+        "standardDataNameArchiveRawAndIntervalData": true
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "Active Power A",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "Active_Power_B",
+      "dataNameDetail": {
+        "dataName": "Active_Power_B",
+        "description": "Active Power B (Equivalent: Active_Power_B)",
+        "details": {
+          "aCmeter": true,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [
+            2,
+            4,
+            3,
+            20,
+            16,
+            1,
+            39,
+            45
+          ],
+          "functions": "PM,GM,CM,XM,SM,PV,BI,BG",
+          "isFloat": true,
+          "isStandardDataName": true,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "kwB,kwac_b,KW_B,KwAC2,PhB_kW",
+          "otherAliasPTDataNames": [
+            235,
+            238,
+            241,
+            244,
+            247
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 10
+        },
+        "equivalent": 232,
+        "errors": [],
+        "functionCodes": [
+          2,
+          4,
+          3,
+          20,
+          16,
+          1,
+          39,
+          45
+        ],
+        "goldenDriverDataNames": [
+          {
+            "dataName": 232,
+            "dataNameAndType": "Active_Power_B (Standard)",
+            "dataNameType": "Standard",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 1
+          },
+          {
+            "dataName": 235,
+            "dataNameAndType": "kwB (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 2
+          },
+          {
+            "dataName": 238,
+            "dataNameAndType": "kwac_b (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 3
+          },
+          {
+            "dataName": 241,
+            "dataNameAndType": "KW_B (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 4
+          },
+          {
+            "dataName": 244,
+            "dataNameAndType": "KwAC2 (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 5
+          },
+          {
+            "dataName": 247,
+            "dataNameAndType": "PhB_kW (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 6
+          }
+        ],
+        "isAllowedForRegisterSetsArray": false,
+        "isStandardDataName": true,
+        "otherAliasPTDataNames": [
+          235,
+          238,
+          241,
+          244,
+          247
+        ],
+        "registerDataNameIdentifier": 232,
+        "registerName": "Active Power B",
+        "registerSetsArrayDisplayedName": "",
+        "standardDataNameArchiveRawAndIntervalData": true
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "Active Power B",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "Active_Power_C",
+      "dataNameDetail": {
+        "dataName": "Active_Power_C",
+        "description": "Active Power C (Equivalent: Active_Power_C)",
+        "details": {
+          "aCmeter": true,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [
+            2,
+            4,
+            3,
+            20,
+            16,
+            1,
+            39,
+            45
+          ],
+          "functions": "PM,GM,CM,XM,SM,PV,BI,BG",
+          "isFloat": true,
+          "isStandardDataName": true,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "kwC,kwac_c,KW_C,KwAC3,PhC_kW",
+          "otherAliasPTDataNames": [
+            236,
+            239,
+            242,
+            245,
+            248
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 10
+        },
+        "equivalent": 233,
+        "errors": [],
+        "functionCodes": [
+          2,
+          4,
+          3,
+          20,
+          16,
+          1,
+          39,
+          45
+        ],
+        "goldenDriverDataNames": [
+          {
+            "dataName": 233,
+            "dataNameAndType": "Active_Power_C (Standard)",
+            "dataNameType": "Standard",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 1
+          },
+          {
+            "dataName": 236,
+            "dataNameAndType": "kwC (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 2
+          },
+          {
+            "dataName": 239,
+            "dataNameAndType": "kwac_c (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 3
+          },
+          {
+            "dataName": 242,
+            "dataNameAndType": "KW_C (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 4
+          },
+          {
+            "dataName": 245,
+            "dataNameAndType": "KwAC3 (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 5
+          },
+          {
+            "dataName": 248,
+            "dataNameAndType": "PhC_kW (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 6
+          }
+        ],
+        "isAllowedForRegisterSetsArray": false,
+        "isStandardDataName": true,
+        "otherAliasPTDataNames": [
+          236,
+          239,
+          242,
+          245,
+          248
+        ],
+        "registerDataNameIdentifier": 233,
+        "registerName": "Active Power C",
+        "registerSetsArrayDisplayedName": "",
+        "standardDataNameArchiveRawAndIntervalData": true
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "Active Power C",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "VacA",
+      "dataNameDetail": {
+        "dataName": "VacA",
+        "description": "AC Voltage AN (Equivalent: VacA)",
         "details": {
           "aCmeter": false,
           "adminHide": false,
           "allowArchiveRaw": false,
-          "condense": 16,
+          "condense": 0,
           "dCmeter": false,
-          "doublePrecision": true,
+          "doublePrecision": false,
           "equivalent": 0,
           "excludedChannels": "",
           "functionCodes": [],
@@ -2449,24 +2962,26 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
           "isFloat": true,
           "isStandardDataName": false,
           "isStatus": false,
-          "otherAliasPTDataNameValues": "Active_Energy_Gross",
+          "otherAliasPTDataNameValues": "AC_Voltage_AN,Voltage_AN",
           "otherAliasPTDataNames": [
-            228
+            347,
+            324
           ],
           "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 11
+          "units": 2
         },
-        "equivalent": 40,
+        "equivalent": 16,
         "errors": [],
         "functionCodes": [],
         "goldenDriverDataNames": null,
         "isAllowedForRegisterSetsArray": false,
         "isStandardDataName": false,
         "otherAliasPTDataNames": [
-          228
+          347,
+          324
         ],
-        "registerDataNameIdentifier": 40,
-        "registerName": "Active Energy Gross",
+        "registerDataNameIdentifier": 16,
+        "registerName": "AC Voltage AN",
         "registerSetsArrayDisplayedName": "",
         "standardDataNameArchiveRawAndIntervalData": false
       },
@@ -2475,22 +2990,22 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "isIgnored": false,
       "isRaw": false,
       "localizedName": "",
-      "name": "Active Energy Gross",
+      "name": "AC Voltage AN",
       "standardDataName": "",
       "units": ""
     },
     {
-      "dataName": "KwhACraw",
+      "dataName": "VacB",
       "dataNameDetail": {
-        "dataName": "KwhACraw",
-        "description": "Active Energy Net Raw (Equivalent: KwhACraw)",
+        "dataName": "VacB",
+        "description": "AC Voltage BN (Equivalent: VacB)",
         "details": {
           "aCmeter": false,
           "adminHide": false,
           "allowArchiveRaw": false,
-          "condense": 16,
+          "condense": 0,
           "dCmeter": false,
-          "doublePrecision": true,
+          "doublePrecision": false,
           "equivalent": 0,
           "excludedChannels": "",
           "functionCodes": [],
@@ -2498,20 +3013,26 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
           "isFloat": true,
           "isStandardDataName": false,
           "isStatus": false,
-          "otherAliasPTDataNameValues": "",
-          "otherAliasPTDataNames": [],
+          "otherAliasPTDataNameValues": "AC_Voltage_BN,Voltage_BN",
+          "otherAliasPTDataNames": [
+            350,
+            326
+          ],
           "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 11
+          "units": 2
         },
-        "equivalent": 41,
+        "equivalent": 17,
         "errors": [],
         "functionCodes": [],
         "goldenDriverDataNames": null,
         "isAllowedForRegisterSetsArray": false,
         "isStandardDataName": false,
-        "otherAliasPTDataNames": [],
-        "registerDataNameIdentifier": 41,
-        "registerName": "Active Energy Net Raw",
+        "otherAliasPTDataNames": [
+          350,
+          326
+        ],
+        "registerDataNameIdentifier": 17,
+        "registerName": "AC Voltage BN",
         "registerSetsArrayDisplayedName": "",
         "standardDataNameArchiveRawAndIntervalData": false
       },
@@ -2520,19 +3041,264 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "isIgnored": false,
       "isRaw": false,
       "localizedName": "",
-      "name": "Active Energy Gross Raw",
+      "name": "AC Voltage BN",
       "standardDataName": "",
       "units": ""
     },
     {
-      "dataName": "",
-      "dataNameDetail": null,
+      "dataName": "VacC",
+      "dataNameDetail": {
+        "dataName": "VacC",
+        "description": "AC Voltage CN (Equivalent: VacC)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "AC_Voltage_CN,Voltage_CN",
+          "otherAliasPTDataNames": [
+            352,
+            328
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 2
+        },
+        "equivalent": 19,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": false,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          352,
+          328
+        ],
+        "registerDataNameIdentifier": 19,
+        "registerName": "AC Voltage CN",
+        "registerSetsArrayDisplayedName": "",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
       "index": 0,
       "isArchived": false,
       "isIgnored": false,
       "isRaw": false,
       "localizedName": "",
-      "name": "Active Energy Today",
+      "name": "AC Voltage CN",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "Iac",
+      "dataNameDetail": {
+        "dataName": "Iac",
+        "description": "AC Current Average (Equivalent: Iac)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "AC_Current_Avg,Iavg,Current_Avg",
+          "otherAliasPTDataNames": [
+            345,
+            267,
+            266
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 4
+        },
+        "equivalent": 37,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": false,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          345,
+          267,
+          266
+        ],
+        "registerDataNameIdentifier": 37,
+        "registerName": "AC Current Average",
+        "registerSetsArrayDisplayedName": "",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "AC Current Average",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "IacA",
+      "dataNameDetail": {
+        "dataName": "IacA",
+        "description": "AC Current A (Equivalent: IacA)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "AC_Current_A,Current_A",
+          "otherAliasPTDataNames": [
+            342,
+            263
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 4
+        },
+        "equivalent": 25,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": false,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          342,
+          263
+        ],
+        "registerDataNameIdentifier": 25,
+        "registerName": "AC Current A",
+        "registerSetsArrayDisplayedName": "",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "AC Current A",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "IacB",
+      "dataNameDetail": {
+        "dataName": "IacB",
+        "description": "AC Current B (Equivalent: IacB)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "AC_Current_B,Current_B",
+          "otherAliasPTDataNames": [
+            343,
+            264
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 4
+        },
+        "equivalent": 26,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": false,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          343,
+          264
+        ],
+        "registerDataNameIdentifier": 26,
+        "registerName": "AC Current B",
+        "registerSetsArrayDisplayedName": "",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "AC Current B",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "IacC",
+      "dataNameDetail": {
+        "dataName": "IacC",
+        "description": "AC Current C (Equivalent: IacC)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "AC_Current_C,Current_C",
+          "otherAliasPTDataNames": [
+            344,
+            265
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 4
+        },
+        "equivalent": 27,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": false,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          344,
+          265
+        ],
+        "registerDataNameIdentifier": 27,
+        "registerName": "AC Current C",
+        "registerSetsArrayDisplayedName": "",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "AC Current C",
       "standardDataName": "",
       "units": ""
     },
@@ -2634,6 +3400,55 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "isRaw": false,
       "localizedName": "",
       "name": "Frequency",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "DeviceTemp",
+      "dataNameDetail": {
+        "dataName": "DeviceTemp",
+        "description": "Device Temperature (Equivalent: DeviceTemp)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "Temp_Device",
+          "otherAliasPTDataNames": [
+            452
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 30
+        },
+        "equivalent": 187,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": false,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          452
+        ],
+        "registerDataNameIdentifier": 187,
+        "registerName": "Device Temperature",
+        "registerSetsArrayDisplayedName": "",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "Device Temperature",
       "standardDataName": "",
       "units": ""
     },
@@ -2797,12 +3612,12 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "units": ""
     },
     {
-      "dataName": "IacA",
+      "dataName": "Reactive_Power_A",
       "dataNameDetail": {
-        "dataName": "IacA",
-        "description": "AC Current A (Equivalent: IacA)",
+        "dataName": "Reactive_Power_A",
+        "description": "Reactive Power A (Equivalent: Reactive_Power_A)",
         "details": {
-          "aCmeter": false,
+          "aCmeter": true,
           "adminHide": false,
           "allowArchiveRaw": false,
           "condense": 0,
@@ -2810,50 +3625,93 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
           "doublePrecision": false,
           "equivalent": 0,
           "excludedChannels": "",
-          "functionCodes": [],
-          "functions": "",
+          "functionCodes": [
+            2,
+            4,
+            3,
+            20,
+            16
+          ],
+          "functions": "PM,GM,CM,XM,SM",
           "isFloat": true,
-          "isStandardDataName": false,
+          "isStandardDataName": true,
           "isStatus": false,
-          "otherAliasPTDataNameValues": "AC_Current_A,Current_A",
+          "otherAliasPTDataNameValues": "kvar_a,kvara,VAR_A",
           "otherAliasPTDataNames": [
-            342,
-            263
+            314,
+            311,
+            318
           ],
           "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 4
+          "units": 26
         },
-        "equivalent": 25,
+        "equivalent": 308,
         "errors": [],
-        "functionCodes": [],
-        "goldenDriverDataNames": null,
-        "isAllowedForRegisterSetsArray": false,
-        "isStandardDataName": false,
-        "otherAliasPTDataNames": [
-          342,
-          263
+        "functionCodes": [
+          2,
+          4,
+          3,
+          20,
+          16
         ],
-        "registerDataNameIdentifier": 25,
-        "registerName": "AC Current A",
+        "goldenDriverDataNames": [
+          {
+            "dataName": 308,
+            "dataNameAndType": "Reactive_Power_A (Standard)",
+            "dataNameType": "Standard",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 1
+          },
+          {
+            "dataName": 314,
+            "dataNameAndType": "kvar_a (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 2
+          },
+          {
+            "dataName": 311,
+            "dataNameAndType": "kvara (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 3
+          },
+          {
+            "dataName": 318,
+            "dataNameAndType": "VAR_A (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 4
+          }
+        ],
+        "isAllowedForRegisterSetsArray": false,
+        "isStandardDataName": true,
+        "otherAliasPTDataNames": [
+          314,
+          311,
+          318
+        ],
+        "registerDataNameIdentifier": 308,
+        "registerName": "Reactive Power A",
         "registerSetsArrayDisplayedName": "",
-        "standardDataNameArchiveRawAndIntervalData": false
+        "standardDataNameArchiveRawAndIntervalData": true
       },
       "index": 0,
       "isArchived": false,
       "isIgnored": false,
       "isRaw": false,
       "localizedName": "",
-      "name": "AC Current A",
+      "name": "Reactive Power ",
       "standardDataName": "",
       "units": ""
     },
     {
-      "dataName": "IacB",
+      "dataName": "Reactive_Power_B",
       "dataNameDetail": {
-        "dataName": "IacB",
-        "description": "AC Current B (Equivalent: IacB)",
+        "dataName": "Reactive_Power_B",
+        "description": "Reactive Power B (Equivalent: Reactive_Power_B)",
         "details": {
-          "aCmeter": false,
+          "aCmeter": true,
           "adminHide": false,
           "allowArchiveRaw": false,
           "condense": 0,
@@ -2861,50 +3719,93 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
           "doublePrecision": false,
           "equivalent": 0,
           "excludedChannels": "",
-          "functionCodes": [],
-          "functions": "",
+          "functionCodes": [
+            2,
+            4,
+            3,
+            20,
+            16
+          ],
+          "functions": "PM,GM,CM,XM,SM",
           "isFloat": true,
-          "isStandardDataName": false,
+          "isStandardDataName": true,
           "isStatus": false,
-          "otherAliasPTDataNameValues": "AC_Current_B,Current_B",
+          "otherAliasPTDataNameValues": "kvar_b,kvarb,VAR_B",
           "otherAliasPTDataNames": [
-            343,
-            264
+            315,
+            312,
+            319
           ],
           "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 4
+          "units": 26
         },
-        "equivalent": 26,
+        "equivalent": 309,
         "errors": [],
-        "functionCodes": [],
-        "goldenDriverDataNames": null,
-        "isAllowedForRegisterSetsArray": false,
-        "isStandardDataName": false,
-        "otherAliasPTDataNames": [
-          343,
-          264
+        "functionCodes": [
+          2,
+          4,
+          3,
+          20,
+          16
         ],
-        "registerDataNameIdentifier": 26,
-        "registerName": "AC Current B",
+        "goldenDriverDataNames": [
+          {
+            "dataName": 309,
+            "dataNameAndType": "Reactive_Power_B (Standard)",
+            "dataNameType": "Standard",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 1
+          },
+          {
+            "dataName": 315,
+            "dataNameAndType": "kvar_b (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 2
+          },
+          {
+            "dataName": 312,
+            "dataNameAndType": "kvarb (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 3
+          },
+          {
+            "dataName": 319,
+            "dataNameAndType": "VAR_B (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 4
+          }
+        ],
+        "isAllowedForRegisterSetsArray": false,
+        "isStandardDataName": true,
+        "otherAliasPTDataNames": [
+          315,
+          312,
+          319
+        ],
+        "registerDataNameIdentifier": 309,
+        "registerName": "Reactive Power B",
         "registerSetsArrayDisplayedName": "",
-        "standardDataNameArchiveRawAndIntervalData": false
+        "standardDataNameArchiveRawAndIntervalData": true
       },
       "index": 0,
       "isArchived": false,
       "isIgnored": false,
       "isRaw": false,
       "localizedName": "",
-      "name": "AC Current B",
+      "name": "Reactive Power B",
       "standardDataName": "",
       "units": ""
     },
     {
-      "dataName": "IacC",
+      "dataName": "Reactive_Power_C",
       "dataNameDetail": {
-        "dataName": "IacC",
-        "description": "AC Current C (Equivalent: IacC)",
+        "dataName": "Reactive_Power_C",
+        "description": "Reactive Power C (Equivalent: Reactive_Power_C)",
         "details": {
-          "aCmeter": false,
+          "aCmeter": true,
           "adminHide": false,
           "allowArchiveRaw": false,
           "condense": 0,
@@ -2912,203 +3813,83 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
           "doublePrecision": false,
           "equivalent": 0,
           "excludedChannels": "",
-          "functionCodes": [],
-          "functions": "",
+          "functionCodes": [
+            2,
+            4,
+            3,
+            20,
+            16
+          ],
+          "functions": "PM,GM,CM,XM,SM",
           "isFloat": true,
-          "isStandardDataName": false,
+          "isStandardDataName": true,
           "isStatus": false,
-          "otherAliasPTDataNameValues": "AC_Current_C,Current_C",
+          "otherAliasPTDataNameValues": "kvar_c,kvarc,VAR_C",
           "otherAliasPTDataNames": [
-            344,
-            265
+            316,
+            313,
+            320
           ],
           "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 4
+          "units": 26
         },
-        "equivalent": 27,
+        "equivalent": 310,
         "errors": [],
-        "functionCodes": [],
-        "goldenDriverDataNames": null,
-        "isAllowedForRegisterSetsArray": false,
-        "isStandardDataName": false,
-        "otherAliasPTDataNames": [
-          344,
-          265
+        "functionCodes": [
+          2,
+          4,
+          3,
+          20,
+          16
         ],
-        "registerDataNameIdentifier": 27,
-        "registerName": "AC Current C",
+        "goldenDriverDataNames": [
+          {
+            "dataName": 310,
+            "dataNameAndType": "Reactive_Power_C (Standard)",
+            "dataNameType": "Standard",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 1
+          },
+          {
+            "dataName": 316,
+            "dataNameAndType": "kvar_c (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 2
+          },
+          {
+            "dataName": 313,
+            "dataNameAndType": "kvarc (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 3
+          },
+          {
+            "dataName": 320,
+            "dataNameAndType": "VAR_C (Alias)",
+            "dataNameType": "Alias",
+            "isUsedForRegisterSetsArray": false,
+            "priorityOrder": 4
+          }
+        ],
+        "isAllowedForRegisterSetsArray": false,
+        "isStandardDataName": true,
+        "otherAliasPTDataNames": [
+          316,
+          313,
+          320
+        ],
+        "registerDataNameIdentifier": 310,
+        "registerName": "Reactive Power C",
         "registerSetsArrayDisplayedName": "",
-        "standardDataNameArchiveRawAndIntervalData": false
+        "standardDataNameArchiveRawAndIntervalData": true
       },
       "index": 0,
       "isArchived": false,
       "isIgnored": false,
       "isRaw": false,
       "localizedName": "",
-      "name": "AC Current C",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
-      "dataName": "Iac",
-      "dataNameDetail": {
-        "dataName": "Iac",
-        "description": "AC Current Average (Equivalent: Iac)",
-        "details": {
-          "aCmeter": false,
-          "adminHide": false,
-          "allowArchiveRaw": false,
-          "condense": 0,
-          "dCmeter": false,
-          "doublePrecision": false,
-          "equivalent": 0,
-          "excludedChannels": "",
-          "functionCodes": [],
-          "functions": "",
-          "isFloat": true,
-          "isStandardDataName": false,
-          "isStatus": false,
-          "otherAliasPTDataNameValues": "AC_Current_Avg,Iavg,Current_Avg",
-          "otherAliasPTDataNames": [
-            345,
-            267,
-            266
-          ],
-          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 4
-        },
-        "equivalent": 37,
-        "errors": [],
-        "functionCodes": [],
-        "goldenDriverDataNames": null,
-        "isAllowedForRegisterSetsArray": false,
-        "isStandardDataName": false,
-        "otherAliasPTDataNames": [
-          345,
-          267,
-          266
-        ],
-        "registerDataNameIdentifier": 37,
-        "registerName": "AC Current Average",
-        "registerSetsArrayDisplayedName": "",
-        "standardDataNameArchiveRawAndIntervalData": false
-      },
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "AC Current Average",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
-      "dataName": "Vac",
-      "dataNameDetail": {
-        "dataName": "Vac",
-        "description": "AC Voltage Average L-N (Equivalent: Vac)",
-        "details": {
-          "aCmeter": false,
-          "adminHide": false,
-          "allowArchiveRaw": false,
-          "condense": 0,
-          "dCmeter": false,
-          "doublePrecision": false,
-          "equivalent": 0,
-          "excludedChannels": "",
-          "functionCodes": [],
-          "functions": "",
-          "isFloat": true,
-          "isStandardDataName": false,
-          "isStatus": false,
-          "otherAliasPTDataNameValues": "Vacln,Vaclna,VNavg,Voltage_LN_Avg,AC_Voltage_LN_Avg",
-          "otherAliasPTDataNames": [
-            338,
-            339,
-            337,
-            336,
-            341
-          ],
-          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 2
-        },
-        "equivalent": 36,
-        "errors": [],
-        "functionCodes": [],
-        "goldenDriverDataNames": null,
-        "isAllowedForRegisterSetsArray": false,
-        "isStandardDataName": false,
-        "otherAliasPTDataNames": [
-          338,
-          339,
-          337,
-          336,
-          341
-        ],
-        "registerDataNameIdentifier": 36,
-        "registerName": "AC Voltage Average L-N",
-        "registerSetsArrayDisplayedName": "",
-        "standardDataNameArchiveRawAndIntervalData": false
-      },
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "AC Voltage Average L-N",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
-      "dataName": "KVA",
-      "dataNameDetail": {
-        "dataName": "KVA",
-        "description": "Apparent Power (Equivalent: KVA)",
-        "details": {
-          "aCmeter": false,
-          "adminHide": false,
-          "allowArchiveRaw": false,
-          "condense": 0,
-          "dCmeter": false,
-          "doublePrecision": false,
-          "equivalent": 0,
-          "excludedChannels": "",
-          "functionCodes": [],
-          "functions": "",
-          "isFloat": true,
-          "isStandardDataName": false,
-          "isStatus": false,
-          "otherAliasPTDataNameValues": "VA,VAs,Apparent_Power",
-          "otherAliasPTDataNames": [
-            257,
-            258,
-            256
-          ],
-          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 20
-        },
-        "equivalent": 6,
-        "errors": [],
-        "functionCodes": [],
-        "goldenDriverDataNames": null,
-        "isAllowedForRegisterSetsArray": false,
-        "isStandardDataName": false,
-        "otherAliasPTDataNames": [
-          257,
-          258,
-          256
-        ],
-        "registerDataNameIdentifier": 6,
-        "registerName": "Apparent Power",
-        "registerSetsArrayDisplayedName": "",
-        "standardDataNameArchiveRawAndIntervalData": false
-      },
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "Apparent Power",
+      "name": "Reactive Power C",
       "standardDataName": "",
       "units": ""
     },
@@ -3162,6 +3943,59 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "isRaw": false,
       "localizedName": "",
       "name": "Reactive Power",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "KVA",
+      "dataNameDetail": {
+        "dataName": "KVA",
+        "description": "Apparent Power (Equivalent: KVA)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "VA,VAs,Apparent_Power",
+          "otherAliasPTDataNames": [
+            257,
+            258,
+            256
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 20
+        },
+        "equivalent": 6,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": false,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          257,
+          258,
+          256
+        ],
+        "registerDataNameIdentifier": 6,
+        "registerName": "Apparent Power",
+        "registerSetsArrayDisplayedName": "",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "Apparent Power",
       "standardDataName": "",
       "units": ""
     },
@@ -3239,506 +4073,6 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "units": ""
     },
     {
-      "dataName": "Vdc1",
-      "dataNameDetail": {
-        "dataName": "Vdc_",
-        "description": "DC Voltage (specify string/bus/zone/ channel) (Equivalent: Vdc_)",
-        "details": {
-          "aCmeter": false,
-          "adminHide": false,
-          "allowArchiveRaw": false,
-          "condense": 0,
-          "dCmeter": false,
-          "doublePrecision": false,
-          "equivalent": 0,
-          "excludedChannels": "",
-          "functionCodes": [],
-          "functions": "",
-          "isFloat": true,
-          "isStandardDataName": false,
-          "isStatus": false,
-          "otherAliasPTDataNameValues": "DC_Voltage_",
-          "otherAliasPTDataNames": [
-            367
-          ],
-          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 2
-        },
-        "equivalent": 49,
-        "errors": [],
-        "functionCodes": [],
-        "goldenDriverDataNames": null,
-        "isAllowedForRegisterSetsArray": true,
-        "isStandardDataName": false,
-        "otherAliasPTDataNames": [
-          367
-        ],
-        "registerDataNameIdentifier": 49,
-        "registerName": "DC Voltage (specify string/bus/zone/ channel)",
-        "registerSetsArrayDisplayedName": "DC Voltage (specify RegisterSets)",
-        "standardDataNameArchiveRawAndIntervalData": false
-      },
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "DC Voltage 1",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
-      "dataName": "Idc1",
-      "dataNameDetail": {
-        "dataName": "Idc_",
-        "description": "DC Current (specify string/bus/zone/ channel) (Equivalent: Idc_)",
-        "details": {
-          "aCmeter": false,
-          "adminHide": false,
-          "allowArchiveRaw": false,
-          "condense": 0,
-          "dCmeter": false,
-          "doublePrecision": false,
-          "equivalent": 0,
-          "excludedChannels": "",
-          "functionCodes": [],
-          "functions": "",
-          "isFloat": true,
-          "isStandardDataName": false,
-          "isStatus": false,
-          "otherAliasPTDataNameValues": "DC_Current_,ZoneAmps_",
-          "otherAliasPTDataNames": [
-            365,
-            165
-          ],
-          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 4
-        },
-        "equivalent": 50,
-        "errors": [],
-        "functionCodes": [],
-        "goldenDriverDataNames": null,
-        "isAllowedForRegisterSetsArray": true,
-        "isStandardDataName": false,
-        "otherAliasPTDataNames": [
-          365,
-          165
-        ],
-        "registerDataNameIdentifier": 50,
-        "registerName": "DC Current (specify string/bus/zone/ channel)",
-        "registerSetsArrayDisplayedName": "DC Current (specify RegisterSets)",
-        "standardDataNameArchiveRawAndIntervalData": false
-      },
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "DC Current 1",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
-      "dataName": "Vdc2",
-      "dataNameDetail": {
-        "dataName": "Vdc_",
-        "description": "DC Voltage (specify string/bus/zone/ channel) (Equivalent: Vdc_)",
-        "details": {
-          "aCmeter": false,
-          "adminHide": false,
-          "allowArchiveRaw": false,
-          "condense": 0,
-          "dCmeter": false,
-          "doublePrecision": false,
-          "equivalent": 0,
-          "excludedChannels": "",
-          "functionCodes": [],
-          "functions": "",
-          "isFloat": true,
-          "isStandardDataName": false,
-          "isStatus": false,
-          "otherAliasPTDataNameValues": "DC_Voltage_",
-          "otherAliasPTDataNames": [
-            367
-          ],
-          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 2
-        },
-        "equivalent": 49,
-        "errors": [],
-        "functionCodes": [],
-        "goldenDriverDataNames": null,
-        "isAllowedForRegisterSetsArray": true,
-        "isStandardDataName": false,
-        "otherAliasPTDataNames": [
-          367
-        ],
-        "registerDataNameIdentifier": 49,
-        "registerName": "DC Voltage (specify string/bus/zone/ channel)",
-        "registerSetsArrayDisplayedName": "DC Voltage (specify RegisterSets)",
-        "standardDataNameArchiveRawAndIntervalData": false
-      },
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "DC Voltage 2",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
-      "dataName": "Idc2",
-      "dataNameDetail": {
-        "dataName": "Idc_",
-        "description": "DC Current (specify string/bus/zone/ channel) (Equivalent: Idc_)",
-        "details": {
-          "aCmeter": false,
-          "adminHide": false,
-          "allowArchiveRaw": false,
-          "condense": 0,
-          "dCmeter": false,
-          "doublePrecision": false,
-          "equivalent": 0,
-          "excludedChannels": "",
-          "functionCodes": [],
-          "functions": "",
-          "isFloat": true,
-          "isStandardDataName": false,
-          "isStatus": false,
-          "otherAliasPTDataNameValues": "DC_Current_,ZoneAmps_",
-          "otherAliasPTDataNames": [
-            365,
-            165
-          ],
-          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 4
-        },
-        "equivalent": 50,
-        "errors": [],
-        "functionCodes": [],
-        "goldenDriverDataNames": null,
-        "isAllowedForRegisterSetsArray": true,
-        "isStandardDataName": false,
-        "otherAliasPTDataNames": [
-          365,
-          165
-        ],
-        "registerDataNameIdentifier": 50,
-        "registerName": "DC Current (specify string/bus/zone/ channel)",
-        "registerSetsArrayDisplayedName": "DC Current (specify RegisterSets)",
-        "standardDataNameArchiveRawAndIntervalData": false
-      },
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "DC Current 2",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
-      "dataName": "Vdc3",
-      "dataNameDetail": {
-        "dataName": "Vdc_",
-        "description": "DC Voltage (specify string/bus/zone/ channel) (Equivalent: Vdc_)",
-        "details": {
-          "aCmeter": false,
-          "adminHide": false,
-          "allowArchiveRaw": false,
-          "condense": 0,
-          "dCmeter": false,
-          "doublePrecision": false,
-          "equivalent": 0,
-          "excludedChannels": "",
-          "functionCodes": [],
-          "functions": "",
-          "isFloat": true,
-          "isStandardDataName": false,
-          "isStatus": false,
-          "otherAliasPTDataNameValues": "DC_Voltage_",
-          "otherAliasPTDataNames": [
-            367
-          ],
-          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 2
-        },
-        "equivalent": 49,
-        "errors": [],
-        "functionCodes": [],
-        "goldenDriverDataNames": null,
-        "isAllowedForRegisterSetsArray": true,
-        "isStandardDataName": false,
-        "otherAliasPTDataNames": [
-          367
-        ],
-        "registerDataNameIdentifier": 49,
-        "registerName": "DC Voltage (specify string/bus/zone/ channel)",
-        "registerSetsArrayDisplayedName": "DC Voltage (specify RegisterSets)",
-        "standardDataNameArchiveRawAndIntervalData": false
-      },
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "DC Voltage 3",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
-      "dataName": "Idc3",
-      "dataNameDetail": {
-        "dataName": "Idc_",
-        "description": "DC Current (specify string/bus/zone/ channel) (Equivalent: Idc_)",
-        "details": {
-          "aCmeter": false,
-          "adminHide": false,
-          "allowArchiveRaw": false,
-          "condense": 0,
-          "dCmeter": false,
-          "doublePrecision": false,
-          "equivalent": 0,
-          "excludedChannels": "",
-          "functionCodes": [],
-          "functions": "",
-          "isFloat": true,
-          "isStandardDataName": false,
-          "isStatus": false,
-          "otherAliasPTDataNameValues": "DC_Current_,ZoneAmps_",
-          "otherAliasPTDataNames": [
-            365,
-            165
-          ],
-          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 4
-        },
-        "equivalent": 50,
-        "errors": [],
-        "functionCodes": [],
-        "goldenDriverDataNames": null,
-        "isAllowedForRegisterSetsArray": true,
-        "isStandardDataName": false,
-        "otherAliasPTDataNames": [
-          365,
-          165
-        ],
-        "registerDataNameIdentifier": 50,
-        "registerName": "DC Current (specify string/bus/zone/ channel)",
-        "registerSetsArrayDisplayedName": "DC Current (specify RegisterSets)",
-        "standardDataNameArchiveRawAndIntervalData": false
-      },
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "DC Current 3",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
-      "dataName": "Idc",
-      "dataNameDetail": {
-        "dataName": "Idc",
-        "description": "DC Current (Equivalent: Idc)",
-        "details": {
-          "aCmeter": false,
-          "adminHide": false,
-          "allowArchiveRaw": false,
-          "condense": 0,
-          "dCmeter": false,
-          "doublePrecision": false,
-          "equivalent": 0,
-          "excludedChannels": "",
-          "functionCodes": [],
-          "functions": "",
-          "isFloat": true,
-          "isStandardDataName": false,
-          "isStatus": false,
-          "otherAliasPTDataNameValues": "DC_Current_Total",
-          "otherAliasPTDataNames": [
-            430
-          ],
-          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 4
-        },
-        "equivalent": 34,
-        "errors": [],
-        "functionCodes": [],
-        "goldenDriverDataNames": null,
-        "isAllowedForRegisterSetsArray": false,
-        "isStandardDataName": false,
-        "otherAliasPTDataNames": [
-          430
-        ],
-        "registerDataNameIdentifier": 34,
-        "registerName": "DC Current",
-        "registerSetsArrayDisplayedName": "",
-        "standardDataNameArchiveRawAndIntervalData": false
-      },
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "DC Current Total",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
-      "dataName": "Vdc",
-      "dataNameDetail": {
-        "dataName": "Vdc",
-        "description": "DC Voltage (Equivalent: Vdc)",
-        "details": {
-          "aCmeter": false,
-          "adminHide": false,
-          "allowArchiveRaw": false,
-          "condense": 0,
-          "dCmeter": false,
-          "doublePrecision": false,
-          "equivalent": 0,
-          "excludedChannels": "",
-          "functionCodes": [],
-          "functions": "",
-          "isFloat": true,
-          "isStandardDataName": false,
-          "isStatus": false,
-          "otherAliasPTDataNameValues": "DC_Voltage,DC_Voltage_Avg",
-          "otherAliasPTDataNames": [
-            438,
-            439
-          ],
-          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 2
-        },
-        "equivalent": 33,
-        "errors": [],
-        "functionCodes": [],
-        "goldenDriverDataNames": null,
-        "isAllowedForRegisterSetsArray": false,
-        "isStandardDataName": false,
-        "otherAliasPTDataNames": [
-          438,
-          439
-        ],
-        "registerDataNameIdentifier": 33,
-        "registerName": "DC Voltage",
-        "registerSetsArrayDisplayedName": "",
-        "standardDataNameArchiveRawAndIntervalData": false
-      },
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "DC Voltage Average",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
-      "dataName": "KwDC",
-      "dataNameDetail": {
-        "dataName": "KwDC",
-        "description": "DC Power (Equivalent: KwDC)",
-        "details": {
-          "aCmeter": false,
-          "adminHide": false,
-          "allowArchiveRaw": false,
-          "condense": 0,
-          "dCmeter": false,
-          "doublePrecision": false,
-          "equivalent": 0,
-          "excludedChannels": "",
-          "functionCodes": [],
-          "functions": "",
-          "isFloat": true,
-          "isStandardDataName": false,
-          "isStatus": false,
-          "otherAliasPTDataNameValues": "DC_Power,DC_Power_Total",
-          "otherAliasPTDataNames": [
-            436,
-            437
-          ],
-          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 10
-        },
-        "equivalent": 35,
-        "errors": [],
-        "functionCodes": [],
-        "goldenDriverDataNames": null,
-        "isAllowedForRegisterSetsArray": false,
-        "isStandardDataName": false,
-        "otherAliasPTDataNames": [
-          436,
-          437
-        ],
-        "registerDataNameIdentifier": 35,
-        "registerName": "DC Power",
-        "registerSetsArrayDisplayedName": "",
-        "standardDataNameArchiveRawAndIntervalData": false
-      },
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "DC Power Total",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
-      "dataName": "DeviceTemp",
-      "dataNameDetail": {
-        "dataName": "DeviceTemp",
-        "description": "Device Temperature (Equivalent: DeviceTemp)",
-        "details": {
-          "aCmeter": false,
-          "adminHide": false,
-          "allowArchiveRaw": false,
-          "condense": 0,
-          "dCmeter": false,
-          "doublePrecision": false,
-          "equivalent": 0,
-          "excludedChannels": "",
-          "functionCodes": [],
-          "functions": "",
-          "isFloat": true,
-          "isStandardDataName": false,
-          "isStatus": false,
-          "otherAliasPTDataNameValues": "Temp_Device",
-          "otherAliasPTDataNames": [
-            452
-          ],
-          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 30
-        },
-        "equivalent": 187,
-        "errors": [],
-        "functionCodes": [],
-        "goldenDriverDataNames": null,
-        "isAllowedForRegisterSetsArray": false,
-        "isStandardDataName": false,
-        "otherAliasPTDataNames": [
-          452
-        ],
-        "registerDataNameIdentifier": 187,
-        "registerName": "Device Temperature",
-        "registerSetsArrayDisplayedName": "",
-        "standardDataNameArchiveRawAndIntervalData": false
-      },
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "Device Temperature",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
       "dataName": "InternalTemp",
       "dataNameDetail": {
         "dataName": "InternalTemp",
@@ -3790,10 +4124,55 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "units": ""
     },
     {
-      "dataName": "Temp_XMFR",
+      "dataName": "KwhACraw",
       "dataNameDetail": {
-        "dataName": "Temp_XMFR",
-        "description": "Transformer Temp Avg (Equivalent: Temp_XMFR)",
+        "dataName": "KwhACraw",
+        "description": "Active Energy Net Raw (Equivalent: KwhACraw)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 16,
+          "dCmeter": false,
+          "doublePrecision": true,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "",
+          "otherAliasPTDataNames": [],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 11
+        },
+        "equivalent": 41,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": false,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [],
+        "registerDataNameIdentifier": 41,
+        "registerName": "Active Energy Net Raw",
+        "registerSetsArrayDisplayedName": "",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "Active Energy Net Raw",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "Idc1",
+      "dataNameDetail": {
+        "dataName": "Idc_",
+        "description": "DC Current (specify string/bus/zone/ channel) (Equivalent: Idc_)",
         "details": {
           "aCmeter": false,
           "adminHide": false,
@@ -3803,35 +4182,1134 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
           "doublePrecision": false,
           "equivalent": 0,
           "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "DC_Current_,ZoneAmps_",
+          "otherAliasPTDataNames": [
+            365,
+            165
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 4
+        },
+        "equivalent": 50,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": true,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          365,
+          165
+        ],
+        "registerDataNameIdentifier": 50,
+        "registerName": "DC Current (specify string/bus/zone/ channel)",
+        "registerSetsArrayDisplayedName": "DC Current (specify RegisterSets)",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "DC Current Input 1",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "Vdc1",
+      "dataNameDetail": {
+        "dataName": "Vdc_",
+        "description": "DC Voltage (specify string/bus/zone/ channel) (Equivalent: Vdc_)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "DC_Voltage_",
+          "otherAliasPTDataNames": [
+            367
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 2
+        },
+        "equivalent": 49,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": true,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          367
+        ],
+        "registerDataNameIdentifier": 49,
+        "registerName": "DC Voltage (specify string/bus/zone/ channel)",
+        "registerSetsArrayDisplayedName": "DC Voltage (specify RegisterSets)",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "DC Voltage Input 1",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "KwDC1",
+      "dataNameDetail": {
+        "dataName": "KwDC_",
+        "description": "DC Power (specify string/bus/zone/ channel) (Equivalent: KwDC_)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "DC_Power_",
+          "otherAliasPTDataNames": [
+            366
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 10
+        },
+        "equivalent": 51,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": true,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          366
+        ],
+        "registerDataNameIdentifier": 51,
+        "registerName": "DC Power (specify string/bus/zone/ channel)",
+        "registerSetsArrayDisplayedName": "DC Power (specify RegisterSets)",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "DC Power 1",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "Idc2",
+      "dataNameDetail": {
+        "dataName": "Idc_",
+        "description": "DC Current (specify string/bus/zone/ channel) (Equivalent: Idc_)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "DC_Current_,ZoneAmps_",
+          "otherAliasPTDataNames": [
+            365,
+            165
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 4
+        },
+        "equivalent": 50,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": true,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          365,
+          165
+        ],
+        "registerDataNameIdentifier": 50,
+        "registerName": "DC Current (specify string/bus/zone/ channel)",
+        "registerSetsArrayDisplayedName": "DC Current (specify RegisterSets)",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "DC Current Input 2",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "Vdc2",
+      "dataNameDetail": {
+        "dataName": "Vdc_",
+        "description": "DC Voltage (specify string/bus/zone/ channel) (Equivalent: Vdc_)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "DC_Voltage_",
+          "otherAliasPTDataNames": [
+            367
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 2
+        },
+        "equivalent": 49,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": true,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          367
+        ],
+        "registerDataNameIdentifier": 49,
+        "registerName": "DC Voltage (specify string/bus/zone/ channel)",
+        "registerSetsArrayDisplayedName": "DC Voltage (specify RegisterSets)",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "DC Voltage Input 2",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "KwDC2",
+      "dataNameDetail": {
+        "dataName": "KwDC_",
+        "description": "DC Power (specify string/bus/zone/ channel) (Equivalent: KwDC_)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "DC_Power_",
+          "otherAliasPTDataNames": [
+            366
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 10
+        },
+        "equivalent": 51,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": true,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          366
+        ],
+        "registerDataNameIdentifier": 51,
+        "registerName": "DC Power (specify string/bus/zone/ channel)",
+        "registerSetsArrayDisplayedName": "DC Power (specify RegisterSets)",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "DC Power 2",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "Idc3",
+      "dataNameDetail": {
+        "dataName": "Idc_",
+        "description": "DC Current (specify string/bus/zone/ channel) (Equivalent: Idc_)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "DC_Current_,ZoneAmps_",
+          "otherAliasPTDataNames": [
+            365,
+            165
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 4
+        },
+        "equivalent": 50,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": true,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          365,
+          165
+        ],
+        "registerDataNameIdentifier": 50,
+        "registerName": "DC Current (specify string/bus/zone/ channel)",
+        "registerSetsArrayDisplayedName": "DC Current (specify RegisterSets)",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "DC Current Input 3",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "Vdc3",
+      "dataNameDetail": {
+        "dataName": "Vdc_",
+        "description": "DC Voltage (specify string/bus/zone/ channel) (Equivalent: Vdc_)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "DC_Voltage_",
+          "otherAliasPTDataNames": [
+            367
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 2
+        },
+        "equivalent": 49,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": true,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          367
+        ],
+        "registerDataNameIdentifier": 49,
+        "registerName": "DC Voltage (specify string/bus/zone/ channel)",
+        "registerSetsArrayDisplayedName": "DC Voltage (specify RegisterSets)",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "DC Voltage Input 3",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "KwDC3",
+      "dataNameDetail": {
+        "dataName": "KwDC_",
+        "description": "DC Power (specify string/bus/zone/ channel) (Equivalent: KwDC_)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "DC_Power_",
+          "otherAliasPTDataNames": [
+            366
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 10
+        },
+        "equivalent": 51,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": true,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          366
+        ],
+        "registerDataNameIdentifier": 51,
+        "registerName": "DC Power (specify string/bus/zone/ channel)",
+        "registerSetsArrayDisplayedName": "DC Power (specify RegisterSets)",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "DC Power 3",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "Idc4",
+      "dataNameDetail": {
+        "dataName": "Idc_",
+        "description": "DC Current (specify string/bus/zone/ channel) (Equivalent: Idc_)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "DC_Current_,ZoneAmps_",
+          "otherAliasPTDataNames": [
+            365,
+            165
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 4
+        },
+        "equivalent": 50,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": true,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          365,
+          165
+        ],
+        "registerDataNameIdentifier": 50,
+        "registerName": "DC Current (specify string/bus/zone/ channel)",
+        "registerSetsArrayDisplayedName": "DC Current (specify RegisterSets)",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "DC Current Input 4",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "Vdc4",
+      "dataNameDetail": {
+        "dataName": "Vdc_",
+        "description": "DC Voltage (specify string/bus/zone/ channel) (Equivalent: Vdc_)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "DC_Voltage_",
+          "otherAliasPTDataNames": [
+            367
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 2
+        },
+        "equivalent": 49,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": true,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          367
+        ],
+        "registerDataNameIdentifier": 49,
+        "registerName": "DC Voltage (specify string/bus/zone/ channel)",
+        "registerSetsArrayDisplayedName": "DC Voltage (specify RegisterSets)",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "DC Voltage Input 4",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "KwDC4",
+      "dataNameDetail": {
+        "dataName": "KwDC_",
+        "description": "DC Power (specify string/bus/zone/ channel) (Equivalent: KwDC_)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "DC_Power_",
+          "otherAliasPTDataNames": [
+            366
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 10
+        },
+        "equivalent": 51,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": true,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          366
+        ],
+        "registerDataNameIdentifier": 51,
+        "registerName": "DC Power (specify string/bus/zone/ channel)",
+        "registerSetsArrayDisplayedName": "DC Power (specify RegisterSets)",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "DC Power 4",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "Idc5",
+      "dataNameDetail": {
+        "dataName": "Idc_",
+        "description": "DC Current (specify string/bus/zone/ channel) (Equivalent: Idc_)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "DC_Current_,ZoneAmps_",
+          "otherAliasPTDataNames": [
+            365,
+            165
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 4
+        },
+        "equivalent": 50,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": true,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          365,
+          165
+        ],
+        "registerDataNameIdentifier": 50,
+        "registerName": "DC Current (specify string/bus/zone/ channel)",
+        "registerSetsArrayDisplayedName": "DC Current (specify RegisterSets)",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "DC Current Input 5",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "Vdc5",
+      "dataNameDetail": {
+        "dataName": "Vdc_",
+        "description": "DC Voltage (specify string/bus/zone/ channel) (Equivalent: Vdc_)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "DC_Voltage_",
+          "otherAliasPTDataNames": [
+            367
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 2
+        },
+        "equivalent": 49,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": true,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          367
+        ],
+        "registerDataNameIdentifier": 49,
+        "registerName": "DC Voltage (specify string/bus/zone/ channel)",
+        "registerSetsArrayDisplayedName": "DC Voltage (specify RegisterSets)",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "DC Voltage Input 5",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "KwDC5",
+      "dataNameDetail": {
+        "dataName": "KwDC_",
+        "description": "DC Power (specify string/bus/zone/ channel) (Equivalent: KwDC_)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "DC_Power_",
+          "otherAliasPTDataNames": [
+            366
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 10
+        },
+        "equivalent": 51,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": true,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          366
+        ],
+        "registerDataNameIdentifier": 51,
+        "registerName": "DC Power (specify string/bus/zone/ channel)",
+        "registerSetsArrayDisplayedName": "DC Power (specify RegisterSets)",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "DC Power 5",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "Idc6",
+      "dataNameDetail": {
+        "dataName": "Idc_",
+        "description": "DC Current (specify string/bus/zone/ channel) (Equivalent: Idc_)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "DC_Current_,ZoneAmps_",
+          "otherAliasPTDataNames": [
+            365,
+            165
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 4
+        },
+        "equivalent": 50,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": true,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          365,
+          165
+        ],
+        "registerDataNameIdentifier": 50,
+        "registerName": "DC Current (specify string/bus/zone/ channel)",
+        "registerSetsArrayDisplayedName": "DC Current (specify RegisterSets)",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "DC Current Input 6",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "Vdc6",
+      "dataNameDetail": {
+        "dataName": "Vdc_",
+        "description": "DC Voltage (specify string/bus/zone/ channel) (Equivalent: Vdc_)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "DC_Voltage_",
+          "otherAliasPTDataNames": [
+            367
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 2
+        },
+        "equivalent": 49,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": true,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          367
+        ],
+        "registerDataNameIdentifier": 49,
+        "registerName": "DC Voltage (specify string/bus/zone/ channel)",
+        "registerSetsArrayDisplayedName": "DC Voltage (specify RegisterSets)",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "DC Voltage Input 6",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "KwDC6",
+      "dataNameDetail": {
+        "dataName": "KwDC_",
+        "description": "DC Power (specify string/bus/zone/ channel) (Equivalent: KwDC_)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "DC_Power_",
+          "otherAliasPTDataNames": [
+            366
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 10
+        },
+        "equivalent": 51,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": true,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          366
+        ],
+        "registerDataNameIdentifier": 51,
+        "registerName": "DC Power (specify string/bus/zone/ channel)",
+        "registerSetsArrayDisplayedName": "DC Power (specify RegisterSets)",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "DC Power 6",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "Idc",
+      "dataNameDetail": {
+        "dataName": "Idc",
+        "description": "DC Current (Equivalent: Idc)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "DC_Current_Total",
+          "otherAliasPTDataNames": [
+            430
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 4
+        },
+        "equivalent": 34,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": false,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          430
+        ],
+        "registerDataNameIdentifier": 34,
+        "registerName": "DC Current",
+        "registerSetsArrayDisplayedName": "",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "DC Current Input (total)",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "Vdc",
+      "dataNameDetail": {
+        "dataName": "Vdc",
+        "description": "DC Voltage (Equivalent: Vdc)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "DC_Voltage,DC_Voltage_Avg",
+          "otherAliasPTDataNames": [
+            438,
+            439
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 2
+        },
+        "equivalent": 33,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": false,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          438,
+          439
+        ],
+        "registerDataNameIdentifier": 33,
+        "registerName": "DC Voltage",
+        "registerSetsArrayDisplayedName": "",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "DC Voltage Input (average)",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "KwDC",
+      "dataNameDetail": {
+        "dataName": "KwDC",
+        "description": "DC Power (Equivalent: KwDC)",
+        "details": {
+          "aCmeter": false,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 0,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
+          "functionCodes": [],
+          "functions": "",
+          "isFloat": true,
+          "isStandardDataName": false,
+          "isStatus": false,
+          "otherAliasPTDataNameValues": "DC_Power,DC_Power_Total",
+          "otherAliasPTDataNames": [
+            436,
+            437
+          ],
+          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "units": 10
+        },
+        "equivalent": 35,
+        "errors": [],
+        "functionCodes": [],
+        "goldenDriverDataNames": null,
+        "isAllowedForRegisterSetsArray": false,
+        "isStandardDataName": false,
+        "otherAliasPTDataNames": [
+          436,
+          437
+        ],
+        "registerDataNameIdentifier": 35,
+        "registerName": "DC Power",
+        "registerSetsArrayDisplayedName": "",
+        "standardDataNameArchiveRawAndIntervalData": false
+      },
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "DC Power (total)",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "",
+      "dataNameDetail": null,
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "Modbus profile",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "",
+      "dataNameDetail": null,
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "SUSy ID",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "Serial_Number",
+      "dataNameDetail": {
+        "dataName": "Serial_Number",
+        "description": "Serial Number (Equivalent: Serial_Number)",
+        "details": {
+          "aCmeter": true,
+          "adminHide": false,
+          "allowArchiveRaw": false,
+          "condense": 1,
+          "dCmeter": false,
+          "doublePrecision": false,
+          "equivalent": 0,
+          "excludedChannels": "",
           "functionCodes": [
+            2,
+            4,
+            3,
+            20,
+            16,
             1,
             39,
-            45,
-            49,
-            48
+            40,
+            5,
+            24,
+            7,
+            6,
+            8,
+            43,
+            44,
+            25,
+            42,
+            47,
+            46,
+            45
           ],
-          "functions": "PV,BI,BG,MV,HV",
+          "functions": "PM,GM,CM,XM,SM,PV,BI,DC,WS,ST,SC,SA,SS,BA,RK,BS,BB,PP,FS,BG",
           "isFloat": true,
           "isStandardDataName": true,
           "isStatus": false,
           "otherAliasPTDataNameValues": "",
           "otherAliasPTDataNames": [],
           "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 30
+          "units": 0
         },
-        "equivalent": 387,
+        "equivalent": 321,
         "errors": [],
         "functionCodes": [
+          2,
+          4,
+          3,
+          20,
+          16,
           1,
           39,
-          45,
-          49,
-          48
+          40,
+          5,
+          24,
+          7,
+          6,
+          8,
+          43,
+          44,
+          25,
+          42,
+          47,
+          46,
+          45
         ],
         "goldenDriverDataNames": [
           {
-            "dataName": 387,
-            "dataNameAndType": "Temp_XMFR (Standard)",
+            "dataName": 321,
+            "dataNameAndType": "Serial_Number (Standard)",
             "dataNameType": "Standard",
             "isUsedForRegisterSetsArray": false,
             "priorityOrder": 1
@@ -3840,65 +5318,17 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
         "isAllowedForRegisterSetsArray": false,
         "isStandardDataName": true,
         "otherAliasPTDataNames": [],
-        "registerDataNameIdentifier": 387,
-        "registerName": "Transformer Temp Avg",
+        "registerDataNameIdentifier": 321,
+        "registerName": "Serial Number",
         "registerSetsArrayDisplayedName": "",
-        "standardDataNameArchiveRawAndIntervalData": true
+        "standardDataNameArchiveRawAndIntervalData": false
       },
       "index": 0,
       "isArchived": false,
       "isIgnored": false,
       "isRaw": false,
       "localizedName": "",
-      "name": "XMFR Temperature",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
-      "dataName": "",
-      "dataNameDetail": null,
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "Error Time YYYY",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
-      "dataName": "",
-      "dataNameDetail": null,
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "Error Time MM-DD",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
-      "dataName": "",
-      "dataNameDetail": null,
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "Error Time HH-MM",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
-      "dataName": "",
-      "dataNameDetail": null,
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "Error Time SS-00",
+      "name": "Serial Number",
       "standardDataName": "",
       "units": ""
     },
@@ -4001,647 +5431,67 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "isIgnored": false,
       "isRaw": false,
       "localizedName": "",
-      "name": "Fault Code",
+      "name": "EventID",
       "standardDataName": "",
       "units": ""
     },
     {
-      "dataName": "Warning",
+      "dataName": "Status",
       "dataNameDetail": {
-        "dataName": "Warning",
-        "description": "Warning (Equivalent: Warning)",
+        "dataName": "Status",
+        "description": "Operating Status (Equivalent: Status)",
         "details": {
           "aCmeter": false,
           "adminHide": false,
-          "allowArchiveRaw": true,
+          "allowArchiveRaw": false,
           "condense": 1,
           "dCmeter": false,
           "doublePrecision": false,
-          "equivalent": 0,
+          "equivalent": 447,
           "excludedChannels": "",
           "functionCodes": [
-            43,
-            44,
-            25,
-            42,
-            47,
-            50,
-            46,
-            49,
-            48
-          ],
-          "functions": "BA,RK,BS,BB,PP,TU,FS,MV,HV",
-          "isFloat": false,
-          "isStandardDataName": true,
-          "isStatus": true,
-          "otherAliasPTDataNameValues": "",
-          "otherAliasPTDataNames": [],
-          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 0
-        },
-        "equivalent": 204,
-        "errors": [],
-        "functionCodes": [
-          43,
-          44,
-          25,
-          42,
-          47,
-          50,
-          46,
-          49,
-          48
-        ],
-        "goldenDriverDataNames": [
-          {
-            "dataName": 204,
-            "dataNameAndType": "Warning (Standard)",
-            "dataNameType": "Standard",
-            "isUsedForRegisterSetsArray": false,
-            "priorityOrder": 1
-          }
-        ],
-        "isAllowedForRegisterSetsArray": false,
-        "isStandardDataName": true,
-        "otherAliasPTDataNames": [],
-        "registerDataNameIdentifier": 204,
-        "registerName": "Warning",
-        "registerSetsArrayDisplayedName": "",
-        "standardDataNameArchiveRawAndIntervalData": true
-      },
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "Warn Code",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
-      "dataName": "Fault0",
-      "dataNameDetail": {
-        "dataName": "Fault_",
-        "description": "Fault (specify channel) (Equivalent: Fault_)",
-        "details": {
-          "aCmeter": true,
-          "adminHide": false,
-          "allowArchiveRaw": true,
-          "condense": 1,
-          "dCmeter": true,
-          "doublePrecision": false,
-          "equivalent": 0,
-          "excludedChannels": "",
-          "functionCodes": [
-            2,
-            4,
-            3,
-            20,
-            16,
-            37,
-            41,
             1,
             39,
             40,
+            5,
             24,
             7,
             6,
             8,
-            45,
-            43,
-            44,
-            25,
-            42,
-            47,
-            50,
-            49,
-            48,
-            46
-          ],
-          "functions": "PM,GM,CM,XM,SM,BM,DP,PV,BI,DC,ST,SC,SA,SS,BG,BA,RK,BS,BB,PP,TU,MV,HV,FS",
-          "isFloat": false,
-          "isStandardDataName": true,
-          "isStatus": true,
-          "otherAliasPTDataNameValues": "",
-          "otherAliasPTDataNames": [],
-          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 0
-        },
-        "equivalent": 441,
-        "errors": [],
-        "functionCodes": [
-          2,
-          4,
-          3,
-          20,
-          16,
-          37,
-          41,
-          1,
-          39,
-          40,
-          24,
-          7,
-          6,
-          8,
-          45,
-          43,
-          44,
-          25,
-          42,
-          47,
-          50,
-          49,
-          48,
-          46
-        ],
-        "goldenDriverDataNames": [
-          {
-            "dataName": 441,
-            "dataNameAndType": "Fault_ (Standard)",
-            "dataNameType": "Standard",
-            "isUsedForRegisterSetsArray": false,
-            "priorityOrder": 1
-          }
-        ],
-        "isAllowedForRegisterSetsArray": true,
-        "isStandardDataName": true,
-        "otherAliasPTDataNames": [],
-        "registerDataNameIdentifier": 441,
-        "registerName": "Fault (specify channel)",
-        "registerSetsArrayDisplayedName": "Fault (specify RegisterSets)",
-        "standardDataNameArchiveRawAndIntervalData": true
-      },
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "Fault Code 0",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
-      "dataName": "Fault1",
-      "dataNameDetail": {
-        "dataName": "Fault_",
-        "description": "Fault (specify channel) (Equivalent: Fault_)",
-        "details": {
-          "aCmeter": true,
-          "adminHide": false,
-          "allowArchiveRaw": true,
-          "condense": 1,
-          "dCmeter": true,
-          "doublePrecision": false,
-          "equivalent": 0,
-          "excludedChannels": "",
-          "functionCodes": [
-            2,
-            4,
-            3,
-            20,
-            16,
-            37,
-            41,
-            1,
-            39,
-            40,
-            24,
-            7,
-            6,
-            8,
-            45,
-            43,
-            44,
-            25,
-            42,
-            47,
-            50,
-            49,
-            48,
-            46
-          ],
-          "functions": "PM,GM,CM,XM,SM,BM,DP,PV,BI,DC,ST,SC,SA,SS,BG,BA,RK,BS,BB,PP,TU,MV,HV,FS",
-          "isFloat": false,
-          "isStandardDataName": true,
-          "isStatus": true,
-          "otherAliasPTDataNameValues": "",
-          "otherAliasPTDataNames": [],
-          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 0
-        },
-        "equivalent": 441,
-        "errors": [],
-        "functionCodes": [
-          2,
-          4,
-          3,
-          20,
-          16,
-          37,
-          41,
-          1,
-          39,
-          40,
-          24,
-          7,
-          6,
-          8,
-          45,
-          43,
-          44,
-          25,
-          42,
-          47,
-          50,
-          49,
-          48,
-          46
-        ],
-        "goldenDriverDataNames": [
-          {
-            "dataName": 441,
-            "dataNameAndType": "Fault_ (Standard)",
-            "dataNameType": "Standard",
-            "isUsedForRegisterSetsArray": false,
-            "priorityOrder": 1
-          }
-        ],
-        "isAllowedForRegisterSetsArray": true,
-        "isStandardDataName": true,
-        "otherAliasPTDataNames": [],
-        "registerDataNameIdentifier": 441,
-        "registerName": "Fault (specify channel)",
-        "registerSetsArrayDisplayedName": "Fault (specify RegisterSets)",
-        "standardDataNameArchiveRawAndIntervalData": true
-      },
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "Fault Code 1",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
-      "dataName": "Fault2",
-      "dataNameDetail": {
-        "dataName": "Fault_",
-        "description": "Fault (specify channel) (Equivalent: Fault_)",
-        "details": {
-          "aCmeter": true,
-          "adminHide": false,
-          "allowArchiveRaw": true,
-          "condense": 1,
-          "dCmeter": true,
-          "doublePrecision": false,
-          "equivalent": 0,
-          "excludedChannels": "",
-          "functionCodes": [
-            2,
-            4,
-            3,
-            20,
-            16,
-            37,
-            41,
-            1,
-            39,
-            40,
-            24,
-            7,
-            6,
-            8,
-            45,
-            43,
-            44,
-            25,
-            42,
-            47,
-            50,
-            49,
-            48,
-            46
-          ],
-          "functions": "PM,GM,CM,XM,SM,BM,DP,PV,BI,DC,ST,SC,SA,SS,BG,BA,RK,BS,BB,PP,TU,MV,HV,FS",
-          "isFloat": false,
-          "isStandardDataName": true,
-          "isStatus": true,
-          "otherAliasPTDataNameValues": "",
-          "otherAliasPTDataNames": [],
-          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 0
-        },
-        "equivalent": 441,
-        "errors": [],
-        "functionCodes": [
-          2,
-          4,
-          3,
-          20,
-          16,
-          37,
-          41,
-          1,
-          39,
-          40,
-          24,
-          7,
-          6,
-          8,
-          45,
-          43,
-          44,
-          25,
-          42,
-          47,
-          50,
-          49,
-          48,
-          46
-        ],
-        "goldenDriverDataNames": [
-          {
-            "dataName": 441,
-            "dataNameAndType": "Fault_ (Standard)",
-            "dataNameType": "Standard",
-            "isUsedForRegisterSetsArray": false,
-            "priorityOrder": 1
-          }
-        ],
-        "isAllowedForRegisterSetsArray": true,
-        "isStandardDataName": true,
-        "otherAliasPTDataNames": [],
-        "registerDataNameIdentifier": 441,
-        "registerName": "Fault (specify channel)",
-        "registerSetsArrayDisplayedName": "Fault (specify RegisterSets)",
-        "standardDataNameArchiveRawAndIntervalData": true
-      },
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "Fault Code 2",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
-      "dataName": "Fault3",
-      "dataNameDetail": {
-        "dataName": "Fault_",
-        "description": "Fault (specify channel) (Equivalent: Fault_)",
-        "details": {
-          "aCmeter": true,
-          "adminHide": false,
-          "allowArchiveRaw": true,
-          "condense": 1,
-          "dCmeter": true,
-          "doublePrecision": false,
-          "equivalent": 0,
-          "excludedChannels": "",
-          "functionCodes": [
-            2,
-            4,
-            3,
-            20,
-            16,
-            37,
-            41,
-            1,
-            39,
-            40,
-            24,
-            7,
-            6,
-            8,
-            45,
-            43,
-            44,
-            25,
-            42,
-            47,
-            50,
-            49,
-            48,
-            46
-          ],
-          "functions": "PM,GM,CM,XM,SM,BM,DP,PV,BI,DC,ST,SC,SA,SS,BG,BA,RK,BS,BB,PP,TU,MV,HV,FS",
-          "isFloat": false,
-          "isStandardDataName": true,
-          "isStatus": true,
-          "otherAliasPTDataNameValues": "",
-          "otherAliasPTDataNames": [],
-          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 0
-        },
-        "equivalent": 441,
-        "errors": [],
-        "functionCodes": [
-          2,
-          4,
-          3,
-          20,
-          16,
-          37,
-          41,
-          1,
-          39,
-          40,
-          24,
-          7,
-          6,
-          8,
-          45,
-          43,
-          44,
-          25,
-          42,
-          47,
-          50,
-          49,
-          48,
-          46
-        ],
-        "goldenDriverDataNames": [
-          {
-            "dataName": 441,
-            "dataNameAndType": "Fault_ (Standard)",
-            "dataNameType": "Standard",
-            "isUsedForRegisterSetsArray": false,
-            "priorityOrder": 1
-          }
-        ],
-        "isAllowedForRegisterSetsArray": true,
-        "isStandardDataName": true,
-        "otherAliasPTDataNames": [],
-        "registerDataNameIdentifier": 441,
-        "registerName": "Fault (specify channel)",
-        "registerSetsArrayDisplayedName": "Fault (specify RegisterSets)",
-        "standardDataNameArchiveRawAndIntervalData": true
-      },
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "Fault Code 3",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
-      "dataName": "Fault4",
-      "dataNameDetail": {
-        "dataName": "Fault_",
-        "description": "Fault (specify channel) (Equivalent: Fault_)",
-        "details": {
-          "aCmeter": true,
-          "adminHide": false,
-          "allowArchiveRaw": true,
-          "condense": 1,
-          "dCmeter": true,
-          "doublePrecision": false,
-          "equivalent": 0,
-          "excludedChannels": "",
-          "functionCodes": [
-            2,
-            4,
-            3,
-            20,
-            16,
-            37,
-            41,
-            1,
-            39,
-            40,
-            24,
-            7,
-            6,
-            8,
-            45,
-            43,
-            44,
-            25,
-            42,
-            47,
-            50,
-            49,
-            48,
-            46
-          ],
-          "functions": "PM,GM,CM,XM,SM,BM,DP,PV,BI,DC,ST,SC,SA,SS,BG,BA,RK,BS,BB,PP,TU,MV,HV,FS",
-          "isFloat": false,
-          "isStandardDataName": true,
-          "isStatus": true,
-          "otherAliasPTDataNameValues": "",
-          "otherAliasPTDataNames": [],
-          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 0
-        },
-        "equivalent": 441,
-        "errors": [],
-        "functionCodes": [
-          2,
-          4,
-          3,
-          20,
-          16,
-          37,
-          41,
-          1,
-          39,
-          40,
-          24,
-          7,
-          6,
-          8,
-          45,
-          43,
-          44,
-          25,
-          42,
-          47,
-          50,
-          49,
-          48,
-          46
-        ],
-        "goldenDriverDataNames": [
-          {
-            "dataName": 441,
-            "dataNameAndType": "Fault_ (Standard)",
-            "dataNameType": "Standard",
-            "isUsedForRegisterSetsArray": false,
-            "priorityOrder": 1
-          }
-        ],
-        "isAllowedForRegisterSetsArray": true,
-        "isStandardDataName": true,
-        "otherAliasPTDataNames": [],
-        "registerDataNameIdentifier": 441,
-        "registerName": "Fault (specify channel)",
-        "registerSetsArrayDisplayedName": "Fault (specify RegisterSets)",
-        "standardDataNameArchiveRawAndIntervalData": true
-      },
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "Fault Code 4",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
-      "dataName": "opmode",
-      "dataNameDetail": {
-        "dataName": "opmode",
-        "description": "Operating Mode (Equivalent: opmode)",
-        "details": {
-          "aCmeter": false,
-          "adminHide": false,
-          "allowArchiveRaw": true,
-          "condense": 1,
-          "dCmeter": false,
-          "doublePrecision": false,
-          "equivalent": 0,
-          "excludedChannels": "",
-          "functionCodes": [
-            1,
-            39,
-            40,
-            24,
             45
           ],
-          "functions": "PV,BI,DC,ST,BG",
+          "functions": "PV,BI,DC,WS,ST,SC,SA,SS,BG",
           "isFloat": false,
           "isStandardDataName": false,
           "isStatus": true,
-          "otherAliasPTDataNameValues": "Op_Mode",
+          "otherAliasPTDataNameValues": "OperatingStatus",
           "otherAliasPTDataNames": [
-            443
+            448
           ],
           "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
           "units": 0
         },
-        "equivalent": 442,
+        "equivalent": 447,
         "errors": [],
         "functionCodes": [
           1,
           39,
           40,
+          5,
           24,
+          7,
+          6,
+          8,
           45
         ],
         "goldenDriverDataNames": null,
         "isAllowedForRegisterSetsArray": false,
         "isStandardDataName": false,
         "otherAliasPTDataNames": [
-          443
+          448
         ],
-        "registerDataNameIdentifier": 442,
-        "registerName": "Operating Mode",
+        "registerDataNameIdentifier": 202,
+        "registerName": "Operating Status",
         "registerSetsArrayDisplayedName": "",
         "standardDataNameArchiveRawAndIntervalData": false
       },
@@ -4650,7 +5500,7 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "isIgnored": false,
       "isRaw": false,
       "localizedName": "",
-      "name": "Inverter Work Mode",
+      "name": "Condition",
       "standardDataName": "",
       "units": ""
     },
@@ -4662,7 +5512,7 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "isIgnored": false,
       "isRaw": false,
       "localizedName": "",
-      "name": "Type Device Model",
+      "name": "Grid Contactor",
       "standardDataName": "",
       "units": ""
     },
@@ -4674,7 +5524,19 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "isIgnored": false,
       "isRaw": false,
       "localizedName": "",
-      "name": "Protocol Version",
+      "name": "Operating Hours",
+      "standardDataName": "",
+      "units": ""
+    },
+    {
+      "dataName": "",
+      "dataNameDetail": null,
+      "index": 0,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "",
+      "name": "Operating State",
       "standardDataName": "",
       "units": ""
     },
@@ -4788,102 +5650,7 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "isIgnored": false,
       "isRaw": false,
       "localizedName": "",
-      "name": "Firmware Version",
-      "standardDataName": "",
-      "units": ""
-    },
-    {
-      "dataName": "Serial_Number",
-      "dataNameDetail": {
-        "dataName": "Serial_Number",
-        "description": "Serial Number (Equivalent: Serial_Number)",
-        "details": {
-          "aCmeter": true,
-          "adminHide": false,
-          "allowArchiveRaw": false,
-          "condense": 1,
-          "dCmeter": false,
-          "doublePrecision": false,
-          "equivalent": 0,
-          "excludedChannels": "",
-          "functionCodes": [
-            2,
-            4,
-            3,
-            20,
-            16,
-            1,
-            39,
-            40,
-            5,
-            24,
-            7,
-            6,
-            8,
-            43,
-            44,
-            25,
-            42,
-            47,
-            46,
-            45
-          ],
-          "functions": "PM,GM,CM,XM,SM,PV,BI,DC,WS,ST,SC,SA,SS,BA,RK,BS,BB,PP,FS,BG",
-          "isFloat": true,
-          "isStandardDataName": true,
-          "isStatus": false,
-          "otherAliasPTDataNameValues": "",
-          "otherAliasPTDataNames": [],
-          "typeId": "AE.DeviceLib.RegisterDataNames+DataNameDetails, AlsoEnergy.MODEL.Desktop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "units": 0
-        },
-        "equivalent": 321,
-        "errors": [],
-        "functionCodes": [
-          2,
-          4,
-          3,
-          20,
-          16,
-          1,
-          39,
-          40,
-          5,
-          24,
-          7,
-          6,
-          8,
-          43,
-          44,
-          25,
-          42,
-          47,
-          46,
-          45
-        ],
-        "goldenDriverDataNames": [
-          {
-            "dataName": 321,
-            "dataNameAndType": "Serial_Number (Standard)",
-            "dataNameType": "Standard",
-            "isUsedForRegisterSetsArray": false,
-            "priorityOrder": 1
-          }
-        ],
-        "isAllowedForRegisterSetsArray": false,
-        "isStandardDataName": true,
-        "otherAliasPTDataNames": [],
-        "registerDataNameIdentifier": 321,
-        "registerName": "Serial Number",
-        "registerSetsArrayDisplayedName": "",
-        "standardDataNameArchiveRawAndIntervalData": false
-      },
-      "index": 0,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "",
-      "name": "Serial Number",
+      "name": "Firmware",
       "standardDataName": "",
       "units": ""
     },
@@ -4895,7 +5662,7 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "isIgnored": false,
       "isRaw": false,
       "localizedName": "",
-      "name": "Inverter Model",
+      "name": "Firmware for Component",
       "standardDataName": "",
       "units": ""
     }
@@ -4903,48 +5670,48 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
   "eGauge": null,
   "fixedEnergyOffset": 0,
   "functionCode": 1,
-  "functionId": "PV3",
+  "functionId": "PV0",
   "gateway": null,
   "gatewayFwVersion": "",
-  "gatewayId": "000CC68CBCC1",
-  "gatewayKey": "H444567",
+  "gatewayId": "000CC68FAF30",
+  "gatewayKey": "H511564",
   "gatewayScriptCount": "",
-  "gatewayType": 2,
+  "gatewayType": 7,
   "groupAllowed": [
     28
   ],
   "groupKey": "",
-  "hardwareId": "C20909_S65552_PV3",
+  "hardwareId": "C20909_S68143_PV0",
   "hardwareStatus": 1,
   "hasCapacity": true,
   "hash": "",
-  "increaseDifference": 6000,
-  "installDate": "2023-04-25",
-  "instance": 3,
+  "increaseDifference": -1,
+  "installDate": "2024-07-12",
+  "instance": 0,
   "inverterKw": 0,
   "isConflictAcknowledged": false,
   "isReportable": true,
-  "isTcp": false,
+  "isTcp": true,
   "isThermal": false,
-  "key": "H444573",
+  "key": "H511568",
   "kiosk": null,
-  "latitude": 38.0048431,
+  "latitude": 34.0371297,
   "limitedCommunication": false,
   "locusId": "",
-  "longitude": -121.8338427,
+  "longitude": -118.1014776,
   "meter": null,
-  "modelNum": "CHINT SCA60KTL-DO/US-480",
+  "modelNum": "SMA CORE 1 STP62-US-41",
   "newNote": null,
   "oneMinuteData": false,
   "outOfService": false,
   "outOfServiceNote": "",
-  "outOfServiceUntil": "2025-12-30T15:26:46.1973401Z",
+  "outOfServiceUntil": "2026-01-07T19:04:45.5211723Z",
   "outputAllowed": [
     2
   ],
-  "outputKey": "H444568",
-  "parentKey": "S65552",
-  "port": 1,
+  "outputKey": "",
+  "parentKey": "S68143",
+  "port": 0,
   "primary": false,
   "pullData": false,
   "pvConfig": {
@@ -4954,30 +5721,42 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
     "combinerInputs": [
       {
         "name": "Idc1",
-        "value": 0
+        "value": 1
       },
       {
         "name": "Idc2",
-        "value": 0
+        "value": 2
       },
       {
         "name": "Idc3",
-        "value": 0
+        "value": 1
+      },
+      {
+        "name": "Idc4",
+        "value": 2
+      },
+      {
+        "name": "Idc5",
+        "value": 1
+      },
+      {
+        "name": "Idc6",
+        "value": 2
       }
     ],
     "degrade": 0.5,
     "fileAKey": "",
     "fileBKey": "",
-    "hasIntegratedCombiners": false,
+    "hasIntegratedCombiners": true,
     "inverters": [
       {
         "acLoss": 0,
         "acVoltage": 480,
-        "azimuth": 196,
+        "azimuth": 180,
         "bifacialRatio": 0,
-        "dcAmps": 204,
+        "dcAmps": 0,
         "dcLoss": 0,
-        "dcSize": 68.04,
+        "dcSize": 8.72,
         "dcVoltage": 1000,
         "derate": 0.9,
         "derateDetail": false,
@@ -5003,9 +5782,9 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
           "scaleY": 0
         },
         "installationType": 2,
-        "inverterKva": 66,
-        "inverterKw": 60,
-        "inverterLoss": 1,
+        "inverterKva": 0,
+        "inverterKw": 62.5,
+        "inverterLoss": 0,
         "inverterName": "",
         "lightInducedDegradation": 0,
         "limitOne": 0,
@@ -5014,32 +5793,32 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
         "limitTwo": 0,
         "mismatch": 0,
         "moduleArea": 0,
-        "mppAmps": 12.97,
-        "mppVoltage": 41.64,
-        "mppWatts": 540.0708000000001,
-        "numOfStrings": 7,
-        "panelsPerString": 18,
+        "mppAmps": 13.04,
+        "mppVoltage": 41.8,
+        "mppWatts": 545.0719999999999,
+        "numOfStrings": 9,
+        "panelsPerString": 16,
         "pmaxDeviation": 0,
         "pvSystConfig": {
-          "cellArea": 0,
-          "cellType": -1,
-          "cellsParallel": 0,
-          "cellsSeries": 0,
-          "impp": 0,
-          "isc": 0,
+          "cellArea": 166.5,
+          "cellType": 0,
+          "cellsParallel": 2,
+          "cellsSeries": 72,
+          "impp": 13.04,
+          "isc": 13.92,
           "key": "",
-          "manufacturer": "",
-          "model": "",
-          "muIsc": 0,
-          "muPMax": 0,
-          "rSeries": 0,
-          "rShunt": 0,
-          "rShuntExp": 0,
-          "rShuntGinc": 0,
-          "vmpp": 0,
-          "voc": 0
+          "manufacturer": "Longi Solar",
+          "model": "LR5-72HBD-545M",
+          "muIsc": 0.063971119133574,
+          "muPMax": -0.34,
+          "rSeries": 0.19,
+          "rShunt": 241,
+          "rShuntExp": 3,
+          "rShuntGinc": 3000,
+          "vmpp": 41.8,
+          "voc": 49.65
         },
-        "pvSystModuleId": 0,
+        "pvSystModuleId": 937,
         "pvSystOutOfSync": false,
         "pvUsaConfig": {
           "ambientTemperature": 0,
@@ -5062,12 +5841,12 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
           },
           "regions": []
         },
-        "tempCoefficient": -0.5,
-        "tilt": 9,
+        "tempCoefficient": -0.34,
+        "tilt": 1,
         "tracking": 0,
         "trackingAngle": 0,
         "transformerLoss": 0,
-        "wattsPerPanel": 540
+        "wattsPerPanel": 545
       }
     ],
     "monthlyDerate": {
@@ -5085,57 +5864,57 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "sep": 1
     },
     "monthlyOutput": {
-      "apr": 10855,
-      "aug": 12799,
-      "dec": 4549,
-      "feb": 5363,
-      "jan": 4580,
-      "jul": 13760,
-      "jun": 13500,
-      "mar": 8562,
-      "may": 12819,
-      "nov": 5633,
-      "oct": 8304,
-      "sep": 10481
+      "apr": 0,
+      "aug": 0,
+      "dec": 0,
+      "feb": 0,
+      "jan": 0,
+      "jul": 0,
+      "jun": 0,
+      "mar": 0,
+      "may": 0,
+      "nov": 0,
+      "oct": 0,
+      "sep": 0
     },
-    "pvModelType": 0
+    "pvModelType": 2
   },
   "readOnly": false,
   "registerOffsets": [
     {
       "index": 0,
-      "name": "KWHoffset",
-      "registerAddress": 22,
-      "registerModbusName": "Active Energy Gross",
+      "name": "",
+      "registerAddress": 9000,
+      "registerModbusName": "Active Energy Net Raw",
       "value": 0
     },
     {
       "index": 1,
-      "name": "",
-      "registerAddress": 9999,
-      "registerModbusName": "Active Energy Gross Raw",
+      "name": "KWHoffset",
+      "registerAddress": 30531,
+      "registerModbusName": "Active Energy Net",
       "value": 0
     }
   ],
   "reportExclude": false,
   "reverse": false,
   "sampleRate": 0,
-  "serialMode": 2,
-  "serialNum": "",
+  "serialMode": 0,
+  "serialNum": "1",
   "settings": [
     {
       "index": 0,
-      "name": "dev:baud",
-      "originalValue": 9600,
-      "type": 1,
-      "value": 9600
+      "name": "dev:portMode",
+      "originalValue": "N/A",
+      "type": 0,
+      "value": "N/A"
     },
     {
       "index": 1,
-      "name": "dev:portMode",
-      "originalValue": "rs485",
-      "type": 0,
-      "value": "rs485"
+      "name": "dev:UnitID",
+      "originalValue": 3,
+      "type": 1,
+      "value": 3
     },
     {
       "index": 2,
@@ -5146,140 +5925,108 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
     },
     {
       "index": 3,
-      "name": "dev:ScaleKW",
-      "originalValue": 0.1,
-      "type": 2,
-      "value": 0.1
+      "name": "dev:tcpretry",
+      "originalValue": "3",
+      "type": 0,
+      "value": "3"
     },
     {
       "index": 4,
-      "name": "dev:ScaleV",
-      "originalValue": "0.1",
-      "type": 0,
-      "value": "0.1"
+      "name": "dev:ScaleKWH",
+      "originalValue": 1,
+      "type": 2,
+      "value": 1
     },
     {
       "index": 5,
-      "name": "dev:ScaleI",
-      "originalValue": "0.1",
-      "type": 0,
-      "value": "0.1"
+      "name": "dev:ScaleKW",
+      "originalValue": 0.001,
+      "type": 2,
+      "value": 0.001
     },
     {
       "index": 6,
-      "name": "dev:ScaleVDC",
-      "originalValue": "0.1",
+      "name": "dev:ScaleV",
+      "originalValue": "0.01",
       "type": 0,
-      "value": "0.1"
+      "value": "0.01"
     },
     {
       "index": 7,
-      "name": "dev:ScaleIDC",
-      "originalValue": "0.1",
+      "name": "dev:ScaleI",
+      "originalValue": "0.001",
       "type": 0,
-      "value": "0.1"
+      "value": "0.001"
     },
     {
       "index": 8,
       "name": "dev:ScaleFrequency",
-      "originalValue": "0.1",
+      "originalValue": "0.01",
       "type": 0,
-      "value": "0.1"
+      "value": "0.01"
     },
     {
       "index": 9,
-      "name": "dev:ScaleKWH",
-      "originalValue": 0.1,
-      "type": 2,
-      "value": 0.1
+      "name": "dev:ScaleKVAR",
+      "originalValue": "0.001",
+      "type": 0,
+      "value": "0.001"
     },
     {
       "index": 10,
-      "name": "dev:ScaleT",
-      "originalValue": "0.1",
-      "type": 0,
-      "value": "0.1"
-    },
-    {
-      "index": 11,
-      "name": "dev:ScaleKVA",
-      "originalValue": "0.1",
-      "type": 0,
-      "value": "0.1"
-    },
-    {
-      "index": 12,
       "name": "dev:ScalePF",
       "originalValue": "0.001",
       "type": 0,
       "value": "0.001"
     },
     {
+      "index": 11,
+      "name": "dev:ScaleTemp",
+      "originalValue": "0.1",
+      "type": 0,
+      "value": "0.1"
+    },
+    {
+      "index": 12,
+      "name": "dev:ScaleKVA",
+      "originalValue": "0.001",
+      "type": 0,
+      "value": "0.001"
+    },
+    {
       "index": 13,
-      "name": "dev:ScaleKVAR",
-      "originalValue": "0.1",
-      "type": 0,
-      "value": "0.1"
-    },
-    {
-      "index": 15,
-      "name": "dev:ScaleKWDC",
-      "originalValue": "0.1",
-      "type": 0,
-      "value": "0.1"
-    },
-    {
-      "index": 16,
-      "name": "dev:Alias",
-      "originalValue": "Status=opmode",
-      "type": 0,
-      "value": "Status=opmode"
-    },
-    {
-      "index": 17,
       "name": "ShortName",
-      "originalValue": "inv4",
+      "originalValue": "PV0",
       "type": 0,
-      "value": "inv4"
+      "value": "PV0"
     }
   ],
-  "siteDcShare": 903.9599999999999,
-  "siteHasInverterGroups": false,
-  "sort": 14,
+  "siteDcShare": 75.21000000000001,
+  "siteHasInverterGroups": true,
+  "sort": 11,
   "syncToLocus": false,
   "tags": {
     "attributes": [],
-    "key": "{\"ancestorKey\":\"H444573\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
+    "key": "{\"ancestorKey\":\"H511568\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
     "keywords": [],
     "lastChanged": null,
-    "notes": [
-      {
-        "authorKey": "U28898",
-        "authorName": "Forest Lehman",
-        "date": "2024-09-05T18:01:39Z",
-        "isEvent": true,
-        "key": "x0549f8c0",
-        "kind": "text",
-        "parentKey": "H444573",
-        "text": "Filled in energy and power values, FillVirtual, 3/13/2024 4:50:00 PM through 3/26/2024 12:15:00 PM"
-      }
-    ],
+    "notes": [],
     "powerDisplays": []
   },
   "taskKey": "",
   "thermal": null,
   "thread": 0,
-  "ts": "2025-05-20T06:35:19Z",
+  "ts": "2026-01-07T19:04:18Z",
   "turbine": null,
-  "unitId": 0,
+  "unitId": 3,
   "uploadRate": 0,
   "validatedByKey": "",
   "validatedDateTime": "0001-01-01T00:00:00",
   "virtualRegisters": [],
   "virtualWeather": null,
   "weather": null,
-  "weatherStationKey1": "H444582",
-  "weatherStationKey2": "H441071",
+  "weatherStationKey1": "",
+  "weatherStationKey2": "",
   "zone": null
 }
 ```
@@ -5289,15 +6036,15 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
 ```json
 {
   "additionalRegisters": [],
-  "address": "4",
+  "address": "192.168.13.51",
   "alsoHardwareId": 0,
   "alsoSiteId": 0,
   "array": null,
   "assetId": "",
-  "autoCorrectDecrease": true,
-  "autoCorrectIncrease": true,
-  "baud": "9600",
-  "capacityKw": 60,
+  "autoCorrectDecrease": false,
+  "autoCorrectIncrease": false,
+  "baud": "",
+  "capacityKw": 62.5,
   "chartSectionCode": 1,
   "commonDC": false,
   "commonDCAllMatch": true,
@@ -5306,16 +6053,28 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
   ],
   "conflictNames": null,
   "dashboardKey": "",
-  "dcRating": 68040,
+  "dcRating": 78480,
   "debug": false,
-  "decreaseDifference": 6000,
+  "decreaseDifference": 100,
   "defaultChart": 2,
-  "description": "Inv 4 (60 kw) CPS-SCA60KTL-DO/US-480",
+  "description": "INVERTER 1",
   "deviceRegisters": [
+    {
+      "dataName": "KwhAC",
+      "dataNameDetail": null,
+      "index": 0,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Active Energy Net (with Offset)",
+      "name": "Active Energy Net",
+      "standardDataName": "Active_Energy_Gross",
+      "units": "kWh"
+    },
     {
       "dataName": "KwAC",
       "dataNameDetail": null,
-      "index": 0,
+      "index": 1,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -5325,81 +6084,93 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "units": "kW"
     },
     {
-      "dataName": "KwhAC",
-      "dataNameDetail": null,
-      "index": 1,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Active Energy Net (with Offset)",
-      "name": "Active Energy Gross",
-      "standardDataName": "Active_Energy_Gross",
-      "units": "kWh"
-    },
-    {
-      "dataName": "KwhACraw",
+      "dataName": "Active_Power_A",
       "dataNameDetail": null,
       "index": 2,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Active Energy Net (without Offset)",
-      "name": "Active Energy Gross Raw",
-      "standardDataName": "",
-      "units": "kWh"
+      "localizedName": "Active Power A",
+      "name": "Active Power A",
+      "standardDataName": "Active_Power_A",
+      "units": "kW"
     },
     {
-      "dataName": "Frequency",
+      "dataName": "Active_Power_B",
       "dataNameDetail": null,
       "index": 3,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Frequency",
-      "name": "Frequency",
-      "standardDataName": "Frequency",
-      "units": "Hz"
+      "localizedName": "Active Power B",
+      "name": "Active Power B",
+      "standardDataName": "Active_Power_B",
+      "units": "kW"
     },
     {
-      "dataName": "VacAB",
+      "dataName": "Active_Power_C",
       "dataNameDetail": null,
       "index": 4,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "AC Voltage A-B (Line-Line)",
-      "name": "AC Voltage AB",
-      "standardDataName": "Voltage_AB",
-      "units": "V"
+      "localizedName": "Active Power C",
+      "name": "Active Power C",
+      "standardDataName": "Active_Power_C",
+      "units": "kW"
     },
     {
-      "dataName": "VacBC",
+      "dataName": "VacA",
       "dataNameDetail": null,
       "index": 5,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "AC Voltage B-C (Line-Line)",
-      "name": "AC Voltage BC",
-      "standardDataName": "Voltage_BC",
+      "localizedName": "AC Voltage A (Line-Neutral)",
+      "name": "AC Voltage AN",
+      "standardDataName": "Voltage_AN",
       "units": "V"
     },
     {
-      "dataName": "VacCA",
+      "dataName": "VacB",
       "dataNameDetail": null,
       "index": 6,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "AC Voltage C-A (Line-Line)",
-      "name": "AC Voltage CA",
-      "standardDataName": "Voltage_CA",
+      "localizedName": "AC Voltage B (Line-Neutral)",
+      "name": "AC Voltage BN",
+      "standardDataName": "Voltage_BN",
       "units": "V"
+    },
+    {
+      "dataName": "VacC",
+      "dataNameDetail": null,
+      "index": 7,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "AC Voltage C (Line-Neutral)",
+      "name": "AC Voltage CN",
+      "standardDataName": "Voltage_CN",
+      "units": "V"
+    },
+    {
+      "dataName": "Iac",
+      "dataNameDetail": null,
+      "index": 8,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "AC Current Average",
+      "name": "AC Current Average",
+      "standardDataName": "Current_Avg",
+      "units": "A"
     },
     {
       "dataName": "IacA",
       "dataNameDetail": null,
-      "index": 7,
+      "index": 9,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -5411,7 +6182,7 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
     {
       "dataName": "IacB",
       "dataNameDetail": null,
-      "index": 8,
+      "index": 10,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -5423,7 +6194,7 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
     {
       "dataName": "IacC",
       "dataNameDetail": null,
-      "index": 9,
+      "index": 11,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -5433,177 +6204,21 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "units": "A"
     },
     {
-      "dataName": "Iac",
-      "dataNameDetail": null,
-      "index": 10,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "AC Current Average",
-      "name": "AC Current Average",
-      "standardDataName": "Current_Avg",
-      "units": "A"
-    },
-    {
-      "dataName": "Vac",
-      "dataNameDetail": null,
-      "index": 11,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "AC Voltage Average L-N",
-      "name": "AC Voltage Average L-N",
-      "standardDataName": "Voltage_LN_Avg",
-      "units": "V"
-    },
-    {
-      "dataName": "KVA",
+      "dataName": "Frequency",
       "dataNameDetail": null,
       "index": 12,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Apparent Power",
-      "name": "Apparent Power",
-      "standardDataName": "Apparent_Power",
-      "units": "kVA"
-    },
-    {
-      "dataName": "KVAR",
-      "dataNameDetail": null,
-      "index": 13,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Reactive Power",
-      "name": "Reactive Power",
-      "standardDataName": "Reactive_Power",
-      "units": "kVAR"
-    },
-    {
-      "dataName": "PowerFactor",
-      "dataNameDetail": null,
-      "index": 14,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Power Factor",
-      "name": "Power Factor",
-      "standardDataName": "Power_Factor",
-      "units": "PF"
-    },
-    {
-      "dataName": "Vdc1",
-      "dataNameDetail": null,
-      "index": 15,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC Voltage 1",
-      "name": "DC Voltage 1",
-      "standardDataName": "DC_Voltage1",
-      "units": "V"
-    },
-    {
-      "dataName": "Idc1",
-      "dataNameDetail": null,
-      "index": 16,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC current 1",
-      "name": "DC Current 1",
-      "standardDataName": "DC_Current1",
-      "units": "A"
-    },
-    {
-      "dataName": "Vdc2",
-      "dataNameDetail": null,
-      "index": 17,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC Voltage 2",
-      "name": "DC Voltage 2",
-      "standardDataName": "DC_Voltage2",
-      "units": "V"
-    },
-    {
-      "dataName": "Idc2",
-      "dataNameDetail": null,
-      "index": 18,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC current 2",
-      "name": "DC Current 2",
-      "standardDataName": "DC_Current2",
-      "units": "A"
-    },
-    {
-      "dataName": "Vdc3",
-      "dataNameDetail": null,
-      "index": 19,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC Voltage 3",
-      "name": "DC Voltage 3",
-      "standardDataName": "DC_Voltage3",
-      "units": "V"
-    },
-    {
-      "dataName": "Idc3",
-      "dataNameDetail": null,
-      "index": 20,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC current 3",
-      "name": "DC Current 3",
-      "standardDataName": "DC_Current3",
-      "units": "A"
-    },
-    {
-      "dataName": "Idc",
-      "dataNameDetail": null,
-      "index": 21,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC Current Total",
-      "name": "DC Current Total",
-      "standardDataName": "DC_Current_Total",
-      "units": "A"
-    },
-    {
-      "dataName": "Vdc",
-      "dataNameDetail": null,
-      "index": 22,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC Voltage Average",
-      "name": "DC Voltage Average",
-      "standardDataName": "DC_Voltage_Avg",
-      "units": "V"
-    },
-    {
-      "dataName": "KwDC",
-      "dataNameDetail": null,
-      "index": 23,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "DC Power",
-      "name": "DC Power Total",
-      "standardDataName": "DC_Power_Total",
-      "units": "kW"
+      "localizedName": "Frequency",
+      "name": "Frequency",
+      "standardDataName": "Frequency",
+      "units": "Hz"
     },
     {
       "dataName": "DeviceTemp",
       "dataNameDetail": null,
-      "index": 24,
+      "index": 13,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -5613,9 +6228,117 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "units": "°F"
     },
     {
+      "dataName": "VacAB",
+      "dataNameDetail": null,
+      "index": 14,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "AC Voltage A-B (Line-Line)",
+      "name": "AC Voltage AB",
+      "standardDataName": "Voltage_AB",
+      "units": "V"
+    },
+    {
+      "dataName": "VacBC",
+      "dataNameDetail": null,
+      "index": 15,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "AC Voltage B-C (Line-Line)",
+      "name": "AC Voltage BC",
+      "standardDataName": "Voltage_BC",
+      "units": "V"
+    },
+    {
+      "dataName": "VacCA",
+      "dataNameDetail": null,
+      "index": 16,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "AC Voltage C-A (Line-Line)",
+      "name": "AC Voltage CA",
+      "standardDataName": "Voltage_CA",
+      "units": "V"
+    },
+    {
+      "dataName": "Reactive_Power_A",
+      "dataNameDetail": null,
+      "index": 17,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Reactive Power A",
+      "name": "Reactive Power ",
+      "standardDataName": "",
+      "units": "kVAR"
+    },
+    {
+      "dataName": "Reactive_Power_B",
+      "dataNameDetail": null,
+      "index": 18,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Reactive Power B",
+      "name": "Reactive Power B",
+      "standardDataName": "",
+      "units": "kVAR"
+    },
+    {
+      "dataName": "Reactive_Power_C",
+      "dataNameDetail": null,
+      "index": 19,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Reactive Power C",
+      "name": "Reactive Power C",
+      "standardDataName": "",
+      "units": "kVAR"
+    },
+    {
+      "dataName": "KVAR",
+      "dataNameDetail": null,
+      "index": 20,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Reactive Power",
+      "name": "Reactive Power",
+      "standardDataName": "Reactive_Power",
+      "units": "kVAR"
+    },
+    {
+      "dataName": "KVA",
+      "dataNameDetail": null,
+      "index": 21,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Apparent Power",
+      "name": "Apparent Power",
+      "standardDataName": "Apparent_Power",
+      "units": "kVA"
+    },
+    {
+      "dataName": "PowerFactor",
+      "dataNameDetail": null,
+      "index": 22,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Power Factor",
+      "name": "Power Factor",
+      "standardDataName": "Power_Factor",
+      "units": "PF"
+    },
+    {
       "dataName": "InternalTemp",
       "dataNameDetail": null,
-      "index": 25,
+      "index": 23,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -5625,129 +6348,273 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "units": "°F"
     },
     {
-      "dataName": "Temp_XMFR",
+      "dataName": "KwhACraw",
+      "dataNameDetail": null,
+      "index": 24,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Active Energy Net (without Offset)",
+      "name": "Active Energy Net Raw",
+      "standardDataName": "",
+      "units": "kWh"
+    },
+    {
+      "dataName": "Idc1",
+      "dataNameDetail": null,
+      "index": 25,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC current 1",
+      "name": "DC Current Input 1",
+      "standardDataName": "DC_Current1",
+      "units": "A"
+    },
+    {
+      "dataName": "Vdc1",
       "dataNameDetail": null,
       "index": 26,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "XMFR Temperature",
-      "name": "XMFR Temperature",
-      "standardDataName": "Temp_XMFR",
-      "units": "°F"
+      "localizedName": "DC Voltage 1",
+      "name": "DC Voltage Input 1",
+      "standardDataName": "DC_Voltage1",
+      "units": "V"
     },
     {
-      "dataName": "Fault",
+      "dataName": "KwDC1",
       "dataNameDetail": null,
       "index": 27,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Fault Code",
-      "name": "Fault Code",
-      "standardDataName": "Fault",
-      "units": ""
+      "localizedName": "DC power 1",
+      "name": "DC Power 1",
+      "standardDataName": "DC_Power1",
+      "units": "kW"
     },
     {
-      "dataName": "Warning",
+      "dataName": "Idc2",
       "dataNameDetail": null,
       "index": 28,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Warn Code",
-      "name": "Warn Code",
-      "standardDataName": "",
-      "units": ""
+      "localizedName": "DC current 2",
+      "name": "DC Current Input 2",
+      "standardDataName": "DC_Current2",
+      "units": "A"
     },
     {
-      "dataName": "Fault0",
+      "dataName": "Vdc2",
       "dataNameDetail": null,
       "index": 29,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Fault Code 0",
-      "name": "Fault Code 0",
-      "standardDataName": "Fault0",
-      "units": ""
+      "localizedName": "DC Voltage 2",
+      "name": "DC Voltage Input 2",
+      "standardDataName": "DC_Voltage2",
+      "units": "V"
     },
     {
-      "dataName": "Fault1",
+      "dataName": "KwDC2",
       "dataNameDetail": null,
       "index": 30,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Fault 1",
-      "name": "Fault Code 1",
-      "standardDataName": "Fault1",
-      "units": ""
+      "localizedName": "DC power 2",
+      "name": "DC Power 2",
+      "standardDataName": "DC_Power2",
+      "units": "kW"
     },
     {
-      "dataName": "Fault2",
+      "dataName": "Idc3",
       "dataNameDetail": null,
       "index": 31,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Fault 2",
-      "name": "Fault Code 2",
-      "standardDataName": "Fault2",
-      "units": ""
+      "localizedName": "DC current 3",
+      "name": "DC Current Input 3",
+      "standardDataName": "DC_Current3",
+      "units": "A"
     },
     {
-      "dataName": "Fault3",
+      "dataName": "Vdc3",
       "dataNameDetail": null,
       "index": 32,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Fault 3",
-      "name": "Fault Code 3",
-      "standardDataName": "Fault3",
-      "units": ""
+      "localizedName": "DC Voltage 3",
+      "name": "DC Voltage Input 3",
+      "standardDataName": "DC_Voltage3",
+      "units": "V"
     },
     {
-      "dataName": "Fault4",
+      "dataName": "KwDC3",
       "dataNameDetail": null,
       "index": 33,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Fault 4",
-      "name": "Fault Code 4",
-      "standardDataName": "Fault4",
-      "units": ""
+      "localizedName": "DC power 3",
+      "name": "DC Power 3",
+      "standardDataName": "DC_Power3",
+      "units": "kW"
     },
     {
-      "dataName": "opmode",
+      "dataName": "Idc4",
       "dataNameDetail": null,
       "index": 34,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Operating Mode",
-      "name": "Inverter Work Mode",
-      "standardDataName": "Op_Mode",
-      "units": "Derate: 0x800;Running:0x1000;Standby:0x2000;Check:0x4000;Fault:0x8000"
+      "localizedName": "DC current 4",
+      "name": "DC Current Input 4",
+      "standardDataName": "DC_Current4",
+      "units": "A"
     },
     {
-      "dataName": "Firmware_Version",
+      "dataName": "Vdc4",
       "dataNameDetail": null,
       "index": 35,
-      "isArchived": false,
+      "isArchived": true,
       "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "Firmware Version",
-      "name": "Firmware Version",
-      "standardDataName": "Firmware_Version",
-      "units": ""
+      "isRaw": true,
+      "localizedName": "DC voltage 4",
+      "name": "DC Voltage Input 4",
+      "standardDataName": "DC_Voltage4",
+      "units": "V"
+    },
+    {
+      "dataName": "KwDC4",
+      "dataNameDetail": null,
+      "index": 36,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC power 4",
+      "name": "DC Power 4",
+      "standardDataName": "DC_Power4",
+      "units": "kW"
+    },
+    {
+      "dataName": "Idc5",
+      "dataNameDetail": null,
+      "index": 37,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC current 5",
+      "name": "DC Current Input 5",
+      "standardDataName": "DC_Current5",
+      "units": "A"
+    },
+    {
+      "dataName": "Vdc5",
+      "dataNameDetail": null,
+      "index": 38,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC Voltage 5",
+      "name": "DC Voltage Input 5",
+      "standardDataName": "DC_Voltage5",
+      "units": "V"
+    },
+    {
+      "dataName": "KwDC5",
+      "dataNameDetail": null,
+      "index": 39,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC power 5",
+      "name": "DC Power 5",
+      "standardDataName": "DC_Power5",
+      "units": "kW"
+    },
+    {
+      "dataName": "Idc6",
+      "dataNameDetail": null,
+      "index": 40,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC current 6",
+      "name": "DC Current Input 6",
+      "standardDataName": "DC_Current6",
+      "units": "A"
+    },
+    {
+      "dataName": "Vdc6",
+      "dataNameDetail": null,
+      "index": 41,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC Voltage 6",
+      "name": "DC Voltage Input 6",
+      "standardDataName": "DC_Voltage6",
+      "units": "V"
+    },
+    {
+      "dataName": "KwDC6",
+      "dataNameDetail": null,
+      "index": 42,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC power 6",
+      "name": "DC Power 6",
+      "standardDataName": "DC_Power6",
+      "units": "kW"
+    },
+    {
+      "dataName": "Idc",
+      "dataNameDetail": null,
+      "index": 43,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC Current Total",
+      "name": "DC Current Input (total)",
+      "standardDataName": "DC_Current_Total",
+      "units": "A"
+    },
+    {
+      "dataName": "Vdc",
+      "dataNameDetail": null,
+      "index": 44,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC Voltage Average",
+      "name": "DC Voltage Input (average)",
+      "standardDataName": "DC_Voltage_Avg",
+      "units": "V"
+    },
+    {
+      "dataName": "KwDC",
+      "dataNameDetail": null,
+      "index": 45,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "DC Power",
+      "name": "DC Power (total)",
+      "standardDataName": "DC_Power_Total",
+      "units": "kW"
     },
     {
       "dataName": "Serial_Number",
       "dataNameDetail": null,
-      "index": 36,
+      "index": 46,
       "isArchived": false,
       "isIgnored": false,
       "isRaw": false,
@@ -5755,59 +6622,95 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "name": "Serial Number",
       "standardDataName": "Serial_Number",
       "units": ""
+    },
+    {
+      "dataName": "Fault",
+      "dataNameDetail": null,
+      "index": 47,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "EventID",
+      "name": "EventID",
+      "standardDataName": "Fault",
+      "units": ""
+    },
+    {
+      "dataName": "Status",
+      "dataNameDetail": null,
+      "index": 48,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Operating Status",
+      "name": "Condition",
+      "standardDataName": "Op_Status",
+      "units": ""
+    },
+    {
+      "dataName": "Firmware_Version",
+      "dataNameDetail": null,
+      "index": 49,
+      "isArchived": false,
+      "isIgnored": false,
+      "isRaw": false,
+      "localizedName": "Firmware Version",
+      "name": "Firmware",
+      "standardDataName": "Firmware_Version",
+      "units": ""
     }
   ],
-  "driverDescription": "Chint / Solectria TL String Inverter [without Control]",
-  "driverFlags": 16386,
-  "driverId": 20630,
-  "driverName": "Chint / Solectria TL String Inverter w/o Control (SS) Standard",
-  "driverNotes": "Know issue on some firmware with kWh Energy not counting through the day, and only adding daily values everynight, FW 1797, 2053, 1284\r\rModbus Map: https://www.chintpowersystems.com/downloads/\r\r14-20-23-28-36kW Modbus Map\r25kW-208V Modbus Map\r25kW-408V Modbus Map\r50-60kW Modbus Map\r100/125kW-600V and 100kW-480 Modbus Map\r250/275kW-800 Modbus Map",
+  "driverDescription": "Tri-Power Core1 inverter with no Controls",
+  "driverFlags": 18434,
+  "driverId": 19880,
+  "driverName": "SMA Tri-Power Core1 Inverter (SS) Standard",
+  "driverNotes": "Legacy Drivers: 2136, 3227, 566, 707\r\r[06.08.2023 - Sagar]\rUpdated the frequency scaling expression.",
   "driverRegisters": [],
   "eGauge": null,
   "fixedEnergyOffset": 0,
   "functionCode": 1,
-  "functionId": "PV3",
+  "functionId": "PV0",
   "gateway": null,
   "gatewayFwVersion": "",
-  "gatewayId": "000CC68CBCC1",
-  "gatewayKey": "H444567",
+  "gatewayId": "000CC68FAF30",
+  "gatewayKey": "H511564",
   "gatewayScriptCount": "",
-  "gatewayType": 2,
+  "gatewayType": 7,
   "groupAllowed": [
     28
   ],
   "groupKey": "",
-  "hardwareId": "C20909_S65552_PV3",
+  "hardwareId": "C20909_S68143_PV0",
   "hardwareStatus": 1,
   "hasCapacity": true,
   "hash": "",
-  "increaseDifference": 6000,
-  "installDate": "2023-04-25",
-  "instance": 3,
+  "increaseDifference": -1,
+  "installDate": "2024-07-12",
+  "instance": 0,
   "inverterKw": 0,
   "isConflictAcknowledged": false,
   "isReportable": true,
-  "isTcp": false,
+  "isTcp": true,
   "isThermal": false,
-  "key": "H444573",
+  "key": "H511568",
   "kiosk": null,
-  "latitude": 38.0048431,
+  "latitude": 34.0371297,
   "limitedCommunication": false,
   "locusId": "",
-  "longitude": -121.8338427,
+  "longitude": -118.1014776,
   "meter": null,
-  "modelNum": "CHINT SCA60KTL-DO/US-480",
+  "modelNum": "SMA CORE 1 STP62-US-41",
   "newNote": "",
   "oneMinuteData": false,
   "outOfService": false,
   "outOfServiceNote": "",
-  "outOfServiceUntil": "2025-12-30T15:45:17.6497725Z",
+  "outOfServiceUntil": "2026-01-07T19:05:57.2547324Z",
   "outputAllowed": [
     2
   ],
-  "outputKey": "H444568",
-  "parentKey": "S65552",
-  "port": 1,
+  "outputKey": "",
+  "parentKey": "S68143",
+  "port": 0,
   "primary": false,
   "pullData": false,
   "pvConfig": {
@@ -5817,30 +6720,42 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
     "combinerInputs": [
       {
         "name": "Idc1",
-        "value": 0
+        "value": 1
       },
       {
         "name": "Idc2",
-        "value": 0
+        "value": 2
       },
       {
         "name": "Idc3",
-        "value": 0
+        "value": 1
+      },
+      {
+        "name": "Idc4",
+        "value": 2
+      },
+      {
+        "name": "Idc5",
+        "value": 1
+      },
+      {
+        "name": "Idc6",
+        "value": 2
       }
     ],
     "degrade": 0.5,
     "fileAKey": "",
     "fileBKey": "",
-    "hasIntegratedCombiners": false,
+    "hasIntegratedCombiners": true,
     "inverters": [
       {
         "acLoss": 0,
         "acVoltage": 480,
-        "azimuth": 196,
+        "azimuth": 180,
         "bifacialRatio": 0,
-        "dcAmps": 204,
+        "dcAmps": 0,
         "dcLoss": 0,
-        "dcSize": 68.04,
+        "dcSize": 78.48,
         "dcVoltage": 1000,
         "derate": 0.9,
         "derateDetail": false,
@@ -5866,9 +6781,9 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
           "scaleY": 0
         },
         "installationType": 2,
-        "inverterKva": 66,
-        "inverterKw": 60,
-        "inverterLoss": 1,
+        "inverterKva": 0,
+        "inverterKw": 62.5,
+        "inverterLoss": 0,
         "inverterName": "",
         "lightInducedDegradation": 0,
         "limitOne": 0,
@@ -5877,32 +6792,32 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
         "limitTwo": 0,
         "mismatch": 0,
         "moduleArea": 0,
-        "mppAmps": 12.97,
-        "mppVoltage": 41.64,
-        "mppWatts": 540.0708000000001,
-        "numOfStrings": 7,
-        "panelsPerString": 18,
+        "mppAmps": 13.04,
+        "mppVoltage": 41.8,
+        "mppWatts": 545.0719999999999,
+        "numOfStrings": 9,
+        "panelsPerString": 16,
         "pmaxDeviation": 0,
         "pvSystConfig": {
-          "cellArea": 0,
-          "cellType": -1,
-          "cellsParallel": 0,
-          "cellsSeries": 0,
-          "impp": 0,
-          "isc": 0,
+          "cellArea": 166.5,
+          "cellType": 0,
+          "cellsParallel": 2,
+          "cellsSeries": 72,
+          "impp": 13.04,
+          "isc": 13.92,
           "key": "",
-          "manufacturer": "",
-          "model": "",
-          "muIsc": 0,
-          "muPMax": 0,
-          "rSeries": 0,
-          "rShunt": 0,
-          "rShuntExp": 0,
-          "rShuntGinc": 0,
-          "vmpp": 0,
-          "voc": 0
+          "manufacturer": "Longi Solar",
+          "model": "LR5-72HBD-545M",
+          "muIsc": 0.063971119133574,
+          "muPMax": -0.34,
+          "rSeries": 0.19,
+          "rShunt": 241,
+          "rShuntExp": 3,
+          "rShuntGinc": 3000,
+          "vmpp": 41.8,
+          "voc": 49.65
         },
-        "pvSystModuleId": 0,
+        "pvSystModuleId": 937,
         "pvSystOutOfSync": false,
         "pvUsaConfig": {
           "ambientTemperature": 0,
@@ -5925,12 +6840,12 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
           },
           "regions": []
         },
-        "tempCoefficient": -0.5,
-        "tilt": 9,
+        "tempCoefficient": -0.34,
+        "tilt": 1,
         "tracking": 0,
         "trackingAngle": 0,
         "transformerLoss": 0,
-        "wattsPerPanel": 540
+        "wattsPerPanel": 545
       }
     ],
     "monthlyDerate": {
@@ -5948,42 +6863,42 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
       "sep": 1
     },
     "monthlyOutput": {
-      "apr": 10855,
-      "aug": 12799,
-      "dec": 4549,
-      "feb": 5363,
-      "jan": 4580,
-      "jul": 13760,
-      "jun": 13500,
-      "mar": 8562,
-      "may": 12819,
-      "nov": 5633,
-      "oct": 8304,
-      "sep": 10481
+      "apr": 0,
+      "aug": 0,
+      "dec": 0,
+      "feb": 0,
+      "jan": 0,
+      "jul": 0,
+      "jun": 0,
+      "mar": 0,
+      "may": 0,
+      "nov": 0,
+      "oct": 0,
+      "sep": 0
     },
-    "pvModelType": 0
+    "pvModelType": 2
   },
   "readOnly": false,
   "registerOffsets": [],
   "reportExclude": false,
   "reverse": false,
   "sampleRate": 0,
-  "serialMode": 2,
-  "serialNum": "",
+  "serialMode": 0,
+  "serialNum": "1",
   "settings": [
     {
       "index": 0,
-      "name": "dev:baud",
-      "originalValue": 9600,
-      "type": 1,
-      "value": 9600
+      "name": "dev:portMode",
+      "originalValue": "N/A",
+      "type": 0,
+      "value": "N/A"
     },
     {
       "index": 1,
-      "name": "dev:portMode",
-      "originalValue": "rs485",
-      "type": 0,
-      "value": "rs485"
+      "name": "dev:UnitID",
+      "originalValue": 3,
+      "type": 1,
+      "value": 3
     },
     {
       "index": 2,
@@ -5994,140 +6909,108 @@ referer: https://apps.alsoenergy.com/powertrack/H444573/administration/config
     },
     {
       "index": 3,
-      "name": "dev:ScaleKW",
-      "originalValue": 0.1,
-      "type": 2,
-      "value": 0.1
+      "name": "dev:tcpretry",
+      "originalValue": "3",
+      "type": 0,
+      "value": "3"
     },
     {
       "index": 4,
-      "name": "dev:ScaleV",
-      "originalValue": "0.1",
-      "type": 0,
-      "value": "0.1"
+      "name": "dev:ScaleKWH",
+      "originalValue": 1,
+      "type": 2,
+      "value": 1
     },
     {
       "index": 5,
-      "name": "dev:ScaleI",
-      "originalValue": "0.1",
-      "type": 0,
-      "value": "0.1"
+      "name": "dev:ScaleKW",
+      "originalValue": 0.001,
+      "type": 2,
+      "value": 0.001
     },
     {
       "index": 6,
-      "name": "dev:ScaleVDC",
-      "originalValue": "0.1",
+      "name": "dev:ScaleV",
+      "originalValue": "0.01",
       "type": 0,
-      "value": "0.1"
+      "value": "0.01"
     },
     {
       "index": 7,
-      "name": "dev:ScaleIDC",
-      "originalValue": "0.1",
+      "name": "dev:ScaleI",
+      "originalValue": "0.001",
       "type": 0,
-      "value": "0.1"
+      "value": "0.001"
     },
     {
       "index": 8,
       "name": "dev:ScaleFrequency",
-      "originalValue": "0.1",
+      "originalValue": "0.01",
       "type": 0,
-      "value": "0.1"
+      "value": "0.01"
     },
     {
       "index": 9,
-      "name": "dev:ScaleKWH",
-      "originalValue": 0.1,
-      "type": 2,
-      "value": 0.1
+      "name": "dev:ScaleKVAR",
+      "originalValue": "0.001",
+      "type": 0,
+      "value": "0.001"
     },
     {
       "index": 10,
-      "name": "dev:ScaleT",
-      "originalValue": "0.1",
-      "type": 0,
-      "value": "0.1"
-    },
-    {
-      "index": 11,
-      "name": "dev:ScaleKVA",
-      "originalValue": "0.1",
-      "type": 0,
-      "value": "0.1"
-    },
-    {
-      "index": 12,
       "name": "dev:ScalePF",
       "originalValue": "0.001",
       "type": 0,
       "value": "0.001"
     },
     {
+      "index": 11,
+      "name": "dev:ScaleTemp",
+      "originalValue": "0.1",
+      "type": 0,
+      "value": "0.1"
+    },
+    {
+      "index": 12,
+      "name": "dev:ScaleKVA",
+      "originalValue": "0.001",
+      "type": 0,
+      "value": "0.001"
+    },
+    {
       "index": 13,
-      "name": "dev:ScaleKVAR",
-      "originalValue": "0.1",
-      "type": 0,
-      "value": "0.1"
-    },
-    {
-      "index": 14,
-      "name": "dev:ScaleKWDC",
-      "originalValue": "0.1",
-      "type": 0,
-      "value": "0.1"
-    },
-    {
-      "index": 15,
-      "name": "dev:Alias",
-      "originalValue": "Status=opmode",
-      "type": 0,
-      "value": "Status=opmode"
-    },
-    {
-      "index": 16,
       "name": "ShortName",
-      "originalValue": "inv4",
+      "originalValue": "PV0",
       "type": 0,
-      "value": "inv4"
+      "value": "PV0"
     }
   ],
-  "siteDcShare": 903.9599999999999,
-  "siteHasInverterGroups": false,
-  "sort": 14,
+  "siteDcShare": 78.48,
+  "siteHasInverterGroups": true,
+  "sort": 11,
   "syncToLocus": false,
   "tags": {
     "attributes": [],
-    "key": "{\"ancestorKey\":\"H444573\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
+    "key": "{\"ancestorKey\":\"H511568\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
     "keywords": [],
     "lastChanged": null,
-    "notes": [
-      {
-        "authorKey": "U28898",
-        "authorName": "Forest Lehman",
-        "date": "2024-09-05T18:01:39Z",
-        "isEvent": true,
-        "key": "x0549f8c0",
-        "kind": "text",
-        "parentKey": "H444573",
-        "text": "Filled in energy and power values, FillVirtual, 3/13/2024 4:50:00 PM through 3/26/2024 12:15:00 PM"
-      }
-    ],
+    "notes": [],
     "powerDisplays": []
   },
   "taskKey": "",
   "thermal": null,
   "thread": 0,
-  "ts": "2025-12-30T15:45:14Z",
+  "ts": "2026-01-07T19:05:55Z",
   "turbine": null,
-  "unitId": 0,
+  "unitId": 3,
   "uploadRate": 0,
   "validatedByKey": "",
   "validatedDateTime": "0001-01-01T00:00:00",
   "virtualRegisters": [],
   "virtualWeather": null,
   "weather": null,
-  "weatherStationKey1": "H444582",
-  "weatherStationKey2": "H441071",
+  "weatherStationKey1": "",
+  "weatherStationKey2": "",
   "zone": null
 }
 ```
