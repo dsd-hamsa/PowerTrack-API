@@ -184,9 +184,29 @@
           "type": "string"
         },
         "parameters": {
-          "type": "array",
-          "items": {
-            "type": "unknown"
+          "type": "object",
+          "properties": {
+            "index": {
+              "type": "number"
+            },
+            "info": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "readOnly": {
+              "type": "boolean"
+            },
+            "source": {
+              "type": "number"
+            },
+            "type": {
+              "type": "number"
+            },
+            "value": {
+              "type": "number"
+            }
           }
         },
         "parentKey": {
@@ -223,20 +243,20 @@
 **Request:**
 
 ```http
-GET /api/alerttrigger/H511568?lastChanged=2026-01-07T18:27:48Z
+GET /api/alerttrigger/H38211?lastChanged=2026-01-07T18:27:48Z
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
 ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/H511568/administration/alertsettings
+referer: https://apps.alsoenergy.com/powertrack/H38211/administration/config
 ```
 
 **Response:**
 
 ```json
 {
-  "assetCode": 7,
-  "calculatedCapacity": 63,
-  "capacity": 63,
+  "assetCode": 6,
+  "calculatedCapacity": 1070,
+  "capacity": 1070,
   "defaultTriggers": [
     {
       "alertTypeKey": "AI250",
@@ -252,7 +272,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511568/administration/alertsett
       "impact": 0,
       "isActive": false,
       "key": "",
-      "lastChanged": "2026-01-07T19:04:18Z",
+      "lastChanged": "2025-12-23T00:49:08Z",
       "name": "Device communication",
       "ownerKey": "",
       "parameters": [
@@ -266,7 +286,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511568/administration/alertsett
           "value": 0
         }
       ],
-      "parentKey": "H511568",
+      "parentKey": "H38211",
       "priorityLevel": 0,
       "sharing": 0,
       "startTime": 0,
@@ -275,24 +295,43 @@ referer: https://apps.alsoenergy.com/powertrack/H511568/administration/alertsett
       "sunMinElevation": 0
     },
     {
-      "alertTypeKey": "AI862",
+      "alertTypeKey": "AI353",
       "checkNoSnow": false,
       "checkSun": false,
       "checkTime": false,
       "delayHoursResolve": 0,
       "delayHoursTrigger": 0,
-      "description": "SMA TriPower Fault Alert following the SMA Event Messages Document.",
+      "description": "Underperforming zone or string detector.  Also detects invalid data on any input channel.",
       "endTime": 0,
       "hasImpact": false,
       "id": 0,
       "impact": 0,
       "isActive": false,
       "key": "",
-      "lastChanged": "2026-01-07T19:04:18Z",
-      "name": "SMA STP/TriPower Fault Alert",
+      "lastChanged": "2025-12-23T00:49:08Z",
+      "name": "Zone / string alarm",
       "ownerKey": "",
-      "parameters": [],
-      "parentKey": "H511568",
+      "parameters": [
+        {
+          "index": 0,
+          "info": "Any zone performing below this percentage of the average will generate an alert",
+          "name": "Threshold",
+          "readOnly": false,
+          "source": 2,
+          "type": 3,
+          "value": 80
+        },
+        {
+          "index": 0,
+          "info": "Do not generate alerts when the string current is below this limit.",
+          "name": "MinAmps",
+          "readOnly": false,
+          "source": 2,
+          "type": 2,
+          "value": 1
+        }
+      ],
+      "parentKey": "H38211",
       "priorityLevel": 0,
       "sharing": 0,
       "startTime": 0,
@@ -301,50 +340,24 @@ referer: https://apps.alsoenergy.com/powertrack/H511568/administration/alertsett
       "sunMinElevation": 0
     }
   ],
-  "key": "H511568",
-  "lastChanged": "2026-01-07T19:04:18Z",
+  "key": "H38211",
+  "lastChanged": "2025-12-23T00:49:08Z",
   "triggers": [
-    {
-      "alertTypeKey": "AI862",
-      "checkNoSnow": false,
-      "checkSun": false,
-      "checkTime": false,
-      "delayHoursResolve": 1,
-      "delayHoursTrigger": 1,
-      "description": "SMA TriPower Fault Alert following the SMA Event Messages Document.",
-      "endTime": 0,
-      "hasImpact": false,
-      "id": 1851954,
-      "impact": 0,
-      "isActive": true,
-      "key": "x2d1c4232",
-      "lastChanged": "2026-01-07T19:04:18Z",
-      "name": "SMA STP/TriPower Fault Alert",
-      "ownerKey": "",
-      "parameters": [],
-      "parentKey": "H511568",
-      "priorityLevel": 0,
-      "sharing": 0,
-      "startTime": 0,
-      "sunMaxAzimuth": 0,
-      "sunMinAzimuth": 0,
-      "sunMinElevation": 0
-    },
     {
       "alertTypeKey": "AI250",
       "checkNoSnow": true,
-      "checkSun": true,
+      "checkSun": false,
       "checkTime": false,
-      "delayHoursResolve": 0.5,
-      "delayHoursTrigger": 1,
+      "delayHoursResolve": 0,
+      "delayHoursTrigger": 0.25,
       "description": "Detects when a device is not talking to the data logger, or invalid data is received from the device.",
       "endTime": 0,
       "hasImpact": false,
-      "id": 1851955,
+      "id": 52078,
       "impact": 0,
       "isActive": true,
-      "key": "x2d1c4233",
-      "lastChanged": "2026-01-07T19:04:18Z",
+      "key": "AS52078",
+      "lastChanged": "2025-12-23T00:49:08Z",
       "name": "Device communication",
       "ownerKey": "",
       "parameters": [
@@ -358,13 +371,58 @@ referer: https://apps.alsoenergy.com/powertrack/H511568/administration/alertsett
           "value": 0
         }
       ],
-      "parentKey": "H511568",
+      "parentKey": "H38211",
       "priorityLevel": 0,
       "sharing": 0,
       "startTime": 0,
       "sunMaxAzimuth": 0,
       "sunMinAzimuth": 0,
-      "sunMinElevation": 10
+      "sunMinElevation": 0
+    },
+    {
+      "alertTypeKey": "AI353",
+      "checkNoSnow": true,
+      "checkSun": true,
+      "checkTime": false,
+      "delayHoursResolve": 0.25,
+      "delayHoursTrigger": 0.5,
+      "description": "Underperforming zone or string detector.  Also detects invalid data on any input channel.",
+      "endTime": 0,
+      "hasImpact": false,
+      "id": 52079,
+      "impact": 0,
+      "isActive": true,
+      "key": "AS52079",
+      "lastChanged": "2025-12-23T00:49:08Z",
+      "name": "Zone / string alarm",
+      "ownerKey": "",
+      "parameters": [
+        {
+          "index": 0,
+          "info": "Any zone performing below this percentage of the average will generate an alert",
+          "name": "Threshold",
+          "readOnly": false,
+          "source": 2,
+          "type": 3,
+          "value": 10
+        },
+        {
+          "index": 0,
+          "info": "Do not generate alerts when the string current is below this limit.",
+          "name": "MinAmps",
+          "readOnly": false,
+          "source": 2,
+          "type": 2,
+          "value": 1
+        }
+      ],
+      "parentKey": "H38211",
+      "priorityLevel": 0,
+      "sharing": 0,
+      "startTime": 0,
+      "sunMaxAzimuth": 0,
+      "sunMinAzimuth": 0,
+      "sunMinElevation": 15
     }
   ]
 }
