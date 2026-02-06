@@ -15,7 +15,7 @@ function extractEndpointFromMD(filePath) {
     const lines = content.split('\n');
     for (const line of lines) {
       if (line.startsWith('# ')) {
-        return line.substring(2).trim(); // Remove '# '
+        return line.substring(2).trim();
       }
     }
   } catch (e) {
@@ -33,7 +33,7 @@ function generateTOC() {
     const methodDir = path.join(DOCS_DIR, method);
     if (!fs.existsSync(methodDir)) continue;
 
-    const files = fs.readdirSync(methodDir).filter(f => f.endsWith('.md'));
+    const files = fs.readdirSync(methodDir).filter(file => file.endsWith('.md'));
     for (const file of files) {
       const filePath = path.join(methodDir, file);
       const endpoint = extractEndpointFromMD(filePath);
@@ -49,22 +49,24 @@ function generateTOC() {
     const categoryDir = path.join(DOCS_DIR, category);
     if (!fs.existsSync(categoryDir)) return;
 
-    const typeDirs = fs.readdirSync(categoryDir).filter(d => fs.statSync(path.join(categoryDir, d)).isDirectory());
-    typeDirs.forEach(typeDir => {
+    const typeDirs = fs.readdirSync(categoryDir).filter(dir => fs.statSync(path.join(categoryDir, dir)).isDirectory());
+    for (const typeDir of typeDirs) {
       const typePath = path.join(categoryDir, typeDir);
-      const files = fs.readdirSync(typePath).filter(f => f.endsWith('.md'));
-      files.forEach(file => {
+      const files = fs.readdirSync(typePath).filter(file => file.endsWith('.md'));
+      for (const file of files) {
         const filePath = path.join(typePath, file);
         const endpoint = extractEndpointFromMD(filePath);
         if (endpoint) {
-            const typeName = typeDir.replace('Unknown_', 'Unknown ');
-          // Extract method from filename (e.g., GET_)
+          const typeName = typeDir.replace('Unknown_', 'Unknown ');
           const methodMatch = file.match(/^(GET|POST|PUT|DELETE)_/);
           const method = methodMatch ? methodMatch[1] : 'UNKNOWN';
-          toc[category].push({ endpoint: `${endpoint} (${typeName}, ${method})`, file: `${category}/${typeDir}/${file}` });
+          toc[category].push({
+            endpoint: `${endpoint} (${typeName}, ${method})`,
+            file: `${category}/${typeDir}/${file}`
+          });
         }
-      });
-    });
+      }
+    }
     toc[category].sort((a, b) => a.endpoint.localeCompare(b.endpoint));
   });
 

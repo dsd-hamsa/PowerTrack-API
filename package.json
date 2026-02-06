@@ -1,0 +1,8 @@
+{
+  "name": "powertrack-api-docs",
+  "private": true,
+  "scripts": {
+    "readme:gen": "node scripts/generate-readme.js",
+    "readme:check": "node scripts/generate-readme.js && git diff --exit-code README.md"
+  }
+}
