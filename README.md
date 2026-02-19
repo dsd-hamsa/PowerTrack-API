@@ -102,6 +102,7 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/edit/hardware/{hardware_id} (Cell Modem, GET)](docs/Hardware/Cell%20Modem/GET_edit_hardware_hardware_id.md)
 - [/api/edit/hardware/{hardware_id} (Data Capture, GET)](docs/Hardware/Data%20Capture/GET_edit_hardware_hardware_id.md)
 - [/api/edit/hardware/{hardware_id} (Data Logger, GET)](docs/Hardware/Data%20Logger/GET_edit_hardware_hardware_id.md)
+- [/api/edit/hardware/{hardware_id} (DC Combiner, GET)](docs/Hardware/DC%20Combiner/GET_edit_hardware_hardware_id.md)
 - [/api/edit/hardware/{hardware_id} (DNP3 Server, GET)](docs/Hardware/DNP3%20Server/GET_edit_hardware_hardware_id.md)
 - [/api/edit/hardware/{hardware_id} (Extra Meter, GET)](docs/Hardware/Extra%20Meter/GET_edit_hardware_hardware_id.md)
 - [/api/edit/hardware/{hardware_id} (Gateway, GET)](docs/Hardware/Gateway/GET_edit_hardware_hardware_id.md)
@@ -112,14 +113,22 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/edit/hardware/{hardware_id} (Weather Station, GET)](docs/Hardware/Weather%20Station/GET_edit_hardware_hardware_id.md)
 - [/api/edit/hardware/gateway/commandhistory/000CC68CC109 (Unknown Unknown, GET)](docs/Hardware/Unknown_Unknown/GET_edit_hardware_gateway_commandhistory_000CC68CC109.md)
 - [/api/edit/hardware/gateway/commandhistory/000CC68FAF30 (Unknown Unknown, GET)](docs/Hardware/Unknown_Unknown/GET_edit_hardware_gateway_commandhistory_000CC68FAF30.md)
+- [/api/edit/hardware/gateway/info/{hardware_id} (Gateway, GET)](docs/Hardware/Gateway/GET_edit_hardware_gateway_info_hardware_id.md)
+- [/api/edit/hardware/new/setting/18 (Unknown Unknown, GET)](docs/Hardware/Unknown_Unknown/GET_edit_hardware_new_setting_18.md)
 
 ### Alerts
+- [/api/alerttrigger (AI1188 Inverter Energy Ratio, PUT)](docs/Alerts/AI1188%20Inverter%20Energy%20Ratio/PUT_alerttrigger.md)
 - [/api/alerttrigger (AI1233 LocusNOC SEL 351 Faults, PUT)](docs/Alerts/AI1233%20LocusNOC%20SEL%20351%20Faults/PUT_alerttrigger.md)
+- [/api/alerttrigger (AI250 Device communication, PUT)](docs/Alerts/AI250%20Device%20communication/PUT_alerttrigger.md)
+- [/api/alerttrigger (AI358 Report run-time alert, PUT)](docs/Alerts/AI358%20Report%20run-time%20alert/PUT_alerttrigger.md)
+- [/api/alerttrigger (AI359 Report analysis alert, PUT)](docs/Alerts/AI359%20Report%20analysis%20alert/PUT_alerttrigger.md)
+- [/api/alerttrigger (AI401 Performance Index Alert, PUT)](docs/Alerts/AI401%20Performance%20Index%20Alert/PUT_alerttrigger.md)
 - [/api/alerttrigger (AI534 Transformer Monitor, PUT)](docs/Alerts/AI534%20Transformer%20Monitor/PUT_alerttrigger.md)
 - [/api/alerttrigger/{alert_id} (AI1037 Solectria XGI 1000 Series - Fault Alert, GET)](docs/Alerts/AI1037%20Solectria%20XGI%201000%20Series%20-%20Fault%20Alert/GET_alerttrigger_alert_id.md)
 - [/api/alerttrigger/{alert_id} (AI1073 TerraTrak - Tracker Alert, GET)](docs/Alerts/AI1073%20TerraTrak%20-%20Tracker%20Alert/GET_alerttrigger_alert_id.md)
 - [/api/alerttrigger/{alert_id} (AI1074 SMA SHP Inverter Alerts, GET)](docs/Alerts/AI1074%20SMA%20SHP%20Inverter%20Alerts/GET_alerttrigger_alert_id.md)
 - [/api/alerttrigger/{alert_id} (AI1119 Sungrow 2500U Fault Alert, GET)](docs/Alerts/AI1119%20Sungrow%202500U%20Fault%20Alert/GET_alerttrigger_alert_id.md)
+- [/api/alerttrigger/{alert_id} (AI1188 Inverter Energy Ratio, GET)](docs/Alerts/AI1188%20Inverter%20Energy%20Ratio/GET_alerttrigger_alert_id.md)
 - [/api/alerttrigger/{alert_id} (AI1233 LocusNOC SEL 351 Faults, GET)](docs/Alerts/AI1233%20LocusNOC%20SEL%20351%20Faults/GET_alerttrigger_alert_id.md)
 - [/api/alerttrigger/{alert_id} (AI1302 String Comparison Alert, GET)](docs/Alerts/AI1302%20String%20Comparison%20Alert/GET_alerttrigger_alert_id.md)
 - [/api/alerttrigger/{alert_id} (AI2420 Voyager FTC Tracker Fault Alert, GET)](docs/Alerts/AI2420%20Voyager%20FTC%20Tracker%20Fault%20Alert/GET_alerttrigger_alert_id.md)
@@ -144,10 +153,13 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/alerttrigger/{alert_id} (AI344 Device heartbeat, GET)](docs/Alerts/AI344%20Device%20heartbeat/GET_alerttrigger_alert_id.md)
 - [/api/alerttrigger/{alert_id} (AI350 Power Meter Check, GET)](docs/Alerts/AI350%20Power%20Meter%20Check/GET_alerttrigger_alert_id.md)
 - [/api/alerttrigger/{alert_id} (AI352 Energy check, GET)](docs/Alerts/AI352%20Energy%20check/GET_alerttrigger_alert_id.md)
+- [/api/alerttrigger/{alert_id} (AI358 Report run-time alert, GET)](docs/Alerts/AI358%20Report%20run-time%20alert/GET_alerttrigger_alert_id.md)
+- [/api/alerttrigger/{alert_id} (AI359 Report analysis alert, GET)](docs/Alerts/AI359%20Report%20analysis%20alert/GET_alerttrigger_alert_id.md)
 - [/api/alerttrigger/{alert_id} (AI3618 Phoenix Contact - Quint UPS Alerts (QUINT4 EIP), GET)](docs/Alerts/AI3618%20Phoenix%20Contact%20-%20Quint%20UPS%20Alerts%20(QUINT4%20EIP)/GET_alerttrigger_alert_id.md)
 - [/api/alerttrigger/{alert_id} (AI3734 SEL 700G Relay Open Alarm, GET)](docs/Alerts/AI3734%20SEL%20700G%20Relay%20Open%20Alarm/GET_alerttrigger_alert_id.md)
 - [/api/alerttrigger/{alert_id} (AI393 Inverter Performance Ratio (upload), GET)](docs/Alerts/AI393%20Inverter%20Performance%20Ratio%20(upload)/GET_alerttrigger_alert_id.md)
 - [/api/alerttrigger/{alert_id} (AI394 Wind Speed Alert, GET)](docs/Alerts/AI394%20Wind%20Speed%20Alert/GET_alerttrigger_alert_id.md)
+- [/api/alerttrigger/{alert_id} (AI401 Performance Index Alert, GET)](docs/Alerts/AI401%20Performance%20Index%20Alert/GET_alerttrigger_alert_id.md)
 - [/api/alerttrigger/{alert_id} (AI412 ATI Tracker Position Alert, GET)](docs/Alerts/AI412%20ATI%20Tracker%20Position%20Alert/GET_alerttrigger_alert_id.md)
 - [/api/alerttrigger/{alert_id} (AI443 Data Comparison Alert, GET)](docs/Alerts/AI443%20Data%20Comparison%20Alert/GET_alerttrigger_alert_id.md)
 - [/api/alerttrigger/{alert_id} (AI491 SolarEdge (3phase Sunspec) Inverter faults, GET)](docs/Alerts/AI491%20SolarEdge%20(3phase%20Sunspec)%20Inverter%20faults/GET_alerttrigger_alert_id.md)
@@ -172,10 +184,22 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/alerttrigger/{alert_id} (AI816 Chint 100kW String Inv Faults (obsolete), GET)](docs/Alerts/AI816%20Chint%20100kW%20String%20Inv%20Faults%20(obsolete)/GET_alerttrigger_alert_id.md)
 - [/api/alerttrigger/{alert_id} (AI863 Gamechange Tracker Alert, GET)](docs/Alerts/AI863%20Gamechange%20Tracker%20Alert/GET_alerttrigger_alert_id.md)
 - [/api/alerttrigger/{alert_id} (AI974 Solar FlexRack Tracker Alert (revG), GET)](docs/Alerts/AI974%20Solar%20FlexRack%20Tracker%20Alert%20(revG)/GET_alerttrigger_alert_id.md)
+- [/api/alerttrigger/{hardware_id} (Unknown Unknown, GET)](docs/Alerts/Unknown%20Unknown/GET_alerttrigger_hardware_id.md)
+- [/api/alerttrigger/{site_id} (Unknown Unknown, GET)](docs/Alerts/Unknown%20Unknown/GET_alerttrigger_site_id.md)
+- [/api/alerttrigger/new/{hardware_id}/AI1302 (AI1302 String Comparison Alert, GET)](docs/Alerts/AI1302%20String%20Comparison%20Alert/GET_alerttrigger_new_hardware_id_AI1302.md)
+- [/api/alerttrigger/new/{site_id}/AI355 (AI355 Site Zone Analyzer, GET)](docs/Alerts/AI355%20Site%20Zone%20Analyzer/GET_alerttrigger_new_site_id_AI355.md)
+- [/api/alerttrigger/test (Unknown Unknown, POST)](docs/Alerts/Unknown%20Unknown/POST_alerttrigger_test.md)
+- [/api/alerttriggers (Unknown Unknown, PUT)](docs/Alerts/Unknown%20Unknown/PUT_alerttriggers.md)
+- [/api/alerttriggers/{hardware_id}/applyto (Unknown Unknown, PUT)](docs/Alerts/Unknown%20Unknown/PUT_alerttriggers_hardware_id_applyto.md)
+- [/api/edit/alert/{alert_id} (Unknown Energy ratio analysis for THD - 984 Newton, GET)](docs/Alerts/Unknown%20Energy%20ratio%20analysis%20for%20THD%20-%20984%20Newton/GET_edit_alert_alert_id.md)
+- [/api/edit/alert/{alert_id} (Unknown Faults detected at President Container - [ 20170] ( NY ): Bentek Combiner 2, GET)](docs/Alerts/Unknown%20Faults%20detected%20at%20President%20Container%20-%20%5B%2020170%5D%20(%20NY%20):%20Bentek%20Combiner%202/GET_edit_alert_alert_id.md)
+- [/api/lookuplist/alertTypes/{hardware_id} (Unknown Unknown, GET)](docs/Alerts/Unknown%20Unknown/GET_lookuplist_alertTypes_hardware_id.md)
+- [/api/lookuplist/alertTypes/{site_id} (Unknown Unknown, GET)](docs/Alerts/Unknown%20Unknown/GET_lookuplist_alertTypes_site_id.md)
+- [/api/view/alerthistory (Unknown Unknown, POST)](docs/Alerts/Unknown%20Unknown/POST_view_alerthistory.md)
 
 ## Generation Details
-- Generated: 2025-12-23
-- Total Endpoints: 151
+- Generated: 2026-02-19
+- Total Endpoints: 175
 - Source: Browser-intercepted API calls from PowerTrack web application
 - Tool: Custom extension for AlsoEnergy PowerTrack API documentation
 
