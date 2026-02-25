@@ -26,11 +26,14 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/grafana/config](docs/GET/grafana_config.md)
 - [/api/lookuplist/alertTypes/{hardware_id}](docs/GET/lookuplist_alertTypes_hardware_id.md)
 - [/api/lookuplist/timeZones](docs/GET/lookuplist_timeZones.md)
+- [/api/lookuplist/timeZonesRaw](docs/GET/lookuplist_timeZonesRaw.md)
 - [/api/netsuite/cases/{site_id}](docs/GET/netsuite_cases_site_id.md)
+- [/api/node/{customer_id}](docs/GET/node_customer_id.md)
 - [/api/node/{hardware_id}](docs/GET/node_hardware_id.md)
 - [/api/node/{site_id}](docs/GET/node_site_id.md)
 - [/api/node/{user_id}](docs/GET/node_user_id.md)
 - [/api/node/favorites](docs/GET/node_favorites.md)
+- [/api/notifications/session](docs/GET/notifications_session.md)
 - [/api/production/{site_id}](docs/GET/production_site_id.md)
 - [/api/projectmanagement/{site_id}](docs/GET/projectmanagement_site_id.md)
 - [/api/subscription/{hardware_id}](docs/GET/subscription_hardware_id.md)
@@ -46,6 +49,8 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/view/hardwarenavigatorstatus/{site_id}](docs/GET/view_hardwarenavigatorstatus_site_id.md)
 - [/api/view/hardwarestatus/status/{hardware_id}](docs/GET/view_hardwarestatus_status_hardware_id.md)
 - [/api/view/portfolio/{customer_id}](docs/GET/view_portfolio_customer_id.md)
+- [/api/view/pvcurvemodels/efficiencycurvemodels](docs/GET/view_pvcurvemodels_efficiencycurvemodels.md)
+- [/api/view/pvcurvemodels/incidenceanglemodels](docs/GET/view_pvcurvemodels_incidenceanglemodels.md)
 - [/api/view/pvsystmodules/{site_id}](docs/GET/view_pvsystmodules_site_id.md)
 - [/api/view/registeroffsets/{hardware_id}](docs/GET/view_registeroffsets_hardware_id.md)
 - [/api/view/site/{site_id}](docs/GET/view_site_site_id.md)
@@ -60,6 +65,7 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/alerttrigger](docs/POST/alerttrigger.md)
 - [/api/alerttrigger/test](docs/POST/alerttrigger_test.md)
 - [/api/alerttriggers](docs/POST/alerttriggers.md)
+- [/api/edit/query/fromchart](docs/POST/edit_query_fromchart.md)
 - [/api/edit/site/getCalculatedElevation](docs/POST/edit_site_getCalculatedElevation.md)
 - [/api/edit/sitehardware/checkallhardware](docs/POST/edit_sitehardware_checkallhardware.md)
 - [/api/node](docs/POST/node.md)
@@ -73,6 +79,7 @@ This repository contains automatically generated documentation for the AlsoEnerg
 ### PUT Endpoints
 - [/api/alerttrigger](docs/PUT/alerttrigger.md)
 - [/api/edit/hardware](docs/PUT/edit_hardware.md)
+- [/api/edit/modeling](docs/PUT/edit_modeling.md)
 - [/api/edit/site](docs/PUT/edit_site.md)
 - [/api/edit/sitehardware](docs/PUT/edit_sitehardware.md)
 
@@ -198,8 +205,8 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/view/alerthistory (Unknown Unknown, POST)](docs/Alerts/Unknown%20Unknown/POST_view_alerthistory.md)
 
 ## Generation Details
-- Generated: 2026-02-19
-- Total Endpoints: 175
+- Generated: 2026-02-25
+- Total Endpoints: 182
 - Source: Browser-intercepted API calls from PowerTrack web application
 - Tool: Custom extension for AlsoEnergy PowerTrack API documentation
 
