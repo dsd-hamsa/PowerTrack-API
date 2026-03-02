@@ -1,5 +1,3 @@
-# Pacific Ridge School
-
 _Generated from `chart_enums.json`_
 
 | Field | Value |
