@@ -41,12 +41,15 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/task/all](docs/GET/task_all.md)
 - [/api/userpreferences](docs/GET/userpreferences.md)
 - [/api/view/activealerts/{customer_id}](docs/GET/view_activealerts_customer_id.md)
+- [/api/view/activealerts/{site_id}](docs/GET/view_activealerts_site_id.md)
 - [/api/view/activealerts/activesummary/{customer_id}](docs/GET/view_activealerts_activesummary_customer_id.md)
 - [/api/view/activealerts/activesummary/{hardware_id}](docs/GET/view_activealerts_activesummary_hardware_id.md)
 - [/api/view/activealerts/activesummary/{site_id}](docs/GET/view_activealerts_activesummary_site_id.md)
+- [/api/view/chart/kpioptions/{site_id}](docs/GET/view_chart_kpioptions_site_id.md)
 - [/api/view/driversettings/list/{id}](docs/GET/view_driversettings_list_id.md)
 - [/api/view/driversettings/list/325](docs/GET/view_driversettings_list_325.md)
 - [/api/view/hardwarenavigatorstatus/{site_id}](docs/GET/view_hardwarenavigatorstatus_site_id.md)
+- [/api/view/hardwarestatus/{hardware_id}](docs/GET/view_hardwarestatus_hardware_id.md)
 - [/api/view/hardwarestatus/status/{hardware_id}](docs/GET/view_hardwarestatus_status_hardware_id.md)
 - [/api/view/portfolio/{customer_id}](docs/GET/view_portfolio_customer_id.md)
 - [/api/view/pvcurvemodels/efficiencycurvemodels](docs/GET/view_pvcurvemodels_efficiencycurvemodels.md)
@@ -74,6 +77,8 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/userpreferences](docs/POST/userpreferences.md)
 - [/api/view/chart](docs/POST/view_chart.md)
 - [/api/view/chart/builtin](docs/POST/view_chart_builtin.md)
+- [/api/view/chart/estimate](docs/POST/view_chart_estimate.md)
+- [/api/view/chart/kpimenu](docs/POST/view_chart_kpimenu.md)
 - [/api/view/sitehardware](docs/POST/view_sitehardware.md)
 
 ### PUT Endpoints
@@ -205,8 +210,8 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/view/alerthistory (Unknown Unknown, POST)](docs/Alerts/Unknown%20Unknown/POST_view_alerthistory.md)
 
 ## Generation Details
-- Generated: 2026-03-02
-- Total Endpoints: 182
+- Generated: 2026-04-19
+- Total Endpoints: 187
 - Source: Browser-intercepted API calls from PowerTrack web application
 - Tool: Custom extension for AlsoEnergy PowerTrack API documentation
 
