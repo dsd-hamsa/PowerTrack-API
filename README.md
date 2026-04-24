@@ -32,13 +32,20 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/node/{hardware_id}](docs/GET/node_hardware_id.md)
 - [/api/node/{site_id}](docs/GET/node_site_id.md)
 - [/api/node/{user_id}](docs/GET/node_user_id.md)
+- [/api/node/F221210](docs/GET/node_F221210.md)
 - [/api/node/favorites](docs/GET/node_favorites.md)
 - [/api/notifications/session](docs/GET/notifications_session.md)
 - [/api/production/{site_id}](docs/GET/production_site_id.md)
 - [/api/projectmanagement/{site_id}](docs/GET/projectmanagement_site_id.md)
+- [/api/reportconfig/F221210](docs/GET/reportconfig_F221210.md)
+- [/api/reportconfig/new/querycolumnheader/0](docs/GET/reportconfig_new_querycolumnheader_0.md)
+- [/api/reportconfig/public/dashboardlistitems](docs/GET/reportconfig_public_dashboardlistitems.md)
+- [/api/reporting](docs/GET/reporting.md)
 - [/api/subscription/{hardware_id}](docs/GET/subscription_hardware_id.md)
 - [/api/subscription/{site_id}](docs/GET/subscription_site_id.md)
+- [/api/task/{id}](docs/GET/task_id.md)
 - [/api/task/all](docs/GET/task_all.md)
+- [/api/task/results/{id}](docs/GET/task_results_id.md)
 - [/api/userpreferences](docs/GET/userpreferences.md)
 - [/api/view/activealerts/{customer_id}](docs/GET/view_activealerts_customer_id.md)
 - [/api/view/activealerts/{site_id}](docs/GET/view_activealerts_site_id.md)
@@ -73,12 +80,16 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/edit/sitehardware/checkallhardware](docs/POST/edit_sitehardware_checkallhardware.md)
 - [/api/node](docs/POST/node.md)
 - [/api/node/batch](docs/POST/node_batch.md)
+- [/api/reporterror](docs/POST/reporterror.md)
 - [/api/tag](docs/POST/tag.md)
+- [/api/task/start](docs/POST/task_start.md)
 - [/api/userpreferences](docs/POST/userpreferences.md)
 - [/api/view/chart](docs/POST/view_chart.md)
 - [/api/view/chart/builtin](docs/POST/view_chart_builtin.md)
 - [/api/view/chart/estimate](docs/POST/view_chart_estimate.md)
 - [/api/view/chart/kpimenu](docs/POST/view_chart_kpimenu.md)
+- [/api/view/kpidashboard](docs/POST/view_kpidashboard.md)
+- [/api/view/reportconfigs](docs/POST/view_reportconfigs.md)
 - [/api/view/sitehardware](docs/POST/view_sitehardware.md)
 
 ### PUT Endpoints
@@ -87,6 +98,7 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/edit/modeling](docs/PUT/edit_modeling.md)
 - [/api/edit/site](docs/PUT/edit_site.md)
 - [/api/edit/sitehardware](docs/PUT/edit_sitehardware.md)
+- [/api/reportconfig](docs/PUT/reportconfig.md)
 
 ### DELETE Endpoints
 - [/api/alerttrigger/{hardware_id}/{alert_id}](docs/DELETE/alerttrigger_hardware_id_alert_id.md)
@@ -210,8 +222,8 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/view/alerthistory (Unknown Unknown, POST)](docs/Alerts/Unknown%20Unknown/POST_view_alerthistory.md)
 
 ## Generation Details
-- Generated: 2026-04-19
-- Total Endpoints: 187
+- Generated: 2026-04-24
+- Total Endpoints: 199
 - Source: Browser-intercepted API calls from PowerTrack web application
 - Tool: Custom extension for AlsoEnergy PowerTrack API documentation
 
