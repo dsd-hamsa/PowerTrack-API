@@ -28,6 +28,7 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/lookuplist/timeZones](docs/GET/lookuplist_timeZones.md)
 - [/api/lookuplist/timeZonesRaw](docs/GET/lookuplist_timeZonesRaw.md)
 - [/api/netsuite/cases/{site_id}](docs/GET/netsuite_cases_site_id.md)
+- [/api/node/{alert_id}](docs/GET/node_alert_id.md)
 - [/api/node/{customer_id}](docs/GET/node_customer_id.md)
 - [/api/node/{hardware_id}](docs/GET/node_hardware_id.md)
 - [/api/node/{site_id}](docs/GET/node_site_id.md)
@@ -48,6 +49,7 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/task/results/{id}](docs/GET/task_results_id.md)
 - [/api/userpreferences](docs/GET/userpreferences.md)
 - [/api/view/activealerts/{customer_id}](docs/GET/view_activealerts_customer_id.md)
+- [/api/view/activealerts/{hardware_id}](docs/GET/view_activealerts_hardware_id.md)
 - [/api/view/activealerts/{site_id}](docs/GET/view_activealerts_site_id.md)
 - [/api/view/activealerts/activesummary/{customer_id}](docs/GET/view_activealerts_activesummary_customer_id.md)
 - [/api/view/activealerts/activesummary/{hardware_id}](docs/GET/view_activealerts_activesummary_hardware_id.md)
@@ -217,13 +219,14 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/alerttriggers/{hardware_id}/applyto (Unknown Unknown, PUT)](docs/Alerts/Unknown%20Unknown/PUT_alerttriggers_hardware_id_applyto.md)
 - [/api/edit/alert/{alert_id} (Unknown Energy ratio analysis for THD - 984 Newton, GET)](docs/Alerts/Unknown%20Energy%20ratio%20analysis%20for%20THD%20-%20984%20Newton/GET_edit_alert_alert_id.md)
 - [/api/edit/alert/{alert_id} (Unknown Faults detected at President Container - [ 20170] ( NY ): Bentek Combiner 2, GET)](docs/Alerts/Unknown%20Faults%20detected%20at%20President%20Container%20-%20%5B%2020170%5D%20(%20NY%20):%20Bentek%20Combiner%202/GET_edit_alert_alert_id.md)
+- [/api/edit/alert/{alert_id} (Unknown Faults detected at THD - Baltimore Dist - 5830 Tiger: Inv 24 (50kW) SMA STP Core-1 50US, GET)](docs/Alerts/Unknown%20Faults%20detected%20at%20THD%20-%20Baltimore%20Dist%20-%205830%20Tiger:%20Inv%2024%20(50kW)%20SMA%20STP%20Core-1%2050US/GET_edit_alert_alert_id.md)
 - [/api/lookuplist/alertTypes/{hardware_id} (Unknown Unknown, GET)](docs/Alerts/Unknown%20Unknown/GET_lookuplist_alertTypes_hardware_id.md)
 - [/api/lookuplist/alertTypes/{site_id} (Unknown Unknown, GET)](docs/Alerts/Unknown%20Unknown/GET_lookuplist_alertTypes_site_id.md)
 - [/api/view/alerthistory (Unknown Unknown, POST)](docs/Alerts/Unknown%20Unknown/POST_view_alerthistory.md)
 
 ## Generation Details
-- Generated: 2026-04-24
-- Total Endpoints: 199
+- Generated: 2026-05-01
+- Total Endpoints: 202
 - Source: Browser-intercepted API calls from PowerTrack web application
 - Tool: Custom extension for AlsoEnergy PowerTrack API documentation
 
