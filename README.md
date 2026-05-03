@@ -225,7 +225,7 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/view/alerthistory (Unknown Unknown, POST)](docs/Alerts/Unknown%20Unknown/POST_view_alerthistory.md)
 
 ## Generation Details
-- Generated: 2026-05-01
+- Generated: 2026-05-03
 - Total Endpoints: 202
 - Source: Browser-intercepted API calls from PowerTrack web application
 - Tool: Custom extension for AlsoEnergy PowerTrack API documentation
