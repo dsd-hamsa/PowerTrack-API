@@ -21,8 +21,13 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/edit/hardware/{hardware_id}](docs/GET/edit_hardware_hardware_id.md)
 - [/api/edit/hardware/gateway/commandhistory/000CC68FAF30](docs/GET/edit_hardware_gateway_commandhistory_000CC68FAF30.md)
 - [/api/edit/modeling/{site_id}](docs/GET/edit_modeling_site_id.md)
+- [/api/edit/rate/F224084](docs/GET/edit_rate_F224084.md)
+- [/api/edit/rate/F224085](docs/GET/edit_rate_F224085.md)
+- [/api/edit/rate/new/rateitem](docs/GET/edit_rate_new_rateitem.md)
 - [/api/edit/site/{site_id}](docs/GET/edit_site_site_id.md)
 - [/api/edit/sitehardware/{site_id}](docs/GET/edit_sitehardware_site_id.md)
+- [/api/fileconfig/F224084](docs/GET/fileconfig_F224084.md)
+- [/api/fileconfig/F224085](docs/GET/fileconfig_F224085.md)
 - [/api/grafana/config](docs/GET/grafana_config.md)
 - [/api/lookuplist/alertTypes/{hardware_id}](docs/GET/lookuplist_alertTypes_hardware_id.md)
 - [/api/lookuplist/timeZones](docs/GET/lookuplist_timeZones.md)
@@ -34,6 +39,7 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/node/{site_id}](docs/GET/node_site_id.md)
 - [/api/node/{user_id}](docs/GET/node_user_id.md)
 - [/api/node/F221210](docs/GET/node_F221210.md)
+- [/api/node/F224085](docs/GET/node_F224085.md)
 - [/api/node/favorites](docs/GET/node_favorites.md)
 - [/api/notifications/session](docs/GET/notifications_session.md)
 - [/api/production/{site_id}](docs/GET/production_site_id.md)
@@ -78,8 +84,11 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/alerttrigger/test](docs/POST/alerttrigger_test.md)
 - [/api/alerttriggers](docs/POST/alerttriggers.md)
 - [/api/edit/query/fromchart](docs/POST/edit_query_fromchart.md)
+- [/api/edit/rate](docs/POST/edit_rate.md)
+- [/api/edit/rate/new](docs/POST/edit_rate_new.md)
 - [/api/edit/site/getCalculatedElevation](docs/POST/edit_site_getCalculatedElevation.md)
 - [/api/edit/sitehardware/checkallhardware](docs/POST/edit_sitehardware_checkallhardware.md)
+- [/api/folderconfig](docs/POST/folderconfig.md)
 - [/api/node](docs/POST/node.md)
 - [/api/node/batch](docs/POST/node_batch.md)
 - [/api/reporterror](docs/POST/reporterror.md)
@@ -98,12 +107,14 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/alerttrigger](docs/PUT/alerttrigger.md)
 - [/api/edit/hardware](docs/PUT/edit_hardware.md)
 - [/api/edit/modeling](docs/PUT/edit_modeling.md)
+- [/api/edit/rate](docs/PUT/edit_rate.md)
 - [/api/edit/site](docs/PUT/edit_site.md)
 - [/api/edit/sitehardware](docs/PUT/edit_sitehardware.md)
 - [/api/reportconfig](docs/PUT/reportconfig.md)
 
 ### DELETE Endpoints
 - [/api/alerttrigger/{hardware_id}/{alert_id}](docs/DELETE/alerttrigger_hardware_id_alert_id.md)
+- [/api/edit/rate/F224084](docs/DELETE/edit_rate_F224084.md)
 
 ### Hardware
 - [/api/edit/hardware (BESS Controller, PUT)](docs/Hardware/BESS%20Controller/PUT_edit_hardware.md)
@@ -225,8 +236,8 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/view/alerthistory (Unknown Unknown, POST)](docs/Alerts/Unknown%20Unknown/POST_view_alerthistory.md)
 
 ## Generation Details
-- Generated: 2026-05-03
-- Total Endpoints: 202
+- Generated: 2026-06-04
+- Total Endpoints: 213
 - Source: Browser-intercepted API calls from PowerTrack web application
 - Tool: Custom extension for AlsoEnergy PowerTrack API documentation
 
