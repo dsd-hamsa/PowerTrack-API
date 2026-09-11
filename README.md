@@ -21,7 +21,9 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/edit/hardware/{hardware_id}](docs/GET/edit_hardware_hardware_id.md)
 - [/api/edit/hardware/gateway/commandhistory/000CC68FAF30](docs/GET/edit_hardware_gateway_commandhistory_000CC68FAF30.md)
 - [/api/edit/modeling/{site_id}](docs/GET/edit_modeling_site_id.md)
+- [/api/edit/pvmodel/F74099](docs/GET/edit_pvmodel_F74099.md)
 - [/api/edit/pvmodel/F74101](docs/GET/edit_pvmodel_F74101.md)
+- [/api/edit/pvmodel/F74102](docs/GET/edit_pvmodel_F74102.md)
 - [/api/edit/rate/F224084](docs/GET/edit_rate_F224084.md)
 - [/api/edit/rate/F224085](docs/GET/edit_rate_F224085.md)
 - [/api/edit/rate/new/rateitem](docs/GET/edit_rate_new_rateitem.md)
@@ -29,7 +31,9 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/edit/sitehardware/{site_id}](docs/GET/edit_sitehardware_site_id.md)
 - [/api/fileconfig/F224084](docs/GET/fileconfig_F224084.md)
 - [/api/fileconfig/F224085](docs/GET/fileconfig_F224085.md)
+- [/api/fileconfig/F74099](docs/GET/fileconfig_F74099.md)
 - [/api/fileconfig/F74101](docs/GET/fileconfig_F74101.md)
+- [/api/fileconfig/F74102](docs/GET/fileconfig_F74102.md)
 - [/api/grafana/config](docs/GET/grafana_config.md)
 - [/api/lookuplist/alertTypes/{hardware_id}](docs/GET/lookuplist_alertTypes_hardware_id.md)
 - [/api/lookuplist/timeZones](docs/GET/lookuplist_timeZones.md)
@@ -78,7 +82,9 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/view/pvcurvemodels/incidenceanglemodels](docs/GET/view_pvcurvemodels_incidenceanglemodels.md)
 - [/api/view/pvsystmodules/{hardware_id}](docs/GET/view_pvsystmodules_hardware_id.md)
 - [/api/view/pvsystmodules/{site_id}](docs/GET/view_pvsystmodules_site_id.md)
+- [/api/view/pvsystmodules/F74099](docs/GET/view_pvsystmodules_F74099.md)
 - [/api/view/pvsystmodules/F74101](docs/GET/view_pvsystmodules_F74101.md)
+- [/api/view/pvsystmodules/F74102](docs/GET/view_pvsystmodules_F74102.md)
 - [/api/view/registeroffsets/{hardware_id}](docs/GET/view_registeroffsets_hardware_id.md)
 - [/api/view/site/{site_id}](docs/GET/view_site_site_id.md)
 - [/api/view/sitehardwareproduction/{site_id}](docs/GET/view_sitehardwareproduction_site_id.md)
@@ -251,7 +257,7 @@ This repository contains automatically generated documentation for the AlsoEnerg
 
 ## Generation Details
 - Generated: 2026-09-11
-- Total Endpoints: 227
+- Total Endpoints: 233
 - Source: Browser-intercepted API calls from PowerTrack web application
 - Tool: Custom extension for AlsoEnergy PowerTrack API documentation
 
