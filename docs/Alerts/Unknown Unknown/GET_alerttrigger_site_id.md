@@ -126,6 +126,12 @@
         "sharing": {
           "type": "number"
         },
+        "standardItems": {
+          "type": "array",
+          "items": {
+            "type": "unknown"
+          }
+        },
         "startTime": {
           "type": "number"
         },
@@ -151,11 +157,11 @@
 **Request:**
 
 ```http
-GET /api/alerttrigger/S34924?lastChanged=2026-01-07T18:27:48Z
+GET /api/alerttrigger/S52104?lastChanged=2026-06-24T16:02:09Z
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
-ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/S34924/administration/alertsettings
+ae_v: 3fefeb
+referer: https://apps.alsoenergy.com/powertrack/S52104/administration/alertsettings
 ```
 
 **Response:**
@@ -166,54 +172,9 @@ referer: https://apps.alsoenergy.com/powertrack/S34924/administration/alertsetti
   "calculatedCapacity": -1,
   "capacity": null,
   "defaultTriggers": [],
-  "key": "S34924",
-  "lastChanged": "2025-12-12T17:43:31Z",
+  "key": "S52104",
+  "lastChanged": "2026-01-27T00:22:42Z",
   "triggers": [
-    {
-      "alertTypeKey": "AI358",
-      "checkNoSnow": false,
-      "checkSun": false,
-      "checkTime": false,
-      "delayHoursResolve": 0,
-      "delayHoursTrigger": 0,
-      "description": "Alerts that are generated while running a report.",
-      "endTime": 1380,
-      "hasImpact": false,
-      "id": 77768,
-      "impact": 0,
-      "isActive": true,
-      "key": "AS77768",
-      "lastChanged": "2025-12-12T17:43:31Z",
-      "name": "Report run-time alert",
-      "ownerKey": "",
-      "parameters": [
-        {
-          "index": 0,
-          "info": "",
-          "name": "OK",
-          "readOnly": false,
-          "source": 3,
-          "type": 1,
-          "value": 0
-        },
-        {
-          "index": 0,
-          "info": "",
-          "name": "Cause",
-          "readOnly": false,
-          "source": 3,
-          "type": 0,
-          "value": ""
-        }
-      ],
-      "parentKey": "S34924",
-      "priorityLevel": 0,
-      "sharing": 0,
-      "startTime": 60,
-      "sunMaxAzimuth": 0,
-      "sunMinAzimuth": 0,
-      "sunMinElevation": 0
-    },
     {
       "alertTypeKey": "AI359",
       "checkNoSnow": false,
@@ -224,11 +185,11 @@ referer: https://apps.alsoenergy.com/powertrack/S34924/administration/alertsetti
       "description": "Analyzes site configuration and data for a report",
       "endTime": 1380,
       "hasImpact": false,
-      "id": 77769,
+      "id": 1049304,
       "impact": 0,
       "isActive": true,
-      "key": "AS77769",
-      "lastChanged": "2025-12-12T17:43:31Z",
+      "key": "x2d1002d8",
+      "lastChanged": "2026-01-27T00:22:42Z",
       "name": "Report analysis alert",
       "ownerKey": "",
       "parameters": [
@@ -257,7 +218,7 @@ referer: https://apps.alsoenergy.com/powertrack/S34924/administration/alertsetti
           "readOnly": false,
           "source": 3,
           "type": 0,
-          "value": "850"
+          "value": "1750"
         },
         {
           "index": 0,
@@ -275,7 +236,7 @@ referer: https://apps.alsoenergy.com/powertrack/S34924/administration/alertsetti
           "readOnly": false,
           "source": 3,
           "type": 0,
-          "value": "33527,0"
+          "value": "3241585398,31,31À¨,)"
         },
         {
           "index": 0,
@@ -296,9 +257,56 @@ referer: https://apps.alsoenergy.com/powertrack/S34924/administration/alertsetti
           "value": "NaN"
         }
       ],
-      "parentKey": "S34924",
+      "parentKey": "S52104",
       "priorityLevel": 0,
       "sharing": 0,
+      "standardItems": [],
+      "startTime": 60,
+      "sunMaxAzimuth": 0,
+      "sunMinAzimuth": 0,
+      "sunMinElevation": 0
+    },
+    {
+      "alertTypeKey": "AI358",
+      "checkNoSnow": false,
+      "checkSun": false,
+      "checkTime": false,
+      "delayHoursResolve": 0,
+      "delayHoursTrigger": 0,
+      "description": "Alerts that are generated while running a report.",
+      "endTime": 1380,
+      "hasImpact": false,
+      "id": 1049305,
+      "impact": 0,
+      "isActive": true,
+      "key": "x2d1002d9",
+      "lastChanged": "2026-01-27T00:22:42Z",
+      "name": "Report run-time alert",
+      "ownerKey": "",
+      "parameters": [
+        {
+          "index": 0,
+          "info": "",
+          "name": "OK",
+          "readOnly": false,
+          "source": 3,
+          "type": 1,
+          "value": 0
+        },
+        {
+          "index": 0,
+          "info": "",
+          "name": "Cause",
+          "readOnly": false,
+          "source": 3,
+          "type": 0,
+          "value": ""
+        }
+      ],
+      "parentKey": "S52104",
+      "priorityLevel": 0,
+      "sharing": 0,
+      "standardItems": [],
       "startTime": 60,
       "sunMaxAzimuth": 0,
       "sunMinAzimuth": 0,

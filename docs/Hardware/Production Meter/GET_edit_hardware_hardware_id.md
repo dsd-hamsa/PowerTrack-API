@@ -4,7 +4,7 @@
 [← Back to Index](../logs.md)
 
 **Methods:** GET  
-**Status Codes:** 200, 200  
+**Status Codes:** 200  
 
 ## Table of Contents
 
@@ -146,6 +146,9 @@
       "type": "object",
       "properties": {}
     },
+    "energyCapacity": {
+      "type": "number"
+    },
     "fixedEnergyOffset": {
       "type": "number"
     },
@@ -200,6 +203,9 @@
     },
     "installDate": {
       "type": "string"
+    },
+    "installedKva": {
+      "type": "number"
     },
     "instance": {
       "type": "number"
@@ -257,6 +263,9 @@
               "type": "number"
             }
           }
+        },
+        "isDc": {
+          "type": "boolean"
         },
         "kw": {
           "type": "number"
@@ -335,6 +344,9 @@
     "parentKey": {
       "type": "string"
     },
+    "parity": {
+      "type": "number"
+    },
     "port": {
       "type": "number"
     },
@@ -382,23 +394,29 @@
           "type": "string"
         },
         "originalValue": {
-          "type": "string"
+          "type": "number"
         },
         "type": {
           "type": "number"
         },
         "value": {
-          "type": "string"
+          "type": "number"
         }
       }
     },
     "siteDcShare": {
       "type": "number"
     },
+    "siteHasHybridInverterGroups": {
+      "type": "boolean"
+    },
     "siteHasInverterGroups": {
       "type": "boolean"
     },
     "sort": {
+      "type": "number"
+    },
+    "stopBits": {
       "type": "number"
     },
     "syncToLocus": {
@@ -527,11 +545,11 @@
 **Request:**
 
 ```http
-GET /api/edit/hardware/H511565
+GET /api/edit/hardware/H225871
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
-ae_v: c75711
-referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
+ae_v: 3fefeb
+referer: https://apps.alsoenergy.com/powertrack/H225871/analysis/chartbuilder
 ```
 
 **Response:**
@@ -547,7 +565,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
   "autoCorrectDecrease": false,
   "autoCorrectIncrease": false,
   "baud": "",
-  "capacityKw": 524.88,
+  "capacityKw": 2750,
   "chartSectionCode": 2,
   "commonDC": false,
   "commonDCAllMatch": true,
@@ -556,28 +574,64 @@ referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
   ],
   "conflictNames": null,
   "dashboardKey": "",
-  "dcRating": 524880,
+  "dcRating": 2750000,
   "debug": false,
   "decreaseDifference": 100,
   "defaultChart": 15,
-  "description": "Accuvim II - PV Prod Meter - M0",
+  "description": "SEL-735 PV Prod Meter",
   "deviceRegisters": [
     {
-      "dataName": "Hz",
+      "dataName": "KWHnet",
       "dataNameDetail": null,
       "index": 0,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
-      "localizedName": "Frequency",
-      "name": "iFreq",
-      "standardDataName": "Frequency",
-      "units": "Hz"
+      "localizedName": "Active Energy Net",
+      "name": "Total energy",
+      "standardDataName": "Active_Energy_Net",
+      "units": "kWh"
+    },
+    {
+      "dataName": "KW",
+      "dataNameDetail": null,
+      "index": 1,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Active Power",
+      "name": "Real power",
+      "standardDataName": "Active_Power",
+      "units": "kW"
+    },
+    {
+      "dataName": "KVAR",
+      "dataNameDetail": null,
+      "index": 2,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Reactive Power",
+      "name": "Reactive power",
+      "standardDataName": "Reactive_Power",
+      "units": "kVAR"
+    },
+    {
+      "dataName": "KVA",
+      "dataNameDetail": null,
+      "index": 3,
+      "isArchived": true,
+      "isIgnored": false,
+      "isRaw": true,
+      "localizedName": "Apparent Power",
+      "name": "Apparent power",
+      "standardDataName": "Apparent_Power",
+      "units": "kVA"
     },
     {
       "dataName": "PowerFactor",
       "dataNameDetail": null,
-      "index": 1,
+      "index": 4,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -589,7 +643,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
     {
       "dataName": "KWHrec",
       "dataNameDetail": null,
-      "index": 2,
+      "index": 5,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -601,7 +655,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
     {
       "dataName": "KWHdel",
       "dataNameDetail": null,
-      "index": 3,
+      "index": 6,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -611,81 +665,9 @@ referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
       "units": "kWh"
     },
     {
-      "dataName": "Reactive_Energy_Rec",
-      "dataNameDetail": null,
-      "index": 4,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Reactive Energy Received",
-      "name": "Reactive Import energy",
-      "standardDataName": "Reactive_Energy_Rec",
-      "units": "kVARh"
-    },
-    {
-      "dataName": "Reactive_Energy_Del",
-      "dataNameDetail": null,
-      "index": 5,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Reactive Energy Delivered",
-      "name": "Reactive Export energy",
-      "standardDataName": "Reactive_Energy_Del",
-      "units": "kVARh"
-    },
-    {
-      "dataName": "KWHnet",
-      "dataNameDetail": null,
-      "index": 6,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Active Energy Net",
-      "name": "Total energy net",
-      "standardDataName": "Active_Energy_Net",
-      "units": "kWh"
-    },
-    {
-      "dataName": "Reactive_Energy_Net",
-      "dataNameDetail": null,
-      "index": 7,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Reactive Energy Net",
-      "name": "Reactive Total energy net",
-      "standardDataName": "Reactive_Energy_Net",
-      "units": "kVARh"
-    },
-    {
-      "dataName": "KVAh",
-      "dataNameDetail": null,
-      "index": 8,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Apparent Energy Net",
-      "name": "Apparent Energy",
-      "standardDataName": "Apparent_Energy_Net",
-      "units": "kVAh"
-    },
-    {
-      "dataName": "KVAR",
-      "dataNameDetail": null,
-      "index": 9,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Reactive Power",
-      "name": "Reactive Power",
-      "standardDataName": "Reactive_Power",
-      "units": "kVAR"
-    },
-    {
       "dataName": "VacA",
       "dataNameDetail": null,
-      "index": 10,
+      "index": 7,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -697,7 +679,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
     {
       "dataName": "VacB",
       "dataNameDetail": null,
-      "index": 11,
+      "index": 8,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -709,7 +691,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
     {
       "dataName": "VacC",
       "dataNameDetail": null,
-      "index": 12,
+      "index": 9,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -719,21 +701,9 @@ referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
       "units": "V"
     },
     {
-      "dataName": "VacLN",
-      "dataNameDetail": null,
-      "index": 13,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "AC Voltage Average L-N",
-      "name": "Average voltage L-N",
-      "standardDataName": "Voltage_LN_Avg",
-      "units": "V"
-    },
-    {
       "dataName": "VacAB",
       "dataNameDetail": null,
-      "index": 14,
+      "index": 10,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -745,7 +715,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
     {
       "dataName": "VacBC",
       "dataNameDetail": null,
-      "index": 15,
+      "index": 11,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -757,7 +727,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
     {
       "dataName": "VacCA",
       "dataNameDetail": null,
-      "index": 16,
+      "index": 12,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -767,21 +737,9 @@ referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
       "units": "V"
     },
     {
-      "dataName": "VacLL",
-      "dataNameDetail": null,
-      "index": 17,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Line to Line voltage",
-      "name": "Average voltage L-L",
-      "standardDataName": "Voltage_LL_Avg",
-      "units": "V"
-    },
-    {
       "dataName": "IacA",
       "dataNameDetail": null,
-      "index": 18,
+      "index": 13,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -793,7 +751,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
     {
       "dataName": "IacB",
       "dataNameDetail": null,
-      "index": 19,
+      "index": 14,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -805,7 +763,7 @@ referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
     {
       "dataName": "IacC",
       "dataNameDetail": null,
-      "index": 20,
+      "index": 15,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
@@ -815,273 +773,83 @@ referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
       "units": "A"
     },
     {
-      "dataName": "Active_Power_A",
+      "dataName": "KVAR_A",
       "dataNameDetail": null,
-      "index": 21,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Active Power A",
-      "name": "Power A",
-      "standardDataName": "Active_Power_A",
-      "units": "kW"
-    },
-    {
-      "dataName": "Active_Power_B",
-      "dataNameDetail": null,
-      "index": 22,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Active Power B",
-      "name": "Power B",
-      "standardDataName": "Active_Power_B",
-      "units": "kW"
-    },
-    {
-      "dataName": "Active_Power_C",
-      "dataNameDetail": null,
-      "index": 23,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Active Power C",
-      "name": "Power C",
-      "standardDataName": "Active_Power_C",
-      "units": "kW"
-    },
-    {
-      "dataName": "KW",
-      "dataNameDetail": null,
-      "index": 24,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Active Power",
-      "name": "Total Power",
-      "standardDataName": "Active_Power",
-      "units": "kW"
-    },
-    {
-      "dataName": "PFA",
-      "dataNameDetail": null,
-      "index": 25,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Power Factor A",
-      "name": "Power factor A",
-      "standardDataName": "Power_Factor_A",
-      "units": "PF"
-    },
-    {
-      "dataName": "PFB",
-      "dataNameDetail": null,
-      "index": 26,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Power Factor B",
-      "name": "Power factor B",
-      "standardDataName": "Power_Factor_B",
-      "units": "PF"
-    },
-    {
-      "dataName": "PFC",
-      "dataNameDetail": null,
-      "index": 27,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Power Factor C",
-      "name": "Power factor C",
-      "standardDataName": "Power_Factor_C",
-      "units": "PF"
-    },
-    {
-      "dataName": "kVARA",
-      "dataNameDetail": null,
-      "index": 28,
+      "index": 16,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
       "localizedName": "Reactive Power A",
-      "name": "Phase A Reactive Power ",
+      "name": "Reactive Power A",
       "standardDataName": "Reactive_Power_A",
       "units": "kVAR"
     },
     {
-      "dataName": "kVARB",
+      "dataName": "KVAR_B",
       "dataNameDetail": null,
-      "index": 29,
+      "index": 17,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
       "localizedName": "Reactive Power B",
-      "name": "Phase B Reactive Power",
+      "name": "Reactive Power B",
       "standardDataName": "Reactive_Power_B",
       "units": "kVAR"
     },
     {
-      "dataName": "kVARC",
+      "dataName": "KVAR_C",
       "dataNameDetail": null,
-      "index": 30,
+      "index": 18,
       "isArchived": true,
       "isIgnored": false,
       "isRaw": true,
       "localizedName": "Reactive Power C",
-      "name": "Phase C Reactive Power ",
+      "name": "Reactive Power C ",
       "standardDataName": "Reactive_Power_C",
       "units": "kVAR"
-    },
-    {
-      "dataName": "KWHdelRaw",
-      "dataNameDetail": null,
-      "index": 31,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Active Energy Delivered (without Offset)",
-      "name": "Active Energy Delivered Raw",
-      "standardDataName": "Active_Energy_Raw_Del",
-      "units": "kWh"
-    },
-    {
-      "dataName": "KWHrecRaw",
-      "dataNameDetail": null,
-      "index": 32,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Active Energy Received (without Offset)",
-      "name": "Active Energy Received Raw",
-      "standardDataName": "Active_Energy_Raw_Rec",
-      "units": "kWh"
-    },
-    {
-      "dataName": "KWHnetRaw",
-      "dataNameDetail": null,
-      "index": 33,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Active Energy Net Raw",
-      "name": "Active Energy Net Raw",
-      "standardDataName": "Active_Energy_Raw_Net",
-      "units": "kWh"
-    },
-    {
-      "dataName": "THD_Current",
-      "dataNameDetail": null,
-      "index": 34,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Phase Total Harmonic Current Distortion",
-      "name": "Phase Total Harmonic Current Distortion",
-      "standardDataName": "THD_Current",
-      "units": "A"
-    },
-    {
-      "dataName": "THD_Voltage",
-      "dataNameDetail": null,
-      "index": 35,
-      "isArchived": true,
-      "isIgnored": false,
-      "isRaw": true,
-      "localizedName": "Phase Total Harmonic Voltage Distortion",
-      "name": "Phase Total Harmonic Voltage Distortion",
-      "standardDataName": "THD_Voltage",
-      "units": "V"
-    },
-    {
-      "dataName": "Potential_XMFR_Primary",
-      "dataNameDetail": null,
-      "index": 36,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "Potential Transformer Primary Ratio",
-      "name": "PT Ratio (primary)",
-      "standardDataName": "Potential_XMFR_Primary",
-      "units": ""
-    },
-    {
-      "dataName": "Potential_XMFR_Secondary",
-      "dataNameDetail": null,
-      "index": 37,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "Potential Transformer Secondary Ratio",
-      "name": "PT Ratio (secondary)",
-      "standardDataName": "Potential_XMFR_Secondary",
-      "units": ""
-    },
-    {
-      "dataName": "Current_XMFR_Primary",
-      "dataNameDetail": null,
-      "index": 38,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "Current Transformer Primary Ratio",
-      "name": "CT Ratio (primary)",
-      "standardDataName": "Current_XMFR_Primary",
-      "units": ""
-    },
-    {
-      "dataName": "Current_XMFR_Secondary",
-      "dataNameDetail": null,
-      "index": 39,
-      "isArchived": false,
-      "isIgnored": false,
-      "isRaw": false,
-      "localizedName": "Current Transformer Secondary Ratio",
-      "name": "CT Ratio (secondary)",
-      "standardDataName": "Current_XMFR_Secondary",
-      "units": ""
     }
   ],
-  "driverDescription": "Meters USA Acuvim II Power meter - Primary Mode",
-  "driverFlags": 16385,
-  "driverId": 19601,
-  "driverName": "AccuEnergy Acuvim II(R-D-5A) Primary Mode(SS)Standard",
-  "driverNotes": "Driver conforms to Standard IO, supercedes all Acuvim Primary Mode Drivers. If Acuvim is in Secondary mode, please use DID 19604.\r\rBustest kW:\rreg=16418 numreg=2\rRogowski Coil Meters: Apply ScaleKW value of 100.\r\r*If Basic Parameter Mode =1 & Energy Display Mode = 0 this means Primary Mode is selected.  ScaleKW = 0.001 |ScaleKWH = 0.1 | ScaleAmps = 1.0 | ScaleVolts = 1.0\r*If vice versa, Secondary Mode is enabled, use DID 19604\r\rConfirmed to work with versions below:\rMeter Firmware - v4.10\rModule Firmware Version - v1.19",
+  "driverDescription": "SEL 735 power meter",
+  "driverFlags": 64,
+  "driverId": 8314,
+  "driverName": "SEL 735 Meter (Qualified)",
+  "driverNotes": "Superceeded DID 301\r\r10/6/20 HSK-changed kV to V\r\rThis is the old one, per Walter (new one == 19685)",
   "driverRegisters": [],
   "eGauge": null,
+  "energyCapacity": 0,
   "fixedEnergyOffset": 0,
   "functionCode": 2,
   "functionId": "PM0",
   "gateway": null,
   "gatewayFwVersion": "",
-  "gatewayId": "000CC68FAF30",
-  "gatewayKey": "H511564",
+  "gatewayId": "000CC6868543",
+  "gatewayKey": "H225869",
   "gatewayScriptCount": "",
   "gatewayType": 2,
   "groupAllowed": [],
   "groupKey": "",
-  "hardwareId": "C20909_S68143_PM0",
+  "hardwareId": "C16293_S52104_PM0",
   "hardwareStatus": 1,
   "hasCapacity": true,
   "hash": "",
   "increaseDifference": -1,
-  "installDate": "2024-07-12",
+  "installDate": "2019-10-30",
+  "installedKva": 0,
   "instance": 0,
-  "inverterKw": 0,
+  "inverterKw": 2750,
   "isConflictAcknowledged": false,
   "isReportable": true,
   "isTcp": true,
   "isThermal": false,
-  "key": "H511565",
+  "key": "H225871",
   "kiosk": null,
-  "latitude": 34.0371297,
+  "latitude": 42.7934503,
   "limitedCommunication": false,
   "locusId": "",
-  "longitude": -118.1014776,
+  "longitude": -73.9558609,
   "meter": {
     "acInfo": 2,
-    "grossEnergy": 0,
+    "grossEnergy": 3,
     "grossEnergyOptions": [
       {
         "name": "Undefined",
@@ -1096,31 +864,33 @@ referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
         "value": 3
       }
     ],
-    "kw": 0,
-    "kwhDelivered": 0,
-    "kwhNet": 0,
-    "kwhReceived": 0,
+    "isDc": false,
+    "kw": 1463.08,
+    "kwhDelivered": 273666,
+    "kwhNet": 19866063,
+    "kwhReceived": 20098394,
     "lineResistance": 0,
     "load": 0,
     "loadLoss": 0,
-    "maxCurrent": 1100,
-    "maxPower": 524.88,
+    "maxCurrent": 7300,
+    "maxPower": 2750,
     "maxVoltage": 480,
     "noLoadLoss": 0,
-    "scale": 0,
-    "scaleKw": 0.001,
-    "scaleKwh": 0.1,
+    "scale": 1,
+    "scaleKw": -1,
+    "scaleKwh": 1,
     "showLoad": false
   },
-  "modelNum": "ACCUENERGY IIR-D-mV-P1V3",
+  "modelNum": "",
   "newNote": "",
   "oneMinuteData": false,
   "outOfService": false,
   "outOfServiceNote": "",
-  "outOfServiceUntil": "2025-12-23T00:10:41.0028736Z",
+  "outOfServiceUntil": "2026-09-11T16:44:56.6596198Z",
   "outputAllowed": [],
   "outputKey": "",
-  "parentKey": "S68143",
+  "parentKey": "S52104",
+  "parity": 0,
   "port": 0,
   "primary": false,
   "pullData": false,
@@ -1130,33 +900,33 @@ referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
   "reportExclude": false,
   "reverse": false,
   "sampleRate": 0,
-  "serialMode": 0,
-  "serialNum": "AHB54010438",
+  "serialMode": -1,
+  "serialNum": "3192130460",
   "settings": [
     {
       "index": 0,
-      "name": "dev:portMode",
-      "originalValue": "N/A",
-      "type": 0,
-      "value": "N/A"
-    },
-    {
-      "index": 1,
-      "name": "dev:UnitID",
+      "name": "dev:Scale",
       "originalValue": 1,
-      "type": 1,
+      "type": 2,
       "value": 1
     },
     {
+      "index": 1,
+      "name": "dev:Reverse",
+      "originalValue": "0",
+      "type": 0,
+      "value": "0"
+    },
+    {
       "index": 2,
-      "name": "dev:TCPport",
-      "originalValue": 502,
-      "type": 1,
-      "value": 502
+      "name": "dev:RegOffset",
+      "originalValue": "0",
+      "type": 0,
+      "value": "0"
     },
     {
       "index": 3,
-      "name": "dev:RegOffset",
+      "name": "dev:Enable",
       "originalValue": 0,
       "type": 1,
       "value": 0
@@ -1164,65 +934,196 @@ referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
     {
       "index": 4,
       "name": "dev:ScaleKW",
-      "originalValue": 0.001,
+      "originalValue": -1,
       "type": 2,
-      "value": 0.001
+      "value": -1
     },
     {
       "index": 5,
-      "name": "dev:Reverse",
-      "originalValue": "0",
-      "type": 0,
-      "value": "0"
+      "name": "dev:ScaleKWH",
+      "originalValue": 1,
+      "type": 2,
+      "value": 1
     },
     {
       "index": 6,
-      "name": "dev:ScaleKWH",
-      "originalValue": 0.1,
-      "type": 2,
-      "value": 0.1
-    },
-    {
-      "index": 7,
-      "name": "dev:ScaleAmps",
-      "originalValue": 1,
-      "type": 2,
-      "value": 1
-    },
-    {
-      "index": 8,
-      "name": "dev:ScaleVolts",
-      "originalValue": 1,
-      "type": 2,
-      "value": 1
-    },
-    {
-      "index": 9,
-      "name": "ShortName",
-      "originalValue": "PM0",
+      "name": "GrossRegister",
+      "originalValue": "Received",
       "type": 0,
-      "value": "PM0"
+      "value": "Received"
     }
   ],
   "siteDcShare": 0,
-  "siteHasInverterGroups": true,
-  "sort": 3,
+  "siteHasHybridInverterGroups": false,
+  "siteHasInverterGroups": false,
+  "sort": 4,
+  "stopBits": 1,
   "syncToLocus": false,
   "tags": {
     "attributes": [],
-    "key": "{\"ancestorKey\":\"H511565\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
+    "key": "{\"ancestorKey\":\"H225871\",\"isRecursive\":false,\"types\":[\"attribute\",\"keyword\",\"note\"]}",
     "keywords": [],
     "lastChanged": null,
     "notes": [
       {
-        "authorKey": "U39142",
-        "authorName": "Reuben Brazeal",
-        "date": "2024-07-12T13:59:07Z",
-        "isEvent": true,
-        "key": "x050bee4d",
+        "authorKey": "U57916",
+        "authorName": "Josh Hamsa",
+        "date": "2026-02-09T22:04:14Z",
+        "isEvent": false,
+        "key": "x60947943",
         "kind": "text",
-        "parentKey": "H511565",
-        "text": "Password created"
+        "parentKey": "H225871",
+        "text": "02-Feb 2026: Update alert: Meter / irradiance check (alert_key=x2d16abf8 ; alert_type=AI721)"
+      },
+      {
+        "authorKey": "U57916",
+        "authorName": "Josh Hamsa",
+        "date": "2026-02-09T22:42:36Z",
+        "isEvent": false,
+        "key": "x60947bfc",
+        "kind": "text",
+        "parentKey": "H225871",
+        "text": "02-Feb 2026: Update alert: Device communication (alert_key=AS717495 ; alert_type=AI250)"
+      },
+      {
+        "authorKey": "U49535",
+        "authorName": "Naveen Verma",
+        "date": "2026-07-29T10:16:32Z",
+        "isEvent": true,
+        "key": "x05bc2d5b",
+        "kind": "text",
+        "parentKey": "H225871",
+        "text": "Filled in energy and power values, FillVirtual, 5/29/2026 9:20:00 AM through 6/4/2026 2:15:00 PM"
+      },
+      {
+        "authorKey": "U49535",
+        "authorName": "Naveen Verma",
+        "date": "2025-10-23T12:36:15Z",
+        "isEvent": true,
+        "key": "x05e5ee41",
+        "kind": "text",
+        "parentKey": "H225871",
+        "text": "Filled in energy and power values, FillVirtual, 10/9/2025 1:20:00 PM through 10/17/2025 10:30:00 AM"
+      },
+      {
+        "authorKey": "U48020",
+        "authorName": "deepali Verma",
+        "date": "2025-08-06T05:34:58Z",
+        "isEvent": true,
+        "key": "x059d4a80",
+        "kind": "text",
+        "parentKey": "H225871",
+        "text": "Filled in energy and power values, FillVirtual, 7/31/2025 3:35:00 PM through 8/4/2025 11:45:00 AM"
+      },
+      {
+        "authorKey": "U26896",
+        "authorName": "Anshu Kumari",
+        "date": "2025-07-30T08:38:25Z",
+        "isEvent": true,
+        "key": "x059542c8",
+        "kind": "text",
+        "parentKey": "H225871",
+        "text": "Filled in energy and power values, FillLinear, 7/10/2025 8:20:00 PM through 7/16/2025 10:30:00 AM"
+      },
+      {
+        "authorKey": "U49535",
+        "authorName": "Naveen Verma",
+        "date": "2025-07-10T07:21:00Z",
+        "isEvent": true,
+        "key": "x0581dfe5",
+        "kind": "text",
+        "parentKey": "H225871",
+        "text": "Filled in energy and power values, FillVirtual, 6/24/2025 11:20:00 AM through 6/29/2025 4:45:00 PM"
+      },
+      {
+        "authorKey": "U26896",
+        "authorName": "Anshu Kumari",
+        "date": "2025-05-12T05:52:20Z",
+        "isEvent": true,
+        "key": "x05490cd8",
+        "kind": "text",
+        "parentKey": "H225871",
+        "text": "Filled in energy and power values, FillVirtual, 4/15/2025 10:05:00 AM through 4/22/2025 9:15:00 AM"
+      },
+      {
+        "authorKey": "U26896",
+        "authorName": "Anshu Kumari",
+        "date": "2025-05-12T05:50:45Z",
+        "isEvent": true,
+        "key": "x05490cb8",
+        "kind": "text",
+        "parentKey": "H225871",
+        "text": "Filled in energy and power values, FillVirtual, 11/21/2024 11:50:00 AM through 11/25/2024 10:30:00 AM"
+      },
+      {
+        "authorKey": "U49535",
+        "authorName": "Naveen Verma",
+        "date": "2026-04-07T09:26:44Z",
+        "isEvent": true,
+        "key": "x054fe0e1",
+        "kind": "text",
+        "parentKey": "H225871",
+        "text": "Filled in energy and power values, FillVirtual, 3/16/2026 10:20:00 AM through 3/31/2026 12:15:00 PM"
+      },
+      {
+        "authorKey": "U24548",
+        "authorName": "Kari Bretl",
+        "date": "2020-07-28T23:10:45Z",
+        "isEvent": true,
+        "key": "x1cf86e1c",
+        "kind": "text",
+        "parentKey": "H225871",
+        "text": "Calculate data (KWHnet), offset: 42,111.8 kWh, 7/10/2020 8:45:00 AM through 7/27/2020 11:00:00 AM"
+      },
+      {
+        "authorKey": "U24548",
+        "authorName": "Kari Bretl",
+        "date": "2020-07-28T23:07:50Z",
+        "isEvent": true,
+        "key": "x1cf86e19",
+        "kind": "text",
+        "parentKey": "H225871",
+        "text": "Offset energy data, -63,216.0 kWh, 7/17/2020 1:30:00 PM through 7/27/2020 11:15:00 AM"
+      },
+      {
+        "authorKey": "U24548",
+        "authorName": "Kari Bretl",
+        "date": "2020-07-14T23:46:23Z",
+        "isEvent": true,
+        "key": "x1cec3622",
+        "kind": "text",
+        "parentKey": "H225871",
+        "text": "Changed data for SEL-735 PV Prod Meter (HID = 225871)\r\nFields: VacAB,VacBC,VacCA,IacC\r\nValueAdjust: NaN\r\nFrom 7/10/2020 8:48:43 AM through 7/14/2020 9:52:00 AM\r\nRaw"
+      },
+      {
+        "authorKey": "U24548",
+        "authorName": "Kari Bretl",
+        "date": "2020-07-14T23:45:44Z",
+        "isEvent": true,
+        "key": "x1cec3621",
+        "kind": "text",
+        "parentKey": "H225871",
+        "text": "Changed data for SEL-735 PV Prod Meter (HID = 225871)\r\nFields: VacB,VacC,IacA,IacB\r\nValueAdjust: NaN\r\nFrom 7/10/2020 8:48:00 AM through 7/14/2020 9:52:00 AM\r\nRaw"
+      },
+      {
+        "authorKey": "U24548",
+        "authorName": "Kari Bretl",
+        "date": "2020-07-14T23:45:10Z",
+        "isEvent": true,
+        "key": "x1cec361e",
+        "kind": "text",
+        "parentKey": "H225871",
+        "text": "Changed data for SEL-735 PV Prod Meter (HID = 225871)\r\nFields: KVAR,KVA,PowerFactor,VacA\r\nValueAdjust: NaN\r\nFrom 7/10/2020 8:48:00 AM through 7/14/2020 9:52:00 AM\r\nRaw"
+      },
+      {
+        "authorKey": "U24548",
+        "authorName": "Kari Bretl",
+        "date": "2020-07-14T23:43:54Z",
+        "isEvent": true,
+        "key": "x1cec361b",
+        "kind": "text",
+        "parentKey": "H225871",
+        "text": "Changed data for SEL-735 PV Prod Meter (HID = 225871)\r\nFields: KW,KWHnet,KWHrec,KWHdel\r\nValueAdjust: NaN\r\nFrom 7/10/2020 8:48:00 AM through 7/14/2020 9:52:00 AM\r\nRaw"
       }
     ],
     "powerDisplays": []
@@ -1230,9 +1131,9 @@ referer: https://apps.alsoenergy.com/powertrack/H511565/administration/config
   "taskKey": "",
   "thermal": null,
   "thread": 0,
-  "ts": "2024-07-15T13:28:32Z",
+  "ts": "2026-02-02T23:08:00Z",
   "turbine": null,
-  "unitId": 1,
+  "unitId": 0,
   "uploadRate": 0,
   "validatedByKey": "",
   "validatedDateTime": "0001-01-01T00:00:00",
