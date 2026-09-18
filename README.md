@@ -39,6 +39,7 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/lookuplist/timeZones](docs/GET/lookuplist_timeZones.md)
 - [/api/lookuplist/timeZonesRaw](docs/GET/lookuplist_timeZonesRaw.md)
 - [/api/netsuite/cases/{site_id}](docs/GET/netsuite_cases_site_id.md)
+- [/api/netsuite/getdefaultmodel/{site_id}](docs/GET/netsuite_getdefaultmodel_site_id.md)
 - [/api/node/{alert_id}](docs/GET/node_alert_id.md)
 - [/api/node/{customer_id}](docs/GET/node_customer_id.md)
 - [/api/node/{hardware_id}](docs/GET/node_hardware_id.md)
@@ -87,6 +88,7 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/view/pvsystmodules/F74102](docs/GET/view_pvsystmodules_F74102.md)
 - [/api/view/registeroffsets/{hardware_id}](docs/GET/view_registeroffsets_hardware_id.md)
 - [/api/view/site/{site_id}](docs/GET/view_site_site_id.md)
+- [/api/view/sitehardware/{site_id}](docs/GET/view_sitehardware_site_id.md)
 - [/api/view/sitehardwareproduction/{site_id}](docs/GET/view_sitehardwareproduction_site_id.md)
 - [/api/view/sitelinks/{site_id}](docs/GET/view_sitelinks_site_id.md)
 - [/api/view/sitesharelocations/{site_id}](docs/GET/view_sitesharelocations_site_id.md)
@@ -100,11 +102,13 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/alerttriggers](docs/POST/alerttriggers.md)
 - [/api/binding/batch](docs/POST/binding_batch.md)
 - [/api/edit/query/fromchart](docs/POST/edit_query_fromchart.md)
+- [/api/edit/query/new/dataitem](docs/POST/edit_query_new_dataitem.md)
 - [/api/edit/rate](docs/POST/edit_rate.md)
 - [/api/edit/rate/new](docs/POST/edit_rate_new.md)
 - [/api/edit/site/getCalculatedElevation](docs/POST/edit_site_getCalculatedElevation.md)
 - [/api/edit/sitehardware/checkallhardware](docs/POST/edit_sitehardware_checkallhardware.md)
 - [/api/folderconfig](docs/POST/folderconfig.md)
+- [/api/netsuite/contactsupport](docs/POST/netsuite_contactsupport.md)
 - [/api/node](docs/POST/node.md)
 - [/api/node/batch](docs/POST/node_batch.md)
 - [/api/reporterror](docs/POST/reporterror.md)
@@ -256,8 +260,8 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/view/alerthistory (Unknown Unknown, POST)](docs/Alerts/Unknown%20Unknown/POST_view_alerthistory.md)
 
 ## Generation Details
-- Generated: 2026-09-11
-- Total Endpoints: 233
+- Generated: 2026-09-18
+- Total Endpoints: 237
 - Source: Browser-intercepted API calls from PowerTrack web application
 - Tool: Custom extension for AlsoEnergy PowerTrack API documentation
 
