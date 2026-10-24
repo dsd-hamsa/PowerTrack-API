@@ -131,6 +131,7 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/edit/rate](docs/PUT/edit_rate.md)
 - [/api/edit/site](docs/PUT/edit_site.md)
 - [/api/edit/sitehardware](docs/PUT/edit_sitehardware.md)
+- [/api/edit/siteshares](docs/PUT/edit_siteshares.md)
 - [/api/reportconfig](docs/PUT/reportconfig.md)
 
 ### DELETE Endpoints
@@ -260,8 +261,8 @@ This repository contains automatically generated documentation for the AlsoEnerg
 - [/api/view/alerthistory (Unknown Unknown, POST)](docs/Alerts/Unknown%20Unknown/POST_view_alerthistory.md)
 
 ## Generation Details
-- Generated: 2026-09-18
-- Total Endpoints: 237
+- Generated: 2026-10-24
+- Total Endpoints: 238
 - Source: Browser-intercepted API calls from PowerTrack web application
 - Tool: Custom extension for AlsoEnergy PowerTrack API documentation
 
