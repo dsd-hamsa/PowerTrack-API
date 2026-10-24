@@ -26,18 +26,18 @@
 **Request:**
 
 ```http
-GET /api/edit/hardware/driver/1844/functioncodes
+GET /api/edit/hardware/driver/8164/functioncodes
 Accept: application/json
 ae_s: *WPOMs1+UDquA3lmqjIlKm9mGjr7uixpBspy0HA==
-ae_v: 3fefeb
-referer: https://apps.alsoenergy.com/powertrack/H70694/administration/config
+ae_v: ac3a35
+referer: https://apps.alsoenergy.com/powertrack/H266279/administration/config
 ```
 
 **Response:**
 
 ```json
 [
-  1
+  5
 ]
 ```
 
